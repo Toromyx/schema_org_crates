@@ -1,4 +1,4 @@
-# main crate
+# workspace
 /target
 /Cargo.lock
 

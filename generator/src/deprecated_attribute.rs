@@ -1,13 +1,13 @@
 use quote::{__private::TokenStream, quote};
 
-use crate::schema::ReferencedSchema;
+use crate::schema::Schema;
 
 pub trait DeprecatedAttribute {
 	/// Check if this schema is in the attic.
 	fn in_attic(&self) -> bool;
 
 	/// Get the schemas this schema is superseded by.
-	fn superseded_by(&self) -> &[ReferencedSchema];
+	fn superseded_by(&self) -> &[Schema];
 
 	fn deprecated_attribute(&self) -> Option<TokenStream> {
 		let deprecated_notes: Vec<_> = [

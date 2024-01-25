@@ -1,0 +1,18 @@
+/// <https://schema.org/XPathType>
+pub trait FindXPathTypeIds {
+	type IdType;
+	fn find_x_path_type_ids(&self) -> Vec<&Self::IdType>;
+}
+#[cfg(any(feature = "json-ld_0_15", doc))]
+mod json_ld_0_15 {
+	use schema_org_constants::SchemaOrgNamespace;
+	impl super::FindXPathTypeIds for crate::json_ld_0_15::JsonLdStore {
+		type IdType = json_ld_0_15::ValidId;
+		fn find_x_path_type_ids(&self) -> Vec<&Self::IdType> {
+			self.find_schema(match self.namespace() {
+				SchemaOrgNamespace::Http => schema_org_constants::X_PATH_TYPE_IRI_HTTP,
+				SchemaOrgNamespace::Https => schema_org_constants::X_PATH_TYPE_IRI_HTTPS,
+			})
+		}
+	}
+}

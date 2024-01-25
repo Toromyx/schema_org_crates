@@ -1,8 +1,8 @@
 [package]
-name = "schema_org_types_generator"
-version = "0.1.0"
+name = "schema_org_crates_generator"
+version = "0.0.1"
 edition = "2021"
-rust-version = "1.71"
+rust-version = "1.75"
 license = "MIT"
 
 [dependencies.convert_case]
@@ -18,7 +18,7 @@ version = "^0.17.6"
 version = "^0.3.19"
 
 [dependencies.prettyplease]
-version = "0.2.15"
+version = "^0.2.15"
 
 [dependencies.quote]
 version = "^1.0"

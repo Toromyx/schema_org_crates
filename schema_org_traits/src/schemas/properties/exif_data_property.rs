@@ -1,0 +1,23 @@
+/// <https://schema.org/exifData>
+pub trait GetExifDataProperty {
+	type IdType;
+	type PropertyType;
+	fn get_exif_data_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
+}
+#[cfg(any(feature = "json-ld_0_15", doc))]
+mod json_ld_0_15 {
+	use schema_org_constants::SchemaOrgNamespace;
+	impl crate::GetExifDataProperty for crate::json_ld_0_15::JsonLdStore {
+		type IdType = json_ld_0_15::ValidId;
+		type PropertyType = rdf_types_0_15::Object;
+		fn get_exif_data_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType> {
+			self.get_property(
+				id,
+				match self.namespace() {
+					SchemaOrgNamespace::Http => schema_org_constants::EXIF_DATA_PROPERTY_IRI_HTTP,
+					SchemaOrgNamespace::Https => schema_org_constants::EXIF_DATA_PROPERTY_IRI_HTTPS,
+				},
+			)
+		}
+	}
+}

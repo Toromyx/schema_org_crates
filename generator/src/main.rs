@@ -1,5 +1,5 @@
 // https://github.com/mcarton/rust-derivative/issues/112
-#![allow(clippy::incorrect_partial_ord_impl_on_ord_type)]
+#![allow(clippy::non_canonical_partial_ord_impl)]
 
 use indicatif::MultiProgress;
 use read::read;
@@ -10,7 +10,8 @@ mod doc_lines;
 mod feature;
 mod read;
 mod schema;
-mod serde_attributes;
+mod schema_org_crate;
+mod schema_type;
 mod sparql;
 mod write;
 

@@ -33,8 +33,8 @@ pub fn strings_as_doc_lines(strings: &[String]) -> TokenStream {
 	)
 }
 
-impl<T: Schema> DocLines for T {
+impl DocLines for Schema {
 	fn doc_lines(&self) -> Vec<String> {
-		vec![format!("<{}>", self.iri())]
+		vec![format!("<{}>", &self.iri)]
 	}
 }

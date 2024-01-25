@@ -1,0 +1,252 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://example.test/recipe/#article",
+      "isPartOf": {
+        "@id": "https://example.test/recipe/"
+      },
+      "author": {
+        "@id": "https://example.test/#person"
+      },
+      "headline": "Article headline",
+      "datePublished": "2024-01-31T20:16:00+00:00",
+      "dateModified": "2024-01-31T20:17:00+00:00",
+      "wordCount": 420,
+      "commentCount": 69,
+      "publisher": {
+        "@id": "https://example.test/#organization"
+      },
+      "image": {
+        "@id": "https://example.test/recipe/#image_object"
+      },
+      "thumbnailUrl": "https://example.test/thumbnail_01.jpg",
+      "keywords": [
+        "article keyword 1",
+        "article keyword 2"
+      ],
+      "articleSection": [
+        "article section 1",
+        "article section 2"
+      ],
+      "inLanguage": "en-EU",
+      "potentialAction": [
+        {
+          "@type": "CommentAction",
+          "name": "Comment",
+          "target": [
+            "https://example.test/recipe/#comment_action"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://example.test/recipe/",
+      "url": "https://example.test/recipe/",
+      "name": "Recipe - Example.Test",
+      "isPartOf": {
+        "@id": "https://example.test/#web_site"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://example.test/recipe/#image_object"
+      },
+      "image": {
+        "@id": "https://example.test/recipe/#image_object"
+      },
+      "thumbnailUrl": "https://example.test/thumbnail_01.jpg",
+      "datePublished": "2024-01-31T20:16:00+00:00",
+      "dateModified": "2024-01-31T20:17:00+00:00",
+      "description": "Web page description",
+      "breadcrumb": {
+        "@id": "https://example.test/recipe/#breadcrumb_list"
+      },
+      "inLanguage": "en-EU",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "https://example.test/recipe/"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "inLanguage": "en-EU",
+      "@id": "https://example.test/recipe/#image_object",
+      "url": "https://example.test/image_01.jpg",
+      "contentUrl": "https://example.test/image_01.jpg",
+      "width": 1920,
+      "height": 1080,
+      "caption": "image caption"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://example.test/recipe/#breadcrumb_list",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://example.test/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Recipe"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://example.test/#web_site",
+      "url": "https://example.test/",
+      "name": "Example.Test",
+      "description": "Example Test",
+      "publisher": {
+        "@id": "https://example.test/#organization"
+      },
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://example.test/{?q}"
+          }
+        }
+      ],
+      "inLanguage": "en-EU"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://example.test/#organization",
+      "name": "Organization",
+      "url": "https://example.test/",
+      "logo": {
+        "@type": "ImageObject",
+        "inLanguage": "en-EU",
+        "@id": "https://example.test/#logo",
+        "url": "https://example.test/logo_01.png",
+        "contentUrl": "https://example.test/logo_01.png",
+        "width": 1920,
+        "height": 1080
+      },
+      "image": {
+        "@id": "https://example.test/#logo"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://example.test/#person",
+      "name": "Miss Example",
+      "sameAs": [
+        "https://example.test/about/"
+      ]
+    },
+    {
+      "@type": "Recipe",
+      "name": "Recipe",
+      "author": {
+        "@id": "https://example.test/#person"
+      },
+      "description": "Recipe description",
+      "datePublished": "2024-01-31T20:16:00+00:00",
+      "image": [
+        "https://example.test/recipe_image_01.jpg",
+        "https://example.test/recipe_image_02.jpg",
+        "https://example.test/recipe_image_03.jpg"
+      ],
+      "recipeYield": [
+        "4"
+      ],
+      "prepTime": "PT15M",
+      "cookTime": "PT20M",
+      "totalTime": "PT35M",
+      "recipeIngredient": [
+        "ingredient 1",
+        "ingredient 2",
+        "ingredient 3",
+        "ingredient 4",
+        "ingredient 5",
+        "ingredient 6",
+        "ingredient 7",
+        "ingredient 8",
+        "ingredient 9"
+      ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToSection",
+          "name": "How-To Section 1",
+          "itemListElement": [
+            {
+              "@type": "HowToStep",
+              "text": "step 1-1",
+              "name": "step 1-1",
+              "url": "https://example.test/recipe/#step_1_1"
+            },
+            {
+              "@type": "HowToStep",
+              "text": "step 1-2",
+              "name": "step 1-2",
+              "url": "https://example.test/recipe/#step_1_2"
+            },
+            {
+              "@type": "HowToStep",
+              "text": "step 1-3",
+              "name": "step 1-3",
+              "url": "https://example.test/recipe/#step_1_3"
+            }
+          ]
+        },
+        {
+          "@type": "HowToSection",
+          "name": "How-To Section 2",
+          "itemListElement": [
+            {
+              "@type": "HowToStep",
+              "text": "step 2-1",
+              "name": "step 2-1",
+              "url": "https://example.test/recipe/#step_2_1"
+            },
+            {
+              "@type": "HowToStep",
+              "text": "step 2-2",
+              "name": "step 2-2",
+              "url": "https://example.test/recipe/#step_2_2"
+            },
+            {
+              "@type": "HowToStep",
+              "text": "step 2-3",
+              "name": "step 2-3",
+              "url": "https://example.test/recipe/#step_2_3"
+            }
+          ]
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "69",
+        "ratingCount": "420"
+      },
+      "recipeCategory": [
+        "recipe category"
+      ],
+      "recipeCuisine": [
+        "recipe cuisine"
+      ],
+      "keywords": "keyword 1, keyword 2",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "420 kcal",
+        "servingSize": "1"
+      },
+      "@id": "https://example.test/recipe/#recipe",
+      "isPartOf": {
+        "@id": "https://example.test/recipe/#article"
+      },
+      "mainEntityOfPage": "https://example.test/recipe/"
+    }
+  ]
+}

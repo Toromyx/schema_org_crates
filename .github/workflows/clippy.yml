@@ -1,0 +1,32 @@
+name: Clippy
+
+on:
+  push:
+    paths:
+      - Cargo.toml
+      - schema_org_constants/src/**
+      - schema_org_constants/Cargo.toml
+      - schema_org_traits/src/**
+      - schema_org_traits/Cargo.toml
+      - .github/workflows/clippy.yml
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - uses: actions/cache@v3
+        with:
+          key: rust-${{ steps.toolchain.outputs.rustc_hash }}-workspace-${{ hashFiles('schema_org_constants/src/**', 'schema_org_traits/src/**') }}-${{ hashFiles('Cargo.toml', 'schema_org_constants/Cargo.toml', 'schema_org_traits/Cargo.toml') }}
+          restore-keys: |
+            rust-${{ steps.toolchain.outputs.rustc_hash }}-workspace-${{ hashFiles('schema_org_constants/src/**', 'schema_org_traits/src/**') }}-
+            rust-${{ steps.toolchain.outputs.rustc_hash }}-workspace-
+            rust-${{ steps.toolchain.outputs.rustc_hash }}-
+            rust-
+          path: |
+            target
+            ~/.cargo/registry
+      - run: cargo clippy --all-targets --all-features

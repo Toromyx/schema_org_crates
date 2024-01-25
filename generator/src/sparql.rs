@@ -1,7 +1,6 @@
 mod as_literal;
 mod as_named_node;
 mod into_solutions;
-pub mod node_type;
 
 use as_literal::AsLiteral;
 use as_named_node::AsNamedNode;
@@ -16,28 +15,6 @@ const PREFIXES: &str = r#"
 PREFIX schema: <https://schema.org/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-"#;
-
-/// The schemas which are ignored in this crate.
-///
-/// These don't work as types in rust:
-/// - <https://schema.org/True>
-/// - <https://schema.org/False>
-///
-/// These are never used:
-/// - <https://schema.org/DataType>
-/// - <https://schema.org/Intangible>
-/// - <https://schema.org/Series>
-const IGNORED_SCHEMAS_FILTER: &str = r#"
-FILTER NOT EXISTS {
-	VALUES ?node {
-		schema:True
-		schema:False
-		schema:DataType
-		schema:Intangible
-		schema:Series
-	}
-}
 "#;
 
 fn iri_from_solution(solution: &QuerySolution) -> String {
@@ -119,31 +96,7 @@ impl From<QueryResults> for CountSolution {
 pub trait SchemaQueries {
 	fn get_schemas(&self) -> Vec<SchemaQuerySolution>;
 
-	fn is_enumeration_variant(&self, iri: &str) -> bool;
-
-	fn is_data_type(&self, iri: &str) -> bool;
-
-	fn is_enumeration(&self, iri: &str) -> bool;
-
 	fn is_property(&self, iri: &str) -> bool;
-
-	/// Get all direct properties of a class, not including parents' properties
-	fn get_properties_of_class(&self, class_iri: &str) -> Vec<SchemaQuerySolution>;
-
-	/// Get all parents of a class via rdfs:subClassOf
-	fn get_parents_of_class(&self, class_iri: &str) -> Vec<SchemaQuerySolution>;
-
-	/// Query for all value labels of a property.
-	fn get_variants_of_property(&self, property_iri: &str) -> Vec<SchemaQuerySolution>;
-
-	/// Query for all enumeration variants of a specific enumeration.
-	fn get_variants_of_enumeration(&self, enumeration_iri: &str)
-	-> Vec<EnumerationVariantSolution>;
-
-	/// Query for a transformable parent data type of another data type.
-	///
-	/// The data type needs to be transformable to a [`crate::serde_attributes::data_type::RustType`].
-	fn get_transformable_data_type_label_of_data_type(&self, data_type_iri: &str) -> String;
 
 	/// Query for schemas superseding the schema.
 	fn get_superseded_by(&self, iri: &str) -> Vec<SchemaQuerySolution>;
@@ -159,12 +112,11 @@ SELECT
 	?label
 	?section
 WHERE {{
-	{}
 	?node rdfs:label ?label .
 	OPTIONAL {{ ?node schema:isPartOf ?section . }}
 }}
 "#,
-			PREFIXES, IGNORED_SCHEMAS_FILTER
+			PREFIXES
 		);
 		self.query(&query)
 			.unwrap()
@@ -172,58 +124,6 @@ WHERE {{
 			.iter()
 			.map(SchemaQuerySolution::from)
 			.collect()
-	}
-
-	fn is_enumeration_variant(&self, iri: &str) -> bool {
-		let query = format!(
-			r#"
-{}
-SELECT
-	(COUNT(*) AS ?count)
-WHERE {{
-	<{}> a ?enumeration .
-	?enumeration rdfs:subClassOf*/rdfs:subClassOf schema:Enumeration .
-}}
-"#,
-			PREFIXES, iri
-		);
-		let count_solution: CountSolution = self.query(&query).unwrap().into();
-		count_solution.0 > 0
-	}
-
-	fn is_data_type(&self, iri: &str) -> bool {
-		let query = format!(
-			r#"
-{}
-SELECT
-	(COUNT(*) AS ?count)
-WHERE {{
-	<{}> rdfs:subClassOf*/a schema:DataType .
-}}
-"#,
-			PREFIXES, iri
-		);
-		let count_solution: CountSolution = self.query(&query).unwrap().into();
-		count_solution.0 > 0
-	}
-
-	fn is_enumeration(&self, iri: &str) -> bool {
-		let query = format!(
-			r#"
-{}
-SELECT
-	(COUNT(*) AS ?count)
-WHERE {{
-	<{}> rdfs:subClassOf*/rdfs:subClassOf schema:Enumeration .
-	FILTER NOT EXISTS {{
-		?property schema:domainIncludes <{}> .
-	}}
-}}
-"#,
-			PREFIXES, iri, iri
-		);
-		let count_solution: CountSolution = self.query(&query).unwrap().into();
-		count_solution.0 > 0
 	}
 
 	fn is_property(&self, iri: &str) -> bool {
@@ -242,143 +142,6 @@ WHERE {{
 		count_solution.0 > 0
 	}
 
-	fn get_properties_of_class(&self, class_iri: &str) -> Vec<SchemaQuerySolution> {
-		let query = format!(
-			r#"
-{}
-SELECT
-	?node
-	?label
-	?section
-WHERE {{
-	{}
-	?node schema:domainIncludes <{}> .
-	?node rdfs:label ?label .
-	OPTIONAL {{ ?node schema:isPartOf ?section . }}
-}}
-"#,
-			PREFIXES, IGNORED_SCHEMAS_FILTER, class_iri
-		);
-		self.query(&query)
-			.unwrap()
-			.into_solutions()
-			.iter()
-			.map(SchemaQuerySolution::from)
-			.collect()
-	}
-
-	fn get_parents_of_class(&self, class_iri: &str) -> Vec<SchemaQuerySolution> {
-		let query = format!(
-			r#"
-{}
-SELECT DISTINCT
-	?node
-	?label
-	?section
-WHERE {{
-	{}
-	<{}> rdfs:subClassOf*/rdfs:subClassOf ?node .
-	?node rdfs:label ?label .
-	OPTIONAL {{ ?node schema:isPartOf ?section . }}
-}}
-"#,
-			PREFIXES, IGNORED_SCHEMAS_FILTER, class_iri
-		);
-		self.query(&query)
-			.unwrap()
-			.into_solutions()
-			.iter()
-			.map(SchemaQuerySolution::from)
-			.collect()
-	}
-
-	fn get_variants_of_property(&self, property_iri: &str) -> Vec<SchemaQuerySolution> {
-		let query = format!(
-			r#"
-{}
-SELECT
-	?node
-	?label
-	?section
-WHERE {{
-	{}
-	<{}> schema:rangeIncludes ?node .
-	?node rdfs:label ?label .
-	OPTIONAL {{ ?node schema:isPartOf ?section . }}
-}}
-"#,
-			PREFIXES, IGNORED_SCHEMAS_FILTER, property_iri
-		);
-		self.query(&query)
-			.unwrap()
-			.into_solutions()
-			.iter()
-			.map(SchemaQuerySolution::from)
-			.collect()
-	}
-
-	fn get_variants_of_enumeration(
-		&self,
-		enumeration_iri: &str,
-	) -> Vec<EnumerationVariantSolution> {
-		let query = format!(
-			r#"
-{}
-SELECT
-	?node
-	?label
-	?section
-WHERE {{
-	{}
-	?node a <{}> .
-	?node rdfs:label ?label .
-	OPTIONAL {{ ?node schema:isPartOf ?section . }}
-}}
-"#,
-			PREFIXES, IGNORED_SCHEMAS_FILTER, enumeration_iri
-		);
-		self.query(&query)
-			.unwrap()
-			.into_solutions()
-			.iter()
-			.map(EnumerationVariantSolution::from)
-			.collect()
-	}
-
-	fn get_transformable_data_type_label_of_data_type(&self, data_type_iri: &str) -> String {
-		let query = format!(
-			r#"
-{}
-SELECT
-	?label
-WHERE {{
-	<{}> rdfs:subClassOf* ?transformable .
-	VALUES ?transformable {{
-		schema:URL
-		schema:DateTime
-		schema:Date
-		schema:Time
-		schema:Text
-		schema:Integer
-		schema:Number
-		schema:Boolean
-	}}
-	?transformable rdfs:label ?label .
-}}
-LIMIT 1
-"#,
-			PREFIXES, data_type_iri
-		);
-		let solutions = self.query(&query).unwrap().into_solutions();
-		let solution = solutions.first().unwrap_or_else(|| {
-			panic!(
-				"Could not get a transformable data type for the schema \"{}\"",
-				data_type_iri
-			);
-		});
-		label_from_solution(solution)
-	}
-
 	fn get_superseded_by(&self, iri: &str) -> Vec<SchemaQuerySolution> {
 		let query = format!(
 			r#"
@@ -388,13 +151,12 @@ SELECT
 	?label
 	?section
 WHERE {{
-	{}
 	<{}> schema:supersededBy ?node .
 	?node rdfs:label ?label .
 	OPTIONAL {{ ?node schema:isPartOf ?section . }}
 }}
 "#,
-			PREFIXES, IGNORED_SCHEMAS_FILTER, iri
+			PREFIXES, iri
 		);
 		self.query(&query)
 			.unwrap()

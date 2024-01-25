@@ -3,9 +3,14 @@ name: Semver Check
 on:
   push:
     paths:
-      - src/**
       - Cargo.toml
+      - schema_org_constants/src/**
+      - schema_org_constants/Cargo.toml
+      - schema_org_traits/src/**
+      - schema_org_traits/Cargo.toml
       - .github/workflows/semver-check.yml
+    tags:
+      - v*
 
 jobs:
   check:

@@ -1,21 +1,17 @@
-use std::{
-	collections::BinaryHeap,
-	path::{Path, PathBuf},
-	str::FromStr,
-	sync::{Mutex, MutexGuard},
-};
+use std::{collections::BinaryHeap, path::Path, str::FromStr, sync::Mutex};
 
 use derivative::Derivative;
 use indicatif::{MultiProgress, ProgressBar};
 use oxigraph::store::Store;
-use quote::{__private::TokenStream, quote, ToTokens};
+use quote::{__private::TokenStream, quote};
 use rayon::prelude::*;
+use strum::IntoEnumIterator;
 
 use crate::{
-	schema::{
-		class::Class, data_type::DataType, enumeration::Enumeration, property::Property, Schema,
-	},
-	sparql::{node_type::NodeType, SchemaQueries, SchemaQuerySolution},
+	schema::Schema,
+	schema_org_crate::SchemaOrgCrate,
+	schema_type::SchemaType,
+	sparql::{SchemaQueries, SchemaQuerySolution},
 };
 
 #[derive(Debug, Clone, Derivative)]
@@ -24,8 +20,8 @@ struct SchemaModuleInfo {
 	pub name: String,
 }
 
-impl<T: Schema> From<&T> for SchemaModuleInfo {
-	fn from(value: &T) -> Self {
+impl From<&Schema> for SchemaModuleInfo {
+	fn from(value: &Schema) -> Self {
 		Self {
 			name: value.module_name(),
 		}
@@ -35,7 +31,7 @@ impl<T: Schema> From<&T> for SchemaModuleInfo {
 trait ToModuleString {
 	fn to_module_string(&self) -> String;
 }
-impl ToModuleString for &[SchemaModuleInfo] {
+impl ToModuleString for &[&SchemaModuleInfo] {
 	fn to_module_string(&self) -> String {
 		let schema_mods_and_pub_uses = self.iter().map(|schema| {
 			let module_name = TokenStream::from_str(&format!("r#{}", schema.name)).unwrap();
@@ -52,176 +48,123 @@ impl ToModuleString for &[SchemaModuleInfo] {
 	}
 }
 
-trait WriteModules {
-	fn write_module(&self, schemas_dir: &Path);
-	fn write_parent_module(schemas: &[SchemaModuleInfo], schemas_dir: &Path)
-	where
-		Self: Sized;
-	fn write_parent_module_folder(schemas_dir: &Path);
+fn to_module_string(prefix: Option<TokenStream>, submodules: &[impl AsRef<str>]) -> String {
+	let schema_mods_and_pub_uses = submodules.iter().map(|submodule| {
+		let module_name = TokenStream::from_str(&format!("r#{}", submodule.as_ref())).unwrap();
+		quote!(
+			mod #module_name;
+			pub use self::#module_name::*;
+		)
+	});
+	quote!(
+		#prefix
+
+		#(#schema_mods_and_pub_uses)*
+	)
+	.to_string()
 }
 
-trait HandleWrite {
-	fn handle_write(
-		store: &Store,
-		solution: SchemaQuerySolution,
-		schema_module_infos: MutexGuard<BinaryHeap<SchemaModuleInfo>>,
-		schemas_dir: &Path,
-	);
-}
-
-impl<T: Schema + ToTokens> HandleWrite for T {
-	fn handle_write(
-		store: &Store,
-		solution: SchemaQuerySolution,
-		mut schema_module_infos: MutexGuard<BinaryHeap<SchemaModuleInfo>>,
-		schemas_dir: &Path,
-	) {
-		let schema = Self::from_solution(store, solution);
-		schema_module_infos.push(SchemaModuleInfo::from(&schema));
-		schema.write_module(schemas_dir);
-	}
-}
-
-/// This function exists to make the futures below [`Send`].
-///
-/// Reference: <https://users.rust-lang.org/t/future-is-not-send-as-this-value-is-used-across-an-await-but-i-drop-the-value-before-the-await/57574/5>
-fn pretty_please(str: &str) -> String {
+pub fn pretty_please(str: &str) -> String {
 	let syntax_tree = syn::parse_file(str).unwrap();
 	prettyplease::unparse(&syntax_tree)
 }
 
-impl<T: Schema + ToTokens> WriteModules for T {
-	fn write_module(&self, schemas_dir: &Path) {
-		let mut file_path = PathBuf::from(&schemas_dir);
-		file_path.push(Self::parent_module_name());
-		file_path.push(format!("{}.rs", self.module_name()));
-		std::fs::write(
-			file_path,
-			pretty_please(&self.to_token_stream().to_string()),
-		)
-		.unwrap();
-	}
-
-	fn write_parent_module(schema_module_infos: &[SchemaModuleInfo], schemas_dir: &Path) {
-		let mut module_file = PathBuf::from(&schemas_dir);
-		module_file.push(format!("{}.rs", Self::parent_module_name()));
-		std::fs::write(
-			module_file,
-			pretty_please(&schema_module_infos.to_module_string()),
-		)
-		.unwrap();
-	}
-
-	fn write_parent_module_folder(schemas_dir: &Path) {
-		let mut module_dir = PathBuf::from(&schemas_dir);
-		module_dir.push(Self::parent_module_name());
-		std::fs::create_dir(&module_dir).unwrap();
-	}
+fn write_parent_module(
+	prefix: Option<TokenStream>,
+	submodules: &[impl AsRef<str>],
+	module_file: &Path,
+) {
+	std::fs::write(
+		module_file,
+		pretty_please(&to_module_string(prefix, submodules)),
+	)
+	.unwrap();
 }
 
 pub fn write(store: &Store, multi_progress: &MultiProgress) {
-	let schemas_dir = PathBuf::from("../src/schemas");
-	std::fs::remove_dir_all(&schemas_dir).unwrap();
-	std::fs::create_dir(&schemas_dir).unwrap();
-
-	Class::write_parent_module_folder(&schemas_dir);
-	Property::write_parent_module_folder(&schemas_dir);
-	Enumeration::write_parent_module_folder(&schemas_dir);
-	DataType::write_parent_module_folder(&schemas_dir);
+	for schema_org_crate in SchemaOrgCrate::iter() {
+		let schemas_dir = schema_org_crate.schemas_dir();
+		std::fs::remove_dir_all(&schemas_dir).unwrap();
+		std::fs::create_dir(&schemas_dir).unwrap();
+		for schema_type in schema_org_crate.schema_types() {
+			std::fs::create_dir(schema_org_crate.schema_type_dir(schema_type)).unwrap();
+		}
+	}
 
 	let schemas = store.get_schemas();
 
-	let class_schema_module_infos = Mutex::new(BinaryHeap::<SchemaModuleInfo>::new());
-	let property_schema_module_infos = Mutex::new(BinaryHeap::<SchemaModuleInfo>::new());
-	let enumeration_schema_module_infos = Mutex::new(BinaryHeap::<SchemaModuleInfo>::new());
-	let data_types_schema_module_infos = Mutex::new(BinaryHeap::<SchemaModuleInfo>::new());
+	let all_schema_modules = Mutex::new(BinaryHeap::<String>::new());
+	let class_schema_modules = Mutex::new(BinaryHeap::<String>::new());
+	let property_schema_modules = Mutex::new(BinaryHeap::<String>::new());
 
-	let handle_class = |solution: SchemaQuerySolution| {
-		Class::handle_write(
-			store,
-			solution,
-			class_schema_module_infos.lock().unwrap(),
-			&schemas_dir,
-		);
-	};
-
-	let handle_property = |solution: SchemaQuerySolution| {
-		Property::handle_write(
-			store,
-			solution,
-			property_schema_module_infos.lock().unwrap(),
-			&schemas_dir,
-		);
-	};
-
-	let handle_enumeration = |solution: SchemaQuerySolution| {
-		Enumeration::handle_write(
-			store,
-			solution,
-			enumeration_schema_module_infos.lock().unwrap(),
-			&schemas_dir,
-		);
-	};
-
-	let handle_data_type = |solution: SchemaQuerySolution| {
-		DataType::handle_write(
-			store,
-			solution,
-			data_types_schema_module_infos.lock().unwrap(),
-			&schemas_dir,
-		);
+	let handle_write = |solution: SchemaQuerySolution| {
+		let schema = Schema::from_solution(store, solution);
+		let schema_module = schema.module_name();
+		match schema.schema_type {
+			SchemaType::Property => property_schema_modules
+				.lock()
+				.unwrap()
+				.push(schema_module.clone()),
+			SchemaType::Class => class_schema_modules
+				.lock()
+				.unwrap()
+				.push(schema_module.clone()),
+		};
+		all_schema_modules.lock().unwrap().push(schema_module);
+		for schema_org_crate in SchemaOrgCrate::iter() {
+			schema.write_module(&schema_org_crate);
+		}
 	};
 
 	let bar = multi_progress.add(ProgressBar::new(schemas.len() as u64));
 	schemas.into_par_iter().for_each(|solution| {
-		match NodeType::from_iri(store, &solution.iri) {
-			NodeType::EnumerationVariant => {}
-			NodeType::Property => {
-				handle_property(solution);
-			}
-			NodeType::DataType => {
-				handle_data_type(solution);
-			}
-			NodeType::Enumeration => {
-				handle_enumeration(solution);
-			}
-			NodeType::Class => {
-				handle_class(solution);
-			}
-		};
+		handle_write(solution);
 		bar.inc(1);
 	});
 
-	Class::write_parent_module(
-		class_schema_module_infos
+	write_parent_module(
+		Some(quote!(
+			#![allow(unused)]
+			#![allow(deprecated)]
+		)),
+		all_schema_modules
 			.into_inner()
 			.unwrap()
 			.into_sorted_vec()
+			.iter()
+			.collect::<Vec<_>>()
 			.as_slice(),
-		&schemas_dir,
+		&SchemaOrgCrate::Constants.schemas_file(),
 	);
-	Property::write_parent_module(
-		property_schema_module_infos
-			.into_inner()
-			.unwrap()
-			.into_sorted_vec()
+	write_parent_module(
+		Some(quote!(
+			#![allow(unused)]
+			#![allow(deprecated)]
+		)),
+		SchemaOrgCrate::Traits
+			.schema_types()
+			.iter()
+			.map(|schema_type| schema_type.parent_module_name().to_string())
+			.collect::<Vec<_>>()
 			.as_slice(),
-		&schemas_dir,
+		&SchemaOrgCrate::Traits.schemas_file(),
 	);
-	Enumeration::write_parent_module(
-		enumeration_schema_module_infos
+	write_parent_module(
+		None,
+		class_schema_modules
 			.into_inner()
 			.unwrap()
 			.into_sorted_vec()
 			.as_slice(),
-		&schemas_dir,
+		&SchemaOrgCrate::Traits.schema_type_file(&SchemaType::Class),
 	);
-	DataType::write_parent_module(
-		data_types_schema_module_infos
+	write_parent_module(
+		None,
+		property_schema_modules
 			.into_inner()
 			.unwrap()
 			.into_sorted_vec()
 			.as_slice(),
-		&schemas_dir,
+		&SchemaOrgCrate::Traits.schema_type_file(&SchemaType::Property),
 	);
 }

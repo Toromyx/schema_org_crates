@@ -1,0 +1,58 @@
+[package]
+name = "schema_org_traits"
+description = "Schema.org schemas as Rust traits"
+version = "0.0.1"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/Toromyx/schema_org_crates"
+
+# https://docs.rs/about/metadata
+[package.metadata.docs.rs]
+features = [
+    "doc",
+]
+
+[dependencies.iref_2]
+package = "iref"
+version = "^2.2"
+optional = true
+
+[dependencies.json-ld_0_15]
+package = "json-ld"
+version = "^0.15.1"
+optional = true
+
+[dependencies.schema_org_constants]
+path = "../schema_org_constants"
+version = "^0.0.1"
+optional = true
+
+[dependencies.rdf-types_0_15]
+package = "rdf-types"
+version = "^0.15.4"
+optional = true
+features = ["meta"]
+
+[dev-dependencies.pretty_assertions]
+version = "^1.4"
+
+[dev-dependencies.tokio]
+version = "^1.35"
+features = ["full"]
+
+[features]
+default = []
+json-ld = [
+    "json-ld_0_15",
+]
+json-ld_0_15 = [
+    "dep:schema_org_constants",
+    "dep:json-ld_0_15",
+    "dep:rdf-types_0_15",
+    "dep:iref_2",
+]
+doc = []
+test = [
+    "json-ld",
+    "json-ld_0_15/reqwest",
+]

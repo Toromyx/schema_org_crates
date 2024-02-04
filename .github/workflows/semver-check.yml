@@ -9,8 +9,6 @@ on:
       - schema_org_traits/src/**
       - schema_org_traits/Cargo.toml
       - .github/workflows/semver-check.yml
-    tags:
-      - v*
 
 jobs:
   check:

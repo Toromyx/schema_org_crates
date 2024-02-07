@@ -2,6 +2,7 @@
 pub trait GetEncodingTypeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/encodingType>
 	fn get_encoding_type_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

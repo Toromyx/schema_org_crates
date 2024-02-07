@@ -1,6 +1,7 @@
 /// <https://schema.org/DigitalPlatformEnumeration>
 pub trait FindDigitalPlatformEnumerationIds {
 	type IdType;
+	/// <https://schema.org/DigitalPlatformEnumeration>
 	fn find_digital_platform_enumeration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

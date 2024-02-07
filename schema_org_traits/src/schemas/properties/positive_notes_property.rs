@@ -2,6 +2,7 @@
 pub trait GetPositiveNotesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/positiveNotes>
 	fn get_positive_notes_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

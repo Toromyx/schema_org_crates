@@ -2,6 +2,7 @@
 pub trait GetBranchCodeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/branchCode>
 	fn get_branch_code_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

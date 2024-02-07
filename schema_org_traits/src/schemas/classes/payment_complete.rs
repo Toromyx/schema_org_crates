@@ -1,6 +1,7 @@
 /// <https://schema.org/PaymentComplete>
 pub trait FindPaymentCompleteIds {
 	type IdType;
+	/// <https://schema.org/PaymentComplete>
 	fn find_payment_complete_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

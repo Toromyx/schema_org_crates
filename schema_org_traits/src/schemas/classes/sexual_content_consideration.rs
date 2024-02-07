@@ -1,6 +1,7 @@
 /// <https://schema.org/SexualContentConsideration>
 pub trait FindSexualContentConsiderationIds {
 	type IdType;
+	/// <https://schema.org/SexualContentConsideration>
 	fn find_sexual_content_consideration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

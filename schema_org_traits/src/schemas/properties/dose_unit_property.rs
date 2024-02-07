@@ -2,6 +2,7 @@
 pub trait GetDoseUnitProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/doseUnit>
 	fn get_dose_unit_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

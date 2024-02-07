@@ -2,6 +2,7 @@
 pub trait GetSourcedFromProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/sourcedFrom>
 	fn get_sourced_from_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

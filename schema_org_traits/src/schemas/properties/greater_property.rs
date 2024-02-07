@@ -2,6 +2,7 @@
 pub trait GetGreaterProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/greater>
 	fn get_greater_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

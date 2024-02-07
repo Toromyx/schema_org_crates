@@ -2,6 +2,7 @@
 pub trait GetMinPriceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/minPrice>
 	fn get_min_price_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

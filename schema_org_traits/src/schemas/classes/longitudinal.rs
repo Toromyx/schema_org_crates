@@ -1,6 +1,7 @@
 /// <https://schema.org/Longitudinal>
 pub trait FindLongitudinalIds {
 	type IdType;
+	/// <https://schema.org/Longitudinal>
 	fn find_longitudinal_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetItemReviewedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/itemReviewed>
 	fn get_item_reviewed_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

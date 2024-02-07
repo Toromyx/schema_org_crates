@@ -1,6 +1,7 @@
 /// <https://schema.org/PlaceOfWorship>
 pub trait FindPlaceOfWorshipIds {
 	type IdType;
+	/// <https://schema.org/PlaceOfWorship>
 	fn find_place_of_worship_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

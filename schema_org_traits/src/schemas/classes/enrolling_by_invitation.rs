@@ -1,6 +1,7 @@
 /// <https://schema.org/EnrollingByInvitation>
 pub trait FindEnrollingByInvitationIds {
 	type IdType;
+	/// <https://schema.org/EnrollingByInvitation>
 	fn find_enrolling_by_invitation_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

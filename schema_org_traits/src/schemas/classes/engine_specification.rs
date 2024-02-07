@@ -1,6 +1,7 @@
 /// <https://schema.org/EngineSpecification>
 pub trait FindEngineSpecificationIds {
 	type IdType;
+	/// <https://schema.org/EngineSpecification>
 	fn find_engine_specification_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

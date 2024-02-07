@@ -2,6 +2,7 @@
 pub trait GetSuccessorOfProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/successorOf>
 	fn get_successor_of_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

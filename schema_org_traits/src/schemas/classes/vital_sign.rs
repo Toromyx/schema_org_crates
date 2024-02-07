@@ -1,6 +1,7 @@
 /// <https://schema.org/VitalSign>
 pub trait FindVitalSignIds {
 	type IdType;
+	/// <https://schema.org/VitalSign>
 	fn find_vital_sign_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

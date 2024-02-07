@@ -2,6 +2,7 @@
 pub trait GetUsesHealthPlanIdStandardProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/usesHealthPlanIdStandard>
 	fn get_uses_health_plan_id_standard_property(
 		&self,
 		id: &Self::IdType,

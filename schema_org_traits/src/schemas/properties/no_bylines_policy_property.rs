@@ -2,6 +2,7 @@
 pub trait GetNoBylinesPolicyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/noBylinesPolicy>
 	fn get_no_bylines_policy_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

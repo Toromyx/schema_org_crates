@@ -1,6 +1,7 @@
 /// <https://schema.org/DigitalArtDigitalSource>
 pub trait FindDigitalArtDigitalSourceIds {
 	type IdType;
+	/// <https://schema.org/DigitalArtDigitalSource>
 	fn find_digital_art_digital_source_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

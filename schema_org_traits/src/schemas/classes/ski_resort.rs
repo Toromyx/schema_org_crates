@@ -1,6 +1,7 @@
 /// <https://schema.org/SkiResort>
 pub trait FindSkiResortIds {
 	type IdType;
+	/// <https://schema.org/SkiResort>
 	fn find_ski_resort_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

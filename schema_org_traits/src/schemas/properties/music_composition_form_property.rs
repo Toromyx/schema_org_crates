@@ -2,6 +2,7 @@
 pub trait GetMusicCompositionFormProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/musicCompositionForm>
 	fn get_music_composition_form_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

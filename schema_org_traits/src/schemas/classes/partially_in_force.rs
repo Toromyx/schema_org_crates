@@ -1,6 +1,7 @@
 /// <https://schema.org/PartiallyInForce>
 pub trait FindPartiallyInForceIds {
 	type IdType;
+	/// <https://schema.org/PartiallyInForce>
 	fn find_partially_in_force_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/ItemAvailability>
 pub trait FindItemAvailabilityIds {
 	type IdType;
+	/// <https://schema.org/ItemAvailability>
 	fn find_item_availability_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

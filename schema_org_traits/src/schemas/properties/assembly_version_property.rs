@@ -2,6 +2,7 @@
 pub trait GetAssemblyVersionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/assemblyVersion>
 	fn get_assembly_version_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

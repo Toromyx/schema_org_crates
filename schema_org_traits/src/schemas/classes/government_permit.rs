@@ -1,6 +1,7 @@
 /// <https://schema.org/GovernmentPermit>
 pub trait FindGovernmentPermitIds {
 	type IdType;
+	/// <https://schema.org/GovernmentPermit>
 	fn find_government_permit_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetContactOptionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/contactOption>
 	fn get_contact_option_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

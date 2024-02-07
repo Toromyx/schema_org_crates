@@ -2,6 +2,7 @@
 pub trait GetEvidenceLevelProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/evidenceLevel>
 	fn get_evidence_level_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

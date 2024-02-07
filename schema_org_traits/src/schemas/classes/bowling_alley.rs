@@ -1,6 +1,7 @@
 /// <https://schema.org/BowlingAlley>
 pub trait FindBowlingAlleyIds {
 	type IdType;
+	/// <https://schema.org/BowlingAlley>
 	fn find_bowling_alley_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

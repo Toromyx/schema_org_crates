@@ -2,6 +2,7 @@
 pub trait GetExchangeRateSpreadProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/exchangeRateSpread>
 	fn get_exchange_rate_spread_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

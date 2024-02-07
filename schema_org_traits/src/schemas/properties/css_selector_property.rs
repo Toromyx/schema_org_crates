@@ -2,6 +2,7 @@
 pub trait GetCssSelectorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/cssSelector>
 	fn get_css_selector_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

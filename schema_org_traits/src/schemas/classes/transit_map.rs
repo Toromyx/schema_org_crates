@@ -1,6 +1,7 @@
 /// <https://schema.org/TransitMap>
 pub trait FindTransitMapIds {
 	type IdType;
+	/// <https://schema.org/TransitMap>
 	fn find_transit_map_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

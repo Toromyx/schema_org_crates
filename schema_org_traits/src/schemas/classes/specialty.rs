@@ -1,6 +1,7 @@
 /// <https://schema.org/Specialty>
 pub trait FindSpecialtyIds {
 	type IdType;
+	/// <https://schema.org/Specialty>
 	fn find_specialty_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

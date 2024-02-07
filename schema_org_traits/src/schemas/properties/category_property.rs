@@ -2,6 +2,7 @@
 pub trait GetCategoryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/category>
 	fn get_category_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

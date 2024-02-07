@@ -2,6 +2,7 @@
 pub trait GetDescriptionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/description>
 	fn get_description_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/ReservationPending>
 pub trait FindReservationPendingIds {
 	type IdType;
+	/// <https://schema.org/ReservationPending>
 	fn find_reservation_pending_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

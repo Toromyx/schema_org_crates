@@ -2,6 +2,7 @@
 pub trait GetProcedureProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/procedure>
 	fn get_procedure_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

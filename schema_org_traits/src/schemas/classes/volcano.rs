@@ -1,6 +1,7 @@
 /// <https://schema.org/Volcano>
 pub trait FindVolcanoIds {
 	type IdType;
+	/// <https://schema.org/Volcano>
 	fn find_volcano_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

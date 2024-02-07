@@ -2,6 +2,7 @@
 pub trait GetDiversityPolicyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/diversityPolicy>
 	fn get_diversity_policy_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

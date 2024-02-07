@@ -1,6 +1,7 @@
 /// <https://schema.org/ReadPermission>
 pub trait FindReadPermissionIds {
 	type IdType;
+	/// <https://schema.org/ReadPermission>
 	fn find_read_permission_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

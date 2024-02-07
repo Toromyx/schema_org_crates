@@ -1,6 +1,7 @@
 /// <https://schema.org/MobileApplication>
 pub trait FindMobileApplicationIds {
 	type IdType;
+	/// <https://schema.org/MobileApplication>
 	fn find_mobile_application_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

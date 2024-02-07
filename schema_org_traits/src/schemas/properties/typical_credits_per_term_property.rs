@@ -2,6 +2,7 @@
 pub trait GetTypicalCreditsPerTermProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/typicalCreditsPerTerm>
 	fn get_typical_credits_per_term_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

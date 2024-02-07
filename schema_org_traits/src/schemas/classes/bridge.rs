@@ -1,6 +1,7 @@
 /// <https://schema.org/Bridge>
 pub trait FindBridgeIds {
 	type IdType;
+	/// <https://schema.org/Bridge>
 	fn find_bridge_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

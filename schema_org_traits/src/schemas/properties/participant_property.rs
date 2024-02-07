@@ -2,6 +2,7 @@
 pub trait GetParticipantProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/participant>
 	fn get_participant_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

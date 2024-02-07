@@ -1,6 +1,7 @@
 /// <https://schema.org/OrderAction>
 pub trait FindOrderActionIds {
 	type IdType;
+	/// <https://schema.org/OrderAction>
 	fn find_order_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

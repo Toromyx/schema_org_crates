@@ -2,6 +2,7 @@
 pub trait GetLearningResourceTypeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/learningResourceType>
 	fn get_learning_resource_type_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

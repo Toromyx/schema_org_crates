@@ -1,6 +1,7 @@
 /// <https://schema.org/Taxon>
 pub trait FindTaxonIds {
 	type IdType;
+	/// <https://schema.org/Taxon>
 	fn find_taxon_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

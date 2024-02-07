@@ -1,6 +1,7 @@
 /// <https://schema.org/True>
 pub trait FindTrueIds {
 	type IdType;
+	/// <https://schema.org/True>
 	fn find_true_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/FDAcategoryA>
 pub trait FindFdAcategoryAIds {
 	type IdType;
+	/// <https://schema.org/FDAcategoryA>
 	fn find_fd_acategory_a_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

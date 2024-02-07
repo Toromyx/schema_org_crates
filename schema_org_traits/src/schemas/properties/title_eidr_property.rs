@@ -2,6 +2,7 @@
 pub trait GetTitleEidrProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/titleEIDR>
 	fn get_title_eidr_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

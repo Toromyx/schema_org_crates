@@ -1,6 +1,7 @@
 /// <https://schema.org/DataFeedItem>
 pub trait FindDataFeedItemIds {
 	type IdType;
+	/// <https://schema.org/DataFeedItem>
 	fn find_data_feed_item_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

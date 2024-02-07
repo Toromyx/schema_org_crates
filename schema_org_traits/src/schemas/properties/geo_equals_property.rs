@@ -2,6 +2,7 @@
 pub trait GetGeoEqualsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/geoEquals>
 	fn get_geo_equals_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

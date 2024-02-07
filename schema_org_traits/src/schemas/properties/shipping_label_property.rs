@@ -2,6 +2,7 @@
 pub trait GetShippingLabelProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/shippingLabel>
 	fn get_shipping_label_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

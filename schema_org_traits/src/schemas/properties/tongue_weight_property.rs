@@ -2,6 +2,7 @@
 pub trait GetTongueWeightProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/tongueWeight>
 	fn get_tongue_weight_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

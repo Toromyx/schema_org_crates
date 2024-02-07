@@ -3,6 +3,7 @@
 pub trait GetBenefitsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/benefits>
 	#[deprecated = "This schema is superseded by <https://schema.org/jobBenefits>."]
 	fn get_benefits_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

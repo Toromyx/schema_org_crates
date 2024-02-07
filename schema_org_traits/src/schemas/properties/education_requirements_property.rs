@@ -2,6 +2,7 @@
 pub trait GetEducationRequirementsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/educationRequirements>
 	fn get_education_requirements_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetDeathPlaceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/deathPlace>
 	fn get_death_place_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

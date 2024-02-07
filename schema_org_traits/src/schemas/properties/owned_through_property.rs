@@ -2,6 +2,7 @@
 pub trait GetOwnedThroughProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/ownedThrough>
 	fn get_owned_through_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

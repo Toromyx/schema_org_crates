@@ -1,6 +1,7 @@
 /// <https://schema.org/DeliveryEvent>
 pub trait FindDeliveryEventIds {
 	type IdType;
+	/// <https://schema.org/DeliveryEvent>
 	fn find_delivery_event_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

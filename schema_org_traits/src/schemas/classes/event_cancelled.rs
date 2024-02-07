@@ -1,6 +1,7 @@
 /// <https://schema.org/EventCancelled>
 pub trait FindEventCancelledIds {
 	type IdType;
+	/// <https://schema.org/EventCancelled>
 	fn find_event_cancelled_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/ReimbursementCap>
 pub trait FindReimbursementCapIds {
 	type IdType;
+	/// <https://schema.org/ReimbursementCap>
 	fn find_reimbursement_cap_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

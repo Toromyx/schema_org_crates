@@ -2,6 +2,7 @@
 pub trait GetClinicalPharmacologyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/clinicalPharmacology>
 	fn get_clinical_pharmacology_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/EndorsementRating>
 pub trait FindEndorsementRatingIds {
 	type IdType;
+	/// <https://schema.org/EndorsementRating>
 	fn find_endorsement_rating_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/ReadAction>
 pub trait FindReadActionIds {
 	type IdType;
+	/// <https://schema.org/ReadAction>
 	fn find_read_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

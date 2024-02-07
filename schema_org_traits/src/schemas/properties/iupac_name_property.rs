@@ -2,6 +2,7 @@
 pub trait GetIupacNameProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/iupacName>
 	fn get_iupac_name_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

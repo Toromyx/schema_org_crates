@@ -1,6 +1,7 @@
 /// <https://schema.org/Endocrine>
 pub trait FindEndocrineIds {
 	type IdType;
+	/// <https://schema.org/Endocrine>
 	fn find_endocrine_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

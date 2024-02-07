@@ -2,6 +2,7 @@
 pub trait GetOrderStatusProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/orderStatus>
 	fn get_order_status_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

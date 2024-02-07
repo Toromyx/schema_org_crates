@@ -2,6 +2,7 @@
 #[deprecated = "This schema is superseded by <https://schema.org/CreativeWorkSeason>."]
 pub trait FindSeasonIds {
 	type IdType;
+	/// <https://schema.org/Season>
 	#[deprecated = "This schema is superseded by <https://schema.org/CreativeWorkSeason>."]
 	fn find_season_ids(&self) -> Vec<&Self::IdType>;
 }

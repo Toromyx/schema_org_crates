@@ -2,6 +2,7 @@
 pub trait GetParentServiceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/parentService>
 	fn get_parent_service_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

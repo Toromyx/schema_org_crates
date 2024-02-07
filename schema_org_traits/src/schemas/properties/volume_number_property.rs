@@ -2,6 +2,7 @@
 pub trait GetVolumeNumberProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/volumeNumber>
 	fn get_volume_number_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

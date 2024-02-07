@@ -1,6 +1,7 @@
 /// <https://schema.org/LiveBlogPosting>
 pub trait FindLiveBlogPostingIds {
 	type IdType;
+	/// <https://schema.org/LiveBlogPosting>
 	fn find_live_blog_posting_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetVerificationFactCheckingPolicyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/verificationFactCheckingPolicy>
 	fn get_verification_fact_checking_policy_property(
 		&self,
 		id: &Self::IdType,

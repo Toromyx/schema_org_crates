@@ -2,6 +2,7 @@
 pub trait GetLeaseLengthProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/leaseLength>
 	fn get_lease_length_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

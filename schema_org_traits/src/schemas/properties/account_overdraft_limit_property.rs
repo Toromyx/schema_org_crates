@@ -2,6 +2,7 @@
 pub trait GetAccountOverdraftLimitProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/accountOverdraftLimit>
 	fn get_account_overdraft_limit_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

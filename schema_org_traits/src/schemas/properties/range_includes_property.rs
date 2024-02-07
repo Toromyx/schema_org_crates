@@ -2,6 +2,7 @@
 pub trait GetRangeIncludesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/rangeIncludes>
 	fn get_range_includes_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

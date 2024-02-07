@@ -2,6 +2,7 @@
 pub trait GetOffersProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/offers>
 	fn get_offers_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

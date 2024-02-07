@@ -2,6 +2,7 @@
 pub trait GetInCodeSetProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/inCodeSet>
 	fn get_in_code_set_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

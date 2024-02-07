@@ -1,6 +1,7 @@
 /// <https://schema.org/Oncologic>
 pub trait FindOncologicIds {
 	type IdType;
+	/// <https://schema.org/Oncologic>
 	fn find_oncologic_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

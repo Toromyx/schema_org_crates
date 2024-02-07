@@ -1,6 +1,7 @@
 /// <https://schema.org/Playground>
 pub trait FindPlaygroundIds {
 	type IdType;
+	/// <https://schema.org/Playground>
 	fn find_playground_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

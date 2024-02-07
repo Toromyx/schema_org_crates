@@ -3,6 +3,7 @@
 pub trait GetVariablesMeasuredProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/variablesMeasured>
 	#[deprecated = "This schema is archived, see <https://schema.org/docs/attic.home.html>."]
 	fn get_variables_measured_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

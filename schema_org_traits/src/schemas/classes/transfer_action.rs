@@ -1,6 +1,7 @@
 /// <https://schema.org/TransferAction>
 pub trait FindTransferActionIds {
 	type IdType;
+	/// <https://schema.org/TransferAction>
 	fn find_transfer_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

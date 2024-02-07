@@ -1,6 +1,7 @@
 /// <https://schema.org/ListPrice>
 pub trait FindListPriceIds {
 	type IdType;
+	/// <https://schema.org/ListPrice>
 	fn find_list_price_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

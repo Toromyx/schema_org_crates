@@ -2,6 +2,7 @@
 pub trait GetMaximumAttendeeCapacityProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/maximumAttendeeCapacity>
 	fn get_maximum_attendee_capacity_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

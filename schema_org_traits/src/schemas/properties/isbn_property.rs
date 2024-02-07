@@ -2,6 +2,7 @@
 pub trait GetIsbnProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isbn>
 	fn get_isbn_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

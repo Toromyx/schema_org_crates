@@ -1,6 +1,7 @@
 /// <https://schema.org/VisualArtsEvent>
 pub trait FindVisualArtsEventIds {
 	type IdType;
+	/// <https://schema.org/VisualArtsEvent>
 	fn find_visual_arts_event_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/Mountain>
 pub trait FindMountainIds {
 	type IdType;
+	/// <https://schema.org/Mountain>
 	fn find_mountain_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

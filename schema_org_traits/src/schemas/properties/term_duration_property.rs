@@ -2,6 +2,7 @@
 pub trait GetTermDurationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/termDuration>
 	fn get_term_duration_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

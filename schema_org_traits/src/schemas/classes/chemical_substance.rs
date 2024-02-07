@@ -1,6 +1,7 @@
 /// <https://schema.org/ChemicalSubstance>
 pub trait FindChemicalSubstanceIds {
 	type IdType;
+	/// <https://schema.org/ChemicalSubstance>
 	fn find_chemical_substance_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

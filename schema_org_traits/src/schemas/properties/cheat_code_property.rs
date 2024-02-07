@@ -2,6 +2,7 @@
 pub trait GetCheatCodeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/cheatCode>
 	fn get_cheat_code_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

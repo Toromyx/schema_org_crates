@@ -1,6 +1,7 @@
 /// <https://schema.org/AuthorizeAction>
 pub trait FindAuthorizeActionIds {
 	type IdType;
+	/// <https://schema.org/AuthorizeAction>
 	fn find_authorize_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

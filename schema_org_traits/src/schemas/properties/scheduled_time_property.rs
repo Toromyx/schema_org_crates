@@ -2,6 +2,7 @@
 pub trait GetScheduledTimeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/scheduledTime>
 	fn get_scheduled_time_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

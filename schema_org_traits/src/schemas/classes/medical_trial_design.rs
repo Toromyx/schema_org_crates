@@ -1,6 +1,7 @@
 /// <https://schema.org/MedicalTrialDesign>
 pub trait FindMedicalTrialDesignIds {
 	type IdType;
+	/// <https://schema.org/MedicalTrialDesign>
 	fn find_medical_trial_design_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

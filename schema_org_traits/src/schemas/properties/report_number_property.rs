@@ -2,6 +2,7 @@
 pub trait GetReportNumberProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/reportNumber>
 	fn get_report_number_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

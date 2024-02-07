@@ -1,6 +1,7 @@
 /// <https://schema.org/Geriatric>
 pub trait FindGeriatricIds {
 	type IdType;
+	/// <https://schema.org/Geriatric>
 	fn find_geriatric_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

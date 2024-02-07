@@ -2,6 +2,7 @@
 pub trait GetEmissionsCo2Property {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/emissionsCO2>
 	fn get_emissions_co_2_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

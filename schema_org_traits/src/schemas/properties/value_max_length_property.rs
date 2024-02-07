@@ -2,6 +2,7 @@
 pub trait GetValueMaxLengthProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/valueMaxLength>
 	fn get_value_max_length_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetMaterialProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/material>
 	fn get_material_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

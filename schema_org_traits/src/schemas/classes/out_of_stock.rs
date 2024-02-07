@@ -1,6 +1,7 @@
 /// <https://schema.org/OutOfStock>
 pub trait FindOutOfStockIds {
 	type IdType;
+	/// <https://schema.org/OutOfStock>
 	fn find_out_of_stock_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetFiberContentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/fiberContent>
 	fn get_fiber_content_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/BackgroundNewsArticle>
 pub trait FindBackgroundNewsArticleIds {
 	type IdType;
+	/// <https://schema.org/BackgroundNewsArticle>
 	fn find_background_news_article_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

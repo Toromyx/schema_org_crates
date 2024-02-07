@@ -2,6 +2,7 @@
 pub trait GetBrokerProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/broker>
 	fn get_broker_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

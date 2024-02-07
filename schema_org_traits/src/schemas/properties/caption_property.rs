@@ -2,6 +2,7 @@
 pub trait GetCaptionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/caption>
 	fn get_caption_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

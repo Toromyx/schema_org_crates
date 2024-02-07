@@ -1,6 +1,7 @@
 /// <https://schema.org/MapCategoryType>
 pub trait FindMapCategoryTypeIds {
 	type IdType;
+	/// <https://schema.org/MapCategoryType>
 	fn find_map_category_type_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

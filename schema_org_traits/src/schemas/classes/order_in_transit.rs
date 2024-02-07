@@ -1,6 +1,7 @@
 /// <https://schema.org/OrderInTransit>
 pub trait FindOrderInTransitIds {
 	type IdType;
+	/// <https://schema.org/OrderInTransit>
 	fn find_order_in_transit_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

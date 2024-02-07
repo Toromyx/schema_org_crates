@@ -1,6 +1,7 @@
 /// <https://schema.org/LegalForceStatus>
 pub trait FindLegalForceStatusIds {
 	type IdType;
+	/// <https://schema.org/LegalForceStatus>
 	fn find_legal_force_status_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

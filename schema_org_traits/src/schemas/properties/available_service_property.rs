@@ -2,6 +2,7 @@
 pub trait GetAvailableServiceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/availableService>
 	fn get_available_service_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

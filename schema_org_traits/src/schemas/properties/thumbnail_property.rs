@@ -2,6 +2,7 @@
 pub trait GetThumbnailProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/thumbnail>
 	fn get_thumbnail_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

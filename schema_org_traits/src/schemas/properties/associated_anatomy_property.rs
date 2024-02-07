@@ -2,6 +2,7 @@
 pub trait GetAssociatedAnatomyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/associatedAnatomy>
 	fn get_associated_anatomy_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

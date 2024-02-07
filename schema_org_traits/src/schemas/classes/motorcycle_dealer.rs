@@ -1,6 +1,7 @@
 /// <https://schema.org/MotorcycleDealer>
 pub trait FindMotorcycleDealerIds {
 	type IdType;
+	/// <https://schema.org/MotorcycleDealer>
 	fn find_motorcycle_dealer_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

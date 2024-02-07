@@ -2,6 +2,7 @@
 pub trait GetDataFeedElementProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/dataFeedElement>
 	fn get_data_feed_element_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

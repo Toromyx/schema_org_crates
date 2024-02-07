@@ -1,6 +1,7 @@
 /// <https://schema.org/RadioChannel>
 pub trait FindRadioChannelIds {
 	type IdType;
+	/// <https://schema.org/RadioChannel>
 	fn find_radio_channel_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

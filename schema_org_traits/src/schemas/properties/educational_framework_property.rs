@@ -2,6 +2,7 @@
 pub trait GetEducationalFrameworkProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/educationalFramework>
 	fn get_educational_framework_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

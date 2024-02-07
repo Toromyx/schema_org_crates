@@ -1,6 +1,7 @@
 /// <https://schema.org/RealEstateListing>
 pub trait FindRealEstateListingIds {
 	type IdType;
+	/// <https://schema.org/RealEstateListing>
 	fn find_real_estate_listing_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

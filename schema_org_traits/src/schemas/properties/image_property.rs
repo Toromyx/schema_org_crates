@@ -2,6 +2,7 @@
 pub trait GetImageProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/image>
 	fn get_image_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

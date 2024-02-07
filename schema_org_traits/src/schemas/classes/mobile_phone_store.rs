@@ -1,6 +1,7 @@
 /// <https://schema.org/MobilePhoneStore>
 pub trait FindMobilePhoneStoreIds {
 	type IdType;
+	/// <https://schema.org/MobilePhoneStore>
 	fn find_mobile_phone_store_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

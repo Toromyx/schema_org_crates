@@ -2,6 +2,7 @@
 pub trait GetSchoolClosuresInfoProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/schoolClosuresInfo>
 	fn get_school_closures_info_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

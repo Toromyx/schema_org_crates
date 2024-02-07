@@ -1,6 +1,7 @@
 /// <https://schema.org/ReplaceAction>
 pub trait FindReplaceActionIds {
 	type IdType;
+	/// <https://schema.org/ReplaceAction>
 	fn find_replace_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

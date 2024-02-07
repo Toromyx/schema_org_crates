@@ -1,6 +1,7 @@
 /// <https://schema.org/MoveAction>
 pub trait FindMoveActionIds {
 	type IdType;
+	/// <https://schema.org/MoveAction>
 	fn find_move_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

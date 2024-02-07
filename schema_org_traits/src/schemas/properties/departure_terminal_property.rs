@@ -2,6 +2,7 @@
 pub trait GetDepartureTerminalProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/departureTerminal>
 	fn get_departure_terminal_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

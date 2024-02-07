@@ -2,6 +2,7 @@
 pub trait GetGtin13Property {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/gtin13>
 	fn get_gtin_13_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/AllergiesHealthAspect>
 pub trait FindAllergiesHealthAspectIds {
 	type IdType;
+	/// <https://schema.org/AllergiesHealthAspect>
 	fn find_allergies_health_aspect_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

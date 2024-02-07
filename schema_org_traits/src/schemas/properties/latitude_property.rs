@@ -2,6 +2,7 @@
 pub trait GetLatitudeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/latitude>
 	fn get_latitude_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

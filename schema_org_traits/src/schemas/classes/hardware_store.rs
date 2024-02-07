@@ -1,6 +1,7 @@
 /// <https://schema.org/HardwareStore>
 pub trait FindHardwareStoreIds {
 	type IdType;
+	/// <https://schema.org/HardwareStore>
 	fn find_hardware_store_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

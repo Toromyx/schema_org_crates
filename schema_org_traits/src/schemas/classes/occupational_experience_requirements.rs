@@ -1,6 +1,7 @@
 /// <https://schema.org/OccupationalExperienceRequirements>
 pub trait FindOccupationalExperienceRequirementsIds {
 	type IdType;
+	/// <https://schema.org/OccupationalExperienceRequirements>
 	fn find_occupational_experience_requirements_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

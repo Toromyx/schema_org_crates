@@ -2,6 +2,7 @@
 pub trait GetApplicantLocationRequirementsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/applicantLocationRequirements>
 	fn get_applicant_location_requirements_property(
 		&self,
 		id: &Self::IdType,

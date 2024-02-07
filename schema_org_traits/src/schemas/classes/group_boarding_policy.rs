@@ -1,6 +1,7 @@
 /// <https://schema.org/GroupBoardingPolicy>
 pub trait FindGroupBoardingPolicyIds {
 	type IdType;
+	/// <https://schema.org/GroupBoardingPolicy>
 	fn find_group_boarding_policy_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

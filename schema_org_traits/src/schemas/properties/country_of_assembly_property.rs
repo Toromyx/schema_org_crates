@@ -2,6 +2,7 @@
 pub trait GetCountryOfAssemblyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/countryOfAssembly>
 	fn get_country_of_assembly_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

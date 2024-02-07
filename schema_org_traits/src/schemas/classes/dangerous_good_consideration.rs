@@ -1,6 +1,7 @@
 /// <https://schema.org/DangerousGoodConsideration>
 pub trait FindDangerousGoodConsiderationIds {
 	type IdType;
+	/// <https://schema.org/DangerousGoodConsideration>
 	fn find_dangerous_good_consideration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

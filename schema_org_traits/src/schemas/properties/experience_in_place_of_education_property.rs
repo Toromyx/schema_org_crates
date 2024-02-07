@@ -2,6 +2,7 @@
 pub trait GetExperienceInPlaceOfEducationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/experienceInPlaceOfEducation>
 	fn get_experience_in_place_of_education_property(
 		&self,
 		id: &Self::IdType,

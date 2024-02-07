@@ -1,6 +1,7 @@
 /// <https://schema.org/ScreeningHealthAspect>
 pub trait FindScreeningHealthAspectIds {
 	type IdType;
+	/// <https://schema.org/ScreeningHealthAspect>
 	fn find_screening_health_aspect_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

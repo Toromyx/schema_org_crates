@@ -2,6 +2,7 @@
 pub trait GetAvailableDeliveryMethodProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/availableDeliveryMethod>
 	fn get_available_delivery_method_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

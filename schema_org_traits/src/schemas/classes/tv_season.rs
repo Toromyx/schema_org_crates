@@ -1,6 +1,7 @@
 /// <https://schema.org/TVSeason>
 pub trait FindTvSeasonIds {
 	type IdType;
+	/// <https://schema.org/TVSeason>
 	fn find_tv_season_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

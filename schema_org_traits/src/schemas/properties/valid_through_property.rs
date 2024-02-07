@@ -2,6 +2,7 @@
 pub trait GetValidThroughProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/validThrough>
 	fn get_valid_through_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/RemixAlbum>
 pub trait FindRemixAlbumIds {
 	type IdType;
+	/// <https://schema.org/RemixAlbum>
 	fn find_remix_album_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

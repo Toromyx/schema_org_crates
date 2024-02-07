@@ -2,6 +2,7 @@
 pub trait GetPrescribingInfoProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/prescribingInfo>
 	fn get_prescribing_info_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

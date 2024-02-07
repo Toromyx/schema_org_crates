@@ -1,6 +1,7 @@
 /// <https://schema.org/MonetaryGrant>
 pub trait FindMonetaryGrantIds {
 	type IdType;
+	/// <https://schema.org/MonetaryGrant>
 	fn find_monetary_grant_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/RefundTypeEnumeration>
 pub trait FindRefundTypeEnumerationIds {
 	type IdType;
+	/// <https://schema.org/RefundTypeEnumeration>
 	fn find_refund_type_enumeration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

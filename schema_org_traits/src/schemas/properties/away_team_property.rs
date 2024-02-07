@@ -2,6 +2,7 @@
 pub trait GetAwayTeamProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/awayTeam>
 	fn get_away_team_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

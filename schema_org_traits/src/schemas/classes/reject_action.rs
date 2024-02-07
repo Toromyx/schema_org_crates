@@ -1,6 +1,7 @@
 /// <https://schema.org/RejectAction>
 pub trait FindRejectActionIds {
 	type IdType;
+	/// <https://schema.org/RejectAction>
 	fn find_reject_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/SubscribeAction>
 pub trait FindSubscribeActionIds {
 	type IdType;
+	/// <https://schema.org/SubscribeAction>
 	fn find_subscribe_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

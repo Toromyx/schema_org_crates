@@ -2,6 +2,7 @@
 pub trait GetCreditedToProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/creditedTo>
 	fn get_credited_to_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

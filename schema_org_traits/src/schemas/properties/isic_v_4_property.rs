@@ -2,6 +2,7 @@
 pub trait GetIsicV4Property {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isicV4>
 	fn get_isic_v_4_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

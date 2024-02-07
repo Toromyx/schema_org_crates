@@ -3,6 +3,7 @@
 pub trait GetContainedInProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/containedIn>
 	#[deprecated = "This schema is superseded by <https://schema.org/containedInPlace>."]
 	fn get_contained_in_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

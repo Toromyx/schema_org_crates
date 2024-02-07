@@ -1,6 +1,7 @@
 /// <https://schema.org/DesktopWebPlatform>
 pub trait FindDesktopWebPlatformIds {
 	type IdType;
+	/// <https://schema.org/DesktopWebPlatform>
 	fn find_desktop_web_platform_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

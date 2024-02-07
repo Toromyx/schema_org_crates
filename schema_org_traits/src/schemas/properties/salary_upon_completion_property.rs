@@ -2,6 +2,7 @@
 pub trait GetSalaryUponCompletionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/salaryUponCompletion>
 	fn get_salary_upon_completion_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/DayOfWeek>
 pub trait FindDayOfWeekIds {
 	type IdType;
+	/// <https://schema.org/DayOfWeek>
 	fn find_day_of_week_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

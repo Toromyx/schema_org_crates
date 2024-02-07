@@ -2,6 +2,7 @@
 pub trait GetReplyToUrlProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/replyToUrl>
 	fn get_reply_to_url_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

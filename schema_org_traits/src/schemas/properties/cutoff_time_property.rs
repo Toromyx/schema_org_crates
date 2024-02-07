@@ -2,6 +2,7 @@
 pub trait GetCutoffTimeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/cutoffTime>
 	fn get_cutoff_time_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

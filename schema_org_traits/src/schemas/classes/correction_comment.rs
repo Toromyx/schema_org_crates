@@ -1,6 +1,7 @@
 /// <https://schema.org/CorrectionComment>
 pub trait FindCorrectionCommentIds {
 	type IdType;
+	/// <https://schema.org/CorrectionComment>
 	fn find_correction_comment_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetUsNpiProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/usNPI>
 	fn get_us_npi_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

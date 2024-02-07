@@ -1,6 +1,7 @@
 /// <https://schema.org/BusinessAudience>
 pub trait FindBusinessAudienceIds {
 	type IdType;
+	/// <https://schema.org/BusinessAudience>
 	fn find_business_audience_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

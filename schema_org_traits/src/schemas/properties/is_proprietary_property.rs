@@ -2,6 +2,7 @@
 pub trait GetIsProprietaryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isProprietary>
 	fn get_is_proprietary_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

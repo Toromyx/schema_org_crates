@@ -1,6 +1,7 @@
 /// <https://schema.org/CDCPMDRecord>
 pub trait FindCdcpmdRecordIds {
 	type IdType;
+	/// <https://schema.org/CDCPMDRecord>
 	fn find_cdcpmd_record_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

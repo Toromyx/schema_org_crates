@@ -1,6 +1,7 @@
 /// <https://schema.org/VisualArtwork>
 pub trait FindVisualArtworkIds {
 	type IdType;
+	/// <https://schema.org/VisualArtwork>
 	fn find_visual_artwork_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

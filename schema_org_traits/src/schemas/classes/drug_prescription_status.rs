@@ -1,6 +1,7 @@
 /// <https://schema.org/DrugPrescriptionStatus>
 pub trait FindDrugPrescriptionStatusIds {
 	type IdType;
+	/// <https://schema.org/DrugPrescriptionStatus>
 	fn find_drug_prescription_status_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

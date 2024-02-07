@@ -1,6 +1,7 @@
 /// <https://schema.org/AutoPartsStore>
 pub trait FindAutoPartsStoreIds {
 	type IdType;
+	/// <https://schema.org/AutoPartsStore>
 	fn find_auto_parts_store_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

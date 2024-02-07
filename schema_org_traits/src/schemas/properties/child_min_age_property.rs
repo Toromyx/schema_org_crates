@@ -2,6 +2,7 @@
 pub trait GetChildMinAgeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/childMinAge>
 	fn get_child_min_age_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

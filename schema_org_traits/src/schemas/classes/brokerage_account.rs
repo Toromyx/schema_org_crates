@@ -1,6 +1,7 @@
 /// <https://schema.org/BrokerageAccount>
 pub trait FindBrokerageAccountIds {
 	type IdType;
+	/// <https://schema.org/BrokerageAccount>
 	fn find_brokerage_account_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/CaseSeries>
 pub trait FindCaseSeriesIds {
 	type IdType;
+	/// <https://schema.org/CaseSeries>
 	fn find_case_series_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

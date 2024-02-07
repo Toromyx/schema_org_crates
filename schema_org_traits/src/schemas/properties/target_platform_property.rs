@@ -2,6 +2,7 @@
 pub trait GetTargetPlatformProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/targetPlatform>
 	fn get_target_platform_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

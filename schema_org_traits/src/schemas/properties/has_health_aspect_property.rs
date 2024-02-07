@@ -2,6 +2,7 @@
 pub trait GetHasHealthAspectProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasHealthAspect>
 	fn get_has_health_aspect_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

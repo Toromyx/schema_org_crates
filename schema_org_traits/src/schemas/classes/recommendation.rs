@@ -1,6 +1,7 @@
 /// <https://schema.org/Recommendation>
 pub trait FindRecommendationIds {
 	type IdType;
+	/// <https://schema.org/Recommendation>
 	fn find_recommendation_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

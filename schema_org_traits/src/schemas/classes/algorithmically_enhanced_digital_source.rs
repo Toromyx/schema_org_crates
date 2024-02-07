@@ -1,6 +1,7 @@
 /// <https://schema.org/AlgorithmicallyEnhancedDigitalSource>
 pub trait FindAlgorithmicallyEnhancedDigitalSourceIds {
 	type IdType;
+	/// <https://schema.org/AlgorithmicallyEnhancedDigitalSource>
 	fn find_algorithmically_enhanced_digital_source_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/EmploymentAgency>
 pub trait FindEmploymentAgencyIds {
 	type IdType;
+	/// <https://schema.org/EmploymentAgency>
 	fn find_employment_agency_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetSuggestedAgeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/suggestedAge>
 	fn get_suggested_age_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

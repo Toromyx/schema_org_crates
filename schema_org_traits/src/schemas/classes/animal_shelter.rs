@@ -1,6 +1,7 @@
 /// <https://schema.org/AnimalShelter>
 pub trait FindAnimalShelterIds {
 	type IdType;
+	/// <https://schema.org/AnimalShelter>
 	fn find_animal_shelter_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

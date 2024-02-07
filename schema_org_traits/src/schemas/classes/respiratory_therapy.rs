@@ -1,6 +1,7 @@
 /// <https://schema.org/RespiratoryTherapy>
 pub trait FindRespiratoryTherapyIds {
 	type IdType;
+	/// <https://schema.org/RespiratoryTherapy>
 	fn find_respiratory_therapy_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetNumberOfBathroomsTotalProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/numberOfBathroomsTotal>
 	fn get_number_of_bathrooms_total_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

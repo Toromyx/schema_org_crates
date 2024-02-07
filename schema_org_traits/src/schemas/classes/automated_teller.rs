@@ -1,6 +1,7 @@
 /// <https://schema.org/AutomatedTeller>
 pub trait FindAutomatedTellerIds {
 	type IdType;
+	/// <https://schema.org/AutomatedTeller>
 	fn find_automated_teller_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

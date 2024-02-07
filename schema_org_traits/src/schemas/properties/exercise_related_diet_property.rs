@@ -2,6 +2,7 @@
 pub trait GetExerciseRelatedDietProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/exerciseRelatedDiet>
 	fn get_exercise_related_diet_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

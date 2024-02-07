@@ -1,6 +1,7 @@
 /// <https://schema.org/BodyMeasurementHeight>
 pub trait FindBodyMeasurementHeightIds {
 	type IdType;
+	/// <https://schema.org/BodyMeasurementHeight>
 	fn find_body_measurement_height_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

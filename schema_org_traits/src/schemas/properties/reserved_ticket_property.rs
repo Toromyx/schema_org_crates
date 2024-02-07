@@ -2,6 +2,7 @@
 pub trait GetReservedTicketProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/reservedTicket>
 	fn get_reserved_ticket_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

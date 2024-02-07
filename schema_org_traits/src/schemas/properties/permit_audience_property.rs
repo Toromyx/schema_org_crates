@@ -2,6 +2,7 @@
 pub trait GetPermitAudienceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/permitAudience>
 	fn get_permit_audience_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

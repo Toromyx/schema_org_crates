@@ -3,6 +3,7 @@
 pub trait GetNamedPositionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/namedPosition>
 	#[deprecated = "This schema is superseded by <https://schema.org/roleName>."]
 	fn get_named_position_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

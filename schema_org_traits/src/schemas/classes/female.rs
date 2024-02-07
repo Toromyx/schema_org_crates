@@ -1,6 +1,7 @@
 /// <https://schema.org/Female>
 pub trait FindFemaleIds {
 	type IdType;
+	/// <https://schema.org/Female>
 	fn find_female_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

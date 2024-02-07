@@ -1,6 +1,7 @@
 /// <https://schema.org/UsedCondition>
 pub trait FindUsedConditionIds {
 	type IdType;
+	/// <https://schema.org/UsedCondition>
 	fn find_used_condition_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

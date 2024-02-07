@@ -2,6 +2,7 @@
 pub trait GetAnnualPercentageRateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/annualPercentageRate>
 	fn get_annual_percentage_rate_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

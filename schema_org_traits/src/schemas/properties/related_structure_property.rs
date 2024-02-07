@@ -2,6 +2,7 @@
 pub trait GetRelatedStructureProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/relatedStructure>
 	fn get_related_structure_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

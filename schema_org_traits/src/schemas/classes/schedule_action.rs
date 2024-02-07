@@ -1,6 +1,7 @@
 /// <https://schema.org/ScheduleAction>
 pub trait FindScheduleActionIds {
 	type IdType;
+	/// <https://schema.org/ScheduleAction>
 	fn find_schedule_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

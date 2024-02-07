@@ -2,6 +2,7 @@
 pub trait GetIsPartOfBioChemEntityProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isPartOfBioChemEntity>
 	fn get_is_part_of_bio_chem_entity_property(
 		&self,
 		id: &Self::IdType,

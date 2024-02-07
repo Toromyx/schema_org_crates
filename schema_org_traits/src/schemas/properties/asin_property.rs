@@ -2,6 +2,7 @@
 pub trait GetAsinProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/asin>
 	fn get_asin_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

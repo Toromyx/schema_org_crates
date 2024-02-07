@@ -2,6 +2,7 @@
 pub trait GetPrintEditionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/printEdition>
 	fn get_print_edition_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

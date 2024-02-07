@@ -1,6 +1,7 @@
 /// <https://schema.org/HealthPlanNetwork>
 pub trait FindHealthPlanNetworkIds {
 	type IdType;
+	/// <https://schema.org/HealthPlanNetwork>
 	fn find_health_plan_network_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

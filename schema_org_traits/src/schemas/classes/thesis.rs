@@ -1,6 +1,7 @@
 /// <https://schema.org/Thesis>
 pub trait FindThesisIds {
 	type IdType;
+	/// <https://schema.org/Thesis>
 	fn find_thesis_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

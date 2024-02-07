@@ -3,6 +3,7 @@
 pub trait GetAspectProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/aspect>
 	#[deprecated = "This schema is superseded by <https://schema.org/mainContentOfPage>."]
 	fn get_aspect_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

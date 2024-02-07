@@ -2,6 +2,7 @@
 pub trait GetExpectsAcceptanceOfProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/expectsAcceptanceOf>
 	fn get_expects_acceptance_of_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

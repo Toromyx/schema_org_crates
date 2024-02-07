@@ -2,6 +2,7 @@
 pub trait GetDosageFormProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/dosageForm>
 	fn get_dosage_form_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

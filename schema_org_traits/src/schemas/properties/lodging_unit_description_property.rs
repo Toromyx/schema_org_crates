@@ -2,6 +2,7 @@
 pub trait GetLodgingUnitDescriptionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/lodgingUnitDescription>
 	fn get_lodging_unit_description_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

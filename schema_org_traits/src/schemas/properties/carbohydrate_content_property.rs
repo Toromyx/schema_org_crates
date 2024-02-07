@@ -2,6 +2,7 @@
 pub trait GetCarbohydrateContentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/carbohydrateContent>
 	fn get_carbohydrate_content_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

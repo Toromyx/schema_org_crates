@@ -1,6 +1,7 @@
 /// <https://schema.org/Hardcover>
 pub trait FindHardcoverIds {
 	type IdType;
+	/// <https://schema.org/Hardcover>
 	fn find_hardcover_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

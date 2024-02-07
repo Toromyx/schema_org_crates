@@ -1,6 +1,7 @@
 /// <https://schema.org/Virus>
 pub trait FindVirusIds {
 	type IdType;
+	/// <https://schema.org/Virus>
 	fn find_virus_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

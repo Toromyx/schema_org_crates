@@ -1,6 +1,7 @@
 /// <https://schema.org/AdministrativeArea>
 pub trait FindAdministrativeAreaIds {
 	type IdType;
+	/// <https://schema.org/AdministrativeArea>
 	fn find_administrative_area_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetInSupportOfProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/inSupportOf>
 	fn get_in_support_of_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

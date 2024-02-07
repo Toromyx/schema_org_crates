@@ -3,6 +3,7 @@
 pub trait GetAlbumsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/albums>
 	#[deprecated = "This schema is superseded by <https://schema.org/album>."]
 	fn get_albums_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

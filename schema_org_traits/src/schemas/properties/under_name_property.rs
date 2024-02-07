@@ -2,6 +2,7 @@
 pub trait GetUnderNameProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/underName>
 	fn get_under_name_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

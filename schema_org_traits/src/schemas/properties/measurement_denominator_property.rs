@@ -2,6 +2,7 @@
 pub trait GetMeasurementDenominatorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/measurementDenominator>
 	fn get_measurement_denominator_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetTotalJobOpeningsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/totalJobOpenings>
 	fn get_total_job_openings_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

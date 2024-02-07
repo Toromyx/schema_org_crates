@@ -2,6 +2,7 @@
 pub trait GetPrintSectionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/printSection>
 	fn get_print_section_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/AnalysisNewsArticle>
 pub trait FindAnalysisNewsArticleIds {
 	type IdType;
+	/// <https://schema.org/AnalysisNewsArticle>
 	fn find_analysis_news_article_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

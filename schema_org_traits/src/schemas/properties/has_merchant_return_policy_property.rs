@@ -2,6 +2,7 @@
 pub trait GetHasMerchantReturnPolicyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasMerchantReturnPolicy>
 	fn get_has_merchant_return_policy_property(
 		&self,
 		id: &Self::IdType,

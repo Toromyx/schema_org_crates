@@ -2,6 +2,7 @@
 pub trait GetOrderedItemProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/orderedItem>
 	fn get_ordered_item_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

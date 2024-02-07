@@ -2,6 +2,7 @@
 pub trait GetEmbeddedTextCaptionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/embeddedTextCaption>
 	fn get_embedded_text_caption_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

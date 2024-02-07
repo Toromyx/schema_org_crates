@@ -1,6 +1,7 @@
 /// <https://schema.org/Boolean>
 pub trait FindBooleanIds {
 	type IdType;
+	/// <https://schema.org/Boolean>
 	fn find_boolean_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

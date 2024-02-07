@@ -1,6 +1,7 @@
 /// <https://schema.org/MedicalIntangible>
 pub trait FindMedicalIntangibleIds {
 	type IdType;
+	/// <https://schema.org/MedicalIntangible>
 	fn find_medical_intangible_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

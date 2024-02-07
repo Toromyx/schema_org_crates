@@ -2,6 +2,7 @@
 pub trait GetEventScheduleProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/eventSchedule>
 	fn get_event_schedule_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

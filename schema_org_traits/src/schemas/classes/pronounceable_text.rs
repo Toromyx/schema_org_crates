@@ -1,6 +1,7 @@
 /// <https://schema.org/PronounceableText>
 pub trait FindPronounceableTextIds {
 	type IdType;
+	/// <https://schema.org/PronounceableText>
 	fn find_pronounceable_text_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

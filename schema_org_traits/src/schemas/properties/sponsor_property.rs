@@ -2,6 +2,7 @@
 pub trait GetSponsorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/sponsor>
 	fn get_sponsor_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

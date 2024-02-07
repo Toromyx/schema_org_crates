@@ -1,6 +1,7 @@
 /// <https://schema.org/DriveWheelConfigurationValue>
 pub trait FindDriveWheelConfigurationValueIds {
 	type IdType;
+	/// <https://schema.org/DriveWheelConfigurationValue>
 	fn find_drive_wheel_configuration_value_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

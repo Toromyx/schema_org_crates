@@ -2,6 +2,7 @@
 pub trait GetIsPartOfProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isPartOf>
 	fn get_is_part_of_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

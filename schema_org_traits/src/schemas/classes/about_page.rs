@@ -1,6 +1,7 @@
 /// <https://schema.org/AboutPage>
 pub trait FindAboutPageIds {
 	type IdType;
+	/// <https://schema.org/AboutPage>
 	fn find_about_page_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

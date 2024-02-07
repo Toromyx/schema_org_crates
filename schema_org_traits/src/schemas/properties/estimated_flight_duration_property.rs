@@ -2,6 +2,7 @@
 pub trait GetEstimatedFlightDurationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/estimatedFlightDuration>
 	fn get_estimated_flight_duration_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

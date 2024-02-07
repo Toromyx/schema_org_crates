@@ -2,6 +2,7 @@
 pub trait GetLegislationDateVersionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/legislationDateVersion>
 	fn get_legislation_date_version_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

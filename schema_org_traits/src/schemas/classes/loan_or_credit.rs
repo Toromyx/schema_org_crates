@@ -1,6 +1,7 @@
 /// <https://schema.org/LoanOrCredit>
 pub trait FindLoanOrCreditIds {
 	type IdType;
+	/// <https://schema.org/LoanOrCredit>
 	fn find_loan_or_credit_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

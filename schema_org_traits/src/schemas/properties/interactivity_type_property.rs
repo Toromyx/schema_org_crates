@@ -2,6 +2,7 @@
 pub trait GetInteractivityTypeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/interactivityType>
 	fn get_interactivity_type_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

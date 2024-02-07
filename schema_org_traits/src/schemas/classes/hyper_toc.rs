@@ -1,6 +1,7 @@
 /// <https://schema.org/HyperToc>
 pub trait FindHyperTocIds {
 	type IdType;
+	/// <https://schema.org/HyperToc>
 	fn find_hyper_toc_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

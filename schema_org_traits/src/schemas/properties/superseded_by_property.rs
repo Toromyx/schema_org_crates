@@ -2,6 +2,7 @@
 pub trait GetSupersededByProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/supersededBy>
 	fn get_superseded_by_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

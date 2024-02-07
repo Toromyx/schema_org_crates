@@ -2,6 +2,7 @@
 pub trait GetDepartureGateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/departureGate>
 	fn get_departure_gate_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

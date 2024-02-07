@@ -1,6 +1,7 @@
 /// <https://schema.org/Otolaryngologic>
 pub trait FindOtolaryngologicIds {
 	type IdType;
+	/// <https://schema.org/Otolaryngologic>
 	fn find_otolaryngologic_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 #[deprecated = "This schema is superseded by <https://schema.org/SoftwareSourceCode>."]
 pub trait FindCodeIds {
 	type IdType;
+	/// <https://schema.org/Code>
 	#[deprecated = "This schema is superseded by <https://schema.org/SoftwareSourceCode>."]
 	fn find_code_ids(&self) -> Vec<&Self::IdType>;
 }

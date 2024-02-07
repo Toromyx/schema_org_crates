@@ -2,6 +2,7 @@
 pub trait GetTypicalTestProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/typicalTest>
 	fn get_typical_test_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

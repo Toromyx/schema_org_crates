@@ -2,6 +2,7 @@
 pub trait GetReferenceQuantityProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/referenceQuantity>
 	fn get_reference_quantity_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

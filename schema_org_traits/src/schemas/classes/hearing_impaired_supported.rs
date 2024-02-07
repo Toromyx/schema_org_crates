@@ -1,6 +1,7 @@
 /// <https://schema.org/HearingImpairedSupported>
 pub trait FindHearingImpairedSupportedIds {
 	type IdType;
+	/// <https://schema.org/HearingImpairedSupported>
 	fn find_hearing_impaired_supported_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

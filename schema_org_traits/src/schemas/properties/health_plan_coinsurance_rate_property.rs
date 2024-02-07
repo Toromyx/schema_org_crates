@@ -2,6 +2,7 @@
 pub trait GetHealthPlanCoinsuranceRateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/healthPlanCoinsuranceRate>
 	fn get_health_plan_coinsurance_rate_property(
 		&self,
 		id: &Self::IdType,

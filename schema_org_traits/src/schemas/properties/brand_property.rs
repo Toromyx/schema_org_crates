@@ -2,6 +2,7 @@
 pub trait GetBrandProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/brand>
 	fn get_brand_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

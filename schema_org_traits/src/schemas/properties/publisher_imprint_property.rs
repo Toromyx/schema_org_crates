@@ -2,6 +2,7 @@
 pub trait GetPublisherImprintProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/publisherImprint>
 	fn get_publisher_imprint_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/PodcastSeries>
 pub trait FindPodcastSeriesIds {
 	type IdType;
+	/// <https://schema.org/PodcastSeries>
 	fn find_podcast_series_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

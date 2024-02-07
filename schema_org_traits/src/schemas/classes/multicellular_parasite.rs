@@ -1,6 +1,7 @@
 /// <https://schema.org/MulticellularParasite>
 pub trait FindMulticellularParasiteIds {
 	type IdType;
+	/// <https://schema.org/MulticellularParasite>
 	fn find_multicellular_parasite_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

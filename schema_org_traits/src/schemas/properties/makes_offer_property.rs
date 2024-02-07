@@ -2,6 +2,7 @@
 pub trait GetMakesOfferProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/makesOffer>
 	fn get_makes_offer_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

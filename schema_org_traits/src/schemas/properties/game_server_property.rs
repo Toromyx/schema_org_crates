@@ -2,6 +2,7 @@
 pub trait GetGameServerProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/gameServer>
 	fn get_game_server_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/OpenTrial>
 pub trait FindOpenTrialIds {
 	type IdType;
+	/// <https://schema.org/OpenTrial>
 	fn find_open_trial_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

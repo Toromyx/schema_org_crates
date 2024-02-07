@@ -1,6 +1,7 @@
 /// <https://schema.org/CreativeWorkSeason>
 pub trait FindCreativeWorkSeasonIds {
 	type IdType;
+	/// <https://schema.org/CreativeWorkSeason>
 	fn find_creative_work_season_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

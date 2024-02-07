@@ -2,6 +2,7 @@
 pub trait GetRemainingAttendeeCapacityProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/remainingAttendeeCapacity>
 	fn get_remaining_attendee_capacity_property(
 		&self,
 		id: &Self::IdType,

@@ -1,6 +1,7 @@
 /// <https://schema.org/CommentAction>
 pub trait FindCommentActionIds {
 	type IdType;
+	/// <https://schema.org/CommentAction>
 	fn find_comment_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

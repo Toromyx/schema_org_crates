@@ -2,6 +2,7 @@
 pub trait GetInStoreReturnsOfferedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/inStoreReturnsOffered>
 	fn get_in_store_returns_offered_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

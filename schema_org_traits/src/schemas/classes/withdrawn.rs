@@ -1,6 +1,7 @@
 /// <https://schema.org/Withdrawn>
 pub trait FindWithdrawnIds {
 	type IdType;
+	/// <https://schema.org/Withdrawn>
 	fn find_withdrawn_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

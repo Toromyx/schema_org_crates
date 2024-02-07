@@ -2,6 +2,7 @@
 pub trait GetFirstPerformanceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/firstPerformance>
 	fn get_first_performance_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

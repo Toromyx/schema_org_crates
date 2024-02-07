@@ -2,6 +2,7 @@
 pub trait GetTripOriginProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/tripOrigin>
 	fn get_trip_origin_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

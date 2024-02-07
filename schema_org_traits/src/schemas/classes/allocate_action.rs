@@ -1,6 +1,7 @@
 /// <https://schema.org/AllocateAction>
 pub trait FindAllocateActionIds {
 	type IdType;
+	/// <https://schema.org/AllocateAction>
 	fn find_allocate_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

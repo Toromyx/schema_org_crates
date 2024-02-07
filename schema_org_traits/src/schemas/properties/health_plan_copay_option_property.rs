@@ -2,6 +2,7 @@
 pub trait GetHealthPlanCopayOptionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/healthPlanCopayOption>
 	fn get_health_plan_copay_option_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

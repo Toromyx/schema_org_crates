@@ -1,6 +1,7 @@
 /// <https://schema.org/ComputerLanguage>
 pub trait FindComputerLanguageIds {
 	type IdType;
+	/// <https://schema.org/ComputerLanguage>
 	fn find_computer_language_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

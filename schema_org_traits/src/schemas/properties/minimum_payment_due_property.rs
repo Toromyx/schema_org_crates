@@ -2,6 +2,7 @@
 pub trait GetMinimumPaymentDueProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/minimumPaymentDue>
 	fn get_minimum_payment_due_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -3,6 +3,7 @@
 pub trait GetInteractionCountProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/interactionCount>
 	#[deprecated = "This schema is superseded by <https://schema.org/interactionStatistic>."]
 	fn get_interaction_count_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

@@ -2,6 +2,7 @@
 #[deprecated = "This schema is superseded by <https://schema.org/TaxiService>."]
 pub trait FindTaxiIds {
 	type IdType;
+	/// <https://schema.org/Taxi>
 	#[deprecated = "This schema is superseded by <https://schema.org/TaxiService>."]
 	fn find_taxi_ids(&self) -> Vec<&Self::IdType>;
 }

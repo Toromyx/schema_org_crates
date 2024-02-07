@@ -1,6 +1,7 @@
 /// <https://schema.org/ProductModel>
 pub trait FindProductModelIds {
 	type IdType;
+	/// <https://schema.org/ProductModel>
 	fn find_product_model_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

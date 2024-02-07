@@ -1,6 +1,7 @@
 /// <https://schema.org/DrugCostCategory>
 pub trait FindDrugCostCategoryIds {
 	type IdType;
+	/// <https://schema.org/DrugCostCategory>
 	fn find_drug_cost_category_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

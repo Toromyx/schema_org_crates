@@ -2,6 +2,7 @@
 pub trait GetCustomerRemorseReturnLabelSourceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/customerRemorseReturnLabelSource>
 	fn get_customer_remorse_return_label_source_property(
 		&self,
 		id: &Self::IdType,

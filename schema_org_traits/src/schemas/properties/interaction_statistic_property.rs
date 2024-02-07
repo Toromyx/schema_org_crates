@@ -2,6 +2,7 @@
 pub trait GetInteractionStatisticProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/interactionStatistic>
 	fn get_interaction_statistic_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

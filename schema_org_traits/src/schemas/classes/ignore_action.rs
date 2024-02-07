@@ -1,6 +1,7 @@
 /// <https://schema.org/IgnoreAction>
 pub trait FindIgnoreActionIds {
 	type IdType;
+	/// <https://schema.org/IgnoreAction>
 	fn find_ignore_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

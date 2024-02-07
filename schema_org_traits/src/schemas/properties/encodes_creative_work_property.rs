@@ -2,6 +2,7 @@
 pub trait GetEncodesCreativeWorkProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/encodesCreativeWork>
 	fn get_encodes_creative_work_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

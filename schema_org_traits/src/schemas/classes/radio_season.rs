@@ -1,6 +1,7 @@
 /// <https://schema.org/RadioSeason>
 pub trait FindRadioSeasonIds {
 	type IdType;
+	/// <https://schema.org/RadioSeason>
 	fn find_radio_season_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

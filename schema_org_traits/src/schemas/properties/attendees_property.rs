@@ -3,6 +3,7 @@
 pub trait GetAttendeesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/attendees>
 	#[deprecated = "This schema is superseded by <https://schema.org/attendee>."]
 	fn get_attendees_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

@@ -2,6 +2,7 @@
 pub trait GetSoftwareAddOnProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/softwareAddOn>
 	fn get_software_add_on_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

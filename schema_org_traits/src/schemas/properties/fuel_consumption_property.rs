@@ -2,6 +2,7 @@
 pub trait GetFuelConsumptionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/fuelConsumption>
 	fn get_fuel_consumption_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

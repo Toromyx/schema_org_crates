@@ -1,6 +1,7 @@
 /// <https://schema.org/FullRefund>
 pub trait FindFullRefundIds {
 	type IdType;
+	/// <https://schema.org/FullRefund>
 	fn find_full_refund_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

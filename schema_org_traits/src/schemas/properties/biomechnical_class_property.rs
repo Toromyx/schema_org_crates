@@ -2,6 +2,7 @@
 pub trait GetBiomechnicalClassProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/biomechnicalClass>
 	fn get_biomechnical_class_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

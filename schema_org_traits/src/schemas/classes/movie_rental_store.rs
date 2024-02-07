@@ -1,6 +1,7 @@
 /// <https://schema.org/MovieRentalStore>
 pub trait FindMovieRentalStoreIds {
 	type IdType;
+	/// <https://schema.org/MovieRentalStore>
 	fn find_movie_rental_store_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetMeetsEmissionStandardProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/meetsEmissionStandard>
 	fn get_meets_emission_standard_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

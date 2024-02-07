@@ -2,6 +2,7 @@
 pub trait GetAccountIdProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/accountId>
 	fn get_account_id_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

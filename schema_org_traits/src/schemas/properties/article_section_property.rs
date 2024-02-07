@@ -2,6 +2,7 @@
 pub trait GetArticleSectionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/articleSection>
 	fn get_article_section_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

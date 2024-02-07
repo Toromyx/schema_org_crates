@@ -2,6 +2,7 @@
 pub trait GetLoanMortgageMandateAmountProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/loanMortgageMandateAmount>
 	fn get_loan_mortgage_mandate_amount_property(
 		&self,
 		id: &Self::IdType,

@@ -2,6 +2,7 @@
 pub trait GetFollowupProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/followup>
 	fn get_followup_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

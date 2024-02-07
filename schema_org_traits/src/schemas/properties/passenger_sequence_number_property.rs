@@ -2,6 +2,7 @@
 pub trait GetPassengerSequenceNumberProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/passengerSequenceNumber>
 	fn get_passenger_sequence_number_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

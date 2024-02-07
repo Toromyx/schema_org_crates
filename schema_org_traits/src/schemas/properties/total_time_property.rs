@@ -2,6 +2,7 @@
 pub trait GetTotalTimeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/totalTime>
 	fn get_total_time_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

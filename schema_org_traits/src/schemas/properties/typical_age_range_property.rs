@@ -2,6 +2,7 @@
 pub trait GetTypicalAgeRangeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/typicalAgeRange>
 	fn get_typical_age_range_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetWorkloadProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/workload>
 	fn get_workload_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

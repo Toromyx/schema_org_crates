@@ -1,6 +1,7 @@
 /// <https://schema.org/UKTrust>
 pub trait FindUkTrustIds {
 	type IdType;
+	/// <https://schema.org/UKTrust>
 	fn find_uk_trust_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

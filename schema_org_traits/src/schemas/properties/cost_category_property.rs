@@ -2,6 +2,7 @@
 pub trait GetCostCategoryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/costCategory>
 	fn get_cost_category_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

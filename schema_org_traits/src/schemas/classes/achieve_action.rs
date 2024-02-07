@@ -1,6 +1,7 @@
 /// <https://schema.org/AchieveAction>
 pub trait FindAchieveActionIds {
 	type IdType;
+	/// <https://schema.org/AchieveAction>
 	fn find_achieve_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

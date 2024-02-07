@@ -2,6 +2,7 @@
 pub trait GetAlgorithmProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/algorithm>
 	fn get_algorithm_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

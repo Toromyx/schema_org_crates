@@ -1,6 +1,7 @@
 /// <https://schema.org/DigitalFormat>
 pub trait FindDigitalFormatIds {
 	type IdType;
+	/// <https://schema.org/DigitalFormat>
 	fn find_digital_format_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

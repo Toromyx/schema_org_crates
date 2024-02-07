@@ -2,6 +2,7 @@
 pub trait GetPostalCodeBeginProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/postalCodeBegin>
 	fn get_postal_code_begin_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

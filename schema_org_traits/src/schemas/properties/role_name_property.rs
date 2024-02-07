@@ -2,6 +2,7 @@
 pub trait GetRoleNameProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/roleName>
 	fn get_role_name_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

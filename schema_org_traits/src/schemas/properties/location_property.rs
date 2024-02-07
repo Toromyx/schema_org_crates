@@ -2,6 +2,7 @@
 pub trait GetLocationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/location>
 	fn get_location_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

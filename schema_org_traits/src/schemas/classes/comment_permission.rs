@@ -1,6 +1,7 @@
 /// <https://schema.org/CommentPermission>
 pub trait FindCommentPermissionIds {
 	type IdType;
+	/// <https://schema.org/CommentPermission>
 	fn find_comment_permission_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

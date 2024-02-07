@@ -2,6 +2,7 @@
 pub trait GetIsResizableProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isResizable>
 	fn get_is_resizable_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

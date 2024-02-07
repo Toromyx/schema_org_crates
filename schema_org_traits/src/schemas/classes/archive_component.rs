@@ -1,6 +1,7 @@
 /// <https://schema.org/ArchiveComponent>
 pub trait FindArchiveComponentIds {
 	type IdType;
+	/// <https://schema.org/ArchiveComponent>
 	fn find_archive_component_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

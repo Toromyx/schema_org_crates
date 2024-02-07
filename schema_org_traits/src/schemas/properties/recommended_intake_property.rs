@@ -2,6 +2,7 @@
 pub trait GetRecommendedIntakeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/recommendedIntake>
 	fn get_recommended_intake_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetSubjectOfProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/subjectOf>
 	fn get_subject_of_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

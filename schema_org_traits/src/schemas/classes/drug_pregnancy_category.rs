@@ -1,6 +1,7 @@
 /// <https://schema.org/DrugPregnancyCategory>
 pub trait FindDrugPregnancyCategoryIds {
 	type IdType;
+	/// <https://schema.org/DrugPregnancyCategory>
 	fn find_drug_pregnancy_category_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

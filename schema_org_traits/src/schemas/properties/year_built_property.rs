@@ -2,6 +2,7 @@
 pub trait GetYearBuiltProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/yearBuilt>
 	fn get_year_built_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

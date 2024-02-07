@@ -1,6 +1,7 @@
 /// <https://schema.org/DataDownload>
 pub trait FindDataDownloadIds {
 	type IdType;
+	/// <https://schema.org/DataDownload>
 	fn find_data_download_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

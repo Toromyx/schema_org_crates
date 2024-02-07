@@ -2,6 +2,7 @@
 pub trait GetExpectedPrognosisProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/expectedPrognosis>
 	fn get_expected_prognosis_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

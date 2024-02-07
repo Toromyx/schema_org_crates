@@ -1,6 +1,7 @@
 /// <https://schema.org/ZoneBoardingPolicy>
 pub trait FindZoneBoardingPolicyIds {
 	type IdType;
+	/// <https://schema.org/ZoneBoardingPolicy>
 	fn find_zone_boarding_policy_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

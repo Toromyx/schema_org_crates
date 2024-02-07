@@ -2,6 +2,7 @@
 pub trait GetArrivalBoatTerminalProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/arrivalBoatTerminal>
 	fn get_arrival_boat_terminal_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

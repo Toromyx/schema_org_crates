@@ -1,6 +1,7 @@
 /// <https://schema.org/Chiropractic>
 pub trait FindChiropracticIds {
 	type IdType;
+	/// <https://schema.org/Chiropractic>
 	fn find_chiropractic_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

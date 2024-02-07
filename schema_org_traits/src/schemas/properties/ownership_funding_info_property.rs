@@ -2,6 +2,7 @@
 pub trait GetOwnershipFundingInfoProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/ownershipFundingInfo>
 	fn get_ownership_funding_info_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

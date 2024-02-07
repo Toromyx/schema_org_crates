@@ -2,6 +2,7 @@
 pub trait GetCarrierRequirementsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/carrierRequirements>
 	fn get_carrier_requirements_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

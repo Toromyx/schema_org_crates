@@ -2,6 +2,7 @@
 pub trait GetStartDateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/startDate>
 	fn get_start_date_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -3,6 +3,7 @@
 pub trait GetSiblingsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/siblings>
 	#[deprecated = "This schema is superseded by <https://schema.org/sibling>."]
 	fn get_siblings_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

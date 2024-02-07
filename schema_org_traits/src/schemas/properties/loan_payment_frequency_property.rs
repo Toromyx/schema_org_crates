@@ -2,6 +2,7 @@
 pub trait GetLoanPaymentFrequencyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/loanPaymentFrequency>
 	fn get_loan_payment_frequency_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

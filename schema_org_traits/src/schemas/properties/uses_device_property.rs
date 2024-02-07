@@ -2,6 +2,7 @@
 pub trait GetUsesDeviceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/usesDevice>
 	fn get_uses_device_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

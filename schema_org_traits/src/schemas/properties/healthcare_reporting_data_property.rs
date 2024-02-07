@@ -2,6 +2,7 @@
 pub trait GetHealthcareReportingDataProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/healthcareReportingData>
 	fn get_healthcare_reporting_data_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

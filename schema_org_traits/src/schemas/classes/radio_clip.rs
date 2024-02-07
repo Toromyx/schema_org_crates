@@ -1,6 +1,7 @@
 /// <https://schema.org/RadioClip>
 pub trait FindRadioClipIds {
 	type IdType;
+	/// <https://schema.org/RadioClip>
 	fn find_radio_clip_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

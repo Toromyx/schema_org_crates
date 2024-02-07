@@ -2,6 +2,7 @@
 pub trait GetJobImmediateStartProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/jobImmediateStart>
 	fn get_job_immediate_start_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

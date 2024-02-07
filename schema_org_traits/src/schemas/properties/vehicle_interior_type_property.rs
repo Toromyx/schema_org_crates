@@ -2,6 +2,7 @@
 pub trait GetVehicleInteriorTypeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/vehicleInteriorType>
 	fn get_vehicle_interior_type_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

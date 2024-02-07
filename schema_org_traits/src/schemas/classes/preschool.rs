@@ -1,6 +1,7 @@
 /// <https://schema.org/Preschool>
 pub trait FindPreschoolIds {
 	type IdType;
+	/// <https://schema.org/Preschool>
 	fn find_preschool_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

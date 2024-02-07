@@ -1,6 +1,7 @@
 /// <https://schema.org/AgreeAction>
 pub trait FindAgreeActionIds {
 	type IdType;
+	/// <https://schema.org/AgreeAction>
 	fn find_agree_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

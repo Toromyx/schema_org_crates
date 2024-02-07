@@ -1,6 +1,7 @@
 /// <https://schema.org/SpecialAnnouncement>
 pub trait FindSpecialAnnouncementIds {
 	type IdType;
+	/// <https://schema.org/SpecialAnnouncement>
 	fn find_special_announcement_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

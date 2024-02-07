@@ -2,6 +2,7 @@
 #[deprecated = "This schema is archived, see <https://schema.org/docs/attic.home.html>. This schema is superseded by <https://schema.org/MerchantReturnUnspecified>."]
 pub trait FindProductReturnUnspecifiedIds {
 	type IdType;
+	/// <https://schema.org/ProductReturnUnspecified>
 	#[deprecated = "This schema is archived, see <https://schema.org/docs/attic.home.html>. This schema is superseded by <https://schema.org/MerchantReturnUnspecified>."]
 	fn find_product_return_unspecified_ids(&self) -> Vec<&Self::IdType>;
 }

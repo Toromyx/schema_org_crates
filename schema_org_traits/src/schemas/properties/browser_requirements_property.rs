@@ -2,6 +2,7 @@
 pub trait GetBrowserRequirementsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/browserRequirements>
 	fn get_browser_requirements_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

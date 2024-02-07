@@ -2,6 +2,7 @@
 pub trait GetSpeakableProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/speakable>
 	fn get_speakable_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

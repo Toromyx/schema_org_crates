@@ -1,6 +1,7 @@
 /// <https://schema.org/RoofingContractor>
 pub trait FindRoofingContractorIds {
 	type IdType;
+	/// <https://schema.org/RoofingContractor>
 	fn find_roofing_contractor_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

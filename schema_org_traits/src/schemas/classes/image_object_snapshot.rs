@@ -1,6 +1,7 @@
 /// <https://schema.org/ImageObjectSnapshot>
 pub trait FindImageObjectSnapshotIds {
 	type IdType;
+	/// <https://schema.org/ImageObjectSnapshot>
 	fn find_image_object_snapshot_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

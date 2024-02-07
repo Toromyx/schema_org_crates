@@ -2,6 +2,7 @@
 pub trait GetBoxProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/box>
 	fn get_box_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

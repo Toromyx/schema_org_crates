@@ -3,6 +3,7 @@
 pub trait GetWarrantyPromiseProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/warrantyPromise>
 	#[deprecated = "This schema is superseded by <https://schema.org/warranty>."]
 	fn get_warranty_promise_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

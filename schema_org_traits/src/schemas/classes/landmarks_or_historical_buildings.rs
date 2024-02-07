@@ -1,6 +1,7 @@
 /// <https://schema.org/LandmarksOrHistoricalBuildings>
 pub trait FindLandmarksOrHistoricalBuildingsIds {
 	type IdType;
+	/// <https://schema.org/LandmarksOrHistoricalBuildings>
 	fn find_landmarks_or_historical_buildings_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

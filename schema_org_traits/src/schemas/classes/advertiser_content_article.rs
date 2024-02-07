@@ -1,6 +1,7 @@
 /// <https://schema.org/AdvertiserContentArticle>
 pub trait FindAdvertiserContentArticleIds {
 	type IdType;
+	/// <https://schema.org/AdvertiserContentArticle>
 	fn find_advertiser_content_article_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

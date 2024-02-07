@@ -2,6 +2,7 @@
 pub trait GetDayOfWeekProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/dayOfWeek>
 	fn get_day_of_week_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

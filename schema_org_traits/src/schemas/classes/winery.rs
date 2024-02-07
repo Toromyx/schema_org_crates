@@ -1,6 +1,7 @@
 /// <https://schema.org/Winery>
 pub trait FindWineryIds {
 	type IdType;
+	/// <https://schema.org/Winery>
 	fn find_winery_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

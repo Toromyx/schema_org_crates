@@ -1,6 +1,7 @@
 /// <https://schema.org/OrderStatus>
 pub trait FindOrderStatusIds {
 	type IdType;
+	/// <https://schema.org/OrderStatus>
 	fn find_order_status_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

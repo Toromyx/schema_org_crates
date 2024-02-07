@@ -1,6 +1,7 @@
 /// <https://schema.org/Sculpture>
 pub trait FindSculptureIds {
 	type IdType;
+	/// <https://schema.org/Sculpture>
 	fn find_sculpture_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

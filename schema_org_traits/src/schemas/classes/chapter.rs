@@ -1,6 +1,7 @@
 /// <https://schema.org/Chapter>
 pub trait FindChapterIds {
 	type IdType;
+	/// <https://schema.org/Chapter>
 	fn find_chapter_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetUnnamedSourcesPolicyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/unnamedSourcesPolicy>
 	fn get_unnamed_sources_policy_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

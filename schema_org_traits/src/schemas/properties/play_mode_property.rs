@@ -2,6 +2,7 @@
 pub trait GetPlayModeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/playMode>
 	fn get_play_mode_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

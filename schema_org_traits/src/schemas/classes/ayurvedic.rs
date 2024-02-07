@@ -1,6 +1,7 @@
 /// <https://schema.org/Ayurvedic>
 pub trait FindAyurvedicIds {
 	type IdType;
+	/// <https://schema.org/Ayurvedic>
 	fn find_ayurvedic_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

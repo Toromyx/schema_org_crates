@@ -2,6 +2,7 @@
 pub trait GetYearsInOperationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/yearsInOperation>
 	fn get_years_in_operation_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

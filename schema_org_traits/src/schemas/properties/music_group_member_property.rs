@@ -3,6 +3,7 @@
 pub trait GetMusicGroupMemberProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/musicGroupMember>
 	#[deprecated = "This schema is superseded by <https://schema.org/member>."]
 	fn get_music_group_member_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

@@ -2,6 +2,7 @@
 pub trait GetPencilerProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/penciler>
 	fn get_penciler_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetArrivalGateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/arrivalGate>
 	fn get_arrival_gate_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

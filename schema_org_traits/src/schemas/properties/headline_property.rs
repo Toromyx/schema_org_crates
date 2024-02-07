@@ -2,6 +2,7 @@
 pub trait GetHeadlineProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/headline>
 	fn get_headline_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

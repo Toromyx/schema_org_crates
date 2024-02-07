@@ -2,6 +2,7 @@
 pub trait GetGeoContainsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/geoContains>
 	fn get_geo_contains_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

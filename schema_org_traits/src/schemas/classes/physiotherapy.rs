@@ -1,6 +1,7 @@
 /// <https://schema.org/Physiotherapy>
 pub trait FindPhysiotherapyIds {
 	type IdType;
+	/// <https://schema.org/Physiotherapy>
 	fn find_physiotherapy_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetCostPerUnitProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/costPerUnit>
 	fn get_cost_per_unit_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

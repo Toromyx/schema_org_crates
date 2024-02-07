@@ -1,6 +1,7 @@
 /// <https://schema.org/ReturnAtKiosk>
 pub trait FindReturnAtKioskIds {
 	type IdType;
+	/// <https://schema.org/ReturnAtKiosk>
 	fn find_return_at_kiosk_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

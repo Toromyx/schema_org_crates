@@ -2,6 +2,7 @@
 pub trait GetTypeOfGoodProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/typeOfGood>
 	fn get_type_of_good_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

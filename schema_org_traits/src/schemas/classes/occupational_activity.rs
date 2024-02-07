@@ -1,6 +1,7 @@
 /// <https://schema.org/OccupationalActivity>
 pub trait FindOccupationalActivityIds {
 	type IdType;
+	/// <https://schema.org/OccupationalActivity>
 	fn find_occupational_activity_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetIsInvolvedInBiologicalProcessProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isInvolvedInBiologicalProcess>
 	fn get_is_involved_in_biological_process_property(
 		&self,
 		id: &Self::IdType,

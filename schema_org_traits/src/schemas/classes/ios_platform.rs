@@ -1,6 +1,7 @@
 /// <https://schema.org/IOSPlatform>
 pub trait FindIosPlatformIds {
 	type IdType;
+	/// <https://schema.org/IOSPlatform>
 	fn find_ios_platform_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

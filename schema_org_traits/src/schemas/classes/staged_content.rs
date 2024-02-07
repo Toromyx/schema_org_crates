@@ -1,6 +1,7 @@
 /// <https://schema.org/StagedContent>
 pub trait FindStagedContentIds {
 	type IdType;
+	/// <https://schema.org/StagedContent>
 	fn find_staged_content_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

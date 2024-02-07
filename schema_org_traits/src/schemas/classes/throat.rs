@@ -1,6 +1,7 @@
 /// <https://schema.org/Throat>
 pub trait FindThroatIds {
 	type IdType;
+	/// <https://schema.org/Throat>
 	fn find_throat_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

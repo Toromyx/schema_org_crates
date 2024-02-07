@@ -1,6 +1,7 @@
 /// <https://schema.org/Ticket>
 pub trait FindTicketIds {
 	type IdType;
+	/// <https://schema.org/Ticket>
 	fn find_ticket_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

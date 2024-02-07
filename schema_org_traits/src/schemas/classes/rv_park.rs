@@ -1,6 +1,7 @@
 /// <https://schema.org/RVPark>
 pub trait FindRvParkIds {
 	type IdType;
+	/// <https://schema.org/RVPark>
 	fn find_rv_park_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

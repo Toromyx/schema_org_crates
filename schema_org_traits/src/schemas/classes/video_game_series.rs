@@ -1,6 +1,7 @@
 /// <https://schema.org/VideoGameSeries>
 pub trait FindVideoGameSeriesIds {
 	type IdType;
+	/// <https://schema.org/VideoGameSeries>
 	fn find_video_game_series_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

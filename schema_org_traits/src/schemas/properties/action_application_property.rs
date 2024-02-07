@@ -2,6 +2,7 @@
 pub trait GetActionApplicationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/actionApplication>
 	fn get_action_application_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

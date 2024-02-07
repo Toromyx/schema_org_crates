@@ -1,6 +1,7 @@
 /// <https://schema.org/APIReference>
 pub trait FindApiReferenceIds {
 	type IdType;
+	/// <https://schema.org/APIReference>
 	fn find_api_reference_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

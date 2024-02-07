@@ -2,6 +2,7 @@
 pub trait GetAppliesToDeliveryMethodProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/appliesToDeliveryMethod>
 	fn get_applies_to_delivery_method_property(
 		&self,
 		id: &Self::IdType,

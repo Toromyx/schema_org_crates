@@ -1,6 +1,7 @@
 /// <https://schema.org/ScholarlyArticle>
 pub trait FindScholarlyArticleIds {
 	type IdType;
+	/// <https://schema.org/ScholarlyArticle>
 	fn find_scholarly_article_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

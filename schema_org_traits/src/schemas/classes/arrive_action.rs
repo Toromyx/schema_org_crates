@@ -1,6 +1,7 @@
 /// <https://schema.org/ArriveAction>
 pub trait FindArriveActionIds {
 	type IdType;
+	/// <https://schema.org/ArriveAction>
 	fn find_arrive_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

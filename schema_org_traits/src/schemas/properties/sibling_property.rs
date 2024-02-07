@@ -2,6 +2,7 @@
 pub trait GetSiblingProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/sibling>
 	fn get_sibling_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

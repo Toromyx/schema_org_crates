@@ -1,6 +1,7 @@
 /// <https://schema.org/MerchantReturnUnspecified>
 pub trait FindMerchantReturnUnspecifiedIds {
 	type IdType;
+	/// <https://schema.org/MerchantReturnUnspecified>
 	fn find_merchant_return_unspecified_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

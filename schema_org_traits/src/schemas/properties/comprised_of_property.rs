@@ -2,6 +2,7 @@
 pub trait GetComprisedOfProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/comprisedOf>
 	fn get_comprised_of_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

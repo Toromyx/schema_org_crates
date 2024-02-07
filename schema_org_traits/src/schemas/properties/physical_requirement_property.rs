@@ -2,6 +2,7 @@
 pub trait GetPhysicalRequirementProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/physicalRequirement>
 	fn get_physical_requirement_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

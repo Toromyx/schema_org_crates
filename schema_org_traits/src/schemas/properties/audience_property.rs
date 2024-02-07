@@ -2,6 +2,7 @@
 pub trait GetAudienceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/audience>
 	fn get_audience_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

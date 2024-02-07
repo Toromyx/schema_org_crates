@@ -2,6 +2,7 @@
 pub trait GetSchemaVersionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/schemaVersion>
 	fn get_schema_version_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/MedicalImagingTechnique>
 pub trait FindMedicalImagingTechniqueIds {
 	type IdType;
+	/// <https://schema.org/MedicalImagingTechnique>
 	fn find_medical_imaging_technique_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

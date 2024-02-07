@@ -2,6 +2,7 @@
 pub trait GetClaimInterpreterProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/claimInterpreter>
 	fn get_claim_interpreter_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

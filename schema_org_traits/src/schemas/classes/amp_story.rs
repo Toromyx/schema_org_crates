@@ -1,6 +1,7 @@
 /// <https://schema.org/AmpStory>
 pub trait FindAmpStoryIds {
 	type IdType;
+	/// <https://schema.org/AmpStory>
 	fn find_amp_story_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

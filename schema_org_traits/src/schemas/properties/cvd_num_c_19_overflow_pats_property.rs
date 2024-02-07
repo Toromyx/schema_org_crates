@@ -2,6 +2,7 @@
 pub trait GetCvdNumC19OverflowPatsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/cvdNumC19OverflowPats>
 	fn get_cvd_num_c_19_overflow_pats_property(
 		&self,
 		id: &Self::IdType,

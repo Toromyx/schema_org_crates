@@ -1,6 +1,7 @@
 /// <https://schema.org/TrainedAlgorithmicMediaDigitalSource>
 pub trait FindTrainedAlgorithmicMediaDigitalSourceIds {
 	type IdType;
+	/// <https://schema.org/TrainedAlgorithmicMediaDigitalSource>
 	fn find_trained_algorithmic_media_digital_source_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

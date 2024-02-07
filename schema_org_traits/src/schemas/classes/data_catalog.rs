@@ -1,6 +1,7 @@
 /// <https://schema.org/DataCatalog>
 pub trait FindDataCatalogIds {
 	type IdType;
+	/// <https://schema.org/DataCatalog>
 	fn find_data_catalog_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetIllustratorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/illustrator>
 	fn get_illustrator_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

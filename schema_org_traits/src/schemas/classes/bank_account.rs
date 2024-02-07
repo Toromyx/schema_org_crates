@@ -1,6 +1,7 @@
 /// <https://schema.org/BankAccount>
 pub trait FindBankAccountIds {
 	type IdType;
+	/// <https://schema.org/BankAccount>
 	fn find_bank_account_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetAssociatedMediaProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/associatedMedia>
 	fn get_associated_media_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

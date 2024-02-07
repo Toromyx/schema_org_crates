@@ -2,6 +2,7 @@
 pub trait GetPaymentMethodIdProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/paymentMethodId>
 	fn get_payment_method_id_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

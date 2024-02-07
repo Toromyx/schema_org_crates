@@ -1,6 +1,7 @@
 /// <https://schema.org/DrugStrength>
 pub trait FindDrugStrengthIds {
 	type IdType;
+	/// <https://schema.org/DrugStrength>
 	fn find_drug_strength_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

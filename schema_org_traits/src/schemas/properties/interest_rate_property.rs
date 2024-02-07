@@ -2,6 +2,7 @@
 pub trait GetInterestRateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/interestRate>
 	fn get_interest_rate_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetTorqueProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/torque>
 	fn get_torque_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetDunsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/duns>
 	fn get_duns_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

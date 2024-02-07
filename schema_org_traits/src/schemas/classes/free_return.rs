@@ -1,6 +1,7 @@
 /// <https://schema.org/FreeReturn>
 pub trait FindFreeReturnIds {
 	type IdType;
+	/// <https://schema.org/FreeReturn>
 	fn find_free_return_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

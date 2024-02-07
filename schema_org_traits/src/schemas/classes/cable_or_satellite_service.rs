@@ -1,6 +1,7 @@
 /// <https://schema.org/CableOrSatelliteService>
 pub trait FindCableOrSatelliteServiceIds {
 	type IdType;
+	/// <https://schema.org/CableOrSatelliteService>
 	fn find_cable_or_satellite_service_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

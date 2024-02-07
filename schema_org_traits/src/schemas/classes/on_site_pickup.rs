@@ -1,6 +1,7 @@
 /// <https://schema.org/OnSitePickup>
 pub trait FindOnSitePickupIds {
 	type IdType;
+	/// <https://schema.org/OnSitePickup>
 	fn find_on_site_pickup_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

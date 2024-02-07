@@ -1,6 +1,7 @@
 /// <https://schema.org/LifestyleModification>
 pub trait FindLifestyleModificationIds {
 	type IdType;
+	/// <https://schema.org/LifestyleModification>
 	fn find_lifestyle_modification_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

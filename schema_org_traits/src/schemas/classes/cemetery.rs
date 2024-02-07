@@ -1,6 +1,7 @@
 /// <https://schema.org/Cemetery>
 pub trait FindCemeteryIds {
 	type IdType;
+	/// <https://schema.org/Cemetery>
 	fn find_cemetery_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

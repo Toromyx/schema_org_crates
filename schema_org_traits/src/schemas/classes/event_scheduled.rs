@@ -1,6 +1,7 @@
 /// <https://schema.org/EventScheduled>
 pub trait FindEventScheduledIds {
 	type IdType;
+	/// <https://schema.org/EventScheduled>
 	fn find_event_scheduled_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

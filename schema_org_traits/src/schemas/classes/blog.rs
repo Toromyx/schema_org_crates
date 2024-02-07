@@ -1,6 +1,7 @@
 /// <https://schema.org/Blog>
 pub trait FindBlogIds {
 	type IdType;
+	/// <https://schema.org/Blog>
 	fn find_blog_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

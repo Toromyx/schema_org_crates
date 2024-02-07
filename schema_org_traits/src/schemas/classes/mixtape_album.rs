@@ -1,6 +1,7 @@
 /// <https://schema.org/MixtapeAlbum>
 pub trait FindMixtapeAlbumIds {
 	type IdType;
+	/// <https://schema.org/MixtapeAlbum>
 	fn find_mixtape_album_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

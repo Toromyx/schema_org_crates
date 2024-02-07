@@ -2,6 +2,7 @@
 pub trait GetEngineDisplacementProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/engineDisplacement>
 	fn get_engine_displacement_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

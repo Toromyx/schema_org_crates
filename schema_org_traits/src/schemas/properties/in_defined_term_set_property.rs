@@ -2,6 +2,7 @@
 pub trait GetInDefinedTermSetProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/inDefinedTermSet>
 	fn get_in_defined_term_set_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

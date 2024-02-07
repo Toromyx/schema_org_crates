@@ -1,6 +1,7 @@
 /// <https://schema.org/EUEnergyEfficiencyCategoryB>
 pub trait FindEuEnergyEfficiencyCategoryBIds {
 	type IdType;
+	/// <https://schema.org/EUEnergyEfficiencyCategoryB>
 	fn find_eu_energy_efficiency_category_b_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

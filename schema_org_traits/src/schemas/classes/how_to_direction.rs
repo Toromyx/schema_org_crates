@@ -1,6 +1,7 @@
 /// <https://schema.org/HowToDirection>
 pub trait FindHowToDirectionIds {
 	type IdType;
+	/// <https://schema.org/HowToDirection>
 	fn find_how_to_direction_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

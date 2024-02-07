@@ -2,6 +2,7 @@
 pub trait GetUserInteractionCountProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/userInteractionCount>
 	fn get_user_interaction_count_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

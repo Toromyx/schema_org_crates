@@ -1,6 +1,7 @@
 /// <https://schema.org/UnofficialLegalValue>
 pub trait FindUnofficialLegalValueIds {
 	type IdType;
+	/// <https://schema.org/UnofficialLegalValue>
 	fn find_unofficial_legal_value_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

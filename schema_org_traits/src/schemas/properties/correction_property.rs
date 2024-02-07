@@ -2,6 +2,7 @@
 pub trait GetCorrectionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/correction>
 	fn get_correction_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

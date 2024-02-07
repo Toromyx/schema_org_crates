@@ -1,6 +1,7 @@
 /// <https://schema.org/PsychologicalTreatment>
 pub trait FindPsychologicalTreatmentIds {
 	type IdType;
+	/// <https://schema.org/PsychologicalTreatment>
 	fn find_psychological_treatment_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

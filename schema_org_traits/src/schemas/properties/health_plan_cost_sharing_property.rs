@@ -2,6 +2,7 @@
 pub trait GetHealthPlanCostSharingProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/healthPlanCostSharing>
 	fn get_health_plan_cost_sharing_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

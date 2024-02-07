@@ -2,6 +2,7 @@
 pub trait GetNewsUpdatesAndGuidelinesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/newsUpdatesAndGuidelines>
 	fn get_news_updates_and_guidelines_property(
 		&self,
 		id: &Self::IdType,

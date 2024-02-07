@@ -2,6 +2,7 @@
 pub trait GetInBroadcastLineupProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/inBroadcastLineup>
 	fn get_in_broadcast_lineup_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

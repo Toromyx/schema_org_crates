@@ -2,6 +2,7 @@
 pub trait GetAuthenticatorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/authenticator>
 	fn get_authenticator_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

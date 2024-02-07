@@ -2,6 +2,7 @@
 pub trait GetEducationalAlignmentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/educationalAlignment>
 	fn get_educational_alignment_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

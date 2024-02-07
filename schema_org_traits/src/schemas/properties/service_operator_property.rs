@@ -2,6 +2,7 @@
 pub trait GetServiceOperatorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/serviceOperator>
 	fn get_service_operator_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

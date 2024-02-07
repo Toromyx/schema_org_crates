@@ -2,6 +2,7 @@
 pub trait GetTargetCollectionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/targetCollection>
 	fn get_target_collection_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

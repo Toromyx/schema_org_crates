@@ -1,6 +1,7 @@
 /// <https://schema.org/Service>
 pub trait FindServiceIds {
 	type IdType;
+	/// <https://schema.org/Service>
 	fn find_service_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetAcquireLicensePageProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/acquireLicensePage>
 	fn get_acquire_license_page_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

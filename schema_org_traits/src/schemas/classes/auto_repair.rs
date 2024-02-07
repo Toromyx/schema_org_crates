@@ -1,6 +1,7 @@
 /// <https://schema.org/AutoRepair>
 pub trait FindAutoRepairIds {
 	type IdType;
+	/// <https://schema.org/AutoRepair>
 	fn find_auto_repair_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

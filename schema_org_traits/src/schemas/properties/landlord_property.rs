@@ -2,6 +2,7 @@
 pub trait GetLandlordProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/landlord>
 	fn get_landlord_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

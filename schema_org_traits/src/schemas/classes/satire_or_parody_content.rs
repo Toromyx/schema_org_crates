@@ -1,6 +1,7 @@
 /// <https://schema.org/SatireOrParodyContent>
 pub trait FindSatireOrParodyContentIds {
 	type IdType;
+	/// <https://schema.org/SatireOrParodyContent>
 	fn find_satire_or_parody_content_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

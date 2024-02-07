@@ -2,6 +2,7 @@
 pub trait GetTourBookingPageProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/tourBookingPage>
 	fn get_tour_booking_page_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

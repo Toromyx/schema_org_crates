@@ -1,6 +1,7 @@
 /// <https://schema.org/TaxiStand>
 pub trait FindTaxiStandIds {
 	type IdType;
+	/// <https://schema.org/TaxiStand>
 	fn find_taxi_stand_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

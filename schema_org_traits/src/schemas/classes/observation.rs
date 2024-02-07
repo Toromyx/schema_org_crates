@@ -1,6 +1,7 @@
 /// <https://schema.org/Observation>
 pub trait FindObservationIds {
 	type IdType;
+	/// <https://schema.org/Observation>
 	fn find_observation_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

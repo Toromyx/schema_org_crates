@@ -1,6 +1,7 @@
 /// <https://schema.org/ReturnLabelSourceEnumeration>
 pub trait FindReturnLabelSourceEnumerationIds {
 	type IdType;
+	/// <https://schema.org/ReturnLabelSourceEnumeration>
 	fn find_return_label_source_enumeration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

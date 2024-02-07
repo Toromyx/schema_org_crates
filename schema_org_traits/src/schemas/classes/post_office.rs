@@ -1,6 +1,7 @@
 /// <https://schema.org/PostOffice>
 pub trait FindPostOfficeIds {
 	type IdType;
+	/// <https://schema.org/PostOffice>
 	fn find_post_office_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

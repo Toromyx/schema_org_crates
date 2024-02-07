@@ -2,6 +2,7 @@
 pub trait GetVideoProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/video>
 	fn get_video_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

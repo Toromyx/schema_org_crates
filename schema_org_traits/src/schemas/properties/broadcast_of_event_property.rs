@@ -2,6 +2,7 @@
 pub trait GetBroadcastOfEventProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/broadcastOfEvent>
 	fn get_broadcast_of_event_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

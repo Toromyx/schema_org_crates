@@ -1,6 +1,7 @@
 /// <https://schema.org/DefinedTermSet>
 pub trait FindDefinedTermSetIds {
 	type IdType;
+	/// <https://schema.org/DefinedTermSet>
 	fn find_defined_term_set_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

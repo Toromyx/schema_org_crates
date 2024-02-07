@@ -2,6 +2,7 @@
 pub trait GetIsAcceptingNewPatientsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isAcceptingNewPatients>
 	fn get_is_accepting_new_patients_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

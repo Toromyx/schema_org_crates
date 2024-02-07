@@ -1,6 +1,7 @@
 /// <https://schema.org/Conversation>
 pub trait FindConversationIds {
 	type IdType;
+	/// <https://schema.org/Conversation>
 	fn find_conversation_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

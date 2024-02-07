@@ -2,6 +2,7 @@
 pub trait GetDeliveryLeadTimeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/deliveryLeadTime>
 	fn get_delivery_lead_time_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

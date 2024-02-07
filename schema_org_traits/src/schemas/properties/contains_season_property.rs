@@ -2,6 +2,7 @@
 pub trait GetContainsSeasonProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/containsSeason>
 	fn get_contains_season_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

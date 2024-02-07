@@ -2,6 +2,7 @@
 pub trait GetDeparturePlatformProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/departurePlatform>
 	fn get_departure_platform_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

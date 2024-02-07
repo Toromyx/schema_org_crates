@@ -1,6 +1,7 @@
 /// <https://schema.org/Duration>
 pub trait FindDurationIds {
 	type IdType;
+	/// <https://schema.org/Duration>
 	fn find_duration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

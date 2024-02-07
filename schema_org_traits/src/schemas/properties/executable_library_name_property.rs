@@ -2,6 +2,7 @@
 pub trait GetExecutableLibraryNameProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/executableLibraryName>
 	fn get_executable_library_name_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

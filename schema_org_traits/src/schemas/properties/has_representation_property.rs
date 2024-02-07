@@ -2,6 +2,7 @@
 pub trait GetHasRepresentationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasRepresentation>
 	fn get_has_representation_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

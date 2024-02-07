@@ -1,6 +1,7 @@
 /// <https://schema.org/HealthcareConsideration>
 pub trait FindHealthcareConsiderationIds {
 	type IdType;
+	/// <https://schema.org/HealthcareConsideration>
 	fn find_healthcare_consideration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

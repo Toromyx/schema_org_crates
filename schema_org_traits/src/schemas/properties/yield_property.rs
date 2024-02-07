@@ -2,6 +2,7 @@
 pub trait GetYieldProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/yield>
 	fn get_yield_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

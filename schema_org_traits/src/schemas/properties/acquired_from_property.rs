@@ -2,6 +2,7 @@
 pub trait GetAcquiredFromProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/acquiredFrom>
 	fn get_acquired_from_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

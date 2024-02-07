@@ -2,6 +2,7 @@
 pub trait GetPrintPageProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/printPage>
 	fn get_print_page_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

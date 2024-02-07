@@ -1,6 +1,7 @@
 /// <https://schema.org/MedicalSign>
 pub trait FindMedicalSignIds {
 	type IdType;
+	/// <https://schema.org/MedicalSign>
 	fn find_medical_sign_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

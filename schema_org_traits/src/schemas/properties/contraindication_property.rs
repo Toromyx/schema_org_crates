@@ -2,6 +2,7 @@
 pub trait GetContraindicationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/contraindication>
 	fn get_contraindication_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

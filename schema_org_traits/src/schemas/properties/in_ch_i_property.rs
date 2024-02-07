@@ -2,6 +2,7 @@
 pub trait GetInChIProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/inChI>
 	fn get_in_ch_i_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

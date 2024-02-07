@@ -1,6 +1,7 @@
 /// <https://schema.org/ExerciseAction>
 pub trait FindExerciseActionIds {
 	type IdType;
+	/// <https://schema.org/ExerciseAction>
 	fn find_exercise_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

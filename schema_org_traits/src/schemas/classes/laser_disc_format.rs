@@ -1,6 +1,7 @@
 /// <https://schema.org/LaserDiscFormat>
 pub trait FindLaserDiscFormatIds {
 	type IdType;
+	/// <https://schema.org/LaserDiscFormat>
 	fn find_laser_disc_format_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

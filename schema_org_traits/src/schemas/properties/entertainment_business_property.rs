@@ -2,6 +2,7 @@
 pub trait GetEntertainmentBusinessProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/entertainmentBusiness>
 	fn get_entertainment_business_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

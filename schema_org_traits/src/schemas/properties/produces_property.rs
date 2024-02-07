@@ -3,6 +3,7 @@
 pub trait GetProducesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/produces>
 	#[deprecated = "This schema is superseded by <https://schema.org/serviceOutput>."]
 	fn get_produces_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

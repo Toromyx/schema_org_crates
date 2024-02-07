@@ -1,6 +1,7 @@
 /// <https://schema.org/HowToSupply>
 pub trait FindHowToSupplyIds {
 	type IdType;
+	/// <https://schema.org/HowToSupply>
 	fn find_how_to_supply_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

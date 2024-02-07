@@ -2,6 +2,7 @@
 pub trait GetIncludesHealthPlanNetworkProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/includesHealthPlanNetwork>
 	fn get_includes_health_plan_network_property(
 		&self,
 		id: &Self::IdType,

@@ -2,6 +2,7 @@
 pub trait GetAdverseOutcomeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/adverseOutcome>
 	fn get_adverse_outcome_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

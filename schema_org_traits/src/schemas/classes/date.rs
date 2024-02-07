@@ -1,6 +1,7 @@
 /// <https://schema.org/Date>
 pub trait FindDateIds {
 	type IdType;
+	/// <https://schema.org/Date>
 	fn find_date_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

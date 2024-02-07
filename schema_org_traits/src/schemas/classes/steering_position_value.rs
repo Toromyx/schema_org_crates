@@ -1,6 +1,7 @@
 /// <https://schema.org/SteeringPositionValue>
 pub trait FindSteeringPositionValueIds {
 	type IdType;
+	/// <https://schema.org/SteeringPositionValue>
 	fn find_steering_position_value_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

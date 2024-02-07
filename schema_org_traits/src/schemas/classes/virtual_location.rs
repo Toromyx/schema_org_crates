@@ -1,6 +1,7 @@
 /// <https://schema.org/VirtualLocation>
 pub trait FindVirtualLocationIds {
 	type IdType;
+	/// <https://schema.org/VirtualLocation>
 	fn find_virtual_location_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

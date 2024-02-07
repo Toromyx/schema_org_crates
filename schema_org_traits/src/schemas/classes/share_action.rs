@@ -1,6 +1,7 @@
 /// <https://schema.org/ShareAction>
 pub trait FindShareActionIds {
 	type IdType;
+	/// <https://schema.org/ShareAction>
 	fn find_share_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

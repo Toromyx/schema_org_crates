@@ -2,6 +2,7 @@
 pub trait GetAvailableAtOrFromProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/availableAtOrFrom>
 	fn get_available_at_or_from_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

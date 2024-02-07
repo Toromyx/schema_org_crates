@@ -1,6 +1,7 @@
 /// <https://schema.org/DryCleaningOrLaundry>
 pub trait FindDryCleaningOrLaundryIds {
 	type IdType;
+	/// <https://schema.org/DryCleaningOrLaundry>
 	fn find_dry_cleaning_or_laundry_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

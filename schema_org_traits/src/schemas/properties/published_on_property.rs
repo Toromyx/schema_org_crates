@@ -2,6 +2,7 @@
 pub trait GetPublishedOnProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/publishedOn>
 	fn get_published_on_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

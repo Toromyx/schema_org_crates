@@ -2,6 +2,7 @@
 pub trait GetNumberedPositionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/numberedPosition>
 	fn get_numbered_position_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

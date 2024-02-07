@@ -2,6 +2,7 @@
 pub trait GetQuarantineGuidelinesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/quarantineGuidelines>
 	fn get_quarantine_guidelines_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

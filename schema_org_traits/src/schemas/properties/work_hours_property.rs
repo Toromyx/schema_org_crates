@@ -2,6 +2,7 @@
 pub trait GetWorkHoursProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/workHours>
 	fn get_work_hours_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

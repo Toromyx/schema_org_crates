@@ -2,6 +2,7 @@
 pub trait GetRecipeCategoryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/recipeCategory>
 	fn get_recipe_category_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

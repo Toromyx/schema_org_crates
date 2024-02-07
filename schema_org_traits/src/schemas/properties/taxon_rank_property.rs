@@ -2,6 +2,7 @@
 pub trait GetTaxonRankProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/taxonRank>
 	fn get_taxon_rank_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetAssociatedArticleProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/associatedArticle>
 	fn get_associated_article_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetBeforeMediaProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/beforeMedia>
 	fn get_before_media_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

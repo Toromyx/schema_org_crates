@@ -2,6 +2,7 @@
 pub trait GetApplicableLocationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/applicableLocation>
 	fn get_applicable_location_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/ViolenceConsideration>
 pub trait FindViolenceConsiderationIds {
 	type IdType;
+	/// <https://schema.org/ViolenceConsideration>
 	fn find_violence_consideration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

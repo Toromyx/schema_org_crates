@@ -2,6 +2,7 @@
 pub trait GetAmountOfThisGoodProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/amountOfThisGood>
 	fn get_amount_of_this_good_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

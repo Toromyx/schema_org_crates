@@ -1,6 +1,7 @@
 /// <https://schema.org/False>
 pub trait FindFalseIds {
 	type IdType;
+	/// <https://schema.org/False>
 	fn find_false_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

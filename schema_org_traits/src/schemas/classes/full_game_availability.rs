@@ -1,6 +1,7 @@
 /// <https://schema.org/FullGameAvailability>
 pub trait FindFullGameAvailabilityIds {
 	type IdType;
+	/// <https://schema.org/FullGameAvailability>
 	fn find_full_game_availability_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

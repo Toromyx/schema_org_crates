@@ -3,6 +3,7 @@
 pub trait GetSubEventsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/subEvents>
 	#[deprecated = "This schema is superseded by <https://schema.org/subEvent>."]
 	fn get_sub_events_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

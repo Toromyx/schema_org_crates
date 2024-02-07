@@ -2,6 +2,7 @@
 pub trait GetTicketTokenProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/ticketToken>
 	fn get_ticket_token_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

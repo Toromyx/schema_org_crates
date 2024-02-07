@@ -2,6 +2,7 @@
 pub trait GetLastReviewedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/lastReviewed>
 	fn get_last_reviewed_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -3,6 +3,7 @@
 pub trait GetCarrierProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/carrier>
 	#[deprecated = "This schema is superseded by <https://schema.org/provider>."]
 	fn get_carrier_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

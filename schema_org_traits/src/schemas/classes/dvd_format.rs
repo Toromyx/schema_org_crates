@@ -1,6 +1,7 @@
 /// <https://schema.org/DVDFormat>
 pub trait FindDvdFormatIds {
 	type IdType;
+	/// <https://schema.org/DVDFormat>
 	fn find_dvd_format_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

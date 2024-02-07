@@ -2,6 +2,7 @@
 pub trait GetStageProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/stage>
 	fn get_stage_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

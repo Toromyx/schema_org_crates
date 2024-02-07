@@ -2,6 +2,7 @@
 pub trait GetWorkExampleProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/workExample>
 	fn get_work_example_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

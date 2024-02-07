@@ -1,6 +1,7 @@
 /// <https://schema.org/RearWheelDriveConfiguration>
 pub trait FindRearWheelDriveConfigurationIds {
 	type IdType;
+	/// <https://schema.org/RearWheelDriveConfiguration>
 	fn find_rear_wheel_drive_configuration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

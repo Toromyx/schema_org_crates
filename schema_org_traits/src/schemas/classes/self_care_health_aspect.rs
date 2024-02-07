@@ -1,6 +1,7 @@
 /// <https://schema.org/SelfCareHealthAspect>
 pub trait FindSelfCareHealthAspectIds {
 	type IdType;
+	/// <https://schema.org/SelfCareHealthAspect>
 	fn find_self_care_health_aspect_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

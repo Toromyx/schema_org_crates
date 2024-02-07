@@ -2,6 +2,7 @@
 pub trait GetSerialNumberProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/serialNumber>
 	fn get_serial_number_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

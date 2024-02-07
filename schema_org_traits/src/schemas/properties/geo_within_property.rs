@@ -2,6 +2,7 @@
 pub trait GetGeoWithinProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/geoWithin>
 	fn get_geo_within_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

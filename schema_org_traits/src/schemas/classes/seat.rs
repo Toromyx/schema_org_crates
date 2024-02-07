@@ -1,6 +1,7 @@
 /// <https://schema.org/Seat>
 pub trait FindSeatIds {
 	type IdType;
+	/// <https://schema.org/Seat>
 	fn find_seat_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

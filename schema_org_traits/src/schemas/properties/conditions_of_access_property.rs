@@ -2,6 +2,7 @@
 pub trait GetConditionsOfAccessProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/conditionsOfAccess>
 	fn get_conditions_of_access_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

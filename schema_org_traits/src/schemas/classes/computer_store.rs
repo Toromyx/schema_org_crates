@@ -1,6 +1,7 @@
 /// <https://schema.org/ComputerStore>
 pub trait FindComputerStoreIds {
 	type IdType;
+	/// <https://schema.org/ComputerStore>
 	fn find_computer_store_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

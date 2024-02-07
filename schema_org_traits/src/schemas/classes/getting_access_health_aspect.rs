@@ -1,6 +1,7 @@
 /// <https://schema.org/GettingAccessHealthAspect>
 pub trait FindGettingAccessHealthAspectIds {
 	type IdType;
+	/// <https://schema.org/GettingAccessHealthAspect>
 	fn find_getting_access_health_aspect_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

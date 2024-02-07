@@ -1,6 +1,7 @@
 /// <https://schema.org/AudioObjectSnapshot>
 pub trait FindAudioObjectSnapshotIds {
 	type IdType;
+	/// <https://schema.org/AudioObjectSnapshot>
 	fn find_audio_object_snapshot_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetIncentiveCompensationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/incentiveCompensation>
 	fn get_incentive_compensation_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

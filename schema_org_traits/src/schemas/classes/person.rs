@@ -1,6 +1,7 @@
 /// <https://schema.org/Person>
 pub trait FindPersonIds {
 	type IdType;
+	/// <https://schema.org/Person>
 	fn find_person_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

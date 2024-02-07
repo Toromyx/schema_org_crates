@@ -1,6 +1,7 @@
 /// <https://schema.org/StagesHealthAspect>
 pub trait FindStagesHealthAspectIds {
 	type IdType;
+	/// <https://schema.org/StagesHealthAspect>
 	fn find_stages_health_aspect_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

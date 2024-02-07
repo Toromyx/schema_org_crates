@@ -1,6 +1,7 @@
 /// <https://schema.org/ItemListOrderDescending>
 pub trait FindItemListOrderDescendingIds {
 	type IdType;
+	/// <https://schema.org/ItemListOrderDescending>
 	fn find_item_list_order_descending_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

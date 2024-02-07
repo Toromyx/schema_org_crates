@@ -2,6 +2,7 @@
 pub trait GetChildTaxonProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/childTaxon>
 	fn get_child_taxon_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

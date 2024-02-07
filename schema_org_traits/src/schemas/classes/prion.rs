@@ -1,6 +1,7 @@
 /// <https://schema.org/Prion>
 pub trait FindPrionIds {
 	type IdType;
+	/// <https://schema.org/Prion>
 	fn find_prion_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

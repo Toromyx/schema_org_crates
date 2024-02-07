@@ -2,6 +2,7 @@
 pub trait GetRequiredQuantityProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/requiredQuantity>
 	fn get_required_quantity_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

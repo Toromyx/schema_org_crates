@@ -2,6 +2,7 @@
 pub trait GetOriginatesFromProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/originatesFrom>
 	fn get_originates_from_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

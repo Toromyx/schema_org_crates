@@ -1,6 +1,7 @@
 /// <https://schema.org/RandomizedTrial>
 pub trait FindRandomizedTrialIds {
 	type IdType;
+	/// <https://schema.org/RandomizedTrial>
 	fn find_randomized_trial_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

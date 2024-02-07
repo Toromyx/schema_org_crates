@@ -1,6 +1,7 @@
 /// <https://schema.org/Poster>
 pub trait FindPosterIds {
 	type IdType;
+	/// <https://schema.org/Poster>
 	fn find_poster_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

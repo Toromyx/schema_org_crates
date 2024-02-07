@@ -2,6 +2,7 @@
 pub trait GetApplicationSubCategoryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/applicationSubCategory>
 	fn get_application_sub_category_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

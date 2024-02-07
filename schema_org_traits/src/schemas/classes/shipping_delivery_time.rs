@@ -1,6 +1,7 @@
 /// <https://schema.org/ShippingDeliveryTime>
 pub trait FindShippingDeliveryTimeIds {
 	type IdType;
+	/// <https://schema.org/ShippingDeliveryTime>
 	fn find_shipping_delivery_time_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/Hackathon>
 pub trait FindHackathonIds {
 	type IdType;
+	/// <https://schema.org/Hackathon>
 	fn find_hackathon_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

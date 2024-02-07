@@ -1,6 +1,7 @@
 /// <https://schema.org/SendAction>
 pub trait FindSendActionIds {
 	type IdType;
+	/// <https://schema.org/SendAction>
 	fn find_send_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

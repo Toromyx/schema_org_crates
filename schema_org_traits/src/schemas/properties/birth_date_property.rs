@@ -2,6 +2,7 @@
 pub trait GetBirthDateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/birthDate>
 	fn get_birth_date_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

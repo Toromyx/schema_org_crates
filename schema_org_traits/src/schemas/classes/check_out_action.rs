@@ -1,6 +1,7 @@
 /// <https://schema.org/CheckOutAction>
 pub trait FindCheckOutActionIds {
 	type IdType;
+	/// <https://schema.org/CheckOutAction>
 	fn find_check_out_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

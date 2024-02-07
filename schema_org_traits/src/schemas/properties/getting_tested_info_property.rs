@@ -2,6 +2,7 @@
 pub trait GetGettingTestedInfoProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/gettingTestedInfo>
 	fn get_getting_tested_info_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

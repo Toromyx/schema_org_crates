@@ -3,6 +3,7 @@
 pub trait GetFreeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/free>
 	#[deprecated = "This schema is superseded by <https://schema.org/isAccessibleForFree>."]
 	fn get_free_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

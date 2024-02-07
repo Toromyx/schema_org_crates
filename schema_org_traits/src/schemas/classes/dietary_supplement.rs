@@ -1,6 +1,7 @@
 /// <https://schema.org/DietarySupplement>
 pub trait FindDietarySupplementIds {
 	type IdType;
+	/// <https://schema.org/DietarySupplement>
 	fn find_dietary_supplement_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

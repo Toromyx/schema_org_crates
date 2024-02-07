@@ -2,6 +2,7 @@
 pub trait GetRxcuiProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/rxcui>
 	fn get_rxcui_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

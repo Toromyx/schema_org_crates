@@ -1,6 +1,7 @@
 /// <https://schema.org/CancelAction>
 pub trait FindCancelActionIds {
 	type IdType;
+	/// <https://schema.org/CancelAction>
 	fn find_cancel_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

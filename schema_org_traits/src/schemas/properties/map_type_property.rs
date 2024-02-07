@@ -2,6 +2,7 @@
 pub trait GetMapTypeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/mapType>
 	fn get_map_type_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

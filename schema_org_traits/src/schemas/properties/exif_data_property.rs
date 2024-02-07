@@ -2,6 +2,7 @@
 pub trait GetExifDataProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/exifData>
 	fn get_exif_data_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

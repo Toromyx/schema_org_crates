@@ -1,6 +1,7 @@
 /// <https://schema.org/TipAction>
 pub trait FindTipActionIds {
 	type IdType;
+	/// <https://schema.org/TipAction>
 	fn find_tip_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/InteractionCounter>
 pub trait FindInteractionCounterIds {
 	type IdType;
+	/// <https://schema.org/InteractionCounter>
 	fn find_interaction_counter_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

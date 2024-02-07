@@ -3,6 +3,7 @@
 pub trait GetApplicationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/application>
 	#[deprecated = "This schema is superseded by <https://schema.org/actionApplication>."]
 	fn get_application_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

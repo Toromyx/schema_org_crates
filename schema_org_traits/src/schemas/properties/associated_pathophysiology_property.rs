@@ -2,6 +2,7 @@
 pub trait GetAssociatedPathophysiologyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/associatedPathophysiology>
 	fn get_associated_pathophysiology_property(
 		&self,
 		id: &Self::IdType,

@@ -1,6 +1,7 @@
 /// <https://schema.org/ReservationConfirmed>
 pub trait FindReservationConfirmedIds {
 	type IdType;
+	/// <https://schema.org/ReservationConfirmed>
 	fn find_reservation_confirmed_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

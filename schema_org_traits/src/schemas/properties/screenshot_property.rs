@@ -2,6 +2,7 @@
 pub trait GetScreenshotProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/screenshot>
 	fn get_screenshot_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

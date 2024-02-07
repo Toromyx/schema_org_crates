@@ -1,6 +1,7 @@
 /// <https://schema.org/PostalCodeRangeSpecification>
 pub trait FindPostalCodeRangeSpecificationIds {
 	type IdType;
+	/// <https://schema.org/PostalCodeRangeSpecification>
 	fn find_postal_code_range_specification_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

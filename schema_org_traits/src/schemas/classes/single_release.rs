@@ -1,6 +1,7 @@
 /// <https://schema.org/SingleRelease>
 pub trait FindSingleReleaseIds {
 	type IdType;
+	/// <https://schema.org/SingleRelease>
 	fn find_single_release_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

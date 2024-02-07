@@ -3,6 +3,7 @@
 pub trait GetIncentivesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/incentives>
 	#[deprecated = "This schema is superseded by <https://schema.org/incentiveCompensation>."]
 	fn get_incentives_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

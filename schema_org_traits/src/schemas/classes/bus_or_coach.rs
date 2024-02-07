@@ -1,6 +1,7 @@
 /// <https://schema.org/BusOrCoach>
 pub trait FindBusOrCoachIds {
 	type IdType;
+	/// <https://schema.org/BusOrCoach>
 	fn find_bus_or_coach_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

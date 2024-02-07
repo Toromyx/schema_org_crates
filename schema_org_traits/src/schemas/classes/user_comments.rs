@@ -2,6 +2,7 @@
 #[deprecated = "This schema is superseded by <https://schema.org/InteractionCounter>."]
 pub trait FindUserCommentsIds {
 	type IdType;
+	/// <https://schema.org/UserComments>
 	#[deprecated = "This schema is superseded by <https://schema.org/InteractionCounter>."]
 	fn find_user_comments_ids(&self) -> Vec<&Self::IdType>;
 }

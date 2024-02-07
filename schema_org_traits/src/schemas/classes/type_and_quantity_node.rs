@@ -1,6 +1,7 @@
 /// <https://schema.org/TypeAndQuantityNode>
 pub trait FindTypeAndQuantityNodeIds {
 	type IdType;
+	/// <https://schema.org/TypeAndQuantityNode>
 	fn find_type_and_quantity_node_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

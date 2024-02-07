@@ -2,6 +2,7 @@
 pub trait GetSupportingDataProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/supportingData>
 	fn get_supporting_data_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

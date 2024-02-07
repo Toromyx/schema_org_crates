@@ -1,6 +1,7 @@
 /// <https://schema.org/OrderPickupAvailable>
 pub trait FindOrderPickupAvailableIds {
 	type IdType;
+	/// <https://schema.org/OrderPickupAvailable>
 	fn find_order_pickup_available_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

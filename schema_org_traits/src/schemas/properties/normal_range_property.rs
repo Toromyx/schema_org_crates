@@ -2,6 +2,7 @@
 pub trait GetNormalRangeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/normalRange>
 	fn get_normal_range_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

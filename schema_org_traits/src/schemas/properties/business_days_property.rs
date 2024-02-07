@@ -2,6 +2,7 @@
 pub trait GetBusinessDaysProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/businessDays>
 	fn get_business_days_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

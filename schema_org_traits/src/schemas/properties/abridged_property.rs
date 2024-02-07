@@ -2,6 +2,7 @@
 pub trait GetAbridgedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/abridged>
 	fn get_abridged_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

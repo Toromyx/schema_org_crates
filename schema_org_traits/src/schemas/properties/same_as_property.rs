@@ -2,6 +2,7 @@
 pub trait GetSameAsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/sameAs>
 	fn get_same_as_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

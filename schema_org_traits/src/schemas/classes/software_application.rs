@@ -1,6 +1,7 @@
 /// <https://schema.org/SoftwareApplication>
 pub trait FindSoftwareApplicationIds {
 	type IdType;
+	/// <https://schema.org/SoftwareApplication>
 	fn find_software_application_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

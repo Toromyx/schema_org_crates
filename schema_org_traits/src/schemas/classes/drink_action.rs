@@ -1,6 +1,7 @@
 /// <https://schema.org/DrinkAction>
 pub trait FindDrinkActionIds {
 	type IdType;
+	/// <https://schema.org/DrinkAction>
 	fn find_drink_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

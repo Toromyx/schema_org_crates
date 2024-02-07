@@ -1,6 +1,7 @@
 /// <https://schema.org/EBook>
 pub trait FindEBookIds {
 	type IdType;
+	/// <https://schema.org/EBook>
 	fn find_e_book_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

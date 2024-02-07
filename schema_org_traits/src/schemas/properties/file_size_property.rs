@@ -2,6 +2,7 @@
 pub trait GetFileSizeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/fileSize>
 	fn get_file_size_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

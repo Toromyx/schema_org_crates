@@ -3,6 +3,7 @@
 pub trait GetRequirementsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/requirements>
 	#[deprecated = "This schema is superseded by <https://schema.org/softwareRequirements>."]
 	fn get_requirements_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

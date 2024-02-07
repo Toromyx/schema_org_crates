@@ -2,6 +2,7 @@
 pub trait GetInAlbumProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/inAlbum>
 	fn get_in_album_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

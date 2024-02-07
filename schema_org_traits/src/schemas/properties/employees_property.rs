@@ -3,6 +3,7 @@
 pub trait GetEmployeesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/employees>
 	#[deprecated = "This schema is superseded by <https://schema.org/employee>."]
 	fn get_employees_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

@@ -1,6 +1,7 @@
 /// <https://schema.org/ParentalSupport>
 pub trait FindParentalSupportIds {
 	type IdType;
+	/// <https://schema.org/ParentalSupport>
 	fn find_parental_support_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

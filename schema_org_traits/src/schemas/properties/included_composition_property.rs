@@ -2,6 +2,7 @@
 pub trait GetIncludedCompositionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/includedComposition>
 	fn get_included_composition_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

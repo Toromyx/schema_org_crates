@@ -2,6 +2,7 @@
 pub trait GetCatalogNumberProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/catalogNumber>
 	fn get_catalog_number_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/InStoreOnly>
 pub trait FindInStoreOnlyIds {
 	type IdType;
+	/// <https://schema.org/InStoreOnly>
 	fn find_in_store_only_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetDeathDateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/deathDate>
 	fn get_death_date_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

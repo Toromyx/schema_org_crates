@@ -2,6 +2,7 @@
 pub trait GetValueRequiredProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/valueRequired>
 	fn get_value_required_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

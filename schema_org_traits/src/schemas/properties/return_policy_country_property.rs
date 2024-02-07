@@ -2,6 +2,7 @@
 pub trait GetReturnPolicyCountryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/returnPolicyCountry>
 	fn get_return_policy_country_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

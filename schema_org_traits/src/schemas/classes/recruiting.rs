@@ -1,6 +1,7 @@
 /// <https://schema.org/Recruiting>
 pub trait FindRecruitingIds {
 	type IdType;
+	/// <https://schema.org/Recruiting>
 	fn find_recruiting_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

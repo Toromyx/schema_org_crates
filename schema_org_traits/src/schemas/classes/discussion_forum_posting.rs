@@ -1,6 +1,7 @@
 /// <https://schema.org/DiscussionForumPosting>
 pub trait FindDiscussionForumPostingIds {
 	type IdType;
+	/// <https://schema.org/DiscussionForumPosting>
 	fn find_discussion_forum_posting_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

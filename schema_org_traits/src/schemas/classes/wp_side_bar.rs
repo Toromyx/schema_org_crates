@@ -1,6 +1,7 @@
 /// <https://schema.org/WPSideBar>
 pub trait FindWpSideBarIds {
 	type IdType;
+	/// <https://schema.org/WPSideBar>
 	fn find_wp_side_bar_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

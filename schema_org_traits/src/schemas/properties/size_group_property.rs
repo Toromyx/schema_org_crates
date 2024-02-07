@@ -2,6 +2,7 @@
 pub trait GetSizeGroupProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/sizeGroup>
 	fn get_size_group_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

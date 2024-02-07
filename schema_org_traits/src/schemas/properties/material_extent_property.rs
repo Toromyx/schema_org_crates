@@ -2,6 +2,7 @@
 pub trait GetMaterialExtentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/materialExtent>
 	fn get_material_extent_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

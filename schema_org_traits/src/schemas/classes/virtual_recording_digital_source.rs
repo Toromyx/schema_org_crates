@@ -1,6 +1,7 @@
 /// <https://schema.org/VirtualRecordingDigitalSource>
 pub trait FindVirtualRecordingDigitalSourceIds {
 	type IdType;
+	/// <https://schema.org/VirtualRecordingDigitalSource>
 	fn find_virtual_recording_digital_source_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

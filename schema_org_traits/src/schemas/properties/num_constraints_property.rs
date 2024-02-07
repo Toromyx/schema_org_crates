@@ -2,6 +2,7 @@
 pub trait GetNumConstraintsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/numConstraints>
 	fn get_num_constraints_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

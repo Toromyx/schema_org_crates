@@ -1,6 +1,7 @@
 /// <https://schema.org/ListenAction>
 pub trait FindListenActionIds {
 	type IdType;
+	/// <https://schema.org/ListenAction>
 	fn find_listen_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

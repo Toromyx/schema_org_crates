@@ -1,6 +1,7 @@
 /// <https://schema.org/RecyclingCenter>
 pub trait FindRecyclingCenterIds {
 	type IdType;
+	/// <https://schema.org/RecyclingCenter>
 	fn find_recycling_center_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

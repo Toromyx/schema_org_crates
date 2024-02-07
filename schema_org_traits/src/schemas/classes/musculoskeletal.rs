@@ -1,6 +1,7 @@
 /// <https://schema.org/Musculoskeletal>
 pub trait FindMusculoskeletalIds {
 	type IdType;
+	/// <https://schema.org/Musculoskeletal>
 	fn find_musculoskeletal_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

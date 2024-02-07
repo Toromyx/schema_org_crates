@@ -2,6 +2,7 @@
 pub trait GetActiveIngredientProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/activeIngredient>
 	fn get_active_ingredient_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetPartOfInvoiceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/partOfInvoice>
 	fn get_part_of_invoice_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/MediaReviewItem>
 pub trait FindMediaReviewItemIds {
 	type IdType;
+	/// <https://schema.org/MediaReviewItem>
 	fn find_media_review_item_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

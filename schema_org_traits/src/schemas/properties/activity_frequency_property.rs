@@ -2,6 +2,7 @@
 pub trait GetActivityFrequencyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/activityFrequency>
 	fn get_activity_frequency_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

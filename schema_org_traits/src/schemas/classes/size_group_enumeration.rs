@@ -1,6 +1,7 @@
 /// <https://schema.org/SizeGroupEnumeration>
 pub trait FindSizeGroupEnumerationIds {
 	type IdType;
+	/// <https://schema.org/SizeGroupEnumeration>
 	fn find_size_group_enumeration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

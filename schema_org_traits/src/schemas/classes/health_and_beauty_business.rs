@@ -1,6 +1,7 @@
 /// <https://schema.org/HealthAndBeautyBusiness>
 pub trait FindHealthAndBeautyBusinessIds {
 	type IdType;
+	/// <https://schema.org/HealthAndBeautyBusiness>
 	fn find_health_and_beauty_business_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

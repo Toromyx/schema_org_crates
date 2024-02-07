@@ -1,6 +1,7 @@
 /// <https://schema.org/SiteNavigationElement>
 pub trait FindSiteNavigationElementIds {
 	type IdType;
+	/// <https://schema.org/SiteNavigationElement>
 	fn find_site_navigation_element_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

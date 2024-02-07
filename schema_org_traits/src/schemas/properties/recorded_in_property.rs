@@ -2,6 +2,7 @@
 pub trait GetRecordedInProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/recordedIn>
 	fn get_recorded_in_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetRatingValueProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/ratingValue>
 	fn get_rating_value_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

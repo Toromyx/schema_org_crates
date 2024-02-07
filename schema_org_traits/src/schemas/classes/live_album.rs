@@ -1,6 +1,7 @@
 /// <https://schema.org/LiveAlbum>
 pub trait FindLiveAlbumIds {
 	type IdType;
+	/// <https://schema.org/LiveAlbum>
 	fn find_live_album_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

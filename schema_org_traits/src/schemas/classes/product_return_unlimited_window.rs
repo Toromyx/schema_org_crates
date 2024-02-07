@@ -2,6 +2,7 @@
 #[deprecated = "This schema is archived, see <https://schema.org/docs/attic.home.html>. This schema is superseded by <https://schema.org/MerchantReturnUnlimitedWindow>."]
 pub trait FindProductReturnUnlimitedWindowIds {
 	type IdType;
+	/// <https://schema.org/ProductReturnUnlimitedWindow>
 	#[deprecated = "This schema is archived, see <https://schema.org/docs/attic.home.html>. This schema is superseded by <https://schema.org/MerchantReturnUnlimitedWindow>."]
 	fn find_product_return_unlimited_window_ids(&self) -> Vec<&Self::IdType>;
 }

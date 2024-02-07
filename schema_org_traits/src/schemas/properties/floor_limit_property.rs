@@ -2,6 +2,7 @@
 pub trait GetFloorLimitProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/floorLimit>
 	fn get_floor_limit_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

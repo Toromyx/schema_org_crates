@@ -2,6 +2,7 @@
 pub trait GetAppliesToPaymentMethodProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/appliesToPaymentMethod>
 	fn get_applies_to_payment_method_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

@@ -2,6 +2,7 @@
 pub trait GetSuggestedGenderProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/suggestedGender>
 	fn get_suggested_gender_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

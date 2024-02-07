@@ -1,6 +1,7 @@
 /// <https://schema.org/SizeSpecification>
 pub trait FindSizeSpecificationIds {
 	type IdType;
+	/// <https://schema.org/SizeSpecification>
 	fn find_size_specification_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/TextDigitalDocument>
 pub trait FindTextDigitalDocumentIds {
 	type IdType;
+	/// <https://schema.org/TextDigitalDocument>
 	fn find_text_digital_document_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

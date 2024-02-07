@@ -1,6 +1,7 @@
 /// <https://schema.org/EmergencyService>
 pub trait FindEmergencyServiceIds {
 	type IdType;
+	/// <https://schema.org/EmergencyService>
 	fn find_emergency_service_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

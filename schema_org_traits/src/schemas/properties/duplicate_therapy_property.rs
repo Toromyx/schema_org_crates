@@ -2,6 +2,7 @@
 pub trait GetDuplicateTherapyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/duplicateTherapy>
 	fn get_duplicate_therapy_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

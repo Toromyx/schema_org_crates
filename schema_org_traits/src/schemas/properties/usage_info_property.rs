@@ -2,6 +2,7 @@
 pub trait GetUsageInfoProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/usageInfo>
 	fn get_usage_info_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

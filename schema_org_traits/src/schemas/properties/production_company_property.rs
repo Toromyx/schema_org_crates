@@ -2,6 +2,7 @@
 pub trait GetProductionCompanyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/productionCompany>
 	fn get_production_company_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

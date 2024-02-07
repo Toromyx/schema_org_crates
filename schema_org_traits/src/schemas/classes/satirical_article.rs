@@ -1,6 +1,7 @@
 /// <https://schema.org/SatiricalArticle>
 pub trait FindSatiricalArticleIds {
 	type IdType;
+	/// <https://schema.org/SatiricalArticle>
 	fn find_satirical_article_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/ProgramMembership>
 pub trait FindProgramMembershipIds {
 	type IdType;
+	/// <https://schema.org/ProgramMembership>
 	fn find_program_membership_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

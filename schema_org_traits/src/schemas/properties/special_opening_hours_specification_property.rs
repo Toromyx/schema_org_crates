@@ -2,6 +2,7 @@
 pub trait GetSpecialOpeningHoursSpecificationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/specialOpeningHoursSpecification>
 	fn get_special_opening_hours_specification_property(
 		&self,
 		id: &Self::IdType,

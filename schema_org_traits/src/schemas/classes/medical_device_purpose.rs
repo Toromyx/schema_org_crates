@@ -1,6 +1,7 @@
 /// <https://schema.org/MedicalDevicePurpose>
 pub trait FindMedicalDevicePurposeIds {
 	type IdType;
+	/// <https://schema.org/MedicalDevicePurpose>
 	fn find_medical_device_purpose_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

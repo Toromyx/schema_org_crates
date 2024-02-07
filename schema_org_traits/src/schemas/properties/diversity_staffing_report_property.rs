@@ -2,6 +2,7 @@
 pub trait GetDiversityStaffingReportProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/diversityStaffingReport>
 	fn get_diversity_staffing_report_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

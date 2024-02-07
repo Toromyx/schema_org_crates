@@ -1,6 +1,7 @@
 /// <https://schema.org/DisagreeAction>
 pub trait FindDisagreeActionIds {
 	type IdType;
+	/// <https://schema.org/DisagreeAction>
 	fn find_disagree_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

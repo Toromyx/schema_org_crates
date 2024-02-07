@@ -2,6 +2,7 @@
 pub trait GetPracticesAtProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/practicesAt>
 	fn get_practices_at_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

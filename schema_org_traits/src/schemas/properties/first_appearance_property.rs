@@ -2,6 +2,7 @@
 pub trait GetFirstAppearanceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/firstAppearance>
 	fn get_first_appearance_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

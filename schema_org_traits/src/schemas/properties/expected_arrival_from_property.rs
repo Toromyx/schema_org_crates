@@ -2,6 +2,7 @@
 pub trait GetExpectedArrivalFromProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/expectedArrivalFrom>
 	fn get_expected_arrival_from_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetArtworkSurfaceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/artworkSurface>
 	fn get_artwork_surface_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

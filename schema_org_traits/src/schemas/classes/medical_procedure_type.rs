@@ -1,6 +1,7 @@
 /// <https://schema.org/MedicalProcedureType>
 pub trait FindMedicalProcedureTypeIds {
 	type IdType;
+	/// <https://schema.org/MedicalProcedureType>
 	fn find_medical_procedure_type_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

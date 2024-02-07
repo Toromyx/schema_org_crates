@@ -1,6 +1,7 @@
 /// <https://schema.org/GeospatialGeometry>
 pub trait FindGeospatialGeometryIds {
 	type IdType;
+	/// <https://schema.org/GeospatialGeometry>
 	fn find_geospatial_geometry_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

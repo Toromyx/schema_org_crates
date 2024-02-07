@@ -2,6 +2,7 @@
 pub trait GetNumberOfAvailableAccommodationUnitsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/numberOfAvailableAccommodationUnits>
 	fn get_number_of_available_accommodation_units_property(
 		&self,
 		id: &Self::IdType,

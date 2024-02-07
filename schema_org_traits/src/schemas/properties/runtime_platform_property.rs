@@ -2,6 +2,7 @@
 pub trait GetRuntimePlatformProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/runtimePlatform>
 	fn get_runtime_platform_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetRecipientProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/recipient>
 	fn get_recipient_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

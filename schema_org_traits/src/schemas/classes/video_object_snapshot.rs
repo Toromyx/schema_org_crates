@@ -1,6 +1,7 @@
 /// <https://schema.org/VideoObjectSnapshot>
 pub trait FindVideoObjectSnapshotIds {
 	type IdType;
+	/// <https://schema.org/VideoObjectSnapshot>
 	fn find_video_object_snapshot_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

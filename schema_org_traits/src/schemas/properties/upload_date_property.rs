@@ -2,6 +2,7 @@
 pub trait GetUploadDateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/uploadDate>
 	fn get_upload_date_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/MarryAction>
 pub trait FindMarryActionIds {
 	type IdType;
+	/// <https://schema.org/MarryAction>
 	fn find_marry_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

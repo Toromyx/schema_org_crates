@@ -2,6 +2,7 @@
 pub trait GetDiscussesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/discusses>
 	fn get_discusses_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

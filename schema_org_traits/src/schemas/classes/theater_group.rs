@@ -1,6 +1,7 @@
 /// <https://schema.org/TheaterGroup>
 pub trait FindTheaterGroupIds {
 	type IdType;
+	/// <https://schema.org/TheaterGroup>
 	fn find_theater_group_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

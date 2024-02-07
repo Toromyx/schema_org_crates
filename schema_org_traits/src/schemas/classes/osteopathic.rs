@@ -1,6 +1,7 @@
 /// <https://schema.org/Osteopathic>
 pub trait FindOsteopathicIds {
 	type IdType;
+	/// <https://schema.org/Osteopathic>
 	fn find_osteopathic_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

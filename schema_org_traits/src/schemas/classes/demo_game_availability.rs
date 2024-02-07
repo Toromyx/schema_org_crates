@@ -1,6 +1,7 @@
 /// <https://schema.org/DemoGameAvailability>
 pub trait FindDemoGameAvailabilityIds {
 	type IdType;
+	/// <https://schema.org/DemoGameAvailability>
 	fn find_demo_game_availability_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

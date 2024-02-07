@@ -1,6 +1,7 @@
 /// <https://schema.org/PaymentStatusType>
 pub trait FindPaymentStatusTypeIds {
 	type IdType;
+	/// <https://schema.org/PaymentStatusType>
 	fn find_payment_status_type_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

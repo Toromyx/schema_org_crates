@@ -1,6 +1,7 @@
 /// <https://schema.org/ParcelService>
 pub trait FindParcelServiceIds {
 	type IdType;
+	/// <https://schema.org/ParcelService>
 	fn find_parcel_service_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

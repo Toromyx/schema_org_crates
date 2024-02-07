@@ -2,6 +2,7 @@
 pub trait GetClosesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/closes>
 	fn get_closes_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

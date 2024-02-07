@@ -2,6 +2,7 @@
 pub trait GetWheelbaseProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/wheelbase>
 	fn get_wheelbase_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

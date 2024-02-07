@@ -1,6 +1,7 @@
 /// <https://schema.org/AllWheelDriveConfiguration>
 pub trait FindAllWheelDriveConfigurationIds {
 	type IdType;
+	/// <https://schema.org/AllWheelDriveConfiguration>
 	fn find_all_wheel_drive_configuration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

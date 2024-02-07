@@ -1,6 +1,7 @@
 /// <https://schema.org/DeleteAction>
 pub trait FindDeleteActionIds {
 	type IdType;
+	/// <https://schema.org/DeleteAction>
 	fn find_delete_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/WPHeader>
 pub trait FindWpHeaderIds {
 	type IdType;
+	/// <https://schema.org/WPHeader>
 	fn find_wp_header_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

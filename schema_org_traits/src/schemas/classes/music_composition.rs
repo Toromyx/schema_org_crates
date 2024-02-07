@@ -1,6 +1,7 @@
 /// <https://schema.org/MusicComposition>
 pub trait FindMusicCompositionIds {
 	type IdType;
+	/// <https://schema.org/MusicComposition>
 	fn find_music_composition_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetSupplyToProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/supplyTo>
 	fn get_supply_to_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

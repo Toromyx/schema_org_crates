@@ -2,6 +2,7 @@
 pub trait GetAlternativeHeadlineProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/alternativeHeadline>
 	fn get_alternative_headline_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

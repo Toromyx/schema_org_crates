@@ -2,6 +2,7 @@
 pub trait GetVehicleIdentificationNumberProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/vehicleIdentificationNumber>
 	fn get_vehicle_identification_number_property(
 		&self,
 		id: &Self::IdType,

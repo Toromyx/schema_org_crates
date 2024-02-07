@@ -1,6 +1,7 @@
 /// <https://schema.org/Discontinued>
 pub trait FindDiscontinuedIds {
 	type IdType;
+	/// <https://schema.org/Discontinued>
 	fn find_discontinued_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

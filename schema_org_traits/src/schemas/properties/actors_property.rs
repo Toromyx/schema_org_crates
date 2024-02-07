@@ -3,6 +3,7 @@
 pub trait GetActorsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/actors>
 	#[deprecated = "This schema is superseded by <https://schema.org/actor>."]
 	fn get_actors_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

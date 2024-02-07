@@ -2,6 +2,7 @@
 pub trait GetAlignmentTypeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/alignmentType>
 	fn get_alignment_type_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

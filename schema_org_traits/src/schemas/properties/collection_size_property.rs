@@ -2,6 +2,7 @@
 pub trait GetCollectionSizeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/collectionSize>
 	fn get_collection_size_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

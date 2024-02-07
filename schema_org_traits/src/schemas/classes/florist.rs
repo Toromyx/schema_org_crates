@@ -1,6 +1,7 @@
 /// <https://schema.org/Florist>
 pub trait FindFloristIds {
 	type IdType;
+	/// <https://schema.org/Florist>
 	fn find_florist_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

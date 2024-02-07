@@ -2,6 +2,7 @@
 pub trait GetDateModifiedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/dateModified>
 	fn get_date_modified_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

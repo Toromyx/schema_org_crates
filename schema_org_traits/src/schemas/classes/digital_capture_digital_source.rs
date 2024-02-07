@@ -1,6 +1,7 @@
 /// <https://schema.org/DigitalCaptureDigitalSource>
 pub trait FindDigitalCaptureDigitalSourceIds {
 	type IdType;
+	/// <https://schema.org/DigitalCaptureDigitalSource>
 	fn find_digital_capture_digital_source_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

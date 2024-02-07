@@ -2,6 +2,7 @@
 pub trait GetAdditionalNameProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/additionalName>
 	fn get_additional_name_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

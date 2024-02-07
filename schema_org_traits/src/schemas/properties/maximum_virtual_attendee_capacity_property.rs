@@ -2,6 +2,7 @@
 pub trait GetMaximumVirtualAttendeeCapacityProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/maximumVirtualAttendeeCapacity>
 	fn get_maximum_virtual_attendee_capacity_property(
 		&self,
 		id: &Self::IdType,

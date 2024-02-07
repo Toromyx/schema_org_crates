@@ -2,6 +2,7 @@
 pub trait GetMusicByProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/musicBy>
 	fn get_music_by_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

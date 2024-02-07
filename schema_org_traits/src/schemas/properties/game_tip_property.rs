@@ -2,6 +2,7 @@
 pub trait GetGameTipProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/gameTip>
 	fn get_game_tip_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

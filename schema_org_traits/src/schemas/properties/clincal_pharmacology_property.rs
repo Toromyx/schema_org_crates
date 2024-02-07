@@ -3,6 +3,7 @@
 pub trait GetClincalPharmacologyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/clincalPharmacology>
 	#[deprecated = "This schema is superseded by <https://schema.org/clinicalPharmacology>."]
 	fn get_clincal_pharmacology_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

@@ -2,6 +2,7 @@
 pub trait GetEmployerOverviewProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/employerOverview>
 	fn get_employer_overview_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

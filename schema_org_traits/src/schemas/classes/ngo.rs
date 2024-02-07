@@ -1,6 +1,7 @@
 /// <https://schema.org/NGO>
 pub trait FindNgoIds {
 	type IdType;
+	/// <https://schema.org/NGO>
 	fn find_ngo_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

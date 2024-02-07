@@ -2,6 +2,7 @@
 pub trait GetArtistProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/artist>
 	fn get_artist_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/Genitourinary>
 pub trait FindGenitourinaryIds {
 	type IdType;
+	/// <https://schema.org/Genitourinary>
 	fn find_genitourinary_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

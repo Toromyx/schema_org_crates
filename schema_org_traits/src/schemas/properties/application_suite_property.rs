@@ -2,6 +2,7 @@
 pub trait GetApplicationSuiteProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/applicationSuite>
 	fn get_application_suite_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/NegativeFilmDigitalSource>
 pub trait FindNegativeFilmDigitalSourceIds {
 	type IdType;
+	/// <https://schema.org/NegativeFilmDigitalSource>
 	fn find_negative_film_digital_source_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

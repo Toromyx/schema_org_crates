@@ -2,6 +2,7 @@
 pub trait GetWebCheckinTimeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/webCheckinTime>
 	fn get_web_checkin_time_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -3,6 +3,7 @@
 pub trait GetEpisodesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/episodes>
 	#[deprecated = "This schema is superseded by <https://schema.org/episode>."]
 	fn get_episodes_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

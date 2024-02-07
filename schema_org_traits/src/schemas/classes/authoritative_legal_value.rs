@@ -1,6 +1,7 @@
 /// <https://schema.org/AuthoritativeLegalValue>
 pub trait FindAuthoritativeLegalValueIds {
 	type IdType;
+	/// <https://schema.org/AuthoritativeLegalValue>
 	fn find_authoritative_legal_value_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

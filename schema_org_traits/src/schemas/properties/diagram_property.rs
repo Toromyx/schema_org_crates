@@ -2,6 +2,7 @@
 pub trait GetDiagramProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/diagram>
 	fn get_diagram_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

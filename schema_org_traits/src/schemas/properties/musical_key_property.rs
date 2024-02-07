@@ -2,6 +2,7 @@
 pub trait GetMusicalKeyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/musicalKey>
 	fn get_musical_key_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

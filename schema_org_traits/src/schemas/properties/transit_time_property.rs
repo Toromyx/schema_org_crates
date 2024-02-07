@@ -2,6 +2,7 @@
 pub trait GetTransitTimeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/transitTime>
 	fn get_transit_time_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

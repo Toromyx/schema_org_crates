@@ -1,6 +1,7 @@
 /// <https://schema.org/CreativeWork>
 pub trait FindCreativeWorkIds {
 	type IdType;
+	/// <https://schema.org/CreativeWork>
 	fn find_creative_work_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

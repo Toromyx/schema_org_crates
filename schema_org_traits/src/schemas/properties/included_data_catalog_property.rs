@@ -3,6 +3,7 @@
 pub trait GetIncludedDataCatalogProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/includedDataCatalog>
 	#[deprecated = "This schema is superseded by <https://schema.org/includedInDataCatalog>."]
 	fn get_included_data_catalog_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

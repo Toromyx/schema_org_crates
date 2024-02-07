@@ -2,6 +2,7 @@
 pub trait GetLicenseProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/license>
 	fn get_license_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

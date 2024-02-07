@@ -1,6 +1,7 @@
 /// <https://schema.org/ConfirmAction>
 pub trait FindConfirmActionIds {
 	type IdType;
+	/// <https://schema.org/ConfirmAction>
 	fn find_confirm_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

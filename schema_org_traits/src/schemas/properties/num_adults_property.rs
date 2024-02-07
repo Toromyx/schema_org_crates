@@ -2,6 +2,7 @@
 pub trait GetNumAdultsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/numAdults>
 	fn get_num_adults_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

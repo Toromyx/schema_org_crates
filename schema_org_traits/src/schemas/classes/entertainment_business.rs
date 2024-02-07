@@ -1,6 +1,7 @@
 /// <https://schema.org/EntertainmentBusiness>
 pub trait FindEntertainmentBusinessIds {
 	type IdType;
+	/// <https://schema.org/EntertainmentBusiness>
 	fn find_entertainment_business_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

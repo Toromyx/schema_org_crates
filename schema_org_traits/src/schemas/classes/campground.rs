@@ -1,6 +1,7 @@
 /// <https://schema.org/Campground>
 pub trait FindCampgroundIds {
 	type IdType;
+	/// <https://schema.org/Campground>
 	fn find_campground_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

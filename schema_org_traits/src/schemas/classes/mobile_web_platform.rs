@@ -1,6 +1,7 @@
 /// <https://schema.org/MobileWebPlatform>
 pub trait FindMobileWebPlatformIds {
 	type IdType;
+	/// <https://schema.org/MobileWebPlatform>
 	fn find_mobile_web_platform_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/WPFooter>
 pub trait FindWpFooterIds {
 	type IdType;
+	/// <https://schema.org/WPFooter>
 	fn find_wp_footer_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetAffiliationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/affiliation>
 	fn get_affiliation_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/GeoCircle>
 pub trait FindGeoCircleIds {
 	type IdType;
+	/// <https://schema.org/GeoCircle>
 	fn find_geo_circle_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

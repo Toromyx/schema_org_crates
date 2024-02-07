@@ -1,6 +1,7 @@
 /// <https://schema.org/LoseAction>
 pub trait FindLoseActionIds {
 	type IdType;
+	/// <https://schema.org/LoseAction>
 	fn find_lose_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

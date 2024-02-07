@@ -1,6 +1,7 @@
 /// <https://schema.org/KeepProduct>
 pub trait FindKeepProductIds {
 	type IdType;
+	/// <https://schema.org/KeepProduct>
 	fn find_keep_product_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

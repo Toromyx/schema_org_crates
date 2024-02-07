@@ -2,6 +2,7 @@
 #[deprecated = "This schema is archived, see <https://schema.org/docs/attic.home.html>."]
 pub trait FindStupidTypeIds {
 	type IdType;
+	/// <https://schema.org/StupidType>
 	#[deprecated = "This schema is archived, see <https://schema.org/docs/attic.home.html>."]
 	fn find_stupid_type_ids(&self) -> Vec<&Self::IdType>;
 }

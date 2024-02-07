@@ -3,6 +3,7 @@
 pub trait GetProductReturnLinkProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/productReturnLink>
 	#[deprecated = "This schema is archived, see <https://schema.org/docs/attic.home.html>. This schema is superseded by <https://schema.org/merchantReturnLink>."]
 	fn get_product_return_link_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

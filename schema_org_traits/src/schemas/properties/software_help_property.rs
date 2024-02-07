@@ -2,6 +2,7 @@
 pub trait GetSoftwareHelpProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/softwareHelp>
 	fn get_software_help_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

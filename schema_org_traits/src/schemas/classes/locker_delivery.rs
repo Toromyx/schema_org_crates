@@ -1,6 +1,7 @@
 /// <https://schema.org/LockerDelivery>
 pub trait FindLockerDeliveryIds {
 	type IdType;
+	/// <https://schema.org/LockerDelivery>
 	fn find_locker_delivery_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

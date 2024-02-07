@@ -2,6 +2,7 @@
 pub trait GetBroadcastSignalModulationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/broadcastSignalModulation>
 	fn get_broadcast_signal_modulation_property(
 		&self,
 		id: &Self::IdType,

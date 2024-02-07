@@ -2,6 +2,7 @@
 pub trait GetEligibleTransactionVolumeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/eligibleTransactionVolume>
 	fn get_eligible_transaction_volume_property(
 		&self,
 		id: &Self::IdType,

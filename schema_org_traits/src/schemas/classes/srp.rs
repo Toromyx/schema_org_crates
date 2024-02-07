@@ -1,6 +1,7 @@
 /// <https://schema.org/SRP>
 pub trait FindSrpIds {
 	type IdType;
+	/// <https://schema.org/SRP>
 	fn find_srp_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

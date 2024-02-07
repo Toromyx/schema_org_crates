@@ -2,6 +2,7 @@
 pub trait GetAccountablePersonProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/accountablePerson>
 	fn get_accountable_person_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

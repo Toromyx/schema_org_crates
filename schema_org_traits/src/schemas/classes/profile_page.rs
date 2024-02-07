@@ -1,6 +1,7 @@
 /// <https://schema.org/ProfilePage>
 pub trait FindProfilePageIds {
 	type IdType;
+	/// <https://schema.org/ProfilePage>
 	fn find_profile_page_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

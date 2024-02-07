@@ -1,6 +1,7 @@
 /// <https://schema.org/RestrictedDiet>
 pub trait FindRestrictedDietIds {
 	type IdType;
+	/// <https://schema.org/RestrictedDiet>
 	fn find_restricted_diet_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

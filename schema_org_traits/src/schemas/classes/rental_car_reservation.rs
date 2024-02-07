@@ -1,6 +1,7 @@
 /// <https://schema.org/RentalCarReservation>
 pub trait FindRentalCarReservationIds {
 	type IdType;
+	/// <https://schema.org/RentalCarReservation>
 	fn find_rental_car_reservation_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

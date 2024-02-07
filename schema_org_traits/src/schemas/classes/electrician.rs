@@ -1,6 +1,7 @@
 /// <https://schema.org/Electrician>
 pub trait FindElectricianIds {
 	type IdType;
+	/// <https://schema.org/Electrician>
 	fn find_electrician_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

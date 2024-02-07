@@ -2,6 +2,7 @@
 pub trait GetArticleBodyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/articleBody>
 	fn get_article_body_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

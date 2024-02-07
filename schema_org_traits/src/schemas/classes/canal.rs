@@ -1,6 +1,7 @@
 /// <https://schema.org/Canal>
 pub trait FindCanalIds {
 	type IdType;
+	/// <https://schema.org/Canal>
 	fn find_canal_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

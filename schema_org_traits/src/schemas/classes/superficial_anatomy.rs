@@ -1,6 +1,7 @@
 /// <https://schema.org/SuperficialAnatomy>
 pub trait FindSuperficialAnatomyIds {
 	type IdType;
+	/// <https://schema.org/SuperficialAnatomy>
 	fn find_superficial_anatomy_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetScheduledPaymentDateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/scheduledPaymentDate>
 	fn get_scheduled_payment_date_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

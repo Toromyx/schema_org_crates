@@ -1,6 +1,7 @@
 /// <https://schema.org/Energy>
 pub trait FindEnergyIds {
 	type IdType;
+	/// <https://schema.org/Energy>
 	fn find_energy_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

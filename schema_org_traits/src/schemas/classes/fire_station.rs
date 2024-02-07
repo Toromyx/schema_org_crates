@@ -1,6 +1,7 @@
 /// <https://schema.org/FireStation>
 pub trait FindFireStationIds {
 	type IdType;
+	/// <https://schema.org/FireStation>
 	fn find_fire_station_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

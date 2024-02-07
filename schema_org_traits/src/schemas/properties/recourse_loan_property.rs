@@ -2,6 +2,7 @@
 pub trait GetRecourseLoanProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/recourseLoan>
 	fn get_recourse_loan_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

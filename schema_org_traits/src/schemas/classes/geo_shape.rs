@@ -1,6 +1,7 @@
 /// <https://schema.org/GeoShape>
 pub trait FindGeoShapeIds {
 	type IdType;
+	/// <https://schema.org/GeoShape>
 	fn find_geo_shape_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

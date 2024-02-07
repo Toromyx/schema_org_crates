@@ -2,6 +2,7 @@
 pub trait GetSmokingAllowedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/smokingAllowed>
 	fn get_smoking_allowed_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetIsEncodedByBioChemEntityProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isEncodedByBioChemEntity>
 	fn get_is_encoded_by_bio_chem_entity_property(
 		&self,
 		id: &Self::IdType,

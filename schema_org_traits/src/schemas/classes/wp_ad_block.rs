@@ -1,6 +1,7 @@
 /// <https://schema.org/WPAdBlock>
 pub trait FindWpAdBlockIds {
 	type IdType;
+	/// <https://schema.org/WPAdBlock>
 	fn find_wp_ad_block_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

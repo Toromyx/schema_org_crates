@@ -1,6 +1,7 @@
 /// <https://schema.org/StrengthTraining>
 pub trait FindStrengthTrainingIds {
 	type IdType;
+	/// <https://schema.org/StrengthTraining>
 	fn find_strength_training_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

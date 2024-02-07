@@ -2,6 +2,7 @@
 pub trait GetGovernmentBenefitsInfoProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/governmentBenefitsInfo>
 	fn get_government_benefits_info_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

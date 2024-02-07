@@ -2,6 +2,7 @@
 pub trait GetTransFatContentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/transFatContent>
 	fn get_trans_fat_content_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

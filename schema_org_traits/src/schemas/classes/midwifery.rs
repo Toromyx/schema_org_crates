@@ -1,6 +1,7 @@
 /// <https://schema.org/Midwifery>
 pub trait FindMidwiferyIds {
 	type IdType;
+	/// <https://schema.org/Midwifery>
 	fn find_midwifery_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetInventoryLevelProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/inventoryLevel>
 	fn get_inventory_level_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/MolecularEntity>
 pub trait FindMolecularEntityIds {
 	type IdType;
+	/// <https://schema.org/MolecularEntity>
 	fn find_molecular_entity_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

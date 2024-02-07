@@ -2,6 +2,7 @@
 pub trait GetMeasurementQualifierProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/measurementQualifier>
 	fn get_measurement_qualifier_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

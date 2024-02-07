@@ -2,6 +2,7 @@
 pub trait GetRenegotiableLoanProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/renegotiableLoan>
 	fn get_renegotiable_loan_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

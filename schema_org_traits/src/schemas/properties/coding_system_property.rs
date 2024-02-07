@@ -2,6 +2,7 @@
 pub trait GetCodingSystemProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/codingSystem>
 	fn get_coding_system_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

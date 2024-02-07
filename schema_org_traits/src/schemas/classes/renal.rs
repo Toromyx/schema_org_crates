@@ -1,6 +1,7 @@
 /// <https://schema.org/Renal>
 pub trait FindRenalIds {
 	type IdType;
+	/// <https://schema.org/Renal>
 	fn find_renal_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

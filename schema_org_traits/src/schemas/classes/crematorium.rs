@@ -1,6 +1,7 @@
 /// <https://schema.org/Crematorium>
 pub trait FindCrematoriumIds {
 	type IdType;
+	/// <https://schema.org/Crematorium>
 	fn find_crematorium_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

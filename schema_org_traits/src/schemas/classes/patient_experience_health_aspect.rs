@@ -1,6 +1,7 @@
 /// <https://schema.org/PatientExperienceHealthAspect>
 pub trait FindPatientExperienceHealthAspectIds {
 	type IdType;
+	/// <https://schema.org/PatientExperienceHealthAspect>
 	fn find_patient_experience_health_aspect_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

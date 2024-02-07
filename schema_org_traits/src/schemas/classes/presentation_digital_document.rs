@@ -1,6 +1,7 @@
 /// <https://schema.org/PresentationDigitalDocument>
 pub trait FindPresentationDigitalDocumentIds {
 	type IdType;
+	/// <https://schema.org/PresentationDigitalDocument>
 	fn find_presentation_digital_document_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

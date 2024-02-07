@@ -1,6 +1,7 @@
 /// <https://schema.org/RestockingFees>
 pub trait FindRestockingFeesIds {
 	type IdType;
+	/// <https://schema.org/RestockingFees>
 	fn find_restocking_fees_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

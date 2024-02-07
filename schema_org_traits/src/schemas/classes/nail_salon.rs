@@ -1,6 +1,7 @@
 /// <https://schema.org/NailSalon>
 pub trait FindNailSalonIds {
 	type IdType;
+	/// <https://schema.org/NailSalon>
 	fn find_nail_salon_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/AlbumRelease>
 pub trait FindAlbumReleaseIds {
 	type IdType;
+	/// <https://schema.org/AlbumRelease>
 	fn find_album_release_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

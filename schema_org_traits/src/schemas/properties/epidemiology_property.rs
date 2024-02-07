@@ -2,6 +2,7 @@
 pub trait GetEpidemiologyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/epidemiology>
 	fn get_epidemiology_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

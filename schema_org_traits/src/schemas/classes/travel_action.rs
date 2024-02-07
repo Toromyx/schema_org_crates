@@ -1,6 +1,7 @@
 /// <https://schema.org/TravelAction>
 pub trait FindTravelActionIds {
 	type IdType;
+	/// <https://schema.org/TravelAction>
 	fn find_travel_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

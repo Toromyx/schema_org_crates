@@ -2,6 +2,7 @@
 pub trait GetMaximumPhysicalAttendeeCapacityProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/maximumPhysicalAttendeeCapacity>
 	fn get_maximum_physical_attendee_capacity_property(
 		&self,
 		id: &Self::IdType,

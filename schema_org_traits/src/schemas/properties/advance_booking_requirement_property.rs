@@ -2,6 +2,7 @@
 pub trait GetAdvanceBookingRequirementProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/advanceBookingRequirement>
 	fn get_advance_booking_requirement_property(
 		&self,
 		id: &Self::IdType,

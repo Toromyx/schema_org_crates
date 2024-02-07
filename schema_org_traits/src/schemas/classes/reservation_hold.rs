@@ -1,6 +1,7 @@
 /// <https://schema.org/ReservationHold>
 pub trait FindReservationHoldIds {
 	type IdType;
+	/// <https://schema.org/ReservationHold>
 	fn find_reservation_hold_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

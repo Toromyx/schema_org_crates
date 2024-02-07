@@ -1,6 +1,7 @@
 /// <https://schema.org/QAPage>
 pub trait FindQaPageIds {
 	type IdType;
+	/// <https://schema.org/QAPage>
 	fn find_qa_page_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

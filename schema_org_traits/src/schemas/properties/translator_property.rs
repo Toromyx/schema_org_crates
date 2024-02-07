@@ -2,6 +2,7 @@
 pub trait GetTranslatorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/translator>
 	fn get_translator_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetAccommodationCategoryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/accommodationCategory>
 	fn get_accommodation_category_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

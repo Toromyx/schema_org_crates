@@ -1,6 +1,7 @@
 /// <https://schema.org/BloodTest>
 pub trait FindBloodTestIds {
 	type IdType;
+	/// <https://schema.org/BloodTest>
 	fn find_blood_test_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

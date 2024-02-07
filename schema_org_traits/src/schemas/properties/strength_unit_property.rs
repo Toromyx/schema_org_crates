@@ -2,6 +2,7 @@
 pub trait GetStrengthUnitProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/strengthUnit>
 	fn get_strength_unit_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

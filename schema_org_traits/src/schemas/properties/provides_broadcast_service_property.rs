@@ -2,6 +2,7 @@
 pub trait GetProvidesBroadcastServiceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/providesBroadcastService>
 	fn get_provides_broadcast_service_property(
 		&self,
 		id: &Self::IdType,

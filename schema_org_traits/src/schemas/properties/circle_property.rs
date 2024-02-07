@@ -2,6 +2,7 @@
 pub trait GetCircleProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/circle>
 	fn get_circle_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

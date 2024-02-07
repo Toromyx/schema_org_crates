@@ -2,6 +2,7 @@
 pub trait GetAggregateRatingProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/aggregateRating>
 	fn get_aggregate_rating_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

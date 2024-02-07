@@ -2,6 +2,7 @@
 pub trait GetMissionCoveragePrioritiesPolicyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/missionCoveragePrioritiesPolicy>
 	fn get_mission_coverage_priorities_policy_property(
 		&self,
 		id: &Self::IdType,

@@ -2,6 +2,7 @@
 pub trait GetPostOfficeBoxNumberProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/postOfficeBoxNumber>
 	fn get_post_office_box_number_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

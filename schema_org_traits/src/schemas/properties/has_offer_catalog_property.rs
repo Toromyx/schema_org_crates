@@ -2,6 +2,7 @@
 pub trait GetHasOfferCatalogProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasOfferCatalog>
 	fn get_has_offer_catalog_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

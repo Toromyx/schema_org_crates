@@ -1,6 +1,7 @@
 /// <https://schema.org/CompleteDataFeed>
 pub trait FindCompleteDataFeedIds {
 	type IdType;
+	/// <https://schema.org/CompleteDataFeed>
 	fn find_complete_data_feed_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

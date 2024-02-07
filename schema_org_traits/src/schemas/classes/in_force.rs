@@ -1,6 +1,7 @@
 /// <https://schema.org/InForce>
 pub trait FindInForceIds {
 	type IdType;
+	/// <https://schema.org/InForce>
 	fn find_in_force_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/Syllabus>
 pub trait FindSyllabusIds {
 	type IdType;
+	/// <https://schema.org/Syllabus>
 	fn find_syllabus_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

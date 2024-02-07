@@ -1,6 +1,7 @@
 /// <https://schema.org/SolveMathAction>
 pub trait FindSolveMathActionIds {
 	type IdType;
+	/// <https://schema.org/SolveMathAction>
 	fn find_solve_math_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

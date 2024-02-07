@@ -2,6 +2,7 @@
 pub trait GetArchivedAtProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/archivedAt>
 	fn get_archived_at_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

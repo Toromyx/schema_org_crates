@@ -1,6 +1,7 @@
 /// <https://schema.org/Barcode>
 pub trait FindBarcodeIds {
 	type IdType;
+	/// <https://schema.org/Barcode>
 	fn find_barcode_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

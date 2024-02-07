@@ -2,6 +2,7 @@
 pub trait GetAgentInteractionStatisticProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/agentInteractionStatistic>
 	fn get_agent_interaction_statistic_property(
 		&self,
 		id: &Self::IdType,

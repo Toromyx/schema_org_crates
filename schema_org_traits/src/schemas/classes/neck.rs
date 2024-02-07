@@ -1,6 +1,7 @@
 /// <https://schema.org/Neck>
 pub trait FindNeckIds {
 	type IdType;
+	/// <https://schema.org/Neck>
 	fn find_neck_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

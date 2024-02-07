@@ -1,6 +1,7 @@
 /// <https://schema.org/LymphaticVessel>
 pub trait FindLymphaticVesselIds {
 	type IdType;
+	/// <https://schema.org/LymphaticVessel>
 	fn find_lymphatic_vessel_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

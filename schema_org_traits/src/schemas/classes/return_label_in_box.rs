@@ -1,6 +1,7 @@
 /// <https://schema.org/ReturnLabelInBox>
 pub trait FindReturnLabelInBoxIds {
 	type IdType;
+	/// <https://schema.org/ReturnLabelInBox>
 	fn find_return_label_in_box_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

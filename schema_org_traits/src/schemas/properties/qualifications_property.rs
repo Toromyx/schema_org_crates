@@ -2,6 +2,7 @@
 pub trait GetQualificationsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/qualifications>
 	fn get_qualifications_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

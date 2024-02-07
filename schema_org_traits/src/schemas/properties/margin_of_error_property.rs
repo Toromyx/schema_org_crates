@@ -2,6 +2,7 @@
 pub trait GetMarginOfErrorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/marginOfError>
 	fn get_margin_of_error_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

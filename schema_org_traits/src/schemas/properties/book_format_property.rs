@@ -2,6 +2,7 @@
 pub trait GetBookFormatProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/bookFormat>
 	fn get_book_format_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

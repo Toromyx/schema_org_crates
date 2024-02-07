@@ -2,6 +2,7 @@
 pub trait GetMusicReleaseFormatProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/musicReleaseFormat>
 	fn get_music_release_format_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

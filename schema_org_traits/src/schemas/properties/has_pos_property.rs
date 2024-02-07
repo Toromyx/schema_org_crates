@@ -2,6 +2,7 @@
 pub trait GetHasPosProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasPOS>
 	fn get_has_pos_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

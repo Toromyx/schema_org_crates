@@ -1,6 +1,7 @@
 /// <https://schema.org/CookAction>
 pub trait FindCookActionIds {
 	type IdType;
+	/// <https://schema.org/CookAction>
 	fn find_cook_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

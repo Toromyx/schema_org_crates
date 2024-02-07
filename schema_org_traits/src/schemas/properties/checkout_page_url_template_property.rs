@@ -2,6 +2,7 @@
 pub trait GetCheckoutPageUrlTemplateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/checkoutPageURLTemplate>
 	fn get_checkout_page_url_template_property(
 		&self,
 		id: &Self::IdType,

@@ -2,6 +2,7 @@
 pub trait GetTemporalCoverageProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/temporalCoverage>
 	fn get_temporal_coverage_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

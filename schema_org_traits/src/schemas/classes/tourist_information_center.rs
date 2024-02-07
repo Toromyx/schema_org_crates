@@ -1,6 +1,7 @@
 /// <https://schema.org/TouristInformationCenter>
 pub trait FindTouristInformationCenterIds {
 	type IdType;
+	/// <https://schema.org/TouristInformationCenter>
 	fn find_tourist_information_center_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

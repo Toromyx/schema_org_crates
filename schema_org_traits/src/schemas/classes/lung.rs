@@ -1,6 +1,7 @@
 /// <https://schema.org/Lung>
 pub trait FindLungIds {
 	type IdType;
+	/// <https://schema.org/Lung>
 	fn find_lung_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

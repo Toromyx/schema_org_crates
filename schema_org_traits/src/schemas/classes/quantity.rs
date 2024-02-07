@@ -1,6 +1,7 @@
 /// <https://schema.org/Quantity>
 pub trait FindQuantityIds {
 	type IdType;
+	/// <https://schema.org/Quantity>
 	fn find_quantity_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

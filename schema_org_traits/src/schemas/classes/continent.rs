@@ -1,6 +1,7 @@
 /// <https://schema.org/Continent>
 pub trait FindContinentIds {
 	type IdType;
+	/// <https://schema.org/Continent>
 	fn find_continent_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

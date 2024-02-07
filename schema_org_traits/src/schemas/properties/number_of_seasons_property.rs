@@ -2,6 +2,7 @@
 pub trait GetNumberOfSeasonsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/numberOfSeasons>
 	fn get_number_of_seasons_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

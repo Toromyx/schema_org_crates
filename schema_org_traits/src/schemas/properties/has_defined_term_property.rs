@@ -2,6 +2,7 @@
 pub trait GetHasDefinedTermProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasDefinedTerm>
 	fn get_has_defined_term_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

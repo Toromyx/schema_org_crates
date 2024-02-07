@@ -1,6 +1,7 @@
 /// <https://schema.org/NewsMediaOrganization>
 pub trait FindNewsMediaOrganizationIds {
 	type IdType;
+	/// <https://schema.org/NewsMediaOrganization>
 	fn find_news_media_organization_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

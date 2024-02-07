@@ -2,6 +2,7 @@
 pub trait GetVehicleConfigurationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/vehicleConfiguration>
 	fn get_vehicle_configuration_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

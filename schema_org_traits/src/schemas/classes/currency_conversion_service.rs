@@ -1,6 +1,7 @@
 /// <https://schema.org/CurrencyConversionService>
 pub trait FindCurrencyConversionServiceIds {
 	type IdType;
+	/// <https://schema.org/CurrencyConversionService>
 	fn find_currency_conversion_service_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

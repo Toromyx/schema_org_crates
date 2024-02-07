@@ -3,6 +3,7 @@
 pub trait GetVendorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/vendor>
 	#[deprecated = "This schema is superseded by <https://schema.org/seller>."]
 	fn get_vendor_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

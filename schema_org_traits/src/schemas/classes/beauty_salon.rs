@@ -1,6 +1,7 @@
 /// <https://schema.org/BeautySalon>
 pub trait FindBeautySalonIds {
 	type IdType;
+	/// <https://schema.org/BeautySalon>
 	fn find_beauty_salon_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

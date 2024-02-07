@@ -1,6 +1,7 @@
 /// <https://schema.org/Protozoa>
 pub trait FindProtozoaIds {
 	type IdType;
+	/// <https://schema.org/Protozoa>
 	fn find_protozoa_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

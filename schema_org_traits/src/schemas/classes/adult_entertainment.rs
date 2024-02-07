@@ -1,6 +1,7 @@
 /// <https://schema.org/AdultEntertainment>
 pub trait FindAdultEntertainmentIds {
 	type IdType;
+	/// <https://schema.org/AdultEntertainment>
 	fn find_adult_entertainment_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

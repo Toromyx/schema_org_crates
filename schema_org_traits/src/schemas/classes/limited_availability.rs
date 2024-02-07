@@ -1,6 +1,7 @@
 /// <https://schema.org/LimitedAvailability>
 pub trait FindLimitedAvailabilityIds {
 	type IdType;
+	/// <https://schema.org/LimitedAvailability>
 	fn find_limited_availability_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

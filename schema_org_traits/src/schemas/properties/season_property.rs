@@ -3,6 +3,7 @@
 pub trait GetSeasonProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/season>
 	#[deprecated = "This schema is superseded by <https://schema.org/containsSeason>."]
 	fn get_season_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

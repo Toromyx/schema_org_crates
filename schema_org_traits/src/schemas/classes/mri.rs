@@ -1,6 +1,7 @@
 /// <https://schema.org/MRI>
 pub trait FindMriIds {
 	type IdType;
+	/// <https://schema.org/MRI>
 	fn find_mri_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

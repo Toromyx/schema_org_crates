@@ -2,6 +2,7 @@
 pub trait GetTelephoneProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/telephone>
 	fn get_telephone_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

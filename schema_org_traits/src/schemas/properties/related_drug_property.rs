@@ -2,6 +2,7 @@
 pub trait GetRelatedDrugProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/relatedDrug>
 	fn get_related_drug_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

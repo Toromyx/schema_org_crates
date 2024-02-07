@@ -2,6 +2,7 @@
 pub trait GetTemporalProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/temporal>
 	fn get_temporal_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

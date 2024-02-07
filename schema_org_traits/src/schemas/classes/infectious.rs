@@ -1,6 +1,7 @@
 /// <https://schema.org/Infectious>
 pub trait FindInfectiousIds {
 	type IdType;
+	/// <https://schema.org/Infectious>
 	fn find_infectious_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetTrailerWeightProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/trailerWeight>
 	fn get_trailer_weight_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

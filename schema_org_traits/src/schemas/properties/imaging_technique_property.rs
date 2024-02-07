@@ -2,6 +2,7 @@
 pub trait GetImagingTechniqueProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/imagingTechnique>
 	fn get_imaging_technique_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

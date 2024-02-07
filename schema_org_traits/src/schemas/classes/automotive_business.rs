@@ -1,6 +1,7 @@
 /// <https://schema.org/AutomotiveBusiness>
 pub trait FindAutomotiveBusinessIds {
 	type IdType;
+	/// <https://schema.org/AutomotiveBusiness>
 	fn find_automotive_business_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

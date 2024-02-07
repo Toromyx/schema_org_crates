@@ -2,6 +2,7 @@
 pub trait GetPlayersOnlineProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/playersOnline>
 	fn get_players_online_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

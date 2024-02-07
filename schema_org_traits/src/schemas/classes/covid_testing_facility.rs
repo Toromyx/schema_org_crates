@@ -1,6 +1,7 @@
 /// <https://schema.org/CovidTestingFacility>
 pub trait FindCovidTestingFacilityIds {
 	type IdType;
+	/// <https://schema.org/CovidTestingFacility>
 	fn find_covid_testing_facility_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

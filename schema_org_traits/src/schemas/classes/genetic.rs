@@ -1,6 +1,7 @@
 /// <https://schema.org/Genetic>
 pub trait FindGeneticIds {
 	type IdType;
+	/// <https://schema.org/Genetic>
 	fn find_genetic_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

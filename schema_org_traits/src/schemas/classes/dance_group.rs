@@ -1,6 +1,7 @@
 /// <https://schema.org/DanceGroup>
 pub trait FindDanceGroupIds {
 	type IdType;
+	/// <https://schema.org/DanceGroup>
 	fn find_dance_group_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetGlobalLocationNumberProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/globalLocationNumber>
 	fn get_global_location_number_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

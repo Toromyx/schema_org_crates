@@ -2,6 +2,7 @@
 pub trait GetServesCuisineProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/servesCuisine>
 	fn get_serves_cuisine_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

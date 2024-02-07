@@ -2,6 +2,7 @@
 pub trait GetDigitalSourceTypeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/digitalSourceType>
 	fn get_digital_source_type_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

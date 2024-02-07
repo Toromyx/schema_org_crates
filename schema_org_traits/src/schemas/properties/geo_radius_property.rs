@@ -2,6 +2,7 @@
 pub trait GetGeoRadiusProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/geoRadius>
 	fn get_geo_radius_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

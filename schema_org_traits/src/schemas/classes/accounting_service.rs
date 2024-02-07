@@ -1,6 +1,7 @@
 /// <https://schema.org/AccountingService>
 pub trait FindAccountingServiceIds {
 	type IdType;
+	/// <https://schema.org/AccountingService>
 	fn find_accounting_service_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/MSRP>
 pub trait FindMsrpIds {
 	type IdType;
+	/// <https://schema.org/MSRP>
 	fn find_msrp_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

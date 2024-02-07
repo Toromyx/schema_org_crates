@@ -2,6 +2,7 @@
 pub trait GetTrackingUrlProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/trackingUrl>
 	fn get_tracking_url_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/CollegeOrUniversity>
 pub trait FindCollegeOrUniversityIds {
 	type IdType;
+	/// <https://schema.org/CollegeOrUniversity>
 	fn find_college_or_university_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

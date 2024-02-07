@@ -1,6 +1,7 @@
 /// <https://schema.org/Downpayment>
 pub trait FindDownpaymentIds {
 	type IdType;
+	/// <https://schema.org/Downpayment>
 	fn find_downpayment_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

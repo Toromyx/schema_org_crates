@@ -2,6 +2,7 @@
 pub trait GetLesserOrEqualProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/lesserOrEqual>
 	fn get_lesser_or_equal_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

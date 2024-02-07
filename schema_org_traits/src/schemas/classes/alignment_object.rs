@@ -1,6 +1,7 @@
 /// <https://schema.org/AlignmentObject>
 pub trait FindAlignmentObjectIds {
 	type IdType;
+	/// <https://schema.org/AlignmentObject>
 	fn find_alignment_object_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

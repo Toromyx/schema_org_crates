@@ -1,6 +1,7 @@
 /// <https://schema.org/MoneyTransfer>
 pub trait FindMoneyTransferIds {
 	type IdType;
+	/// <https://schema.org/MoneyTransfer>
 	fn find_money_transfer_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

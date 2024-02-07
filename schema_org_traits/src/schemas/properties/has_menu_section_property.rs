@@ -2,6 +2,7 @@
 pub trait GetHasMenuSectionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasMenuSection>
 	fn get_has_menu_section_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

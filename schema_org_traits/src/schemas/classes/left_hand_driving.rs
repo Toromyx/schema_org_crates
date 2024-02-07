@@ -1,6 +1,7 @@
 /// <https://schema.org/LeftHandDriving>
 pub trait FindLeftHandDrivingIds {
 	type IdType;
+	/// <https://schema.org/LeftHandDriving>
 	fn find_left_hand_driving_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

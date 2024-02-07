@@ -2,6 +2,7 @@
 pub trait GetOrganizerProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/organizer>
 	fn get_organizer_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

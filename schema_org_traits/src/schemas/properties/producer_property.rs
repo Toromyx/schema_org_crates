@@ -2,6 +2,7 @@
 pub trait GetProducerProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/producer>
 	fn get_producer_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

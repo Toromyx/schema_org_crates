@@ -1,6 +1,7 @@
 /// <https://schema.org/GameServer>
 pub trait FindGameServerIds {
 	type IdType;
+	/// <https://schema.org/GameServer>
 	fn find_game_server_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

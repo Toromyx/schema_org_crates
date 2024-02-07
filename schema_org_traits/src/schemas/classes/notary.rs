@@ -1,6 +1,7 @@
 /// <https://schema.org/Notary>
 pub trait FindNotaryIds {
 	type IdType;
+	/// <https://schema.org/Notary>
 	fn find_notary_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

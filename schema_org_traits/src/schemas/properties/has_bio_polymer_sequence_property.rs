@@ -2,6 +2,7 @@
 pub trait GetHasBioPolymerSequenceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasBioPolymerSequence>
 	fn get_has_bio_polymer_sequence_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

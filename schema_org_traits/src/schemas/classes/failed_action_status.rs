@@ -1,6 +1,7 @@
 /// <https://schema.org/FailedActionStatus>
 pub trait FindFailedActionStatusIds {
 	type IdType;
+	/// <https://schema.org/FailedActionStatus>
 	fn find_failed_action_status_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

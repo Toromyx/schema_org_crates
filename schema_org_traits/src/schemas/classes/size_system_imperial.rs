@@ -1,6 +1,7 @@
 /// <https://schema.org/SizeSystemImperial>
 pub trait FindSizeSystemImperialIds {
 	type IdType;
+	/// <https://schema.org/SizeSystemImperial>
 	fn find_size_system_imperial_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

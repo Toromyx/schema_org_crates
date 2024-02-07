@@ -2,6 +2,7 @@
 pub trait GetWordCountProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/wordCount>
 	fn get_word_count_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

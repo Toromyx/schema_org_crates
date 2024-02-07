@@ -2,6 +2,7 @@
 pub trait GetRecipeIngredientProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/recipeIngredient>
 	fn get_recipe_ingredient_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

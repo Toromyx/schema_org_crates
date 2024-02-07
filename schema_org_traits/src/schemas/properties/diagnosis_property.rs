@@ -2,6 +2,7 @@
 pub trait GetDiagnosisProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/diagnosis>
 	fn get_diagnosis_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

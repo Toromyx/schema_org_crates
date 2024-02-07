@@ -1,6 +1,7 @@
 /// <https://schema.org/BuyAction>
 pub trait FindBuyActionIds {
 	type IdType;
+	/// <https://schema.org/BuyAction>
 	fn find_buy_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

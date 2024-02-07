@@ -1,6 +1,7 @@
 /// <https://schema.org/LaboratoryScience>
 pub trait FindLaboratoryScienceIds {
 	type IdType;
+	/// <https://schema.org/LaboratoryScience>
 	fn find_laboratory_science_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

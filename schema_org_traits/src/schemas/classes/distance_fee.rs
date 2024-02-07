@@ -1,6 +1,7 @@
 /// <https://schema.org/DistanceFee>
 pub trait FindDistanceFeeIds {
 	type IdType;
+	/// <https://schema.org/DistanceFee>
 	fn find_distance_fee_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

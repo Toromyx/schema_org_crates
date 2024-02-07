@@ -1,6 +1,7 @@
 /// <https://schema.org/Podiatric>
 pub trait FindPodiatricIds {
 	type IdType;
+	/// <https://schema.org/Podiatric>
 	fn find_podiatric_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

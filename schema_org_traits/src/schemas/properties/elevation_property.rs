@@ -2,6 +2,7 @@
 pub trait GetElevationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/elevation>
 	fn get_elevation_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

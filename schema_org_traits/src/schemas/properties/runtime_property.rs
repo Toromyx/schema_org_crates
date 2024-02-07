@@ -3,6 +3,7 @@
 pub trait GetRuntimeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/runtime>
 	#[deprecated = "This schema is superseded by <https://schema.org/runtimePlatform>."]
 	fn get_runtime_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

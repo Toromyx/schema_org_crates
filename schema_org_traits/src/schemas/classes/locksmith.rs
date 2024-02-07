@@ -1,6 +1,7 @@
 /// <https://schema.org/Locksmith>
 pub trait FindLocksmithIds {
 	type IdType;
+	/// <https://schema.org/Locksmith>
 	fn find_locksmith_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

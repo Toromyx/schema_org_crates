@@ -1,6 +1,7 @@
 /// <https://schema.org/AggregateOffer>
 pub trait FindAggregateOfferIds {
 	type IdType;
+	/// <https://schema.org/AggregateOffer>
 	fn find_aggregate_offer_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

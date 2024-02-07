@@ -2,6 +2,7 @@
 pub trait GetMobileUrlProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/mobileUrl>
 	fn get_mobile_url_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

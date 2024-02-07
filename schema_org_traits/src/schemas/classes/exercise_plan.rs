@@ -1,6 +1,7 @@
 /// <https://schema.org/ExercisePlan>
 pub trait FindExercisePlanIds {
 	type IdType;
+	/// <https://schema.org/ExercisePlan>
 	fn find_exercise_plan_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetItemDefectReturnLabelSourceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/itemDefectReturnLabelSource>
 	fn get_item_defect_return_label_source_property(
 		&self,
 		id: &Self::IdType,

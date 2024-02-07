@@ -1,6 +1,7 @@
 /// <https://schema.org/WebAPI>
 pub trait FindWebApiIds {
 	type IdType;
+	/// <https://schema.org/WebAPI>
 	fn find_web_api_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

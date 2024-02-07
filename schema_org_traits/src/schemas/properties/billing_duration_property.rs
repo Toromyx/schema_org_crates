@@ -2,6 +2,7 @@
 pub trait GetBillingDurationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/billingDuration>
 	fn get_billing_duration_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

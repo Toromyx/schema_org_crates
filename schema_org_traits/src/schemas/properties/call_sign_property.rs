@@ -2,6 +2,7 @@
 pub trait GetCallSignProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/callSign>
 	fn get_call_sign_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

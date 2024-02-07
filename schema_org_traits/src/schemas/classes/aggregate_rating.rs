@@ -1,6 +1,7 @@
 /// <https://schema.org/AggregateRating>
 pub trait FindAggregateRatingIds {
 	type IdType;
+	/// <https://schema.org/AggregateRating>
 	fn find_aggregate_rating_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

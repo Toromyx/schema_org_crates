@@ -1,6 +1,7 @@
 /// <https://schema.org/OnlineOnly>
 pub trait FindOnlineOnlyIds {
 	type IdType;
+	/// <https://schema.org/OnlineOnly>
 	fn find_online_only_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

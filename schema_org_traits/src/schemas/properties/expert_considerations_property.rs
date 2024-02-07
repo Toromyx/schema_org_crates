@@ -2,6 +2,7 @@
 pub trait GetExpertConsiderationsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/expertConsiderations>
 	fn get_expert_considerations_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

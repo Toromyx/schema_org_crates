@@ -1,6 +1,7 @@
 /// <https://schema.org/PregnancyHealthAspect>
 pub trait FindPregnancyHealthAspectIds {
 	type IdType;
+	/// <https://schema.org/PregnancyHealthAspect>
 	fn find_pregnancy_health_aspect_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

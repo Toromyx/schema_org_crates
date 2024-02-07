@@ -1,6 +1,7 @@
 /// <https://schema.org/SuspendAction>
 pub trait FindSuspendActionIds {
 	type IdType;
+	/// <https://schema.org/SuspendAction>
 	fn find_suspend_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

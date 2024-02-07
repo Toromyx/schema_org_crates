@@ -1,6 +1,7 @@
 /// <https://schema.org/AutoWash>
 pub trait FindAutoWashIds {
 	type IdType;
+	/// <https://schema.org/AutoWash>
 	fn find_auto_wash_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

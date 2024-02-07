@@ -2,6 +2,7 @@
 pub trait GetDropoffTimeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/dropoffTime>
 	fn get_dropoff_time_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

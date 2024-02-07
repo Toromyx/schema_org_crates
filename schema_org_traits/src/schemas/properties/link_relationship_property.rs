@@ -2,6 +2,7 @@
 pub trait GetLinkRelationshipProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/linkRelationship>
 	fn get_link_relationship_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetBlogPostProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/blogPost>
 	fn get_blog_post_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

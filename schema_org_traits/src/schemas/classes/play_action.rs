@@ -1,6 +1,7 @@
 /// <https://schema.org/PlayAction>
 pub trait FindPlayActionIds {
 	type IdType;
+	/// <https://schema.org/PlayAction>
 	fn find_play_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

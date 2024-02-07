@@ -1,6 +1,7 @@
 /// <https://schema.org/Registry>
 pub trait FindRegistryIds {
 	type IdType;
+	/// <https://schema.org/Registry>
 	fn find_registry_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

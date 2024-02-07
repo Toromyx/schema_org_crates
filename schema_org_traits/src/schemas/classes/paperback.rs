@@ -1,6 +1,7 @@
 /// <https://schema.org/Paperback>
 pub trait FindPaperbackIds {
 	type IdType;
+	/// <https://schema.org/Paperback>
 	fn find_paperback_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

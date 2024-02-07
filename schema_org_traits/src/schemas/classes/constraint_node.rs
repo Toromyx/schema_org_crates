@@ -1,6 +1,7 @@
 /// <https://schema.org/ConstraintNode>
 pub trait FindConstraintNodeIds {
 	type IdType;
+	/// <https://schema.org/ConstraintNode>
 	fn find_constraint_node_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

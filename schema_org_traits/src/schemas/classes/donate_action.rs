@@ -1,6 +1,7 @@
 /// <https://schema.org/DonateAction>
 pub trait FindDonateActionIds {
 	type IdType;
+	/// <https://schema.org/DonateAction>
 	fn find_donate_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

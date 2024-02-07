@@ -2,6 +2,7 @@
 pub trait GetCommentCountProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/commentCount>
 	fn get_comment_count_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

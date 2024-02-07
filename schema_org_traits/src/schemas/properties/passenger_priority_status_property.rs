@@ -2,6 +2,7 @@
 pub trait GetPassengerPriorityStatusProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/passengerPriorityStatus>
 	fn get_passenger_priority_status_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

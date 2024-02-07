@@ -1,6 +1,7 @@
 /// <https://schema.org/PaidLeave>
 pub trait FindPaidLeaveIds {
 	type IdType;
+	/// <https://schema.org/PaidLeave>
 	fn find_paid_leave_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

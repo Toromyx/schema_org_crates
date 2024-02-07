@@ -1,6 +1,7 @@
 /// <https://schema.org/Library>
 pub trait FindLibraryIds {
 	type IdType;
+	/// <https://schema.org/Library>
 	fn find_library_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

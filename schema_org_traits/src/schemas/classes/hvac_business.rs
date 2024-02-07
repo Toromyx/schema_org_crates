@@ -1,6 +1,7 @@
 /// <https://schema.org/HVACBusiness>
 pub trait FindHvacBusinessIds {
 	type IdType;
+	/// <https://schema.org/HVACBusiness>
 	fn find_hvac_business_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetEligibilityToWorkRequirementProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/eligibilityToWorkRequirement>
 	fn get_eligibility_to_work_requirement_property(
 		&self,
 		id: &Self::IdType,

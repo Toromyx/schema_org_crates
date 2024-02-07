@@ -2,6 +2,7 @@
 pub trait GetReleaseDateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/releaseDate>
 	fn get_release_date_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

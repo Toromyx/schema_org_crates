@@ -2,6 +2,7 @@
 pub trait GetRecommendationStrengthProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/recommendationStrength>
 	fn get_recommendation_strength_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

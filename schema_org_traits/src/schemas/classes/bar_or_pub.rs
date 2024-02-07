@@ -1,6 +1,7 @@
 /// <https://schema.org/BarOrPub>
 pub trait FindBarOrPubIds {
 	type IdType;
+	/// <https://schema.org/BarOrPub>
 	fn find_bar_or_pub_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetNetWorthProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/netWorth>
 	fn get_net_worth_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

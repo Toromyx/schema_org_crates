@@ -2,6 +2,7 @@
 pub trait GetReleaseOfProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/releaseOf>
 	fn get_release_of_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetFaxNumberProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/faxNumber>
 	fn get_fax_number_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

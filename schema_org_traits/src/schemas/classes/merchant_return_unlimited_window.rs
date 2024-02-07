@@ -1,6 +1,7 @@
 /// <https://schema.org/MerchantReturnUnlimitedWindow>
 pub trait FindMerchantReturnUnlimitedWindowIds {
 	type IdType;
+	/// <https://schema.org/MerchantReturnUnlimitedWindow>
 	fn find_merchant_return_unlimited_window_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

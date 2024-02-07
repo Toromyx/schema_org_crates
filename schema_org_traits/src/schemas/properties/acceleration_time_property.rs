@@ -2,6 +2,7 @@
 pub trait GetAccelerationTimeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/accelerationTime>
 	fn get_acceleration_time_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

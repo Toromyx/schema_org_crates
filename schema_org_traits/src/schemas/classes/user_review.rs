@@ -1,6 +1,7 @@
 /// <https://schema.org/UserReview>
 pub trait FindUserReviewIds {
 	type IdType;
+	/// <https://schema.org/UserReview>
 	fn find_user_review_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

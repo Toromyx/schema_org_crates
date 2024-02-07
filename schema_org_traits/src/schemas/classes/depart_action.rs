@@ -1,6 +1,7 @@
 /// <https://schema.org/DepartAction>
 pub trait FindDepartActionIds {
 	type IdType;
+	/// <https://schema.org/DepartAction>
 	fn find_depart_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/MedicalRiskCalculator>
 pub trait FindMedicalRiskCalculatorIds {
 	type IdType;
+	/// <https://schema.org/MedicalRiskCalculator>
 	fn find_medical_risk_calculator_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

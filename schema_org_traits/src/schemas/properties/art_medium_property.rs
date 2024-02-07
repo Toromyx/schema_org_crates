@@ -2,6 +2,7 @@
 pub trait GetArtMediumProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/artMedium>
 	fn get_art_medium_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

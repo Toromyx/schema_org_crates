@@ -1,6 +1,7 @@
 /// <https://schema.org/BrainStructure>
 pub trait FindBrainStructureIds {
 	type IdType;
+	/// <https://schema.org/BrainStructure>
 	fn find_brain_structure_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

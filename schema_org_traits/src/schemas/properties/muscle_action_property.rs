@@ -2,6 +2,7 @@
 pub trait GetMuscleActionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/muscleAction>
 	fn get_muscle_action_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

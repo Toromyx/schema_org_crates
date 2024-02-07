@@ -1,6 +1,7 @@
 /// <https://schema.org/OrderProcessing>
 pub trait FindOrderProcessingIds {
 	type IdType;
+	/// <https://schema.org/OrderProcessing>
 	fn find_order_processing_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

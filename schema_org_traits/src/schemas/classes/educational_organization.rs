@@ -1,6 +1,7 @@
 /// <https://schema.org/EducationalOrganization>
 pub trait FindEducationalOrganizationIds {
 	type IdType;
+	/// <https://schema.org/EducationalOrganization>
 	fn find_educational_organization_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

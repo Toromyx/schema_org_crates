@@ -1,6 +1,7 @@
 /// <https://schema.org/MerchantReturnPolicy>
 pub trait FindMerchantReturnPolicyIds {
 	type IdType;
+	/// <https://schema.org/MerchantReturnPolicy>
 	fn find_merchant_return_policy_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

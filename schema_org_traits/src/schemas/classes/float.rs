@@ -1,6 +1,7 @@
 /// <https://schema.org/Float>
 pub trait FindFloatIds {
 	type IdType;
+	/// <https://schema.org/Float>
 	fn find_float_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

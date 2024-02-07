@@ -2,6 +2,7 @@
 pub trait GetRestPeriodsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/restPeriods>
 	fn get_rest_periods_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

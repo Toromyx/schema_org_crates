@@ -1,6 +1,7 @@
 /// <https://schema.org/MinorHumanEditsDigitalSource>
 pub trait FindMinorHumanEditsDigitalSourceIds {
 	type IdType;
+	/// <https://schema.org/MinorHumanEditsDigitalSource>
 	fn find_minor_human_edits_digital_source_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

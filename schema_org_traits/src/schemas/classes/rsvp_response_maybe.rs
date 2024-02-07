@@ -1,6 +1,7 @@
 /// <https://schema.org/RsvpResponseMaybe>
 pub trait FindRsvpResponseMaybeIds {
 	type IdType;
+	/// <https://schema.org/RsvpResponseMaybe>
 	fn find_rsvp_response_maybe_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

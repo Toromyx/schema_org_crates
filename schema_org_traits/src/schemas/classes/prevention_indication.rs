@@ -1,6 +1,7 @@
 /// <https://schema.org/PreventionIndication>
 pub trait FindPreventionIndicationIds {
 	type IdType;
+	/// <https://schema.org/PreventionIndication>
 	fn find_prevention_indication_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

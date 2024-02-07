@@ -2,6 +2,7 @@
 pub trait GetProductGroupIdProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/productGroupID>
 	fn get_product_group_id_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

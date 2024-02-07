@@ -2,6 +2,7 @@
 pub trait GetSignificanceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/significance>
 	fn get_significance_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

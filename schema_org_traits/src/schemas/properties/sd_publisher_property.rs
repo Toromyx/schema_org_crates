@@ -2,6 +2,7 @@
 pub trait GetSdPublisherProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/sdPublisher>
 	fn get_sd_publisher_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

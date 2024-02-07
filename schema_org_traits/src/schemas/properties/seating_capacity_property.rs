@@ -2,6 +2,7 @@
 pub trait GetSeatingCapacityProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/seatingCapacity>
 	fn get_seating_capacity_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

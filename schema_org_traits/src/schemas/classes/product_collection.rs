@@ -1,6 +1,7 @@
 /// <https://schema.org/ProductCollection>
 pub trait FindProductCollectionIds {
 	type IdType;
+	/// <https://schema.org/ProductCollection>
 	fn find_product_collection_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

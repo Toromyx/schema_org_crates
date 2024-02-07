@@ -1,6 +1,7 @@
 /// <https://schema.org/DrugClass>
 pub trait FindDrugClassIds {
 	type IdType;
+	/// <https://schema.org/DrugClass>
 	fn find_drug_class_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

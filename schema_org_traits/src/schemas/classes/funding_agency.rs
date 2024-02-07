@@ -1,6 +1,7 @@
 /// <https://schema.org/FundingAgency>
 pub trait FindFundingAgencyIds {
 	type IdType;
+	/// <https://schema.org/FundingAgency>
 	fn find_funding_agency_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

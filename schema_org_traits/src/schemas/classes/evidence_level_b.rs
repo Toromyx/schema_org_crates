@@ -1,6 +1,7 @@
 /// <https://schema.org/EvidenceLevelB>
 pub trait FindEvidenceLevelBIds {
 	type IdType;
+	/// <https://schema.org/EvidenceLevelB>
 	fn find_evidence_level_b_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

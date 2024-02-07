@@ -2,6 +2,7 @@
 pub trait GetGuidelineSubjectProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/guidelineSubject>
 	fn get_guideline_subject_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

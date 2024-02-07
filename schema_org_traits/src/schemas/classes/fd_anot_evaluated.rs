@@ -1,6 +1,7 @@
 /// <https://schema.org/FDAnotEvaluated>
 pub trait FindFdAnotEvaluatedIds {
 	type IdType;
+	/// <https://schema.org/FDAnotEvaluated>
 	fn find_fd_anot_evaluated_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

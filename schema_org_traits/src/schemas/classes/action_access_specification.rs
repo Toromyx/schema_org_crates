@@ -1,6 +1,7 @@
 /// <https://schema.org/ActionAccessSpecification>
 pub trait FindActionAccessSpecificationIds {
 	type IdType;
+	/// <https://schema.org/ActionAccessSpecification>
 	fn find_action_access_specification_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/DiagnosticLab>
 pub trait FindDiagnosticLabIds {
 	type IdType;
+	/// <https://schema.org/DiagnosticLab>
 	fn find_diagnostic_lab_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

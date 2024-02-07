@@ -1,6 +1,7 @@
 /// <https://schema.org/Class>
 pub trait FindClassIds {
 	type IdType;
+	/// <https://schema.org/Class>
 	fn find_class_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

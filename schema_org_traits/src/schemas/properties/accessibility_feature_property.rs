@@ -2,6 +2,7 @@
 pub trait GetAccessibilityFeatureProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/accessibilityFeature>
 	fn get_accessibility_feature_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

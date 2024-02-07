@@ -2,6 +2,7 @@
 pub trait GetTrialDesignProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/trialDesign>
 	fn get_trial_design_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/BasicIncome>
 pub trait FindBasicIncomeIds {
 	type IdType;
+	/// <https://schema.org/BasicIncome>
 	fn find_basic_income_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

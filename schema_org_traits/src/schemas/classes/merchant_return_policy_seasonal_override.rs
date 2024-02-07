@@ -1,6 +1,7 @@
 /// <https://schema.org/MerchantReturnPolicySeasonalOverride>
 pub trait FindMerchantReturnPolicySeasonalOverrideIds {
 	type IdType;
+	/// <https://schema.org/MerchantReturnPolicySeasonalOverride>
 	fn find_merchant_return_policy_seasonal_override_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

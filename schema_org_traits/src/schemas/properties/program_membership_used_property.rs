@@ -2,6 +2,7 @@
 pub trait GetProgramMembershipUsedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/programMembershipUsed>
 	fn get_program_membership_used_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

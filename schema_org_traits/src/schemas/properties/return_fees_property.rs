@@ -2,6 +2,7 @@
 pub trait GetReturnFeesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/returnFees>
 	fn get_return_fees_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

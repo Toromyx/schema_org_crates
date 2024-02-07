@@ -2,6 +2,7 @@
 pub trait GetDietFeaturesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/dietFeatures>
 	fn get_diet_features_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetAvailableTestProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/availableTest>
 	fn get_available_test_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

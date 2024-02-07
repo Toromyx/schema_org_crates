@@ -1,6 +1,7 @@
 /// <https://schema.org/ResultsAvailable>
 pub trait FindResultsAvailableIds {
 	type IdType;
+	/// <https://schema.org/ResultsAvailable>
 	fn find_results_available_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

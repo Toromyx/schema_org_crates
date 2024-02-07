@@ -1,6 +1,7 @@
 /// <https://schema.org/DepositAccount>
 pub trait FindDepositAccountIds {
 	type IdType;
+	/// <https://schema.org/DepositAccount>
 	fn find_deposit_account_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/CassetteFormat>
 pub trait FindCassetteFormatIds {
 	type IdType;
+	/// <https://schema.org/CassetteFormat>
 	fn find_cassette_format_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

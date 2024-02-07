@@ -1,6 +1,7 @@
 /// <https://schema.org/SpreadsheetDigitalDocument>
 pub trait FindSpreadsheetDigitalDocumentIds {
 	type IdType;
+	/// <https://schema.org/SpreadsheetDigitalDocument>
 	fn find_spreadsheet_digital_document_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

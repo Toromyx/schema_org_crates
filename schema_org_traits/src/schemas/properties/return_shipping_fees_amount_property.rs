@@ -2,6 +2,7 @@
 pub trait GetReturnShippingFeesAmountProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/returnShippingFeesAmount>
 	fn get_return_shipping_fees_amount_property(
 		&self,
 		id: &Self::IdType,

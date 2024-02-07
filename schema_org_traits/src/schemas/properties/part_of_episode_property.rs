@@ -2,6 +2,7 @@
 pub trait GetPartOfEpisodeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/partOfEpisode>
 	fn get_part_of_episode_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

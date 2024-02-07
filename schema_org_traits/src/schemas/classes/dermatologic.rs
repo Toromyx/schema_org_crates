@@ -2,6 +2,7 @@
 #[deprecated = "This schema is superseded by <https://schema.org/Dermatology>."]
 pub trait FindDermatologicIds {
 	type IdType;
+	/// <https://schema.org/Dermatologic>
 	#[deprecated = "This schema is superseded by <https://schema.org/Dermatology>."]
 	fn find_dermatologic_ids(&self) -> Vec<&Self::IdType>;
 }

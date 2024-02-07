@@ -2,6 +2,7 @@
 pub trait GetGeoCoversProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/geoCovers>
 	fn get_geo_covers_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

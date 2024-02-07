@@ -2,6 +2,7 @@
 pub trait GetMemoryRequirementsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/memoryRequirements>
 	fn get_memory_requirements_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

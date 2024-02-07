@@ -1,6 +1,7 @@
 /// <https://schema.org/Nursing>
 pub trait FindNursingIds {
 	type IdType;
+	/// <https://schema.org/Nursing>
 	fn find_nursing_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

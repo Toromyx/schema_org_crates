@@ -1,6 +1,7 @@
 /// <https://schema.org/HalalDiet>
 pub trait FindHalalDietIds {
 	type IdType;
+	/// <https://schema.org/HalalDiet>
 	fn find_halal_diet_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

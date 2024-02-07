@@ -1,6 +1,7 @@
 /// <https://schema.org/Radiography>
 pub trait FindRadiographyIds {
 	type IdType;
+	/// <https://schema.org/Radiography>
 	fn find_radiography_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

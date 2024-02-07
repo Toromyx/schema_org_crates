@@ -2,6 +2,7 @@
 pub trait GetToolProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/tool>
 	fn get_tool_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetWorstRatingProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/worstRating>
 	fn get_worst_rating_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

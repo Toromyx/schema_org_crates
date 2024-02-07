@@ -1,6 +1,7 @@
 /// <https://schema.org/ArtGallery>
 pub trait FindArtGalleryIds {
 	type IdType;
+	/// <https://schema.org/ArtGallery>
 	fn find_art_gallery_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

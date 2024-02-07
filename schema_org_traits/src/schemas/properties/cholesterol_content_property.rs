@@ -2,6 +2,7 @@
 pub trait GetCholesterolContentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/cholesterolContent>
 	fn get_cholesterol_content_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetEmbedUrlProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/embedUrl>
 	fn get_embed_url_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

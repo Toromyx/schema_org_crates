@@ -3,6 +3,7 @@
 pub trait GetEncodingsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/encodings>
 	#[deprecated = "This schema is superseded by <https://schema.org/encoding>."]
 	fn get_encodings_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

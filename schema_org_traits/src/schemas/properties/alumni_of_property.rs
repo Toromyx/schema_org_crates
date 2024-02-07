@@ -2,6 +2,7 @@
 pub trait GetAlumniOfProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/alumniOf>
 	fn get_alumni_of_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

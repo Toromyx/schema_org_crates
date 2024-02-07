@@ -1,6 +1,7 @@
 /// <https://schema.org/FAQPage>
 pub trait FindFaqPageIds {
 	type IdType;
+	/// <https://schema.org/FAQPage>
 	fn find_faq_page_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

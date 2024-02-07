@@ -2,6 +2,7 @@
 pub trait GetEnergyEfficiencyScaleMinProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/energyEfficiencyScaleMin>
 	fn get_energy_efficiency_scale_min_property(
 		&self,
 		id: &Self::IdType,

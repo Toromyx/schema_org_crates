@@ -1,6 +1,7 @@
 /// <https://schema.org/ReturnFeesCustomerResponsibility>
 pub trait FindReturnFeesCustomerResponsibilityIds {
 	type IdType;
+	/// <https://schema.org/ReturnFeesCustomerResponsibility>
 	fn find_return_fees_customer_responsibility_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

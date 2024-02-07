@@ -2,6 +2,7 @@
 pub trait GetFamilyNameProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/familyName>
 	fn get_family_name_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetPreparationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/preparation>
 	fn get_preparation_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

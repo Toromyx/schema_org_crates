@@ -1,6 +1,7 @@
 /// <https://schema.org/WearAction>
 pub trait FindWearActionIds {
 	type IdType;
+	/// <https://schema.org/WearAction>
 	fn find_wear_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

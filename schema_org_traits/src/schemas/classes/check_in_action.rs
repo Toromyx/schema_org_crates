@@ -1,6 +1,7 @@
 /// <https://schema.org/CheckInAction>
 pub trait FindCheckInActionIds {
 	type IdType;
+	/// <https://schema.org/CheckInAction>
 	fn find_check_in_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/TennisComplex>
 pub trait FindTennisComplexIds {
 	type IdType;
+	/// <https://schema.org/TennisComplex>
 	fn find_tennis_complex_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

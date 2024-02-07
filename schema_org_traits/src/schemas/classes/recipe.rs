@@ -1,6 +1,7 @@
 /// <https://schema.org/Recipe>
 pub trait FindRecipeIds {
 	type IdType;
+	/// <https://schema.org/Recipe>
 	fn find_recipe_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

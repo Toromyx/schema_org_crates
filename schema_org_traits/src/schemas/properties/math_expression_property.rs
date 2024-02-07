@@ -2,6 +2,7 @@
 pub trait GetMathExpressionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/mathExpression>
 	fn get_math_expression_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

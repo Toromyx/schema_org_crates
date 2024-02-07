@@ -1,6 +1,7 @@
 /// <https://schema.org/OrderReturned>
 pub trait FindOrderReturnedIds {
 	type IdType;
+	/// <https://schema.org/OrderReturned>
 	fn find_order_returned_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

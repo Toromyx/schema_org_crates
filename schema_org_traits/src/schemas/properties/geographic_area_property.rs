@@ -2,6 +2,7 @@
 pub trait GetGeographicAreaProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/geographicArea>
 	fn get_geographic_area_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

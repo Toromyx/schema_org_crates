@@ -1,6 +1,7 @@
 /// <https://schema.org/ExampleMeasurementMethodEnum>
 pub trait FindExampleMeasurementMethodEnumIds {
 	type IdType;
+	/// <https://schema.org/ExampleMeasurementMethodEnum>
 	fn find_example_measurement_method_enum_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetIncludesObjectProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/includesObject>
 	fn get_includes_object_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

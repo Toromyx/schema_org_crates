@@ -2,6 +2,7 @@
 pub trait GetApplicationContactProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/applicationContact>
 	fn get_application_contact_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

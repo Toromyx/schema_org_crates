@@ -1,6 +1,7 @@
 /// <https://schema.org/CompositeCaptureDigitalSource>
 pub trait FindCompositeCaptureDigitalSourceIds {
 	type IdType;
+	/// <https://schema.org/CompositeCaptureDigitalSource>
 	fn find_composite_capture_digital_source_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

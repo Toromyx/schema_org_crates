@@ -2,6 +2,7 @@
 pub trait GetResponsibilitiesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/responsibilities>
 	fn get_responsibilities_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

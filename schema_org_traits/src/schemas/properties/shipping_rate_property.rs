@@ -2,6 +2,7 @@
 pub trait GetShippingRateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/shippingRate>
 	fn get_shipping_rate_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

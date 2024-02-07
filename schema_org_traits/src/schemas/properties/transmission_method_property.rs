@@ -2,6 +2,7 @@
 pub trait GetTransmissionMethodProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/transmissionMethod>
 	fn get_transmission_method_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetWinnerProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/winner>
 	fn get_winner_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

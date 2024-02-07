@@ -3,6 +3,7 @@
 pub trait GetPhotosProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/photos>
 	#[deprecated = "This schema is superseded by <https://schema.org/photo>."]
 	fn get_photos_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

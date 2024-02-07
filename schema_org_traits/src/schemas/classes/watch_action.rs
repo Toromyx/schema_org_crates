@@ -1,6 +1,7 @@
 /// <https://schema.org/WatchAction>
 pub trait FindWatchActionIds {
 	type IdType;
+	/// <https://schema.org/WatchAction>
 	fn find_watch_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

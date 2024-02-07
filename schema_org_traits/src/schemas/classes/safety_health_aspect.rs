@@ -1,6 +1,7 @@
 /// <https://schema.org/SafetyHealthAspect>
 pub trait FindSafetyHealthAspectIds {
 	type IdType;
+	/// <https://schema.org/SafetyHealthAspect>
 	fn find_safety_health_aspect_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

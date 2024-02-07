@@ -2,6 +2,7 @@
 pub trait GetConfirmationNumberProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/confirmationNumber>
 	fn get_confirmation_number_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

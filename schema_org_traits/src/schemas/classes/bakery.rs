@@ -1,6 +1,7 @@
 /// <https://schema.org/Bakery>
 pub trait FindBakeryIds {
 	type IdType;
+	/// <https://schema.org/Bakery>
 	fn find_bakery_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

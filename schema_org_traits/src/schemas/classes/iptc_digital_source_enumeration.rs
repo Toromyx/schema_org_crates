@@ -1,6 +1,7 @@
 /// <https://schema.org/IPTCDigitalSourceEnumeration>
 pub trait FindIptcDigitalSourceEnumerationIds {
 	type IdType;
+	/// <https://schema.org/IPTCDigitalSourceEnumeration>
 	fn find_iptc_digital_source_enumeration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

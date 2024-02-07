@@ -3,6 +3,7 @@
 pub trait GetHasProductReturnPolicyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasProductReturnPolicy>
 	#[deprecated = "This schema is archived, see <https://schema.org/docs/attic.home.html>. This schema is superseded by <https://schema.org/hasMerchantReturnPolicy>."]
 	fn get_has_product_return_policy_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;

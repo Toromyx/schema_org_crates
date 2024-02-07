@@ -2,6 +2,7 @@
 pub trait GetArrivalBusStopProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/arrivalBusStop>
 	fn get_arrival_bus_stop_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

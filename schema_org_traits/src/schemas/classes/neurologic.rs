@@ -1,6 +1,7 @@
 /// <https://schema.org/Neurologic>
 pub trait FindNeurologicIds {
 	type IdType;
+	/// <https://schema.org/Neurologic>
 	fn find_neurologic_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

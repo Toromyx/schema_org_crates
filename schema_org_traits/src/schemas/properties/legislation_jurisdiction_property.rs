@@ -2,6 +2,7 @@
 pub trait GetLegislationJurisdictionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/legislationJurisdiction>
 	fn get_legislation_jurisdiction_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

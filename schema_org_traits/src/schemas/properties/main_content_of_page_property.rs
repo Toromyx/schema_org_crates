@@ -2,6 +2,7 @@
 pub trait GetMainContentOfPageProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/mainContentOfPage>
 	fn get_main_content_of_page_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

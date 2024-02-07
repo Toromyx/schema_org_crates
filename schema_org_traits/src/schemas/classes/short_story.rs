@@ -1,6 +1,7 @@
 /// <https://schema.org/ShortStory>
 pub trait FindShortStoryIds {
 	type IdType;
+	/// <https://schema.org/ShortStory>
 	fn find_short_story_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

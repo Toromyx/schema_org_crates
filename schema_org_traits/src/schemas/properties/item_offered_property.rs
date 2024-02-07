@@ -2,6 +2,7 @@
 pub trait GetItemOfferedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/itemOffered>
 	fn get_item_offered_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

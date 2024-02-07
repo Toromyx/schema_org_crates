@@ -2,6 +2,7 @@
 pub trait GetQuestProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/quest>
 	fn get_quest_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

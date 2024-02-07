@@ -1,6 +1,7 @@
 /// <https://schema.org/WearableSizeSystemEurope>
 pub trait FindWearableSizeSystemEuropeIds {
 	type IdType;
+	/// <https://schema.org/WearableSizeSystemEurope>
 	fn find_wearable_size_system_europe_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/PhysicalExam>
 pub trait FindPhysicalExamIds {
 	type IdType;
+	/// <https://schema.org/PhysicalExam>
 	fn find_physical_exam_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/ShippingRateSettings>
 pub trait FindShippingRateSettingsIds {
 	type IdType;
+	/// <https://schema.org/ShippingRateSettings>
 	fn find_shipping_rate_settings_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

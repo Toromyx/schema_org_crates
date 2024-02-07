@@ -1,6 +1,7 @@
 /// <https://schema.org/Balance>
 pub trait FindBalanceIds {
 	type IdType;
+	/// <https://schema.org/Balance>
 	fn find_balance_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

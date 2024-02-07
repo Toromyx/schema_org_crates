@@ -1,6 +1,7 @@
 /// <https://schema.org/Online>
 pub trait FindOnlineIds {
 	type IdType;
+	/// <https://schema.org/Online>
 	fn find_online_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

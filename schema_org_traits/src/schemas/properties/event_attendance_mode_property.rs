@@ -2,6 +2,7 @@
 pub trait GetEventAttendanceModeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/eventAttendanceMode>
 	fn get_event_attendance_mode_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

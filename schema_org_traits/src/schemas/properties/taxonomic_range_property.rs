@@ -2,6 +2,7 @@
 pub trait GetTaxonomicRangeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/taxonomicRange>
 	fn get_taxonomic_range_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

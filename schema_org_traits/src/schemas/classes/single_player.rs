@@ -1,6 +1,7 @@
 /// <https://schema.org/SinglePlayer>
 pub trait FindSinglePlayerIds {
 	type IdType;
+	/// <https://schema.org/SinglePlayer>
 	fn find_single_player_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

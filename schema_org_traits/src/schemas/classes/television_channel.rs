@@ -1,6 +1,7 @@
 /// <https://schema.org/TelevisionChannel>
 pub trait FindTelevisionChannelIds {
 	type IdType;
+	/// <https://schema.org/TelevisionChannel>
 	fn find_television_channel_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

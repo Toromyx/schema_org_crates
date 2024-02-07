@@ -2,6 +2,7 @@
 pub trait GetContentLocationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/contentLocation>
 	fn get_content_location_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

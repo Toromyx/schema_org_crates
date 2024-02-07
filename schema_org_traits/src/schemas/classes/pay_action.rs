@@ -1,6 +1,7 @@
 /// <https://schema.org/PayAction>
 pub trait FindPayActionIds {
 	type IdType;
+	/// <https://schema.org/PayAction>
 	fn find_pay_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

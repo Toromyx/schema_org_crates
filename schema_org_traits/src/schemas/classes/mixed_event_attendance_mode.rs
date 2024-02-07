@@ -1,6 +1,7 @@
 /// <https://schema.org/MixedEventAttendanceMode>
 pub trait FindMixedEventAttendanceModeIds {
 	type IdType;
+	/// <https://schema.org/MixedEventAttendanceMode>
 	fn find_mixed_event_attendance_mode_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

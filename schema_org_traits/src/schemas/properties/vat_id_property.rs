@@ -2,6 +2,7 @@
 pub trait GetVatIdProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/vatID>
 	fn get_vat_id_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

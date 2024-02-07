@@ -2,6 +2,7 @@
 pub trait GetRequiredGenderProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/requiredGender>
 	fn get_required_gender_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

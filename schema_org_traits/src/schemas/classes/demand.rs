@@ -1,6 +1,7 @@
 /// <https://schema.org/Demand>
 pub trait FindDemandIds {
 	type IdType;
+	/// <https://schema.org/Demand>
 	fn find_demand_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

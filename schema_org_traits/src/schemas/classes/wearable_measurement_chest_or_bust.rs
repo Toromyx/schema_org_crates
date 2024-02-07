@@ -1,6 +1,7 @@
 /// <https://schema.org/WearableMeasurementChestOrBust>
 pub trait FindWearableMeasurementChestOrBustIds {
 	type IdType;
+	/// <https://schema.org/WearableMeasurementChestOrBust>
 	fn find_wearable_measurement_chest_or_bust_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

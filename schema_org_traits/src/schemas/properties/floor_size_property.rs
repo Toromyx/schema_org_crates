@@ -2,6 +2,7 @@
 pub trait GetFloorSizeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/floorSize>
 	fn get_floor_size_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

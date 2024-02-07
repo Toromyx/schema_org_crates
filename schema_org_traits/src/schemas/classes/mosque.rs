@@ -1,6 +1,7 @@
 /// <https://schema.org/Mosque>
 pub trait FindMosqueIds {
 	type IdType;
+	/// <https://schema.org/Mosque>
 	fn find_mosque_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

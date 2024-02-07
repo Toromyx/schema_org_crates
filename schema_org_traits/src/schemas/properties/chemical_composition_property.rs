@@ -2,6 +2,7 @@
 pub trait GetChemicalCompositionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/chemicalComposition>
 	fn get_chemical_composition_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -3,6 +3,7 @@
 pub trait GetBranchOfProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/branchOf>
 	#[deprecated = "This schema is superseded by <https://schema.org/parentOrganization>."]
 	fn get_branch_of_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

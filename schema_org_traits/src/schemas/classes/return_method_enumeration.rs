@@ -1,6 +1,7 @@
 /// <https://schema.org/ReturnMethodEnumeration>
 pub trait FindReturnMethodEnumerationIds {
 	type IdType;
+	/// <https://schema.org/ReturnMethodEnumeration>
 	fn find_return_method_enumeration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

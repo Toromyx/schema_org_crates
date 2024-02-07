@@ -2,6 +2,7 @@
 pub trait GetGranteeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/grantee>
 	fn get_grantee_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetMerchantReturnDaysProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/merchantReturnDays>
 	fn get_merchant_return_days_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

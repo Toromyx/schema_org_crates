@@ -2,6 +2,7 @@
 pub trait GetSkuProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/sku>
 	fn get_sku_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

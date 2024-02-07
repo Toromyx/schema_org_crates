@@ -2,6 +2,7 @@
 pub trait GetTickerSymbolProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/tickerSymbol>
 	fn get_ticker_symbol_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

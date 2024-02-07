@@ -2,6 +2,7 @@
 pub trait GetCvdNumC19OfMechVentPatsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/cvdNumC19OFMechVentPats>
 	fn get_cvd_num_c_19_of_mech_vent_pats_property(
 		&self,
 		id: &Self::IdType,

@@ -2,6 +2,7 @@
 pub trait GetExercisePlanProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/exercisePlan>
 	fn get_exercise_plan_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

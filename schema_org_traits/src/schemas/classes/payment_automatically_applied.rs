@@ -1,6 +1,7 @@
 /// <https://schema.org/PaymentAutomaticallyApplied>
 pub trait FindPaymentAutomaticallyAppliedIds {
 	type IdType;
+	/// <https://schema.org/PaymentAutomaticallyApplied>
 	fn find_payment_automatically_applied_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/VoteAction>
 pub trait FindVoteActionIds {
 	type IdType;
+	/// <https://schema.org/VoteAction>
 	fn find_vote_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

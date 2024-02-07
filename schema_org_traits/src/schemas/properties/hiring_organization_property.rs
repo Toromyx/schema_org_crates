@@ -2,6 +2,7 @@
 pub trait GetHiringOrganizationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hiringOrganization>
 	fn get_hiring_organization_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

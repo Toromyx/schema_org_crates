@@ -2,6 +2,7 @@
 pub trait GetReviewBodyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/reviewBody>
 	fn get_review_body_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

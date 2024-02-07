@@ -1,6 +1,7 @@
 /// <https://schema.org/OwnershipInfo>
 pub trait FindOwnershipInfoIds {
 	type IdType;
+	/// <https://schema.org/OwnershipInfo>
 	fn find_ownership_info_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

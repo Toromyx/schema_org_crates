@@ -2,6 +2,7 @@
 pub trait GetCoverageStartTimeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/coverageStartTime>
 	fn get_coverage_start_time_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

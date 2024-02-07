@@ -1,6 +1,7 @@
 /// <https://schema.org/EventVenue>
 pub trait FindEventVenueIds {
 	type IdType;
+	/// <https://schema.org/EventVenue>
 	fn find_event_venue_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

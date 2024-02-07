@@ -2,6 +2,7 @@
 pub trait GetTravelBansProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/travelBans>
 	fn get_travel_bans_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

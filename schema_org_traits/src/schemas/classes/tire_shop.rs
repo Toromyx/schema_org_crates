@@ -1,6 +1,7 @@
 /// <https://schema.org/TireShop>
 pub trait FindTireShopIds {
 	type IdType;
+	/// <https://schema.org/TireShop>
 	fn find_tire_shop_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

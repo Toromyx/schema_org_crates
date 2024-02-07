@@ -1,6 +1,7 @@
 /// <https://schema.org/WorkBasedProgram>
 pub trait FindWorkBasedProgramIds {
 	type IdType;
+	/// <https://schema.org/WorkBasedProgram>
 	fn find_work_based_program_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

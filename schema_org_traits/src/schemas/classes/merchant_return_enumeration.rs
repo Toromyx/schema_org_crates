@@ -1,6 +1,7 @@
 /// <https://schema.org/MerchantReturnEnumeration>
 pub trait FindMerchantReturnEnumerationIds {
 	type IdType;
+	/// <https://schema.org/MerchantReturnEnumeration>
 	fn find_merchant_return_enumeration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

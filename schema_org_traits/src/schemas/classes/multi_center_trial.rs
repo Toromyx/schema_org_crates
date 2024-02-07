@@ -1,6 +1,7 @@
 /// <https://schema.org/MultiCenterTrial>
 pub trait FindMultiCenterTrialIds {
 	type IdType;
+	/// <https://schema.org/MultiCenterTrial>
 	fn find_multi_center_trial_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

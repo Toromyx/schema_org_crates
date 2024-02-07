@@ -3,6 +3,7 @@
 pub trait GetFileFormatProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/fileFormat>
 	#[deprecated = "This schema is superseded by <https://schema.org/encodingFormat>."]
 	fn get_file_format_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

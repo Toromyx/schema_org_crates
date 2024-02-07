@@ -2,6 +2,7 @@
 pub trait GetCoursePrerequisitesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/coursePrerequisites>
 	fn get_course_prerequisites_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

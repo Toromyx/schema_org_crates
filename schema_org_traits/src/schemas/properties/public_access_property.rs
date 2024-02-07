@@ -2,6 +2,7 @@
 pub trait GetPublicAccessProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/publicAccess>
 	fn get_public_access_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

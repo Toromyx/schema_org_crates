@@ -2,6 +2,7 @@
 pub trait GetSportsActivityLocationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/sportsActivityLocation>
 	fn get_sports_activity_location_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

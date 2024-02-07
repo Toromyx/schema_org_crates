@@ -3,6 +3,7 @@
 pub trait GetBlogPostsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/blogPosts>
 	#[deprecated = "This schema is superseded by <https://schema.org/blogPost>."]
 	fn get_blog_posts_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

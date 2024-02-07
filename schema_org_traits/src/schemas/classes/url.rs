@@ -1,6 +1,7 @@
 /// <https://schema.org/URL>
 pub trait FindUrlIds {
 	type IdType;
+	/// <https://schema.org/URL>
 	fn find_url_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

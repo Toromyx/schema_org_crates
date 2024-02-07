@@ -2,6 +2,7 @@
 pub trait GetHoursAvailableProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hoursAvailable>
 	fn get_hours_available_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetTocEntryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/tocEntry>
 	fn get_toc_entry_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

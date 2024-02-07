@@ -2,6 +2,7 @@
 pub trait GetLegislationResponsibleProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/legislationResponsible>
 	fn get_legislation_responsible_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

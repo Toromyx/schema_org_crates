@@ -3,6 +3,7 @@
 pub trait GetLanguageProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/language>
 	#[deprecated = "This schema is superseded by <https://schema.org/inLanguage>."]
 	fn get_language_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

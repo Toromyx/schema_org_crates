@@ -2,6 +2,7 @@
 pub trait GetBenefitsSummaryUrlProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/benefitsSummaryUrl>
 	fn get_benefits_summary_url_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

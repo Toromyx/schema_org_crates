@@ -1,6 +1,7 @@
 /// <https://schema.org/ReceiveAction>
 pub trait FindReceiveActionIds {
 	type IdType;
+	/// <https://schema.org/ReceiveAction>
 	fn find_receive_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

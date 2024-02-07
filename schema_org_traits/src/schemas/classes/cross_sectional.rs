@@ -1,6 +1,7 @@
 /// <https://schema.org/CrossSectional>
 pub trait FindCrossSectionalIds {
 	type IdType;
+	/// <https://schema.org/CrossSectional>
 	fn find_cross_sectional_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetWarningProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/warning>
 	fn get_warning_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

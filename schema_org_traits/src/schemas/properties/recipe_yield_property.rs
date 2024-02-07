@@ -2,6 +2,7 @@
 pub trait GetRecipeYieldProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/recipeYield>
 	fn get_recipe_yield_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

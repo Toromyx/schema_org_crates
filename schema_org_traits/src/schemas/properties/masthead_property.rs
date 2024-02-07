@@ -2,6 +2,7 @@
 pub trait GetMastheadProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/masthead>
 	fn get_masthead_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

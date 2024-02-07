@@ -2,6 +2,7 @@
 pub trait GetEndOffsetProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/endOffset>
 	fn get_end_offset_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

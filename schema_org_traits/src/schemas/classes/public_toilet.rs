@@ -1,6 +1,7 @@
 /// <https://schema.org/PublicToilet>
 pub trait FindPublicToiletIds {
 	type IdType;
+	/// <https://schema.org/PublicToilet>
 	fn find_public_toilet_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

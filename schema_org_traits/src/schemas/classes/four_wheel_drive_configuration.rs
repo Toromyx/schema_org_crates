@@ -1,6 +1,7 @@
 /// <https://schema.org/FourWheelDriveConfiguration>
 pub trait FindFourWheelDriveConfigurationIds {
 	type IdType;
+	/// <https://schema.org/FourWheelDriveConfiguration>
 	fn find_four_wheel_drive_configuration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

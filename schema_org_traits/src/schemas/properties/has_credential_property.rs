@@ -2,6 +2,7 @@
 pub trait GetHasCredentialProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasCredential>
 	fn get_has_credential_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

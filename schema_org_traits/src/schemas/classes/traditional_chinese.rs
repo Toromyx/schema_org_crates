@@ -1,6 +1,7 @@
 /// <https://schema.org/TraditionalChinese>
 pub trait FindTraditionalChineseIds {
 	type IdType;
+	/// <https://schema.org/TraditionalChinese>
 	fn find_traditional_chinese_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

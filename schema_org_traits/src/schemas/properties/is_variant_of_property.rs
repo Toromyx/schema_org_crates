@@ -2,6 +2,7 @@
 pub trait GetIsVariantOfProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isVariantOf>
 	fn get_is_variant_of_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

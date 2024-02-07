@@ -1,6 +1,7 @@
 /// <https://schema.org/WeaponConsideration>
 pub trait FindWeaponConsiderationIds {
 	type IdType;
+	/// <https://schema.org/WeaponConsideration>
 	fn find_weapon_consideration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

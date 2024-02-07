@@ -2,6 +2,7 @@
 pub trait GetNumChildrenProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/numChildren>
 	fn get_num_children_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

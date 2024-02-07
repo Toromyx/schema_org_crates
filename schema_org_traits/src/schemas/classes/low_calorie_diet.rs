@@ -1,6 +1,7 @@
 /// <https://schema.org/LowCalorieDiet>
 pub trait FindLowCalorieDietIds {
 	type IdType;
+	/// <https://schema.org/LowCalorieDiet>
 	fn find_low_calorie_diet_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

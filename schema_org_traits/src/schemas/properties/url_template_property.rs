@@ -2,6 +2,7 @@
 pub trait GetUrlTemplateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/urlTemplate>
 	fn get_url_template_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

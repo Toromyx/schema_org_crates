@@ -2,6 +2,7 @@
 pub trait GetRsvpResponseProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/rsvpResponse>
 	fn get_rsvp_response_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/StudioAlbum>
 pub trait FindStudioAlbumIds {
 	type IdType;
+	/// <https://schema.org/StudioAlbum>
 	fn find_studio_album_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

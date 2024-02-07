@@ -2,6 +2,7 @@
 pub trait GetOriginalMediaContextDescriptionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/originalMediaContextDescription>
 	fn get_original_media_context_description_property(
 		&self,
 		id: &Self::IdType,

@@ -1,6 +1,7 @@
 /// <https://schema.org/InStock>
 pub trait FindInStockIds {
 	type IdType;
+	/// <https://schema.org/InStock>
 	fn find_in_stock_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetPositionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/position>
 	fn get_position_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

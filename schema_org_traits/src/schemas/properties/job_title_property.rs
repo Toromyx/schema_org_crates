@@ -2,6 +2,7 @@
 pub trait GetJobTitleProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/jobTitle>
 	fn get_job_title_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

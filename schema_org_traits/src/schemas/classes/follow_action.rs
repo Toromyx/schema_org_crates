@@ -1,6 +1,7 @@
 /// <https://schema.org/FollowAction>
 pub trait FindFollowActionIds {
 	type IdType;
+	/// <https://schema.org/FollowAction>
 	fn find_follow_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

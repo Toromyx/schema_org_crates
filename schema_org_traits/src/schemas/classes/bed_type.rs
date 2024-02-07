@@ -1,6 +1,7 @@
 /// <https://schema.org/BedType>
 pub trait FindBedTypeIds {
 	type IdType;
+	/// <https://schema.org/BedType>
 	fn find_bed_type_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

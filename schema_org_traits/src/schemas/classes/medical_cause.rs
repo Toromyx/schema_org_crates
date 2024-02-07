@@ -1,6 +1,7 @@
 /// <https://schema.org/MedicalCause>
 pub trait FindMedicalCauseIds {
 	type IdType;
+	/// <https://schema.org/MedicalCause>
 	fn find_medical_cause_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

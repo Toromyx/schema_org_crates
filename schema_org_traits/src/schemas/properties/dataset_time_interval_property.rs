@@ -3,6 +3,7 @@
 pub trait GetDatasetTimeIntervalProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/datasetTimeInterval>
 	#[deprecated = "This schema is superseded by <https://schema.org/temporalCoverage>."]
 	fn get_dataset_time_interval_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

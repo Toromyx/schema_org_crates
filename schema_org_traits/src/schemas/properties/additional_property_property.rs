@@ -2,6 +2,7 @@
 pub trait GetAdditionalPropertyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/additionalProperty>
 	fn get_additional_property_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

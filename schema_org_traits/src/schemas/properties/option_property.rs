@@ -3,6 +3,7 @@
 pub trait GetOptionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/option>
 	#[deprecated = "This schema is superseded by <https://schema.org/actionOption>."]
 	fn get_option_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

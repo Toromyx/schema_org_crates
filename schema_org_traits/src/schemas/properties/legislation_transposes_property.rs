@@ -2,6 +2,7 @@
 pub trait GetLegislationTransposesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/legislationTransposes>
 	fn get_legislation_transposes_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

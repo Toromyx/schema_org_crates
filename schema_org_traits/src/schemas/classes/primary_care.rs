@@ -1,6 +1,7 @@
 /// <https://schema.org/PrimaryCare>
 pub trait FindPrimaryCareIds {
 	type IdType;
+	/// <https://schema.org/PrimaryCare>
 	fn find_primary_care_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

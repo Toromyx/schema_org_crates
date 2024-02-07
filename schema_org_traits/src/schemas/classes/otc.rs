@@ -1,6 +1,7 @@
 /// <https://schema.org/OTC>
 pub trait FindOtcIds {
 	type IdType;
+	/// <https://schema.org/OTC>
 	fn find_otc_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

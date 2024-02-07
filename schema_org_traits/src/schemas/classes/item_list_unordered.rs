@@ -1,6 +1,7 @@
 /// <https://schema.org/ItemListUnordered>
 pub trait FindItemListUnorderedIds {
 	type IdType;
+	/// <https://schema.org/ItemListUnordered>
 	fn find_item_list_unordered_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

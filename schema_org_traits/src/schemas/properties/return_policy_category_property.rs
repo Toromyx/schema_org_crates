@@ -2,6 +2,7 @@
 pub trait GetReturnPolicyCategoryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/returnPolicyCategory>
 	fn get_return_policy_category_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

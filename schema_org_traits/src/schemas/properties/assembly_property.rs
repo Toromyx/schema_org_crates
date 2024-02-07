@@ -3,6 +3,7 @@
 pub trait GetAssemblyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/assembly>
 	#[deprecated = "This schema is superseded by <https://schema.org/executableLibraryName>."]
 	fn get_assembly_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

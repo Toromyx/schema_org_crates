@@ -1,6 +1,7 @@
 /// <https://schema.org/HinduDiet>
 pub trait FindHinduDietIds {
 	type IdType;
+	/// <https://schema.org/HinduDiet>
 	fn find_hindu_diet_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

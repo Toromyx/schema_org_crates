@@ -1,6 +1,7 @@
 /// <https://schema.org/EventReservation>
 pub trait FindEventReservationIds {
 	type IdType;
+	/// <https://schema.org/EventReservation>
 	fn find_event_reservation_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

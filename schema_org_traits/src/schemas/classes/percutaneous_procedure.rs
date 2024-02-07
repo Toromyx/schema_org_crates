@@ -1,6 +1,7 @@
 /// <https://schema.org/PercutaneousProcedure>
 pub trait FindPercutaneousProcedureIds {
 	type IdType;
+	/// <https://schema.org/PercutaneousProcedure>
 	fn find_percutaneous_procedure_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

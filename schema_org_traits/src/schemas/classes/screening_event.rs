@@ -1,6 +1,7 @@
 /// <https://schema.org/ScreeningEvent>
 pub trait FindScreeningEventIds {
 	type IdType;
+	/// <https://schema.org/ScreeningEvent>
 	fn find_screening_event_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

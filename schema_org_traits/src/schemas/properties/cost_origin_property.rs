@@ -2,6 +2,7 @@
 pub trait GetCostOriginProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/costOrigin>
 	fn get_cost_origin_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

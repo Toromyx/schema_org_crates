@@ -1,6 +1,7 @@
 /// <https://schema.org/HairSalon>
 pub trait FindHairSalonIds {
 	type IdType;
+	/// <https://schema.org/HairSalon>
 	fn find_hair_salon_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

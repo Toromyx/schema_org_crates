@@ -2,6 +2,7 @@
 pub trait GetBookingTimeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/bookingTime>
 	fn get_booking_time_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

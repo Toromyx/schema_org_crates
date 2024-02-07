@@ -1,6 +1,7 @@
 /// <https://schema.org/EventAttendanceModeEnumeration>
 pub trait FindEventAttendanceModeEnumerationIds {
 	type IdType;
+	/// <https://schema.org/EventAttendanceModeEnumeration>
 	fn find_event_attendance_mode_enumeration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetCredentialCategoryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/credentialCategory>
 	fn get_credential_category_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

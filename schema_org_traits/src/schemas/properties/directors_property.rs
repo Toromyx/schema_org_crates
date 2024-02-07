@@ -3,6 +3,7 @@
 pub trait GetDirectorsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/directors>
 	#[deprecated = "This schema is superseded by <https://schema.org/director>."]
 	fn get_directors_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

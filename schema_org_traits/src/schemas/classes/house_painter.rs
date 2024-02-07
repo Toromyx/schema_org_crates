@@ -1,6 +1,7 @@
 /// <https://schema.org/HousePainter>
 pub trait FindHousePainterIds {
 	type IdType;
+	/// <https://schema.org/HousePainter>
 	fn find_house_painter_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

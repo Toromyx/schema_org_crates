@@ -2,6 +2,7 @@
 pub trait GetMedicalAudienceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/medicalAudience>
 	fn get_medical_audience_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

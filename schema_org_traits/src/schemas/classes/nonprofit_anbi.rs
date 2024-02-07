@@ -1,6 +1,7 @@
 /// <https://schema.org/NonprofitANBI>
 pub trait FindNonprofitAnbiIds {
 	type IdType;
+	/// <https://schema.org/NonprofitANBI>
 	fn find_nonprofit_anbi_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

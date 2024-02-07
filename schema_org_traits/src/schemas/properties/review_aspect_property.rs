@@ -2,6 +2,7 @@
 pub trait GetReviewAspectProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/reviewAspect>
 	fn get_review_aspect_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/SingleCenterTrial>
 pub trait FindSingleCenterTrialIds {
 	type IdType;
+	/// <https://schema.org/SingleCenterTrial>
 	fn find_single_center_trial_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

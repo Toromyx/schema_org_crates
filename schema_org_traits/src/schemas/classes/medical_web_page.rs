@@ -1,6 +1,7 @@
 /// <https://schema.org/MedicalWebPage>
 pub trait FindMedicalWebPageIds {
 	type IdType;
+	/// <https://schema.org/MedicalWebPage>
 	fn find_medical_web_page_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

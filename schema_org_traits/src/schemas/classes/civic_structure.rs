@@ -1,6 +1,7 @@
 /// <https://schema.org/CivicStructure>
 pub trait FindCivicStructureIds {
 	type IdType;
+	/// <https://schema.org/CivicStructure>
 	fn find_civic_structure_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

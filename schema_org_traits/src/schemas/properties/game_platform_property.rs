@@ -2,6 +2,7 @@
 pub trait GetGamePlatformProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/gamePlatform>
 	fn get_game_platform_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

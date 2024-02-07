@@ -1,6 +1,7 @@
 /// <https://schema.org/Protein>
 pub trait FindProteinIds {
 	type IdType;
+	/// <https://schema.org/Protein>
 	fn find_protein_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

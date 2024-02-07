@@ -1,6 +1,7 @@
 /// <https://schema.org/Homeopathic>
 pub trait FindHomeopathicIds {
 	type IdType;
+	/// <https://schema.org/Homeopathic>
 	fn find_homeopathic_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

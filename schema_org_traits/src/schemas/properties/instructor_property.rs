@@ -2,6 +2,7 @@
 pub trait GetInstructorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/instructor>
 	fn get_instructor_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

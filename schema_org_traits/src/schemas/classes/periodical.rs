@@ -1,6 +1,7 @@
 /// <https://schema.org/Periodical>
 pub trait FindPeriodicalIds {
 	type IdType;
+	/// <https://schema.org/Periodical>
 	fn find_periodical_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

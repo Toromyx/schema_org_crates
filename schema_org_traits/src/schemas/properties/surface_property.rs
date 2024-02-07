@@ -3,6 +3,7 @@
 pub trait GetSurfaceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/surface>
 	#[deprecated = "This schema is superseded by <https://schema.org/artworkSurface>."]
 	fn get_surface_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

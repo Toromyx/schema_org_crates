@@ -1,6 +1,7 @@
 /// <https://schema.org/MortgageLoan>
 pub trait FindMortgageLoanIds {
 	type IdType;
+	/// <https://schema.org/MortgageLoan>
 	fn find_mortgage_loan_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

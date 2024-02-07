@@ -1,6 +1,7 @@
 /// <https://schema.org/BroadcastFrequencySpecification>
 pub trait FindBroadcastFrequencySpecificationIds {
 	type IdType;
+	/// <https://schema.org/BroadcastFrequencySpecification>
 	fn find_broadcast_frequency_specification_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

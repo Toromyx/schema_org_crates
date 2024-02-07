@@ -2,6 +2,7 @@
 pub trait GetActionableFeedbackPolicyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/actionableFeedbackPolicy>
 	fn get_actionable_feedback_policy_property(
 		&self,
 		id: &Self::IdType,

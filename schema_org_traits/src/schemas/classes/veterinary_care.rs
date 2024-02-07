@@ -1,6 +1,7 @@
 /// <https://schema.org/VeterinaryCare>
 pub trait FindVeterinaryCareIds {
 	type IdType;
+	/// <https://schema.org/VeterinaryCare>
 	fn find_veterinary_care_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

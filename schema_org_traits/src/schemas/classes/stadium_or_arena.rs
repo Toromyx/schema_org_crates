@@ -1,6 +1,7 @@
 /// <https://schema.org/StadiumOrArena>
 pub trait FindStadiumOrArenaIds {
 	type IdType;
+	/// <https://schema.org/StadiumOrArena>
 	fn find_stadium_or_arena_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

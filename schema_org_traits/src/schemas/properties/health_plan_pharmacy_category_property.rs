@@ -2,6 +2,7 @@
 pub trait GetHealthPlanPharmacyCategoryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/healthPlanPharmacyCategory>
 	fn get_health_plan_pharmacy_category_property(
 		&self,
 		id: &Self::IdType,

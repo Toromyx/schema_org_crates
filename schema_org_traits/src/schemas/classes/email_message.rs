@@ -1,6 +1,7 @@
 /// <https://schema.org/EmailMessage>
 pub trait FindEmailMessageIds {
 	type IdType;
+	/// <https://schema.org/EmailMessage>
 	fn find_email_message_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

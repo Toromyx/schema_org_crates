@@ -2,6 +2,7 @@
 pub trait GetReadByProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/readBy>
 	fn get_read_by_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

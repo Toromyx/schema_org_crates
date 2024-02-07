@@ -3,6 +3,7 @@
 pub trait GetSignificantLinksProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/significantLinks>
 	#[deprecated = "This schema is superseded by <https://schema.org/significantLink>."]
 	fn get_significant_links_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

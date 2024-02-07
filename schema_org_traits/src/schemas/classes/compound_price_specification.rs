@@ -1,6 +1,7 @@
 /// <https://schema.org/CompoundPriceSpecification>
 pub trait FindCompoundPriceSpecificationIds {
 	type IdType;
+	/// <https://schema.org/CompoundPriceSpecification>
 	fn find_compound_price_specification_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

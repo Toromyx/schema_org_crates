@@ -3,6 +3,7 @@
 pub trait GetFoundersProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/founders>
 	#[deprecated = "This schema is superseded by <https://schema.org/founder>."]
 	fn get_founders_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

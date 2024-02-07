@@ -1,6 +1,7 @@
 /// <https://schema.org/SchoolDistrict>
 pub trait FindSchoolDistrictIds {
 	type IdType;
+	/// <https://schema.org/SchoolDistrict>
 	fn find_school_district_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

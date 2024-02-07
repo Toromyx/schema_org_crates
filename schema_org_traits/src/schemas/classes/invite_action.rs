@@ -1,6 +1,7 @@
 /// <https://schema.org/InviteAction>
 pub trait FindInviteActionIds {
 	type IdType;
+	/// <https://schema.org/InviteAction>
 	fn find_invite_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/PhysicalActivity>
 pub trait FindPhysicalActivityIds {
 	type IdType;
+	/// <https://schema.org/PhysicalActivity>
 	fn find_physical_activity_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

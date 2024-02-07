@@ -1,6 +1,7 @@
 /// <https://schema.org/EventPostponed>
 pub trait FindEventPostponedIds {
 	type IdType;
+	/// <https://schema.org/EventPostponed>
 	fn find_event_postponed_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

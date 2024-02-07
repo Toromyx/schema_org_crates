@@ -1,6 +1,7 @@
 /// <https://schema.org/TieAction>
 pub trait FindTieActionIds {
 	type IdType;
+	/// <https://schema.org/TieAction>
 	fn find_tie_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

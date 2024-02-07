@@ -1,6 +1,7 @@
 /// <https://schema.org/ChooseAction>
 pub trait FindChooseActionIds {
 	type IdType;
+	/// <https://schema.org/ChooseAction>
 	fn find_choose_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetObservationPeriodProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/observationPeriod>
 	fn get_observation_period_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

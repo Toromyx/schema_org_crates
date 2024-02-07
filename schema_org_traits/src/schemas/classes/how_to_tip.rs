@@ -1,6 +1,7 @@
 /// <https://schema.org/HowToTip>
 pub trait FindHowToTipIds {
 	type IdType;
+	/// <https://schema.org/HowToTip>
 	fn find_how_to_tip_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

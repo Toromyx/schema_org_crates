@@ -2,6 +2,7 @@
 pub trait GetRestockingFeeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/restockingFee>
 	fn get_restocking_fee_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

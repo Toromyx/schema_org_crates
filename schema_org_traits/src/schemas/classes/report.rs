@@ -1,6 +1,7 @@
 /// <https://schema.org/Report>
 pub trait FindReportIds {
 	type IdType;
+	/// <https://schema.org/Report>
 	fn find_report_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

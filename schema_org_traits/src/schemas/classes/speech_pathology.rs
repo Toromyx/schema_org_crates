@@ -1,6 +1,7 @@
 /// <https://schema.org/SpeechPathology>
 pub trait FindSpeechPathologyIds {
 	type IdType;
+	/// <https://schema.org/SpeechPathology>
 	fn find_speech_pathology_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetAcceptedAnswerProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/acceptedAnswer>
 	fn get_accepted_answer_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

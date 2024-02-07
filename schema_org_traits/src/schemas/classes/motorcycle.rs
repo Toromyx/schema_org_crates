@@ -1,6 +1,7 @@
 /// <https://schema.org/Motorcycle>
 pub trait FindMotorcycleIds {
 	type IdType;
+	/// <https://schema.org/Motorcycle>
 	fn find_motorcycle_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

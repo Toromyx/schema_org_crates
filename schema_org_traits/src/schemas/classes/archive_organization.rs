@@ -1,6 +1,7 @@
 /// <https://schema.org/ArchiveOrganization>
 pub trait FindArchiveOrganizationIds {
 	type IdType;
+	/// <https://schema.org/ArchiveOrganization>
 	fn find_archive_organization_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

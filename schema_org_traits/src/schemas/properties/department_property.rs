@@ -2,6 +2,7 @@
 pub trait GetDepartmentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/department>
 	fn get_department_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

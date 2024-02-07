@@ -1,6 +1,7 @@
 /// <https://schema.org/Claim>
 pub trait FindClaimIds {
 	type IdType;
+	/// <https://schema.org/Claim>
 	fn find_claim_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/Country>
 pub trait FindCountryIds {
 	type IdType;
+	/// <https://schema.org/Country>
 	fn find_country_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/MensClothingStore>
 pub trait FindMensClothingStoreIds {
 	type IdType;
+	/// <https://schema.org/MensClothingStore>
 	fn find_mens_clothing_store_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

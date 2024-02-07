@@ -1,6 +1,7 @@
 /// <https://schema.org/PerformanceRole>
 pub trait FindPerformanceRoleIds {
 	type IdType;
+	/// <https://schema.org/PerformanceRole>
 	fn find_performance_role_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetHasCourseProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasCourse>
 	fn get_has_course_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

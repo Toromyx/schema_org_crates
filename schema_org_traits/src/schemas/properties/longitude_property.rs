@@ -2,6 +2,7 @@
 pub trait GetLongitudeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/longitude>
 	fn get_longitude_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

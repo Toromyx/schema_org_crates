@@ -1,6 +1,7 @@
 /// <https://schema.org/UsageOrScheduleHealthAspect>
 pub trait FindUsageOrScheduleHealthAspectIds {
 	type IdType;
+	/// <https://schema.org/UsageOrScheduleHealthAspect>
 	fn find_usage_or_schedule_health_aspect_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/ReplyAction>
 pub trait FindReplyActionIds {
 	type IdType;
+	/// <https://schema.org/ReplyAction>
 	fn find_reply_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

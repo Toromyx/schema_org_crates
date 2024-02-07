@@ -1,6 +1,7 @@
 /// <https://schema.org/FindAction>
 pub trait FindFindActionIds {
 	type IdType;
+	/// <https://schema.org/FindAction>
 	fn find_find_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

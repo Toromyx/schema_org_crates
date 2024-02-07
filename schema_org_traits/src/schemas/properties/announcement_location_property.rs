@@ -2,6 +2,7 @@
 pub trait GetAnnouncementLocationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/announcementLocation>
 	fn get_announcement_location_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetCreativeWorkStatusProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/creativeWorkStatus>
 	fn get_creative_work_status_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

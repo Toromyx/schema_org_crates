@@ -2,6 +2,7 @@
 pub trait GetSecurityClearanceRequirementProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/securityClearanceRequirement>
 	fn get_security_clearance_requirement_property(
 		&self,
 		id: &Self::IdType,

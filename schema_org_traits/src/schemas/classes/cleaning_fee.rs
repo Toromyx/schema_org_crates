@@ -1,6 +1,7 @@
 /// <https://schema.org/CleaningFee>
 pub trait FindCleaningFeeIds {
 	type IdType;
+	/// <https://schema.org/CleaningFee>
 	fn find_cleaning_fee_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/AnatomicalSystem>
 pub trait FindAnatomicalSystemIds {
 	type IdType;
+	/// <https://schema.org/AnatomicalSystem>
 	fn find_anatomical_system_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

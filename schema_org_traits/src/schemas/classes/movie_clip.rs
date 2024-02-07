@@ -1,6 +1,7 @@
 /// <https://schema.org/MovieClip>
 pub trait FindMovieClipIds {
 	type IdType;
+	/// <https://schema.org/MovieClip>
 	fn find_movie_clip_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

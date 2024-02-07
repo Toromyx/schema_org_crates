@@ -2,6 +2,7 @@
 pub trait GetRepresentativeOfPageProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/representativeOfPage>
 	fn get_representative_of_page_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

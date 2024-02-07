@@ -1,6 +1,7 @@
 /// <https://schema.org/PublicationVolume>
 pub trait FindPublicationVolumeIds {
 	type IdType;
+	/// <https://schema.org/PublicationVolume>
 	fn find_publication_volume_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

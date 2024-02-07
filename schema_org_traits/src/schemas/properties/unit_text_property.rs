@@ -2,6 +2,7 @@
 pub trait GetUnitTextProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/unitText>
 	fn get_unit_text_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/OfferItemCondition>
 pub trait FindOfferItemConditionIds {
 	type IdType;
+	/// <https://schema.org/OfferItemCondition>
 	fn find_offer_item_condition_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

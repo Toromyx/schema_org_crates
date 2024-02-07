@@ -2,6 +2,7 @@
 pub trait GetUpvoteCountProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/upvoteCount>
 	fn get_upvote_count_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

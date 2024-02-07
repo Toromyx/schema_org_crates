@@ -1,6 +1,7 @@
 /// <https://schema.org/Vessel>
 pub trait FindVesselIds {
 	type IdType;
+	/// <https://schema.org/Vessel>
 	fn find_vessel_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

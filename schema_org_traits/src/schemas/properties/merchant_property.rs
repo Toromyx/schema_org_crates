@@ -3,6 +3,7 @@
 pub trait GetMerchantProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/merchant>
 	#[deprecated = "This schema is superseded by <https://schema.org/seller>."]
 	fn get_merchant_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

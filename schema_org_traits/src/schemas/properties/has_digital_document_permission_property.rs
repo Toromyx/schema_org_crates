@@ -2,6 +2,7 @@
 pub trait GetHasDigitalDocumentPermissionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasDigitalDocumentPermission>
 	fn get_has_digital_document_permission_property(
 		&self,
 		id: &Self::IdType,

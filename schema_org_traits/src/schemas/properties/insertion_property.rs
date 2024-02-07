@@ -2,6 +2,7 @@
 pub trait GetInsertionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/insertion>
 	fn get_insertion_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

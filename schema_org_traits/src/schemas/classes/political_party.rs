@@ -1,6 +1,7 @@
 /// <https://schema.org/PoliticalParty>
 pub trait FindPoliticalPartyIds {
 	type IdType;
+	/// <https://schema.org/PoliticalParty>
 	fn find_political_party_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

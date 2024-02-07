@@ -2,6 +2,7 @@
 pub trait GetTotalHistoricalEnrollmentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/totalHistoricalEnrollment>
 	fn get_total_historical_enrollment_property(
 		&self,
 		id: &Self::IdType,

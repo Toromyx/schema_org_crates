@@ -2,6 +2,7 @@
 pub trait GetFoodWarningProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/foodWarning>
 	fn get_food_warning_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/NotInForce>
 pub trait FindNotInForceIds {
 	type IdType;
+	/// <https://schema.org/NotInForce>
 	fn find_not_in_force_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

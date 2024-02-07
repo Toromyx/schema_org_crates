@@ -2,6 +2,7 @@
 pub trait GetOccupationalCredentialAwardedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/occupationalCredentialAwarded>
 	fn get_occupational_credential_awarded_property(
 		&self,
 		id: &Self::IdType,

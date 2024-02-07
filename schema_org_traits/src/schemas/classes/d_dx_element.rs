@@ -1,6 +1,7 @@
 /// <https://schema.org/DDxElement>
 pub trait FindDDxElementIds {
 	type IdType;
+	/// <https://schema.org/DDxElement>
 	fn find_d_dx_element_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

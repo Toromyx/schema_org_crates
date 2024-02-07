@@ -1,6 +1,7 @@
 /// <https://schema.org/SelfStorage>
 pub trait FindSelfStorageIds {
 	type IdType;
+	/// <https://schema.org/SelfStorage>
 	fn find_self_storage_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

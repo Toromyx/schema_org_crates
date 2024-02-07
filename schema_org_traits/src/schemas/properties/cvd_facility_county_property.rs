@@ -2,6 +2,7 @@
 pub trait GetCvdFacilityCountyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/cvdFacilityCounty>
 	fn get_cvd_facility_county_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

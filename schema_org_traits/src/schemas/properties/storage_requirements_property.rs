@@ -2,6 +2,7 @@
 pub trait GetStorageRequirementsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/storageRequirements>
 	fn get_storage_requirements_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/Statement>
 pub trait FindStatementIds {
 	type IdType;
+	/// <https://schema.org/Statement>
 	fn find_statement_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/Map>
 pub trait FindMapIds {
 	type IdType;
+	/// <https://schema.org/Map>
 	fn find_map_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

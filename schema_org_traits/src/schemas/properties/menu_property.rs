@@ -3,6 +3,7 @@
 pub trait GetMenuProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/menu>
 	#[deprecated = "This schema is superseded by <https://schema.org/hasMenu>."]
 	fn get_menu_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

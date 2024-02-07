@@ -2,6 +2,7 @@
 pub trait GetCertificationIdentificationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/certificationIdentification>
 	fn get_certification_identification_property(
 		&self,
 		id: &Self::IdType,

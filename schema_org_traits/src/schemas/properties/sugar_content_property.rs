@@ -2,6 +2,7 @@
 pub trait GetSugarContentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/sugarContent>
 	fn get_sugar_content_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

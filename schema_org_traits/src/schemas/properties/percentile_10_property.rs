@@ -2,6 +2,7 @@
 pub trait GetPercentile10Property {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/percentile10>
 	fn get_percentile_10_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetMinValueProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/minValue>
 	fn get_min_value_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

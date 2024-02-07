@@ -1,6 +1,7 @@
 /// <https://schema.org/PositiveFilmDigitalSource>
 pub trait FindPositiveFilmDigitalSourceIds {
 	type IdType;
+	/// <https://schema.org/PositiveFilmDigitalSource>
 	fn find_positive_film_digital_source_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

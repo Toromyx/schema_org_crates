@@ -2,6 +2,7 @@
 pub trait GetTranscriptProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/transcript>
 	fn get_transcript_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

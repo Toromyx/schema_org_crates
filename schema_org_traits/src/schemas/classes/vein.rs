@@ -1,6 +1,7 @@
 /// <https://schema.org/Vein>
 pub trait FindVeinIds {
 	type IdType;
+	/// <https://schema.org/Vein>
 	fn find_vein_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

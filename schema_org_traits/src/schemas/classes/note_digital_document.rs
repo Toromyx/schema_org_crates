@@ -1,6 +1,7 @@
 /// <https://schema.org/NoteDigitalDocument>
 pub trait FindNoteDigitalDocumentIds {
 	type IdType;
+	/// <https://schema.org/NoteDigitalDocument>
 	fn find_note_digital_document_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

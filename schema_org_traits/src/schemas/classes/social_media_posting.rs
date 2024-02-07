@@ -1,6 +1,7 @@
 /// <https://schema.org/SocialMediaPosting>
 pub trait FindSocialMediaPostingIds {
 	type IdType;
+	/// <https://schema.org/SocialMediaPosting>
 	fn find_social_media_posting_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

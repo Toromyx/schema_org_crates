@@ -2,6 +2,7 @@
 pub trait GetDurationOfWarrantyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/durationOfWarranty>
 	fn get_duration_of_warranty_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

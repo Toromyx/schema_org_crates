@@ -1,6 +1,7 @@
 /// <https://schema.org/WebContent>
 pub trait FindWebContentIds {
 	type IdType;
+	/// <https://schema.org/WebContent>
 	fn find_web_content_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

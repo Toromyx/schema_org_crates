@@ -1,6 +1,7 @@
 /// <https://schema.org/OccupationalTherapy>
 pub trait FindOccupationalTherapyIds {
 	type IdType;
+	/// <https://schema.org/OccupationalTherapy>
 	fn find_occupational_therapy_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/AndroidPlatform>
 pub trait FindAndroidPlatformIds {
 	type IdType;
+	/// <https://schema.org/AndroidPlatform>
 	fn find_android_platform_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

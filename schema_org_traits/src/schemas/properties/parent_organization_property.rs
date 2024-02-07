@@ -2,6 +2,7 @@
 pub trait GetParentOrganizationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/parentOrganization>
 	fn get_parent_organization_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetHasDriveThroughServiceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasDriveThroughService>
 	fn get_has_drive_through_service_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

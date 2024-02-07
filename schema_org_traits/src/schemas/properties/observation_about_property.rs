@@ -2,6 +2,7 @@
 pub trait GetObservationAboutProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/observationAbout>
 	fn get_observation_about_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

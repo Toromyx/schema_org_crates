@@ -2,6 +2,7 @@
 pub trait GetKnowsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/knows>
 	fn get_knows_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

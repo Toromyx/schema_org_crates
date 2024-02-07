@@ -1,6 +1,7 @@
 /// <https://schema.org/Appearance>
 pub trait FindAppearanceIds {
 	type IdType;
+	/// <https://schema.org/Appearance>
 	fn find_appearance_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

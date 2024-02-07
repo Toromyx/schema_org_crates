@@ -2,6 +2,7 @@
 pub trait GetDistributionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/distribution>
 	fn get_distribution_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

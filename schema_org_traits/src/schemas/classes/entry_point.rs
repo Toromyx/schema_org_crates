@@ -1,6 +1,7 @@
 /// <https://schema.org/EntryPoint>
 pub trait FindEntryPointIds {
 	type IdType;
+	/// <https://schema.org/EntryPoint>
 	fn find_entry_point_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

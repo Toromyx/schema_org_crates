@@ -1,6 +1,7 @@
 /// <https://schema.org/ImagingTest>
 pub trait FindImagingTestIds {
 	type IdType;
+	/// <https://schema.org/ImagingTest>
 	fn find_imaging_test_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

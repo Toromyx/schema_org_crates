@@ -2,6 +2,7 @@
 pub trait GetItemDefectReturnFeesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/itemDefectReturnFees>
 	fn get_item_defect_return_fees_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

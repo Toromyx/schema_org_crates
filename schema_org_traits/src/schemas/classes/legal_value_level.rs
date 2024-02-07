@@ -1,6 +1,7 @@
 /// <https://schema.org/LegalValueLevel>
 pub trait FindLegalValueLevelIds {
 	type IdType;
+	/// <https://schema.org/LegalValueLevel>
 	fn find_legal_value_level_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

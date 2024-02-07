@@ -1,6 +1,7 @@
 /// <https://schema.org/VideoGallery>
 pub trait FindVideoGalleryIds {
 	type IdType;
+	/// <https://schema.org/VideoGallery>
 	fn find_video_gallery_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

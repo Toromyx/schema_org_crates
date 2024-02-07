@@ -1,6 +1,7 @@
 /// <https://schema.org/Corporation>
 pub trait FindCorporationIds {
 	type IdType;
+	/// <https://schema.org/Corporation>
 	fn find_corporation_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

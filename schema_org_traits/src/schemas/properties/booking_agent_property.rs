@@ -3,6 +3,7 @@
 pub trait GetBookingAgentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/bookingAgent>
 	#[deprecated = "This schema is superseded by <https://schema.org/broker>."]
 	fn get_booking_agent_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

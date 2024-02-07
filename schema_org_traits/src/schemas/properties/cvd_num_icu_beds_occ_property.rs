@@ -2,6 +2,7 @@
 pub trait GetCvdNumIcuBedsOccProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/cvdNumICUBedsOcc>
 	fn get_cvd_num_icu_beds_occ_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

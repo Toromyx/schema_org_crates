@@ -2,6 +2,7 @@
 pub trait GetBoardingPolicyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/boardingPolicy>
 	fn get_boarding_policy_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

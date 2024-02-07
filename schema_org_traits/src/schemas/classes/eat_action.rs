@@ -1,6 +1,7 @@
 /// <https://schema.org/EatAction>
 pub trait FindEatActionIds {
 	type IdType;
+	/// <https://schema.org/EatAction>
 	fn find_eat_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

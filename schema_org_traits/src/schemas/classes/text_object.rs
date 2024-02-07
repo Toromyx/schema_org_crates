@@ -1,6 +1,7 @@
 /// <https://schema.org/TextObject>
 pub trait FindTextObjectIds {
 	type IdType;
+	/// <https://schema.org/TextObject>
 	fn find_text_object_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

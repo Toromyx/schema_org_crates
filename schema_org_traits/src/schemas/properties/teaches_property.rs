@@ -2,6 +2,7 @@
 pub trait GetTeachesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/teaches>
 	fn get_teaches_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

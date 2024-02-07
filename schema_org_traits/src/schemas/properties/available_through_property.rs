@@ -2,6 +2,7 @@
 pub trait GetAvailableThroughProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/availableThrough>
 	fn get_available_through_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

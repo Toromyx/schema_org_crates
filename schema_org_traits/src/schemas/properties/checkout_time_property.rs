@@ -2,6 +2,7 @@
 pub trait GetCheckoutTimeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/checkoutTime>
 	fn get_checkout_time_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

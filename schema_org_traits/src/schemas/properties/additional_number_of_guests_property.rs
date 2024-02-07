@@ -2,6 +2,7 @@
 pub trait GetAdditionalNumberOfGuestsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/additionalNumberOfGuests>
 	fn get_additional_number_of_guests_property(
 		&self,
 		id: &Self::IdType,

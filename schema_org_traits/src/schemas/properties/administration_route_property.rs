@@ -2,6 +2,7 @@
 pub trait GetAdministrationRouteProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/administrationRoute>
 	fn get_administration_route_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetDownloadUrlProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/downloadUrl>
 	fn get_download_url_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetErrorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/error>
 	fn get_error_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

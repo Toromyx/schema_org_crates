@@ -3,6 +3,7 @@
 pub trait GetColleaguesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/colleagues>
 	#[deprecated = "This schema is superseded by <https://schema.org/colleague>."]
 	fn get_colleagues_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

@@ -1,6 +1,7 @@
 /// <https://schema.org/MediaObject>
 pub trait FindMediaObjectIds {
 	type IdType;
+	/// <https://schema.org/MediaObject>
 	fn find_media_object_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

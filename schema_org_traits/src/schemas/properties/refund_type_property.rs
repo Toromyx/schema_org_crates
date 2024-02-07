@@ -2,6 +2,7 @@
 pub trait GetRefundTypeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/refundType>
 	fn get_refund_type_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

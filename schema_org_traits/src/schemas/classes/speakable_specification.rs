@@ -1,6 +1,7 @@
 /// <https://schema.org/SpeakableSpecification>
 pub trait FindSpeakableSpecificationIds {
 	type IdType;
+	/// <https://schema.org/SpeakableSpecification>
 	fn find_speakable_specification_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

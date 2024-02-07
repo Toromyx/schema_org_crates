@@ -1,6 +1,7 @@
 /// <https://schema.org/Artery>
 pub trait FindArteryIds {
 	type IdType;
+	/// <https://schema.org/Artery>
 	fn find_artery_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

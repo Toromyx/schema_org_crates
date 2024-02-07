@@ -1,6 +1,7 @@
 /// <https://schema.org/Embassy>
 pub trait FindEmbassyIds {
 	type IdType;
+	/// <https://schema.org/Embassy>
 	fn find_embassy_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

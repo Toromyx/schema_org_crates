@@ -2,6 +2,7 @@
 pub trait GetSignificantLinkProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/significantLink>
 	fn get_significant_link_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/DepartmentStore>
 pub trait FindDepartmentStoreIds {
 	type IdType;
+	/// <https://schema.org/DepartmentStore>
 	fn find_department_store_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

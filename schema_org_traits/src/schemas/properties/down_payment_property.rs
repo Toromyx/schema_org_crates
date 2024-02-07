@@ -2,6 +2,7 @@
 pub trait GetDownPaymentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/downPayment>
 	fn get_down_payment_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

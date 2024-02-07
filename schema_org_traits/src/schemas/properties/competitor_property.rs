@@ -2,6 +2,7 @@
 pub trait GetCompetitorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/competitor>
 	fn get_competitor_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetHandlingTimeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/handlingTime>
 	fn get_handling_time_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

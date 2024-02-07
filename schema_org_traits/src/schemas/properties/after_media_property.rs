@@ -2,6 +2,7 @@
 pub trait GetAfterMediaProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/afterMedia>
 	fn get_after_media_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

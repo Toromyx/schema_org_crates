@@ -1,6 +1,7 @@
 /// <https://schema.org/BackOrder>
 pub trait FindBackOrderIds {
 	type IdType;
+	/// <https://schema.org/BackOrder>
 	fn find_back_order_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

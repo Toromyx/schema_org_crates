@@ -1,6 +1,7 @@
 /// <https://schema.org/Hostel>
 pub trait FindHostelIds {
 	type IdType;
+	/// <https://schema.org/Hostel>
 	fn find_hostel_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

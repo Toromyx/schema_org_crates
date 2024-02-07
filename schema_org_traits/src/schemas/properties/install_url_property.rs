@@ -2,6 +2,7 @@
 pub trait GetInstallUrlProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/installUrl>
 	fn get_install_url_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

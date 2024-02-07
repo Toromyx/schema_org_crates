@@ -2,6 +2,7 @@
 pub trait GetDisambiguatingDescriptionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/disambiguatingDescription>
 	fn get_disambiguating_description_property(
 		&self,
 		id: &Self::IdType,

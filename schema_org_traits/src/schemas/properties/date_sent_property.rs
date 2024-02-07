@@ -2,6 +2,7 @@
 pub trait GetDateSentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/dateSent>
 	fn get_date_sent_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

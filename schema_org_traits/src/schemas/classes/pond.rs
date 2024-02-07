@@ -1,6 +1,7 @@
 /// <https://schema.org/Pond>
 pub trait FindPondIds {
 	type IdType;
+	/// <https://schema.org/Pond>
 	fn find_pond_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

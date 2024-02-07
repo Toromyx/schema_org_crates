@@ -1,6 +1,7 @@
 /// <https://schema.org/Nonprofit501c2>
 pub trait FindNonprofit501C2Ids {
 	type IdType;
+	/// <https://schema.org/Nonprofit501c2>
 	fn find_nonprofit_501_c_2_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

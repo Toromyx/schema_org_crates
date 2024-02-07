@@ -1,6 +1,7 @@
 /// <https://schema.org/OneTimePayments>
 pub trait FindOneTimePaymentsIds {
 	type IdType;
+	/// <https://schema.org/OneTimePayments>
 	fn find_one_time_payments_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

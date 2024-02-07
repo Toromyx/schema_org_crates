@@ -1,6 +1,7 @@
 /// <https://schema.org/Hematologic>
 pub trait FindHematologicIds {
 	type IdType;
+	/// <https://schema.org/Hematologic>
 	fn find_hematologic_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

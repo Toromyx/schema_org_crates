@@ -2,6 +2,7 @@
 pub trait GetReturnMethodProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/returnMethod>
 	fn get_return_method_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

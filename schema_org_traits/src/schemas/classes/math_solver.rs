@@ -1,6 +1,7 @@
 /// <https://schema.org/MathSolver>
 pub trait FindMathSolverIds {
 	type IdType;
+	/// <https://schema.org/MathSolver>
 	fn find_math_solver_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

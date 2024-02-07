@@ -2,6 +2,7 @@
 pub trait GetOverdosageProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/overdosage>
 	fn get_overdosage_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

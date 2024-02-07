@@ -1,6 +1,7 @@
 /// <https://schema.org/ActiveActionStatus>
 pub trait FindActiveActionStatusIds {
 	type IdType;
+	/// <https://schema.org/ActiveActionStatus>
 	fn find_active_action_status_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

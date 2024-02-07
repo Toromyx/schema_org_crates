@@ -1,6 +1,7 @@
 /// <https://schema.org/Cardiovascular>
 pub trait FindCardiovascularIds {
 	type IdType;
+	/// <https://schema.org/Cardiovascular>
 	fn find_cardiovascular_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

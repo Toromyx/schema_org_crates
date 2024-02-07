@@ -2,6 +2,7 @@
 pub trait GetRoofLoadProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/roofLoad>
 	fn get_roof_load_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

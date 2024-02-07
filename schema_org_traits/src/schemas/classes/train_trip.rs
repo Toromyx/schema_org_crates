@@ -1,6 +1,7 @@
 /// <https://schema.org/TrainTrip>
 pub trait FindTrainTripIds {
 	type IdType;
+	/// <https://schema.org/TrainTrip>
 	fn find_train_trip_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

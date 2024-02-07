@@ -2,6 +2,7 @@
 pub trait GetOpensProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/opens>
 	fn get_opens_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

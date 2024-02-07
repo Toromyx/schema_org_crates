@@ -2,6 +2,7 @@
 pub trait GetSpatialProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/spatial>
 	fn get_spatial_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

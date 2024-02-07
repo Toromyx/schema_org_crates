@@ -2,6 +2,7 @@
 pub trait GetAthleteProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/athlete>
 	fn get_athlete_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetTaxIdProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/taxID>
 	fn get_tax_id_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

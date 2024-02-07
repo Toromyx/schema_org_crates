@@ -3,6 +3,7 @@
 pub trait GetProductReturnDaysProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/productReturnDays>
 	#[deprecated = "This schema is archived, see <https://schema.org/docs/attic.home.html>. This schema is superseded by <https://schema.org/merchantReturnDays>."]
 	fn get_product_return_days_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

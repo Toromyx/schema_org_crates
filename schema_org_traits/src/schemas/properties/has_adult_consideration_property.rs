@@ -2,6 +2,7 @@
 pub trait GetHasAdultConsiderationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasAdultConsideration>
 	fn get_has_adult_consideration_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

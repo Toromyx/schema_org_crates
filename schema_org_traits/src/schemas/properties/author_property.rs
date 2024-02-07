@@ -2,6 +2,7 @@
 pub trait GetAuthorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/author>
 	fn get_author_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

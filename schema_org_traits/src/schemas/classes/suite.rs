@@ -1,6 +1,7 @@
 /// <https://schema.org/Suite>
 pub trait FindSuiteIds {
 	type IdType;
+	/// <https://schema.org/Suite>
 	fn find_suite_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

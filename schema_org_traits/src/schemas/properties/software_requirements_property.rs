@@ -2,6 +2,7 @@
 pub trait GetSoftwareRequirementsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/softwareRequirements>
 	fn get_software_requirements_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/InternationalTrial>
 pub trait FindInternationalTrialIds {
 	type IdType;
+	/// <https://schema.org/InternationalTrial>
 	fn find_international_trial_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

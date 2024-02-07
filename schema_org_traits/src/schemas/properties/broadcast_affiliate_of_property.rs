@@ -2,6 +2,7 @@
 pub trait GetBroadcastAffiliateOfProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/broadcastAffiliateOf>
 	fn get_broadcast_affiliate_of_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

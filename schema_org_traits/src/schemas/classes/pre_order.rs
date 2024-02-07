@@ -1,6 +1,7 @@
 /// <https://schema.org/PreOrder>
 pub trait FindPreOrderIds {
 	type IdType;
+	/// <https://schema.org/PreOrder>
 	fn find_pre_order_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

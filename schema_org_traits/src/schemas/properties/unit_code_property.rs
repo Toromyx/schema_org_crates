@@ -2,6 +2,7 @@
 pub trait GetUnitCodeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/unitCode>
 	fn get_unit_code_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

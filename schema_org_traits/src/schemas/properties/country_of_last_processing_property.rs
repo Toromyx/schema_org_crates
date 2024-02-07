@@ -2,6 +2,7 @@
 pub trait GetCountryOfLastProcessingProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/countryOfLastProcessing>
 	fn get_country_of_last_processing_property(
 		&self,
 		id: &Self::IdType,

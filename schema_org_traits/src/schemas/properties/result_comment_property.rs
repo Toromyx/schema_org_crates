@@ -2,6 +2,7 @@
 pub trait GetResultCommentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/resultComment>
 	fn get_result_comment_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

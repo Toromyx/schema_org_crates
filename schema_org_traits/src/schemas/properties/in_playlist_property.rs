@@ -2,6 +2,7 @@
 pub trait GetInPlaylistProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/inPlaylist>
 	fn get_in_playlist_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

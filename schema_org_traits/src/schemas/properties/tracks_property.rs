@@ -3,6 +3,7 @@
 pub trait GetTracksProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/tracks>
 	#[deprecated = "This schema is superseded by <https://schema.org/track>."]
 	fn get_tracks_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

@@ -2,6 +2,7 @@
 pub trait GetMediaAuthenticityCategoryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/mediaAuthenticityCategory>
 	fn get_media_authenticity_category_property(
 		&self,
 		id: &Self::IdType,

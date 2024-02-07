@@ -1,6 +1,7 @@
 /// <https://schema.org/Terminated>
 pub trait FindTerminatedIds {
 	type IdType;
+	/// <https://schema.org/Terminated>
 	fn find_terminated_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

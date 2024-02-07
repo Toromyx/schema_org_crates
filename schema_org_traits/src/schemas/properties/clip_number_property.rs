@@ -2,6 +2,7 @@
 pub trait GetClipNumberProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/clipNumber>
 	fn get_clip_number_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

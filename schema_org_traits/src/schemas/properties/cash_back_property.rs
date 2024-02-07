@@ -2,6 +2,7 @@
 pub trait GetCashBackProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/cashBack>
 	fn get_cash_back_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

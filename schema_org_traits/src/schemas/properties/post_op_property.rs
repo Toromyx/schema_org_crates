@@ -2,6 +2,7 @@
 pub trait GetPostOpProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/postOp>
 	fn get_post_op_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

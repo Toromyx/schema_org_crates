@@ -2,6 +2,7 @@
 pub trait GetChildMaxAgeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/childMaxAge>
 	fn get_child_max_age_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetBusinessFunctionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/businessFunction>
 	fn get_business_function_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

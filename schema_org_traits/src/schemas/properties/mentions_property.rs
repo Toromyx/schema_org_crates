@@ -2,6 +2,7 @@
 pub trait GetMentionsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/mentions>
 	fn get_mentions_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

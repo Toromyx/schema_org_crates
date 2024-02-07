@@ -2,6 +2,7 @@
 pub trait GetIsAccessoryOrSparePartForProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isAccessoryOrSparePartFor>
 	fn get_is_accessory_or_spare_part_for_property(
 		&self,
 		id: &Self::IdType,

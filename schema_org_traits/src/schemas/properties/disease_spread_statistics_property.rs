@@ -2,6 +2,7 @@
 pub trait GetDiseaseSpreadStatisticsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/diseaseSpreadStatistics>
 	fn get_disease_spread_statistics_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

@@ -2,6 +2,7 @@
 pub trait GetIsLocatedInSubcellularLocationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isLocatedInSubcellularLocation>
 	fn get_is_located_in_subcellular_location_property(
 		&self,
 		id: &Self::IdType,

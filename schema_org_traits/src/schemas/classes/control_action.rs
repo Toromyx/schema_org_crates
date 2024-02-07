@@ -1,6 +1,7 @@
 /// <https://schema.org/ControlAction>
 pub trait FindControlActionIds {
 	type IdType;
+	/// <https://schema.org/ControlAction>
 	fn find_control_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

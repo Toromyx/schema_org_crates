@@ -2,6 +2,7 @@
 pub trait GetCvdNumVentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/cvdNumVent>
 	fn get_cvd_num_vent_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

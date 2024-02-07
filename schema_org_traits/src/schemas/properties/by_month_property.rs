@@ -2,6 +2,7 @@
 pub trait GetByMonthProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/byMonth>
 	fn get_by_month_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

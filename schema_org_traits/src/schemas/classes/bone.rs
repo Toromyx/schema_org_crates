@@ -1,6 +1,7 @@
 /// <https://schema.org/Bone>
 pub trait FindBoneIds {
 	type IdType;
+	/// <https://schema.org/Bone>
 	fn find_bone_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

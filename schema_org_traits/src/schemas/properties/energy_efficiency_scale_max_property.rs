@@ -2,6 +2,7 @@
 pub trait GetEnergyEfficiencyScaleMaxProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/energyEfficiencyScaleMax>
 	fn get_energy_efficiency_scale_max_property(
 		&self,
 		id: &Self::IdType,

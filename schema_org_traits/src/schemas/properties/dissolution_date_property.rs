@@ -2,6 +2,7 @@
 pub trait GetDissolutionDateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/dissolutionDate>
 	fn get_dissolution_date_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

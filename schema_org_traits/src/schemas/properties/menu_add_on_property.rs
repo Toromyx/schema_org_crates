@@ -2,6 +2,7 @@
 pub trait GetMenuAddOnProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/menuAddOn>
 	fn get_menu_add_on_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

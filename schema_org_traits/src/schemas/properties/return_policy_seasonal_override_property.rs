@@ -2,6 +2,7 @@
 pub trait GetReturnPolicySeasonalOverrideProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/returnPolicySeasonalOverride>
 	fn get_return_policy_seasonal_override_property(
 		&self,
 		id: &Self::IdType,

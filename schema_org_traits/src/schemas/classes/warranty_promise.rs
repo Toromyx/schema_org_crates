@@ -1,6 +1,7 @@
 /// <https://schema.org/WarrantyPromise>
 pub trait FindWarrantyPromiseIds {
 	type IdType;
+	/// <https://schema.org/WarrantyPromise>
 	fn find_warranty_promise_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

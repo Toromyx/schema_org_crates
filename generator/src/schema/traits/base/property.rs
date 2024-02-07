@@ -28,6 +28,7 @@ pub fn to_token_stream(schema: &Schema) -> TokenStream {
 		pub trait #trait_name {
 			type IdType;
 			type PropertyType;
+			#doc_lines
 			#deprecated_attribute
 			fn #function_name(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 		}

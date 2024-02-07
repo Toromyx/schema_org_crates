@@ -1,6 +1,7 @@
 /// <https://schema.org/DietNutrition>
 pub trait FindDietNutritionIds {
 	type IdType;
+	/// <https://schema.org/DietNutrition>
 	fn find_diet_nutrition_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

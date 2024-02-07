@@ -1,6 +1,7 @@
 /// <https://schema.org/Completed>
 pub trait FindCompletedIds {
 	type IdType;
+	/// <https://schema.org/Completed>
 	fn find_completed_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

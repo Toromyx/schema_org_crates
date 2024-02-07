@@ -2,6 +2,7 @@
 pub trait GetRequiredCollateralProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/requiredCollateral>
 	fn get_required_collateral_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

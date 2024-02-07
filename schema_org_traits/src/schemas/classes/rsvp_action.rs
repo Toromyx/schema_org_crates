@@ -1,6 +1,7 @@
 /// <https://schema.org/RsvpAction>
 pub trait FindRsvpActionIds {
 	type IdType;
+	/// <https://schema.org/RsvpAction>
 	fn find_rsvp_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

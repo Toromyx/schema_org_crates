@@ -2,6 +2,7 @@
 pub trait GetHomeTeamProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/homeTeam>
 	fn get_home_team_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

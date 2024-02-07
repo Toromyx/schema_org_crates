@@ -1,6 +1,7 @@
 /// <https://schema.org/StatusEnumeration>
 pub trait FindStatusEnumerationIds {
 	type IdType;
+	/// <https://schema.org/StatusEnumeration>
 	fn find_status_enumeration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetHasDeliveryMethodProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasDeliveryMethod>
 	fn get_has_delivery_method_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

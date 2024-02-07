@@ -2,6 +2,7 @@
 pub trait GetEstimatesRiskOfProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/estimatesRiskOf>
 	fn get_estimates_risk_of_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

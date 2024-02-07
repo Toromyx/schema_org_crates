@@ -1,6 +1,7 @@
 /// <https://schema.org/AcceptAction>
 pub trait FindAcceptActionIds {
 	type IdType;
+	/// <https://schema.org/AcceptAction>
 	fn find_accept_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

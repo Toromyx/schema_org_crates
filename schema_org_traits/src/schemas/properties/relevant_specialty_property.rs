@@ -2,6 +2,7 @@
 pub trait GetRelevantSpecialtyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/relevantSpecialty>
 	fn get_relevant_specialty_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetNumberOfPreviousOwnersProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/numberOfPreviousOwners>
 	fn get_number_of_previous_owners_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

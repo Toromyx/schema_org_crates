@@ -1,6 +1,7 @@
 /// <https://schema.org/EducationalOccupationalCredential>
 pub trait FindEducationalOccupationalCredentialIds {
 	type IdType;
+	/// <https://schema.org/EducationalOccupationalCredential>
 	fn find_educational_occupational_credential_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

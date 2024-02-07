@@ -2,6 +2,7 @@
 pub trait GetTextValueProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/textValue>
 	fn get_text_value_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

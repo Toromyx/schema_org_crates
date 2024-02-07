@@ -1,6 +1,7 @@
 /// <https://schema.org/LakeBodyOfWater>
 pub trait FindLakeBodyOfWaterIds {
 	type IdType;
+	/// <https://schema.org/LakeBodyOfWater>
 	fn find_lake_body_of_water_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

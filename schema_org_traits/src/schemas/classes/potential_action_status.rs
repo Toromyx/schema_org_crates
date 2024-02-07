@@ -1,6 +1,7 @@
 /// <https://schema.org/PotentialActionStatus>
 pub trait FindPotentialActionStatusIds {
 	type IdType;
+	/// <https://schema.org/PotentialActionStatus>
 	fn find_potential_action_status_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

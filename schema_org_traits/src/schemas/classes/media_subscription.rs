@@ -1,6 +1,7 @@
 /// <https://schema.org/MediaSubscription>
 pub trait FindMediaSubscriptionIds {
 	type IdType;
+	/// <https://schema.org/MediaSubscription>
 	fn find_media_subscription_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

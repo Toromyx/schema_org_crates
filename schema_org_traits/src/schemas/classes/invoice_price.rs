@@ -1,6 +1,7 @@
 /// <https://schema.org/InvoicePrice>
 pub trait FindInvoicePriceIds {
 	type IdType;
+	/// <https://schema.org/InvoicePrice>
 	fn find_invoice_price_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

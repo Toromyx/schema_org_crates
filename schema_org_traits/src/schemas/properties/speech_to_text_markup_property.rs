@@ -2,6 +2,7 @@
 pub trait GetSpeechToTextMarkupProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/speechToTextMarkup>
 	fn get_speech_to_text_markup_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetSha256Property {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/sha256>
 	fn get_sha_256_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

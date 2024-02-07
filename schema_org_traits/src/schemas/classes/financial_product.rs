@@ -1,6 +1,7 @@
 /// <https://schema.org/FinancialProduct>
 pub trait FindFinancialProductIds {
 	type IdType;
+	/// <https://schema.org/FinancialProduct>
 	fn find_financial_product_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

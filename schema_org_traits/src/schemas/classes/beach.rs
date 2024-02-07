@@ -1,6 +1,7 @@
 /// <https://schema.org/Beach>
 pub trait FindBeachIds {
 	type IdType;
+	/// <https://schema.org/Beach>
 	fn find_beach_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

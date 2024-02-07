@@ -1,6 +1,7 @@
 /// <https://schema.org/DeactivateAction>
 pub trait FindDeactivateActionIds {
 	type IdType;
+	/// <https://schema.org/DeactivateAction>
 	fn find_deactivate_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

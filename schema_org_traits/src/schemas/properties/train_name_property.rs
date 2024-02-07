@@ -2,6 +2,7 @@
 pub trait GetTrainNameProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/trainName>
 	fn get_train_name_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

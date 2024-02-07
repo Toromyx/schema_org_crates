@@ -2,6 +2,7 @@
 pub trait GetProgramNameProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/programName>
 	fn get_program_name_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

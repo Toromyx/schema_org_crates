@@ -1,6 +1,7 @@
 /// <https://schema.org/OriginalMediaContent>
 pub trait FindOriginalMediaContentIds {
 	type IdType;
+	/// <https://schema.org/OriginalMediaContent>
 	fn find_original_media_content_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

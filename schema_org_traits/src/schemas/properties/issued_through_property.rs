@@ -2,6 +2,7 @@
 pub trait GetIssuedThroughProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/issuedThrough>
 	fn get_issued_through_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

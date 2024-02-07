@@ -1,6 +1,7 @@
 /// <https://schema.org/PropertyValue>
 pub trait FindPropertyValueIds {
 	type IdType;
+	/// <https://schema.org/PropertyValue>
 	fn find_property_value_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

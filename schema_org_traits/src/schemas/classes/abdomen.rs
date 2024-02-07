@@ -1,6 +1,7 @@
 /// <https://schema.org/Abdomen>
 pub trait FindAbdomenIds {
 	type IdType;
+	/// <https://schema.org/Abdomen>
 	fn find_abdomen_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetVehicleSpecialUsageProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/vehicleSpecialUsage>
 	fn get_vehicle_special_usage_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

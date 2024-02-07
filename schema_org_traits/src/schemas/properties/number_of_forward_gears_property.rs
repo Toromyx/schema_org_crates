@@ -2,6 +2,7 @@
 pub trait GetNumberOfForwardGearsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/numberOfForwardGears>
 	fn get_number_of_forward_gears_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

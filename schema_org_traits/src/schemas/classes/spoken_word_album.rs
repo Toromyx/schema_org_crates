@@ -1,6 +1,7 @@
 /// <https://schema.org/SpokenWordAlbum>
 pub trait FindSpokenWordAlbumIds {
 	type IdType;
+	/// <https://schema.org/SpokenWordAlbum>
 	fn find_spoken_word_album_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

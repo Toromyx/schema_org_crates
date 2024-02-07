@@ -1,6 +1,7 @@
 /// <https://schema.org/CommunicateAction>
 pub trait FindCommunicateActionIds {
 	type IdType;
+	/// <https://schema.org/CommunicateAction>
 	fn find_communicate_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

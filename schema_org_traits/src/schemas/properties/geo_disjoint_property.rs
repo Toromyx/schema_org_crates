@@ -2,6 +2,7 @@
 pub trait GetGeoDisjointProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/geoDisjoint>
 	fn get_geo_disjoint_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

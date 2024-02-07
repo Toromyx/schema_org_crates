@@ -1,6 +1,7 @@
 /// <https://schema.org/StoreCreditRefund>
 pub trait FindStoreCreditRefundIds {
 	type IdType;
+	/// <https://schema.org/StoreCreditRefund>
 	fn find_store_credit_refund_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

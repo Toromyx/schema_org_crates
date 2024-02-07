@@ -2,6 +2,7 @@
 pub trait GetColorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/color>
 	fn get_color_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

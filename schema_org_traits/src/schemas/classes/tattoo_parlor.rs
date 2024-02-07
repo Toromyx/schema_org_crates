@@ -1,6 +1,7 @@
 /// <https://schema.org/TattooParlor>
 pub trait FindTattooParlorIds {
 	type IdType;
+	/// <https://schema.org/TattooParlor>
 	fn find_tattoo_parlor_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

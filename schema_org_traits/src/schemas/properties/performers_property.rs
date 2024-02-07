@@ -3,6 +3,7 @@
 pub trait GetPerformersProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/performers>
 	#[deprecated = "This schema is superseded by <https://schema.org/performer>."]
 	fn get_performers_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

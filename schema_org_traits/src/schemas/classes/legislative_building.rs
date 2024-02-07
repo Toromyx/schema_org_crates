@@ -1,6 +1,7 @@
 /// <https://schema.org/LegislativeBuilding>
 pub trait FindLegislativeBuildingIds {
 	type IdType;
+	/// <https://schema.org/LegislativeBuilding>
 	fn find_legislative_building_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

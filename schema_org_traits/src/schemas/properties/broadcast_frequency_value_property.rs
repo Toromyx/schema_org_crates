@@ -2,6 +2,7 @@
 pub trait GetBroadcastFrequencyValueProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/broadcastFrequencyValue>
 	fn get_broadcast_frequency_value_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

@@ -1,6 +1,7 @@
 /// <https://schema.org/BedAndBreakfast>
 pub trait FindBedAndBreakfastIds {
 	type IdType;
+	/// <https://schema.org/BedAndBreakfast>
 	fn find_bed_and_breakfast_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

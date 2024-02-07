@@ -2,6 +2,7 @@
 pub trait GetMonthlyMinimumRepaymentAmountProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/monthlyMinimumRepaymentAmount>
 	fn get_monthly_minimum_repayment_amount_property(
 		&self,
 		id: &Self::IdType,

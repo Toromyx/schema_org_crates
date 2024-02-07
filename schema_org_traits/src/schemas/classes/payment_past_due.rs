@@ -1,6 +1,7 @@
 /// <https://schema.org/PaymentPastDue>
 pub trait FindPaymentPastDueIds {
 	type IdType;
+	/// <https://schema.org/PaymentPastDue>
 	fn find_payment_past_due_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/ResearchProject>
 pub trait FindResearchProjectIds {
 	type IdType;
+	/// <https://schema.org/ResearchProject>
 	fn find_research_project_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

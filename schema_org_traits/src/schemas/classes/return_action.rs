@@ -1,6 +1,7 @@
 /// <https://schema.org/ReturnAction>
 pub trait FindReturnActionIds {
 	type IdType;
+	/// <https://schema.org/ReturnAction>
 	fn find_return_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetSpokenByCharacterProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/spokenByCharacter>
 	fn get_spoken_by_character_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

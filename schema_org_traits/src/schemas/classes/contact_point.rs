@@ -1,6 +1,7 @@
 /// <https://schema.org/ContactPoint>
 pub trait FindContactPointIds {
 	type IdType;
+	/// <https://schema.org/ContactPoint>
 	fn find_contact_point_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

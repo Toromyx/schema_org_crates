@@ -1,6 +1,7 @@
 /// <https://schema.org/Manuscript>
 pub trait FindManuscriptIds {
 	type IdType;
+	/// <https://schema.org/Manuscript>
 	fn find_manuscript_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

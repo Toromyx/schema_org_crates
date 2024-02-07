@@ -2,6 +2,7 @@
 pub trait GetNumTracksProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/numTracks>
 	fn get_num_tracks_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

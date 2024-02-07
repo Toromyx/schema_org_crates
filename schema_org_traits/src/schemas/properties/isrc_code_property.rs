@@ -2,6 +2,7 @@
 pub trait GetIsrcCodeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isrcCode>
 	fn get_isrc_code_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

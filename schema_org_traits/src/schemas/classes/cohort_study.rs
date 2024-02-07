@@ -1,6 +1,7 @@
 /// <https://schema.org/CohortStudy>
 pub trait FindCohortStudyIds {
 	type IdType;
+	/// <https://schema.org/CohortStudy>
 	fn find_cohort_study_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

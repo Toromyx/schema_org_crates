@@ -3,6 +3,7 @@
 pub trait GetAreaProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/area>
 	#[deprecated = "This schema is superseded by <https://schema.org/serviceArea>."]
 	fn get_area_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

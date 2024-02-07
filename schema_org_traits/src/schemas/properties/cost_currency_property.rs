@@ -2,6 +2,7 @@
 pub trait GetCostCurrencyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/costCurrency>
 	fn get_cost_currency_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

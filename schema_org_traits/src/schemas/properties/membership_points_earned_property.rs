@@ -2,6 +2,7 @@
 pub trait GetMembershipPointsEarnedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/membershipPointsEarned>
 	fn get_membership_points_earned_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

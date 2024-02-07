@@ -2,6 +2,7 @@
 pub trait GetValueAddedTaxIncludedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/valueAddedTaxIncluded>
 	fn get_value_added_tax_included_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

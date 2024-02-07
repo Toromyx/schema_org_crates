@@ -3,6 +3,7 @@
 pub trait GetDeviceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/device>
 	#[deprecated = "This schema is superseded by <https://schema.org/availableOnDevice>."]
 	fn get_device_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

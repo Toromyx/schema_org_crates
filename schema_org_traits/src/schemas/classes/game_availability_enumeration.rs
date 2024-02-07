@@ -1,6 +1,7 @@
 /// <https://schema.org/GameAvailabilityEnumeration>
 pub trait FindGameAvailabilityEnumerationIds {
 	type IdType;
+	/// <https://schema.org/GameAvailabilityEnumeration>
 	fn find_game_availability_enumeration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

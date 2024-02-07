@@ -1,6 +1,7 @@
 /// <https://schema.org/TradeAction>
 pub trait FindTradeActionIds {
 	type IdType;
+	/// <https://schema.org/TradeAction>
 	fn find_trade_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

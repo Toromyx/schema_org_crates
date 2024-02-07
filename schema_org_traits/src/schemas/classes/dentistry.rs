@@ -1,6 +1,7 @@
 /// <https://schema.org/Dentistry>
 pub trait FindDentistryIds {
 	type IdType;
+	/// <https://schema.org/Dentistry>
 	fn find_dentistry_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

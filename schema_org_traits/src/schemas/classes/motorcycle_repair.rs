@@ -1,6 +1,7 @@
 /// <https://schema.org/MotorcycleRepair>
 pub trait FindMotorcycleRepairIds {
 	type IdType;
+	/// <https://schema.org/MotorcycleRepair>
 	fn find_motorcycle_repair_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

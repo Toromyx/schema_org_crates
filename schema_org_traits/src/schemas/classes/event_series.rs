@@ -1,6 +1,7 @@
 /// <https://schema.org/EventSeries>
 pub trait FindEventSeriesIds {
 	type IdType;
+	/// <https://schema.org/EventSeries>
 	fn find_event_series_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

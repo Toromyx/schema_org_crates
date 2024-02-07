@@ -2,6 +2,7 @@
 pub trait GetNutritionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/nutrition>
 	fn get_nutrition_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

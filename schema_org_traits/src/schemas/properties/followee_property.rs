@@ -2,6 +2,7 @@
 pub trait GetFolloweeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/followee>
 	fn get_followee_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetBedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/bed>
 	fn get_bed_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

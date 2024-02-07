@@ -2,6 +2,7 @@
 pub trait GetEncodesBioChemEntityProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/encodesBioChemEntity>
 	fn get_encodes_bio_chem_entity_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

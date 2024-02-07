@@ -1,6 +1,7 @@
 /// <https://schema.org/GenericWebPlatform>
 pub trait FindGenericWebPlatformIds {
 	type IdType;
+	/// <https://schema.org/GenericWebPlatform>
 	fn find_generic_web_platform_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

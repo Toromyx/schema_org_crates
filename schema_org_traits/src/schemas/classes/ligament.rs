@@ -1,6 +1,7 @@
 /// <https://schema.org/Ligament>
 pub trait FindLigamentIds {
 	type IdType;
+	/// <https://schema.org/Ligament>
 	fn find_ligament_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

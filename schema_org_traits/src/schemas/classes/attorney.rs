@@ -1,6 +1,7 @@
 /// <https://schema.org/Attorney>
 pub trait FindAttorneyIds {
 	type IdType;
+	/// <https://schema.org/Attorney>
 	fn find_attorney_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

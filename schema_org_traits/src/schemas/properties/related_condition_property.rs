@@ -2,6 +2,7 @@
 pub trait GetRelatedConditionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/relatedCondition>
 	fn get_related_condition_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

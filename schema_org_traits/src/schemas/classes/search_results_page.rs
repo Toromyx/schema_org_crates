@@ -1,6 +1,7 @@
 /// <https://schema.org/SearchResultsPage>
 pub trait FindSearchResultsPageIds {
 	type IdType;
+	/// <https://schema.org/SearchResultsPage>
 	fn find_search_results_page_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

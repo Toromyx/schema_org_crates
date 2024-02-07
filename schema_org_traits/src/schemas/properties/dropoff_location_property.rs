@@ -2,6 +2,7 @@
 pub trait GetDropoffLocationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/dropoffLocation>
 	fn get_dropoff_location_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetLiveBlogUpdateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/liveBlogUpdate>
 	fn get_live_blog_update_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetAccessModeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/accessMode>
 	fn get_access_mode_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/ActivationFee>
 pub trait FindActivationFeeIds {
 	type IdType;
+	/// <https://schema.org/ActivationFee>
 	fn find_activation_fee_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

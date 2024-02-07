@@ -1,6 +1,7 @@
 /// <https://schema.org/SearchRescueOrganization>
 pub trait FindSearchRescueOrganizationIds {
 	type IdType;
+	/// <https://schema.org/SearchRescueOrganization>
 	fn find_search_rescue_organization_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

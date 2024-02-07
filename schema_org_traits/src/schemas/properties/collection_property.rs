@@ -3,6 +3,7 @@
 pub trait GetCollectionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/collection>
 	#[deprecated = "This schema is superseded by <https://schema.org/targetCollection>."]
 	fn get_collection_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

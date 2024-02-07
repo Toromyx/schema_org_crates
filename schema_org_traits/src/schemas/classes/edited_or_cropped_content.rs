@@ -1,6 +1,7 @@
 /// <https://schema.org/EditedOrCroppedContent>
 pub trait FindEditedOrCroppedContentIds {
 	type IdType;
+	/// <https://schema.org/EditedOrCroppedContent>
 	fn find_edited_or_cropped_content_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

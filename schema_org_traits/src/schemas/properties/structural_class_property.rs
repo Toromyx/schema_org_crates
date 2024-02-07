@@ -2,6 +2,7 @@
 pub trait GetStructuralClassProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/structuralClass>
 	fn get_structural_class_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

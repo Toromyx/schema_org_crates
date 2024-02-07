@@ -1,6 +1,7 @@
 /// <https://schema.org/Rating>
 pub trait FindRatingIds {
 	type IdType;
+	/// <https://schema.org/Rating>
 	fn find_rating_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

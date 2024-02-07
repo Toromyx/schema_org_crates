@@ -2,6 +2,7 @@
 pub trait GetBankAccountTypeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/bankAccountType>
 	fn get_bank_account_type_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

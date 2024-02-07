@@ -2,6 +2,7 @@
 #[deprecated = "This schema is superseded by <https://schema.org/InteractionCounter>."]
 pub trait FindUserInteractionIds {
 	type IdType;
+	/// <https://schema.org/UserInteraction>
 	#[deprecated = "This schema is superseded by <https://schema.org/InteractionCounter>."]
 	fn find_user_interaction_ids(&self) -> Vec<&Self::IdType>;
 }

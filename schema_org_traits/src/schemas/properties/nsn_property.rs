@@ -2,6 +2,7 @@
 pub trait GetNsnProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/nsn>
 	fn get_nsn_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

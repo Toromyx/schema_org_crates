@@ -1,6 +1,7 @@
 /// <https://schema.org/Anesthesia>
 pub trait FindAnesthesiaIds {
 	type IdType;
+	/// <https://schema.org/Anesthesia>
 	fn find_anesthesia_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

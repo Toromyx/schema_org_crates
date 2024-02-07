@@ -1,6 +1,7 @@
 /// <https://schema.org/Dataset>
 pub trait FindDatasetIds {
 	type IdType;
+	/// <https://schema.org/Dataset>
 	fn find_dataset_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

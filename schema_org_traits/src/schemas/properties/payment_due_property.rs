@@ -3,6 +3,7 @@
 pub trait GetPaymentDueProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/paymentDue>
 	#[deprecated = "This schema is superseded by <https://schema.org/paymentDueDate>."]
 	fn get_payment_due_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

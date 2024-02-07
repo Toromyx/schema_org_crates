@@ -1,6 +1,7 @@
 /// <https://schema.org/Gene>
 pub trait FindGeneIds {
 	type IdType;
+	/// <https://schema.org/Gene>
 	fn find_gene_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

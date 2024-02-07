@@ -2,6 +2,7 @@
 pub trait GetArtformProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/artform>
 	fn get_artform_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

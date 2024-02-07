@@ -2,6 +2,7 @@
 pub trait GetFlightDistanceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/flightDistance>
 	fn get_flight_distance_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

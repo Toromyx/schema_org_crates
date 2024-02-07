@@ -2,6 +2,7 @@
 pub trait GetAccessCodeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/accessCode>
 	fn get_access_code_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

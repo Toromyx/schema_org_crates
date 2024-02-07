@@ -1,6 +1,7 @@
 /// <https://schema.org/FloorPlan>
 pub trait FindFloorPlanIds {
 	type IdType;
+	/// <https://schema.org/FloorPlan>
 	fn find_floor_plan_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

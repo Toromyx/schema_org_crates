@@ -1,6 +1,7 @@
 /// <https://schema.org/AdultOrientedEnumeration>
 pub trait FindAdultOrientedEnumerationIds {
 	type IdType;
+	/// <https://schema.org/AdultOrientedEnumeration>
 	fn find_adult_oriented_enumeration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

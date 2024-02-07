@@ -2,6 +2,7 @@
 pub trait GetMaximumIntakeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/maximumIntake>
 	fn get_maximum_intake_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

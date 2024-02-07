@@ -1,6 +1,7 @@
 /// <https://schema.org/Museum>
 pub trait FindMuseumIds {
 	type IdType;
+	/// <https://schema.org/Museum>
 	fn find_museum_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

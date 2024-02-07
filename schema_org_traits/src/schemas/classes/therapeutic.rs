@@ -1,6 +1,7 @@
 /// <https://schema.org/Therapeutic>
 pub trait FindTherapeuticIds {
 	type IdType;
+	/// <https://schema.org/Therapeutic>
 	fn find_therapeutic_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

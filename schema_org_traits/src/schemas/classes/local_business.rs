@@ -1,6 +1,7 @@
 /// <https://schema.org/LocalBusiness>
 pub trait FindLocalBusinessIds {
 	type IdType;
+	/// <https://schema.org/LocalBusiness>
 	fn find_local_business_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetEventStatusProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/eventStatus>
 	fn get_event_status_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

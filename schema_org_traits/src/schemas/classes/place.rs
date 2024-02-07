@@ -1,6 +1,7 @@
 /// <https://schema.org/Place>
 pub trait FindPlaceIds {
 	type IdType;
+	/// <https://schema.org/Place>
 	fn find_place_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

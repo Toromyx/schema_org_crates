@@ -2,6 +2,7 @@
 pub trait GetEducationalCredentialAwardedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/educationalCredentialAwarded>
 	fn get_educational_credential_awarded_property(
 		&self,
 		id: &Self::IdType,

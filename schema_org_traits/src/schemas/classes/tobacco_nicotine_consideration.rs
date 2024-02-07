@@ -1,6 +1,7 @@
 /// <https://schema.org/TobaccoNicotineConsideration>
 pub trait FindTobaccoNicotineConsiderationIds {
 	type IdType;
+	/// <https://schema.org/TobaccoNicotineConsideration>
 	fn find_tobacco_nicotine_consideration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

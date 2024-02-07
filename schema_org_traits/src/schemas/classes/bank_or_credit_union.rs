@@ -1,6 +1,7 @@
 /// <https://schema.org/BankOrCreditUnion>
 pub trait FindBankOrCreditUnionIds {
 	type IdType;
+	/// <https://schema.org/BankOrCreditUnion>
 	fn find_bank_or_credit_union_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

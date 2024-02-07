@@ -1,6 +1,7 @@
 /// <https://schema.org/PublicSwimmingPool>
 pub trait FindPublicSwimmingPoolIds {
 	type IdType;
+	/// <https://schema.org/PublicSwimmingPool>
 	fn find_public_swimming_pool_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/ExchangeRateSpecification>
 pub trait FindExchangeRateSpecificationIds {
 	type IdType;
+	/// <https://schema.org/ExchangeRateSpecification>
 	fn find_exchange_rate_specification_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

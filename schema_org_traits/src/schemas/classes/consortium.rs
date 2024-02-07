@@ -1,6 +1,7 @@
 /// <https://schema.org/Consortium>
 pub trait FindConsortiumIds {
 	type IdType;
+	/// <https://schema.org/Consortium>
 	fn find_consortium_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

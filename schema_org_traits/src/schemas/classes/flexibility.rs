@@ -1,6 +1,7 @@
 /// <https://schema.org/Flexibility>
 pub trait FindFlexibilityIds {
 	type IdType;
+	/// <https://schema.org/Flexibility>
 	fn find_flexibility_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

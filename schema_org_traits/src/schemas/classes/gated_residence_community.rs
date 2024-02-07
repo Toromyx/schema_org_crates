@@ -1,6 +1,7 @@
 /// <https://schema.org/GatedResidenceCommunity>
 pub trait FindGatedResidenceCommunityIds {
 	type IdType;
+	/// <https://schema.org/GatedResidenceCommunity>
 	fn find_gated_residence_community_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

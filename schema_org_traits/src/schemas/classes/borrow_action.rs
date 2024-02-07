@@ -1,6 +1,7 @@
 /// <https://schema.org/BorrowAction>
 pub trait FindBorrowActionIds {
 	type IdType;
+	/// <https://schema.org/BorrowAction>
 	fn find_borrow_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

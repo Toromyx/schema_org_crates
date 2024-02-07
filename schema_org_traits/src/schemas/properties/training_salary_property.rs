@@ -2,6 +2,7 @@
 pub trait GetTrainingSalaryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/trainingSalary>
 	fn get_training_salary_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

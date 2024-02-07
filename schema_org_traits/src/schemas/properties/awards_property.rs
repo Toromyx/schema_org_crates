@@ -3,6 +3,7 @@
 pub trait GetAwardsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/awards>
 	#[deprecated = "This schema is superseded by <https://schema.org/award>."]
 	fn get_awards_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

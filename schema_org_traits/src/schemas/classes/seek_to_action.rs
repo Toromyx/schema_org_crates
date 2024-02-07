@@ -1,6 +1,7 @@
 /// <https://schema.org/SeekToAction>
 pub trait FindSeekToActionIds {
 	type IdType;
+	/// <https://schema.org/SeekToAction>
 	fn find_seek_to_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

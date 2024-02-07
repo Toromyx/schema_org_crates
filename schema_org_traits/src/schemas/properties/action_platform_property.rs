@@ -2,6 +2,7 @@
 pub trait GetActionPlatformProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/actionPlatform>
 	fn get_action_platform_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

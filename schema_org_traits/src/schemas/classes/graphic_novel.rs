@@ -1,6 +1,7 @@
 /// <https://schema.org/GraphicNovel>
 pub trait FindGraphicNovelIds {
 	type IdType;
+	/// <https://schema.org/GraphicNovel>
 	fn find_graphic_novel_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

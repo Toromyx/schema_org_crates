@@ -1,6 +1,7 @@
 /// <https://schema.org/OrderCancelled>
 pub trait FindOrderCancelledIds {
 	type IdType;
+	/// <https://schema.org/OrderCancelled>
 	fn find_order_cancelled_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

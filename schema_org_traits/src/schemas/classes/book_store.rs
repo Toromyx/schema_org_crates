@@ -1,6 +1,7 @@
 /// <https://schema.org/BookStore>
 pub trait FindBookStoreIds {
 	type IdType;
+	/// <https://schema.org/BookStore>
 	fn find_book_store_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

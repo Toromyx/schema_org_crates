@@ -2,6 +2,7 @@
 pub trait GetNumberOfPartialBathroomsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/numberOfPartialBathrooms>
 	fn get_number_of_partial_bathrooms_property(
 		&self,
 		id: &Self::IdType,

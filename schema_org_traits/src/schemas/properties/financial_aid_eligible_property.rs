@@ -2,6 +2,7 @@
 pub trait GetFinancialAidEligibleProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/financialAidEligible>
 	fn get_financial_aid_eligible_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetIncreasesRiskOfProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/increasesRiskOf>
 	fn get_increases_risk_of_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

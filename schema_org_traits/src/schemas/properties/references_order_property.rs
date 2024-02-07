@@ -2,6 +2,7 @@
 pub trait GetReferencesOrderProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/referencesOrder>
 	fn get_references_order_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

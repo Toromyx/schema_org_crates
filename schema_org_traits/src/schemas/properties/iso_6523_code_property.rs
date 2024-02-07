@@ -2,6 +2,7 @@
 pub trait GetIso6523CodeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/iso6523Code>
 	fn get_iso_6523_code_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

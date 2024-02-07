@@ -1,6 +1,7 @@
 /// <https://schema.org/ReturnByMail>
 pub trait FindReturnByMailIds {
 	type IdType;
+	/// <https://schema.org/ReturnByMail>
 	fn find_return_by_mail_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

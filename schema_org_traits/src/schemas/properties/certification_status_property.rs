@@ -2,6 +2,7 @@
 pub trait GetCertificationStatusProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/certificationStatus>
 	fn get_certification_status_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

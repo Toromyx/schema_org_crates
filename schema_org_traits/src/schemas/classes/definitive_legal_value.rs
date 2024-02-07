@@ -1,6 +1,7 @@
 /// <https://schema.org/DefinitiveLegalValue>
 pub trait FindDefinitiveLegalValueIds {
 	type IdType;
+	/// <https://schema.org/DefinitiveLegalValue>
 	fn find_definitive_legal_value_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

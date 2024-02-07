@@ -2,6 +2,7 @@
 pub trait GetAvailabilityEndsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/availabilityEnds>
 	fn get_availability_ends_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

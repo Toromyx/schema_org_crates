@@ -1,6 +1,7 @@
 /// <https://schema.org/Permit>
 pub trait FindPermitIds {
 	type IdType;
+	/// <https://schema.org/Permit>
 	fn find_permit_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

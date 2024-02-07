@@ -2,6 +2,7 @@
 pub trait GetUsedToDiagnoseProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/usedToDiagnose>
 	fn get_used_to_diagnose_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

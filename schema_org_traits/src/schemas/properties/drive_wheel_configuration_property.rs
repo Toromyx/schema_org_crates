@@ -2,6 +2,7 @@
 pub trait GetDriveWheelConfigurationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/driveWheelConfiguration>
 	fn get_drive_wheel_configuration_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

@@ -3,6 +3,7 @@
 pub trait GetIsBasedOnUrlProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isBasedOnUrl>
 	#[deprecated = "This schema is superseded by <https://schema.org/isBasedOn>."]
 	fn get_is_based_on_url_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

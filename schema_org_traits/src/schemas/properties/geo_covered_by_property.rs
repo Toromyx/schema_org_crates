@@ -2,6 +2,7 @@
 pub trait GetGeoCoveredByProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/geoCoveredBy>
 	fn get_geo_covered_by_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

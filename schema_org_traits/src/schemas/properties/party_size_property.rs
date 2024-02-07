@@ -2,6 +2,7 @@
 pub trait GetPartySizeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/partySize>
 	fn get_party_size_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

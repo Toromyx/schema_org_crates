@@ -2,6 +2,7 @@
 pub trait GetAntagonistProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/antagonist>
 	fn get_antagonist_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

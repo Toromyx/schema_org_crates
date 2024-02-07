@@ -1,6 +1,7 @@
 /// <https://schema.org/NightClub>
 pub trait FindNightClubIds {
 	type IdType;
+	/// <https://schema.org/NightClub>
 	fn find_night_club_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

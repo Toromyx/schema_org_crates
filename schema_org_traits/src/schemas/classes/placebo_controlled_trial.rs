@@ -1,6 +1,7 @@
 /// <https://schema.org/PlaceboControlledTrial>
 pub trait FindPlaceboControlledTrialIds {
 	type IdType;
+	/// <https://schema.org/PlaceboControlledTrial>
 	fn find_placebo_controlled_trial_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

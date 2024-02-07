@@ -1,6 +1,7 @@
 /// <https://schema.org/MerchantReturnNotPermitted>
 pub trait FindMerchantReturnNotPermittedIds {
 	type IdType;
+	/// <https://schema.org/MerchantReturnNotPermitted>
 	fn find_merchant_return_not_permitted_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/Language>
 pub trait FindLanguageIds {
 	type IdType;
+	/// <https://schema.org/Language>
 	fn find_language_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

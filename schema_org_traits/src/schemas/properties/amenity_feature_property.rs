@@ -2,6 +2,7 @@
 pub trait GetAmenityFeatureProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/amenityFeature>
 	fn get_amenity_feature_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

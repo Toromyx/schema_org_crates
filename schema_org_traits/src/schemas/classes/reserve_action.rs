@@ -1,6 +1,7 @@
 /// <https://schema.org/ReserveAction>
 pub trait FindReserveActionIds {
 	type IdType;
+	/// <https://schema.org/ReserveAction>
 	fn find_reserve_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

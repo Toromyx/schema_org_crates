@@ -1,6 +1,7 @@
 /// <https://schema.org/Zoo>
 pub trait FindZooIds {
 	type IdType;
+	/// <https://schema.org/Zoo>
 	fn find_zoo_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

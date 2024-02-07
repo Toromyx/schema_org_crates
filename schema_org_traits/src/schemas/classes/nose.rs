@@ -1,6 +1,7 @@
 /// <https://schema.org/Nose>
 pub trait FindNoseIds {
 	type IdType;
+	/// <https://schema.org/Nose>
 	fn find_nose_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

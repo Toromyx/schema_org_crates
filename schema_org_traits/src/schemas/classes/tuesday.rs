@@ -1,6 +1,7 @@
 /// <https://schema.org/Tuesday>
 pub trait FindTuesdayIds {
 	type IdType;
+	/// <https://schema.org/Tuesday>
 	fn find_tuesday_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

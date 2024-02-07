@@ -1,6 +1,7 @@
 /// <https://schema.org/Urologic>
 pub trait FindUrologicIds {
 	type IdType;
+	/// <https://schema.org/Urologic>
 	fn find_urologic_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

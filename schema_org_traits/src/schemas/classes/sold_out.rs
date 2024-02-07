@@ -1,6 +1,7 @@
 /// <https://schema.org/SoldOut>
 pub trait FindSoldOutIds {
 	type IdType;
+	/// <https://schema.org/SoldOut>
 	fn find_sold_out_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

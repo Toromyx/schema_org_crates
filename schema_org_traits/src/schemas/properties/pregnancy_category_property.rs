@@ -2,6 +2,7 @@
 pub trait GetPregnancyCategoryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/pregnancyCategory>
 	fn get_pregnancy_category_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

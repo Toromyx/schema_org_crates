@@ -1,6 +1,7 @@
 /// <https://schema.org/EPRelease>
 pub trait FindEpReleaseIds {
 	type IdType;
+	/// <https://schema.org/EPRelease>
 	fn find_ep_release_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

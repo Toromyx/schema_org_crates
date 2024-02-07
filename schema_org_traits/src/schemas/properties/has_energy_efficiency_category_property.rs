@@ -2,6 +2,7 @@
 pub trait GetHasEnergyEfficiencyCategoryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasEnergyEfficiencyCategory>
 	fn get_has_energy_efficiency_category_property(
 		&self,
 		id: &Self::IdType,

@@ -1,6 +1,7 @@
 /// <https://schema.org/Skin>
 pub trait FindSkinIds {
 	type IdType;
+	/// <https://schema.org/Skin>
 	fn find_skin_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

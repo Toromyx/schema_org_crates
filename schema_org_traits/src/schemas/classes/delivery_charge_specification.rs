@@ -1,6 +1,7 @@
 /// <https://schema.org/DeliveryChargeSpecification>
 pub trait FindDeliveryChargeSpecificationIds {
 	type IdType;
+	/// <https://schema.org/DeliveryChargeSpecification>
 	fn find_delivery_charge_specification_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

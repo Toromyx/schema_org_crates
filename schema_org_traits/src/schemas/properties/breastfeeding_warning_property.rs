@@ -2,6 +2,7 @@
 pub trait GetBreastfeedingWarningProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/breastfeedingWarning>
 	fn get_breastfeeding_warning_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

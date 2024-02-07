@@ -2,6 +2,7 @@
 pub trait GetTargetUrlProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/targetUrl>
 	fn get_target_url_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/MusculoskeletalExam>
 pub trait FindMusculoskeletalExamIds {
 	type IdType;
+	/// <https://schema.org/MusculoskeletalExam>
 	fn find_musculoskeletal_exam_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

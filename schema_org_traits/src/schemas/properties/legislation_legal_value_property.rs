@@ -2,6 +2,7 @@
 pub trait GetLegislationLegalValueProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/legislationLegalValue>
 	fn get_legislation_legal_value_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

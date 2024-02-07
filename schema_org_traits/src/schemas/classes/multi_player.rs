@@ -1,6 +1,7 @@
 /// <https://schema.org/MultiPlayer>
 pub trait FindMultiPlayerIds {
 	type IdType;
+	/// <https://schema.org/MultiPlayer>
 	fn find_multi_player_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

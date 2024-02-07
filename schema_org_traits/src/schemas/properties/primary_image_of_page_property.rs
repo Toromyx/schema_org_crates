@@ -2,6 +2,7 @@
 pub trait GetPrimaryImageOfPageProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/primaryImageOfPage>
 	fn get_primary_image_of_page_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

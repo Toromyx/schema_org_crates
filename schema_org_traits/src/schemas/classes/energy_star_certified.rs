@@ -1,6 +1,7 @@
 /// <https://schema.org/EnergyStarCertified>
 pub trait FindEnergyStarCertifiedIds {
 	type IdType;
+	/// <https://schema.org/EnergyStarCertified>
 	fn find_energy_star_certified_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

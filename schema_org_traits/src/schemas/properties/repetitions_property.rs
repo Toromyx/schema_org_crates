@@ -2,6 +2,7 @@
 pub trait GetRepetitionsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/repetitions>
 	fn get_repetitions_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

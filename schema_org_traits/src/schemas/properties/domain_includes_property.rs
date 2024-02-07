@@ -2,6 +2,7 @@
 pub trait GetDomainIncludesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/domainIncludes>
 	fn get_domain_includes_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

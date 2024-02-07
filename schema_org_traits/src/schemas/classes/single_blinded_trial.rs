@@ -1,6 +1,7 @@
 /// <https://schema.org/SingleBlindedTrial>
 pub trait FindSingleBlindedTrialIds {
 	type IdType;
+	/// <https://schema.org/SingleBlindedTrial>
 	fn find_single_blinded_trial_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

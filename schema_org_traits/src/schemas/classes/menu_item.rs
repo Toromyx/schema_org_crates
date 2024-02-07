@@ -1,6 +1,7 @@
 /// <https://schema.org/MenuItem>
 pub trait FindMenuItemIds {
 	type IdType;
+	/// <https://schema.org/MenuItem>
 	fn find_menu_item_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

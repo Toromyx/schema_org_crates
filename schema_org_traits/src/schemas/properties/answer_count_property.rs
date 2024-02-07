@@ -2,6 +2,7 @@
 pub trait GetAnswerCountProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/answerCount>
 	fn get_answer_count_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

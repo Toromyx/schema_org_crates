@@ -1,6 +1,7 @@
 /// <https://schema.org/GlutenFreeDiet>
 pub trait FindGlutenFreeDietIds {
 	type IdType;
+	/// <https://schema.org/GlutenFreeDiet>
 	fn find_gluten_free_diet_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

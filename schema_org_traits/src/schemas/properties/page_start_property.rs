@@ -2,6 +2,7 @@
 pub trait GetPageStartProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/pageStart>
 	fn get_page_start_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

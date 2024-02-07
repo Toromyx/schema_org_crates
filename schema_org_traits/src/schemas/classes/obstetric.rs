@@ -1,6 +1,7 @@
 /// <https://schema.org/Obstetric>
 pub trait FindObstetricIds {
 	type IdType;
+	/// <https://schema.org/Obstetric>
 	fn find_obstetric_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

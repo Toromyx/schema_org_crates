@@ -1,6 +1,7 @@
 /// <https://schema.org/HowToSection>
 pub trait FindHowToSectionIds {
 	type IdType;
+	/// <https://schema.org/HowToSection>
 	fn find_how_to_section_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

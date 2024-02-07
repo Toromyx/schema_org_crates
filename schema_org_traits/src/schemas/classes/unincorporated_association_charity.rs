@@ -1,6 +1,7 @@
 /// <https://schema.org/UnincorporatedAssociationCharity>
 pub trait FindUnincorporatedAssociationCharityIds {
 	type IdType;
+	/// <https://schema.org/UnincorporatedAssociationCharity>
 	fn find_unincorporated_association_charity_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

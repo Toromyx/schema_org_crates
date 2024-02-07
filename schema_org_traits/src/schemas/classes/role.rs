@@ -1,6 +1,7 @@
 /// <https://schema.org/Role>
 pub trait FindRoleIds {
 	type IdType;
+	/// <https://schema.org/Role>
 	fn find_role_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/DamagedCondition>
 pub trait FindDamagedConditionIds {
 	type IdType;
+	/// <https://schema.org/DamagedCondition>
 	fn find_damaged_condition_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

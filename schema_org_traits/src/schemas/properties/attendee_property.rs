@@ -2,6 +2,7 @@
 pub trait GetAttendeeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/attendee>
 	fn get_attendee_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

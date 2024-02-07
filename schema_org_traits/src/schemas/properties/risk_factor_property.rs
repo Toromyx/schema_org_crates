@@ -2,6 +2,7 @@
 pub trait GetRiskFactorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/riskFactor>
 	fn get_risk_factor_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

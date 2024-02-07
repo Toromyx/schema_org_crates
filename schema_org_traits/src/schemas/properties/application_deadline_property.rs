@@ -2,6 +2,7 @@
 pub trait GetApplicationDeadlineProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/applicationDeadline>
 	fn get_application_deadline_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

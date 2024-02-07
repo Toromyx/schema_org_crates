@@ -1,6 +1,7 @@
 /// <https://schema.org/ComicCoverArt>
 pub trait FindComicCoverArtIds {
 	type IdType;
+	/// <https://schema.org/ComicCoverArt>
 	fn find_comic_cover_art_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

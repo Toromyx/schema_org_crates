@@ -2,6 +2,7 @@
 pub trait GetOrderDeliveryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/orderDelivery>
 	fn get_order_delivery_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

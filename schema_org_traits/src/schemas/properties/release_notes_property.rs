@@ -2,6 +2,7 @@
 pub trait GetReleaseNotesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/releaseNotes>
 	fn get_release_notes_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

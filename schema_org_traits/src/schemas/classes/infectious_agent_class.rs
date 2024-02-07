@@ -1,6 +1,7 @@
 /// <https://schema.org/InfectiousAgentClass>
 pub trait FindInfectiousAgentClassIds {
 	type IdType;
+	/// <https://schema.org/InfectiousAgentClass>
 	fn find_infectious_agent_class_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/InformAction>
 pub trait FindInformActionIds {
 	type IdType;
+	/// <https://schema.org/InformAction>
 	fn find_inform_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

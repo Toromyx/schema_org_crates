@@ -1,6 +1,7 @@
 /// <https://schema.org/UnclassifiedAdultConsideration>
 pub trait FindUnclassifiedAdultConsiderationIds {
 	type IdType;
+	/// <https://schema.org/UnclassifiedAdultConsideration>
 	fn find_unclassified_adult_consideration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

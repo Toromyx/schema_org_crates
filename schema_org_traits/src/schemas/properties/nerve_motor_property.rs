@@ -2,6 +2,7 @@
 pub trait GetNerveMotorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/nerveMotor>
 	fn get_nerve_motor_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

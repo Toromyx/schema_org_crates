@@ -1,6 +1,7 @@
 /// <https://schema.org/CssSelectorType>
 pub trait FindCssSelectorTypeIds {
 	type IdType;
+	/// <https://schema.org/CssSelectorType>
 	fn find_css_selector_type_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/TakeAction>
 pub trait FindTakeActionIds {
 	type IdType;
+	/// <https://schema.org/TakeAction>
 	fn find_take_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

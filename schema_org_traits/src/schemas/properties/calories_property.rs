@@ -2,6 +2,7 @@
 pub trait GetCaloriesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/calories>
 	fn get_calories_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

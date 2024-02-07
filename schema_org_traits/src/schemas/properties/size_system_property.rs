@@ -2,6 +2,7 @@
 pub trait GetSizeSystemProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/sizeSystem>
 	fn get_size_system_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

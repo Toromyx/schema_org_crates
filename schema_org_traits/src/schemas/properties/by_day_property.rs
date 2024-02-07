@@ -2,6 +2,7 @@
 pub trait GetByDayProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/byDay>
 	fn get_by_day_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

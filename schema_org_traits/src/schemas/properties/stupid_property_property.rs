@@ -3,6 +3,7 @@
 pub trait GetStupidPropertyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/stupidProperty>
 	#[deprecated = "This schema is archived, see <https://schema.org/docs/attic.home.html>."]
 	fn get_stupid_property_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

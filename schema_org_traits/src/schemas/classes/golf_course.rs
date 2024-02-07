@@ -1,6 +1,7 @@
 /// <https://schema.org/GolfCourse>
 pub trait FindGolfCourseIds {
 	type IdType;
+	/// <https://schema.org/GolfCourse>
 	fn find_golf_course_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

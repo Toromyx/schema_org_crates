@@ -1,6 +1,7 @@
 /// <https://schema.org/MediaEnumeration>
 pub trait FindMediaEnumerationIds {
 	type IdType;
+	/// <https://schema.org/MediaEnumeration>
 	fn find_media_enumeration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/Reservoir>
 pub trait FindReservoirIds {
 	type IdType;
+	/// <https://schema.org/Reservoir>
 	fn find_reservoir_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

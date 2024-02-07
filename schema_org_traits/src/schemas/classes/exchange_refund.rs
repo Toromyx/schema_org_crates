@@ -1,6 +1,7 @@
 /// <https://schema.org/ExchangeRefund>
 pub trait FindExchangeRefundIds {
 	type IdType;
+	/// <https://schema.org/ExchangeRefund>
 	fn find_exchange_refund_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

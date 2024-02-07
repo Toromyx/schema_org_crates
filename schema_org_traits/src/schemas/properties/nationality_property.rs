@@ -2,6 +2,7 @@
 pub trait GetNationalityProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/nationality>
 	fn get_nationality_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

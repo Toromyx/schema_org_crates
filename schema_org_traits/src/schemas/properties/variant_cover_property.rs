@@ -2,6 +2,7 @@
 pub trait GetVariantCoverProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/variantCover>
 	fn get_variant_cover_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

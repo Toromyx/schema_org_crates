@@ -2,6 +2,7 @@
 pub trait GetLettererProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/letterer>
 	fn get_letterer_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

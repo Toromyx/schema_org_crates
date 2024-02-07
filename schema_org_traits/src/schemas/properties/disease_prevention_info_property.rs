@@ -2,6 +2,7 @@
 pub trait GetDiseasePreventionInfoProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/diseasePreventionInfo>
 	fn get_disease_prevention_info_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

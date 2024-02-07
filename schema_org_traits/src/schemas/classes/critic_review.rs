@@ -1,6 +1,7 @@
 /// <https://schema.org/CriticReview>
 pub trait FindCriticReviewIds {
 	type IdType;
+	/// <https://schema.org/CriticReview>
 	fn find_critic_review_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

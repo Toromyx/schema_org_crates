@@ -1,6 +1,7 @@
 /// <https://schema.org/NotYetRecruiting>
 pub trait FindNotYetRecruitingIds {
 	type IdType;
+	/// <https://schema.org/NotYetRecruiting>
 	fn find_not_yet_recruiting_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

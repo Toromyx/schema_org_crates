@@ -1,6 +1,7 @@
 /// <https://schema.org/DaySpa>
 pub trait FindDaySpaIds {
 	type IdType;
+	/// <https://schema.org/DaySpa>
 	fn find_day_spa_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

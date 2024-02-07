@@ -1,6 +1,7 @@
 /// <https://schema.org/ReservationPackage>
 pub trait FindReservationPackageIds {
 	type IdType;
+	/// <https://schema.org/ReservationPackage>
 	fn find_reservation_package_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

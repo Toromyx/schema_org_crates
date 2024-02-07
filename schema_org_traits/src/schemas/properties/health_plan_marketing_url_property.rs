@@ -2,6 +2,7 @@
 pub trait GetHealthPlanMarketingUrlProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/healthPlanMarketingUrl>
 	fn get_health_plan_marketing_url_property(&self, id: &Self::IdType)
 	-> Vec<&Self::PropertyType>;
 }

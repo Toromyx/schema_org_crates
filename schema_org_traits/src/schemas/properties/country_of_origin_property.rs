@@ -2,6 +2,7 @@
 pub trait GetCountryOfOriginProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/countryOfOrigin>
 	fn get_country_of_origin_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

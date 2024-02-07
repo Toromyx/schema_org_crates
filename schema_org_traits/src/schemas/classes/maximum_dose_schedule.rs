@@ -1,6 +1,7 @@
 /// <https://schema.org/MaximumDoseSchedule>
 pub trait FindMaximumDoseScheduleIds {
 	type IdType;
+	/// <https://schema.org/MaximumDoseSchedule>
 	fn find_maximum_dose_schedule_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

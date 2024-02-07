@@ -2,6 +2,7 @@
 pub trait GetLegislationConsolidatesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/legislationConsolidates>
 	fn get_legislation_consolidates_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

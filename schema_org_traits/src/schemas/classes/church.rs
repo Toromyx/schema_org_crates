@@ -1,6 +1,7 @@
 /// <https://schema.org/Church>
 pub trait FindChurchIds {
 	type IdType;
+	/// <https://schema.org/Church>
 	fn find_church_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

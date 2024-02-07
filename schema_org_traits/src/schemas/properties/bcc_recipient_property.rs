@@ -2,6 +2,7 @@
 pub trait GetBccRecipientProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/bccRecipient>
 	fn get_bcc_recipient_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

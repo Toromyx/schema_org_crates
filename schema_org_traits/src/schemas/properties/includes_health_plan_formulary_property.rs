@@ -2,6 +2,7 @@
 pub trait GetIncludesHealthPlanFormularyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/includesHealthPlanFormulary>
 	fn get_includes_health_plan_formulary_property(
 		&self,
 		id: &Self::IdType,

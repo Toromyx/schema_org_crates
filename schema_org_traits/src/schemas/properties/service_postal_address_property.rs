@@ -2,6 +2,7 @@
 pub trait GetServicePostalAddressProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/servicePostalAddress>
 	fn get_service_postal_address_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

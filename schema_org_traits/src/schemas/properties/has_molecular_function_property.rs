@@ -2,6 +2,7 @@
 pub trait GetHasMolecularFunctionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasMolecularFunction>
 	fn get_has_molecular_function_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

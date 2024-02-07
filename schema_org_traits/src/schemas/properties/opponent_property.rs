@@ -2,6 +2,7 @@
 pub trait GetOpponentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/opponent>
 	fn get_opponent_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/TollFree>
 pub trait FindTollFreeIds {
 	type IdType;
+	/// <https://schema.org/TollFree>
 	fn find_toll_free_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

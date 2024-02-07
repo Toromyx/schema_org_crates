@@ -2,6 +2,7 @@
 pub trait GetSpatialCoverageProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/spatialCoverage>
 	fn get_spatial_coverage_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

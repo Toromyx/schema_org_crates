@@ -1,6 +1,7 @@
 /// <https://schema.org/ReturnLabelDownloadAndPrint>
 pub trait FindReturnLabelDownloadAndPrintIds {
 	type IdType;
+	/// <https://schema.org/ReturnLabelDownloadAndPrint>
 	fn find_return_label_download_and_print_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

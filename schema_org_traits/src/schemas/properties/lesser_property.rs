@@ -2,6 +2,7 @@
 pub trait GetLesserProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/lesser>
 	fn get_lesser_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

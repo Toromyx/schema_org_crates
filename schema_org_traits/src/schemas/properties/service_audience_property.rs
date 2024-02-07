@@ -3,6 +3,7 @@
 pub trait GetServiceAudienceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/serviceAudience>
 	#[deprecated = "This schema is superseded by <https://schema.org/audience>."]
 	fn get_service_audience_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

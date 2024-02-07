@@ -1,6 +1,7 @@
 /// <https://schema.org/HobbyShop>
 pub trait FindHobbyShopIds {
 	type IdType;
+	/// <https://schema.org/HobbyShop>
 	fn find_hobby_shop_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

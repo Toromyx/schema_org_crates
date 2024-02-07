@@ -2,6 +2,7 @@
 pub trait GetRepeatCountProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/repeatCount>
 	fn get_repeat_count_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

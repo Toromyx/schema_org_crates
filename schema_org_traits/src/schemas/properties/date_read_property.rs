@@ -2,6 +2,7 @@
 pub trait GetDateReadProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/dateRead>
 	fn get_date_read_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

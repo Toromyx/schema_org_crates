@@ -2,6 +2,7 @@
 pub trait GetSuggestedAnswerProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/suggestedAnswer>
 	fn get_suggested_answer_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

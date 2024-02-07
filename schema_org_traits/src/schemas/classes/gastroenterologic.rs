@@ -1,6 +1,7 @@
 /// <https://schema.org/Gastroenterologic>
 pub trait FindGastroenterologicIds {
 	type IdType;
+	/// <https://schema.org/Gastroenterologic>
 	fn find_gastroenterologic_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

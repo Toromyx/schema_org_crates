@@ -1,6 +1,7 @@
 /// <https://schema.org/CertificationInactive>
 pub trait FindCertificationInactiveIds {
 	type IdType;
+	/// <https://schema.org/CertificationInactive>
 	fn find_certification_inactive_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

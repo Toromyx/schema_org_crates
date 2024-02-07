@@ -2,6 +2,7 @@
 pub trait GetEstimatedSalaryProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/estimatedSalary>
 	fn get_estimated_salary_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

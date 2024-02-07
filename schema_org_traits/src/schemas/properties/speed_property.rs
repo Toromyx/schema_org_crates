@@ -2,6 +2,7 @@
 pub trait GetSpeedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/speed>
 	fn get_speed_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

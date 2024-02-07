@@ -2,6 +2,7 @@
 pub trait GetEducationalLevelProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/educationalLevel>
 	fn get_educational_level_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

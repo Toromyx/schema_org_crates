@@ -2,6 +2,7 @@
 pub trait GetSyllabusSectionsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/syllabusSections>
 	fn get_syllabus_sections_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

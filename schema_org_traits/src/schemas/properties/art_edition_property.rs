@@ -2,6 +2,7 @@
 pub trait GetArtEditionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/artEdition>
 	fn get_art_edition_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/OfficeEquipmentStore>
 pub trait FindOfficeEquipmentStoreIds {
 	type IdType;
+	/// <https://schema.org/OfficeEquipmentStore>
 	fn find_office_equipment_store_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

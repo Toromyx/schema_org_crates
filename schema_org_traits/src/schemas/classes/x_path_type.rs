@@ -1,6 +1,7 @@
 /// <https://schema.org/XPathType>
 pub trait FindXPathTypeIds {
 	type IdType;
+	/// <https://schema.org/XPathType>
 	fn find_x_path_type_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

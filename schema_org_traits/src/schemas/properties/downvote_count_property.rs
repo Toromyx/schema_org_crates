@@ -2,6 +2,7 @@
 pub trait GetDownvoteCountProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/downvoteCount>
 	fn get_downvote_count_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

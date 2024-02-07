@@ -1,6 +1,7 @@
 /// <https://schema.org/EmployerReview>
 pub trait FindEmployerReviewIds {
 	type IdType;
+	/// <https://schema.org/EmployerReview>
 	fn find_employer_review_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

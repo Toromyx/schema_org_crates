@@ -1,6 +1,7 @@
 /// <https://schema.org/Waterfall>
 pub trait FindWaterfallIds {
 	type IdType;
+	/// <https://schema.org/Waterfall>
 	fn find_waterfall_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

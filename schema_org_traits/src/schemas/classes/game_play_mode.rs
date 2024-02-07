@@ -1,6 +1,7 @@
 /// <https://schema.org/GamePlayMode>
 pub trait FindGamePlayModeIds {
 	type IdType;
+	/// <https://schema.org/GamePlayMode>
 	fn find_game_play_mode_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

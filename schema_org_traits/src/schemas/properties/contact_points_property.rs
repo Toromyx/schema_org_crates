@@ -3,6 +3,7 @@
 pub trait GetContactPointsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/contactPoints>
 	#[deprecated = "This schema is superseded by <https://schema.org/contactPoint>."]
 	fn get_contact_points_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

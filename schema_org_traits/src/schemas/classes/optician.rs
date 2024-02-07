@@ -1,6 +1,7 @@
 /// <https://schema.org/Optician>
 pub trait FindOpticianIds {
 	type IdType;
+	/// <https://schema.org/Optician>
 	fn find_optician_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

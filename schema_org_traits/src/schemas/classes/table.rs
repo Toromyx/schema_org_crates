@@ -1,6 +1,7 @@
 /// <https://schema.org/Table>
 pub trait FindTableIds {
 	type IdType;
+	/// <https://schema.org/Table>
 	fn find_table_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/ConsumeAction>
 pub trait FindConsumeActionIds {
 	type IdType;
+	/// <https://schema.org/ConsumeAction>
 	fn find_consume_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

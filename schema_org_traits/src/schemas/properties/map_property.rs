@@ -3,6 +3,7 @@
 pub trait GetMapProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/map>
 	#[deprecated = "This schema is superseded by <https://schema.org/hasMap>."]
 	fn get_map_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

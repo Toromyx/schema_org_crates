@@ -1,6 +1,7 @@
 /// <https://schema.org/NoninvasiveProcedure>
 pub trait FindNoninvasiveProcedureIds {
 	type IdType;
+	/// <https://schema.org/NoninvasiveProcedure>
 	fn find_noninvasive_procedure_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

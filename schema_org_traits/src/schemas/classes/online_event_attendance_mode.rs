@@ -1,6 +1,7 @@
 /// <https://schema.org/OnlineEventAttendanceMode>
 pub trait FindOnlineEventAttendanceModeIds {
 	type IdType;
+	/// <https://schema.org/OnlineEventAttendanceMode>
 	fn find_online_event_attendance_mode_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

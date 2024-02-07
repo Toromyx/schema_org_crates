@@ -1,6 +1,7 @@
 /// <https://schema.org/RadiationTherapy>
 pub trait FindRadiationTherapyIds {
 	type IdType;
+	/// <https://schema.org/RadiationTherapy>
 	fn find_radiation_therapy_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/PublicHolidays>
 pub trait FindPublicHolidaysIds {
 	type IdType;
+	/// <https://schema.org/PublicHolidays>
 	fn find_public_holidays_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

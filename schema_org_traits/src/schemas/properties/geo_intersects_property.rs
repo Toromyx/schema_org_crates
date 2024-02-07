@@ -2,6 +2,7 @@
 pub trait GetGeoIntersectsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/geoIntersects>
 	fn get_geo_intersects_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

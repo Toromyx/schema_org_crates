@@ -1,6 +1,7 @@
 /// <https://schema.org/CourseInstance>
 pub trait FindCourseInstanceIds {
 	type IdType;
+	/// <https://schema.org/CourseInstance>
 	fn find_course_instance_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

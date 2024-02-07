@@ -2,6 +2,7 @@
 pub trait GetActionAccessibilityRequirementProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/actionAccessibilityRequirement>
 	fn get_action_accessibility_requirement_property(
 		&self,
 		id: &Self::IdType,

@@ -1,6 +1,7 @@
 /// <https://schema.org/Toxicologic>
 pub trait FindToxicologicIds {
 	type IdType;
+	/// <https://schema.org/Toxicologic>
 	fn find_toxicologic_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

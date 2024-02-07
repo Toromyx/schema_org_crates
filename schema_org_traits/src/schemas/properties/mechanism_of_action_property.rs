@@ -2,6 +2,7 @@
 pub trait GetMechanismOfActionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/mechanismOfAction>
 	fn get_mechanism_of_action_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

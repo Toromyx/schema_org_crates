@@ -1,6 +1,7 @@
 /// <https://schema.org/BroadcastRelease>
 pub trait FindBroadcastReleaseIds {
 	type IdType;
+	/// <https://schema.org/BroadcastRelease>
 	fn find_broadcast_release_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/PaintAction>
 pub trait FindPaintActionIds {
 	type IdType;
+	/// <https://schema.org/PaintAction>
 	fn find_paint_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

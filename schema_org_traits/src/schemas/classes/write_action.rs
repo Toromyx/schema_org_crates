@@ -1,6 +1,7 @@
 /// <https://schema.org/WriteAction>
 pub trait FindWriteActionIds {
 	type IdType;
+	/// <https://schema.org/WriteAction>
 	fn find_write_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

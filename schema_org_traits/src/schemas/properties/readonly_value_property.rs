@@ -2,6 +2,7 @@
 pub trait GetReadonlyValueProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/readonlyValue>
 	fn get_readonly_value_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/LeaveAction>
 pub trait FindLeaveActionIds {
 	type IdType;
+	/// <https://schema.org/LeaveAction>
 	fn find_leave_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

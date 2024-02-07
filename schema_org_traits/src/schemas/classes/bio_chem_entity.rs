@@ -1,6 +1,7 @@
 /// <https://schema.org/BioChemEntity>
 pub trait FindBioChemEntityIds {
 	type IdType;
+	/// <https://schema.org/BioChemEntity>
 	fn find_bio_chem_entity_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

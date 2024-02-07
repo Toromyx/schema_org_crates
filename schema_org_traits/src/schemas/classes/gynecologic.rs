@@ -1,6 +1,7 @@
 /// <https://schema.org/Gynecologic>
 pub trait FindGynecologicIds {
 	type IdType;
+	/// <https://schema.org/Gynecologic>
 	fn find_gynecologic_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

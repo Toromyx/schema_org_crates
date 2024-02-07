@@ -1,6 +1,7 @@
 /// <https://schema.org/UnRegisterAction>
 pub trait FindUnRegisterActionIds {
 	type IdType;
+	/// <https://schema.org/UnRegisterAction>
 	fn find_un_register_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

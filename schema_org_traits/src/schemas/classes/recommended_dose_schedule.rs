@@ -1,6 +1,7 @@
 /// <https://schema.org/RecommendedDoseSchedule>
 pub trait FindRecommendedDoseScheduleIds {
 	type IdType;
+	/// <https://schema.org/RecommendedDoseSchedule>
 	fn find_recommended_dose_schedule_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

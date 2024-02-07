@@ -2,6 +2,7 @@
 pub trait GetTermsPerYearProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/termsPerYear>
 	fn get_terms_per_year_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

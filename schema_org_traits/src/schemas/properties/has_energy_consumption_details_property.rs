@@ -2,6 +2,7 @@
 pub trait GetHasEnergyConsumptionDetailsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/hasEnergyConsumptionDetails>
 	fn get_has_energy_consumption_details_property(
 		&self,
 		id: &Self::IdType,

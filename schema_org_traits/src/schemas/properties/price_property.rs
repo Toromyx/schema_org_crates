@@ -2,6 +2,7 @@
 pub trait GetPriceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/price>
 	fn get_price_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

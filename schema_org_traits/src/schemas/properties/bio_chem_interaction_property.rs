@@ -2,6 +2,7 @@
 pub trait GetBioChemInteractionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/bioChemInteraction>
 	fn get_bio_chem_interaction_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

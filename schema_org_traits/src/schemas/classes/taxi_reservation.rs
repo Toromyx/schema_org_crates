@@ -1,6 +1,7 @@
 /// <https://schema.org/TaxiReservation>
 pub trait FindTaxiReservationIds {
 	type IdType;
+	/// <https://schema.org/TaxiReservation>
 	fn find_taxi_reservation_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

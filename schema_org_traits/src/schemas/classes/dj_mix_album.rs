@@ -1,6 +1,7 @@
 /// <https://schema.org/DJMixAlbum>
 pub trait FindDjMixAlbumIds {
 	type IdType;
+	/// <https://schema.org/DJMixAlbum>
 	fn find_dj_mix_album_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

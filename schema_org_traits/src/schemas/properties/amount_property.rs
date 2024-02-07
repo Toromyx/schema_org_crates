@@ -2,6 +2,7 @@
 pub trait GetAmountProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/amount>
 	fn get_amount_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetOperatingSystemProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/operatingSystem>
 	fn get_operating_system_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

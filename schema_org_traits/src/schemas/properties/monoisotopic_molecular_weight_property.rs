@@ -2,6 +2,7 @@
 pub trait GetMonoisotopicMolecularWeightProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/monoisotopicMolecularWeight>
 	fn get_monoisotopic_molecular_weight_property(
 		&self,
 		id: &Self::IdType,

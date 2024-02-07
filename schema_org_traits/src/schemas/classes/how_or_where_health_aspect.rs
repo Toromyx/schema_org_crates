@@ -1,6 +1,7 @@
 /// <https://schema.org/HowOrWhereHealthAspect>
 pub trait FindHowOrWhereHealthAspectIds {
 	type IdType;
+	/// <https://schema.org/HowOrWhereHealthAspect>
 	fn find_how_or_where_health_aspect_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

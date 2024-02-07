@@ -2,6 +2,7 @@
 pub trait GetMonthsOfExperienceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/monthsOfExperience>
 	fn get_months_of_experience_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

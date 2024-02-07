@@ -1,6 +1,7 @@
 /// <https://schema.org/DrivingSchoolVehicleUsage>
 pub trait FindDrivingSchoolVehicleUsageIds {
 	type IdType;
+	/// <https://schema.org/DrivingSchoolVehicleUsage>
 	fn find_driving_school_vehicle_usage_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

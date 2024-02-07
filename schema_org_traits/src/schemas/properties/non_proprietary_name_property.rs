@@ -2,6 +2,7 @@
 pub trait GetNonProprietaryNameProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/nonProprietaryName>
 	fn get_non_proprietary_name_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetContributorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/contributor>
 	fn get_contributor_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

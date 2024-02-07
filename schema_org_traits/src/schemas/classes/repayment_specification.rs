@@ -1,6 +1,7 @@
 /// <https://schema.org/RepaymentSpecification>
 pub trait FindRepaymentSpecificationIds {
 	type IdType;
+	/// <https://schema.org/RepaymentSpecification>
 	fn find_repayment_specification_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

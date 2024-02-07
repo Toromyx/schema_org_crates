@@ -2,6 +2,7 @@
 pub trait GetEmailProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/email>
 	fn get_email_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

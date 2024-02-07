@@ -1,6 +1,7 @@
 /// <https://schema.org/StructuredValue>
 pub trait FindStructuredValueIds {
 	type IdType;
+	/// <https://schema.org/StructuredValue>
 	fn find_structured_value_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

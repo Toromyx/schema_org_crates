@@ -1,6 +1,7 @@
 /// <https://schema.org/OpeningHoursSpecification>
 pub trait FindOpeningHoursSpecificationIds {
 	type IdType;
+	/// <https://schema.org/OpeningHoursSpecification>
 	fn find_opening_hours_specification_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

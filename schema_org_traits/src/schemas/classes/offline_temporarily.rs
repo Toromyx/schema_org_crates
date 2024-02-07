@@ -1,6 +1,7 @@
 /// <https://schema.org/OfflineTemporarily>
 pub trait FindOfflineTemporarilyIds {
 	type IdType;
+	/// <https://schema.org/OfflineTemporarily>
 	fn find_offline_temporarily_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

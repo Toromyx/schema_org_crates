@@ -1,6 +1,7 @@
 /// <https://schema.org/Audience>
 pub trait FindAudienceIds {
 	type IdType;
+	/// <https://schema.org/Audience>
 	fn find_audience_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

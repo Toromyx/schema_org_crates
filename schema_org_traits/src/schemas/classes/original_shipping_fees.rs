@@ -1,6 +1,7 @@
 /// <https://schema.org/OriginalShippingFees>
 pub trait FindOriginalShippingFeesIds {
 	type IdType;
+	/// <https://schema.org/OriginalShippingFees>
 	fn find_original_shipping_fees_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

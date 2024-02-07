@@ -2,6 +2,7 @@
 pub trait GetIsSimilarToProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isSimilarTo>
 	fn get_is_similar_to_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

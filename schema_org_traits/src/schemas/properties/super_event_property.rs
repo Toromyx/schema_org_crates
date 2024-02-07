@@ -2,6 +2,7 @@
 pub trait GetSuperEventProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/superEvent>
 	fn get_super_event_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

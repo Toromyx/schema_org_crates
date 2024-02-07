@@ -2,6 +2,7 @@
 pub trait GetGameAvailabilityTypeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/gameAvailabilityType>
 	fn get_game_availability_type_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

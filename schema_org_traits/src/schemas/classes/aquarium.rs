@@ -1,6 +1,7 @@
 /// <https://schema.org/Aquarium>
 pub trait FindAquariumIds {
 	type IdType;
+	/// <https://schema.org/Aquarium>
 	fn find_aquarium_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

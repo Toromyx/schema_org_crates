@@ -1,6 +1,7 @@
 /// <https://schema.org/QuantitativeValue>
 pub trait FindQuantitativeValueIds {
 	type IdType;
+	/// <https://schema.org/QuantitativeValue>
 	fn find_quantitative_value_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

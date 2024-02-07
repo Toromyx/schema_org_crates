@@ -2,6 +2,7 @@
 pub trait GetReservationForProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/reservationFor>
 	fn get_reservation_for_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

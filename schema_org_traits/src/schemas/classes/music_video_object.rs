@@ -1,6 +1,7 @@
 /// <https://schema.org/MusicVideoObject>
 pub trait FindMusicVideoObjectIds {
 	type IdType;
+	/// <https://schema.org/MusicVideoObject>
 	fn find_music_video_object_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

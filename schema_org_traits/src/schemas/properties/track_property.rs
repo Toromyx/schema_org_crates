@@ -2,6 +2,7 @@
 pub trait GetTrackProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/track>
 	fn get_track_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

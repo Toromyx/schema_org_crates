@@ -1,6 +1,7 @@
 /// <https://schema.org/Quotation>
 pub trait FindQuotationIds {
 	type IdType;
+	/// <https://schema.org/Quotation>
 	fn find_quotation_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

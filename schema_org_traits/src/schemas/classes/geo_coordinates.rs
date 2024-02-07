@@ -1,6 +1,7 @@
 /// <https://schema.org/GeoCoordinates>
 pub trait FindGeoCoordinatesIds {
 	type IdType;
+	/// <https://schema.org/GeoCoordinates>
 	fn find_geo_coordinates_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetEndorseeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/endorsee>
 	fn get_endorsee_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

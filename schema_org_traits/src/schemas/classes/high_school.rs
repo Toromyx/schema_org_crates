@@ -1,6 +1,7 @@
 /// <https://schema.org/HighSchool>
 pub trait FindHighSchoolIds {
 	type IdType;
+	/// <https://schema.org/HighSchool>
 	fn find_high_school_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

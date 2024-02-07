@@ -1,6 +1,7 @@
 /// <https://schema.org/Plumber>
 pub trait FindPlumberIds {
 	type IdType;
+	/// <https://schema.org/Plumber>
 	fn find_plumber_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

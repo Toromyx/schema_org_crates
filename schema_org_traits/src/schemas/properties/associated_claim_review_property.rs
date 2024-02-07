@@ -2,6 +2,7 @@
 pub trait GetAssociatedClaimReviewProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/associatedClaimReview>
 	fn get_associated_claim_review_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

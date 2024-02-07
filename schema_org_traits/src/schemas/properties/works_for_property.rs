@@ -2,6 +2,7 @@
 pub trait GetWorksForProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/worksFor>
 	fn get_works_for_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

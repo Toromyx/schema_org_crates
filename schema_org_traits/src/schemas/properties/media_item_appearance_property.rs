@@ -2,6 +2,7 @@
 pub trait GetMediaItemAppearanceProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/mediaItemAppearance>
 	fn get_media_item_appearance_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/3DModel>
 pub trait FindModel3DIds {
 	type IdType;
+	/// <https://schema.org/3DModel>
 	fn find_model_3_d_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

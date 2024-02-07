@@ -2,6 +2,7 @@
 pub trait GetSecurityScreeningProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/securityScreening>
 	fn get_security_screening_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/AutoDealer>
 pub trait FindAutoDealerIds {
 	type IdType;
+	/// <https://schema.org/AutoDealer>
 	fn find_auto_dealer_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

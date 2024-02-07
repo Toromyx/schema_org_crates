@@ -1,6 +1,7 @@
 /// <https://schema.org/PerformingGroup>
 pub trait FindPerformingGroupIds {
 	type IdType;
+	/// <https://schema.org/PerformingGroup>
 	fn find_performing_group_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/Flight>
 pub trait FindFlightIds {
 	type IdType;
+	/// <https://schema.org/Flight>
 	fn find_flight_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

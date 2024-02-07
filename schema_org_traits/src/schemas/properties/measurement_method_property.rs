@@ -2,6 +2,7 @@
 pub trait GetMeasurementMethodProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/measurementMethod>
 	fn get_measurement_method_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/OfferForLease>
 pub trait FindOfferForLeaseIds {
 	type IdType;
+	/// <https://schema.org/OfferForLease>
 	fn find_offer_for_lease_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

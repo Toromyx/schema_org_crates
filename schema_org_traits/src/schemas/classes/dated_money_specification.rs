@@ -2,6 +2,7 @@
 #[deprecated = "This schema is superseded by <https://schema.org/MonetaryAmount>."]
 pub trait FindDatedMoneySpecificationIds {
 	type IdType;
+	/// <https://schema.org/DatedMoneySpecification>
 	#[deprecated = "This schema is superseded by <https://schema.org/MonetaryAmount>."]
 	fn find_dated_money_specification_ids(&self) -> Vec<&Self::IdType>;
 }

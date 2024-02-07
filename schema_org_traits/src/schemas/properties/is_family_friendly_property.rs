@@ -2,6 +2,7 @@
 pub trait GetIsFamilyFriendlyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isFamilyFriendly>
 	fn get_is_family_friendly_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetDoesNotShipProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/doesNotShip>
 	fn get_does_not_ship_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/DisabilitySupport>
 pub trait FindDisabilitySupportIds {
 	type IdType;
+	/// <https://schema.org/DisabilitySupport>
 	fn find_disability_support_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

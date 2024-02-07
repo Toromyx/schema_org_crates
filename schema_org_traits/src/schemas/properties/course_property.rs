@@ -3,6 +3,7 @@
 pub trait GetCourseProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/course>
 	#[deprecated = "This schema is superseded by <https://schema.org/exerciseCourse>."]
 	fn get_course_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

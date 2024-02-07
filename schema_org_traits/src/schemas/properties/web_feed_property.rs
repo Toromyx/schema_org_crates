@@ -2,6 +2,7 @@
 pub trait GetWebFeedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/webFeed>
 	fn get_web_feed_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

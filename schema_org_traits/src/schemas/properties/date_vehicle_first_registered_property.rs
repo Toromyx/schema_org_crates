@@ -2,6 +2,7 @@
 pub trait GetDateVehicleFirstRegisteredProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/dateVehicleFirstRegistered>
 	fn get_date_vehicle_first_registered_property(
 		&self,
 		id: &Self::IdType,

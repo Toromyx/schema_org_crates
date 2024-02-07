@@ -1,6 +1,7 @@
 /// <https://schema.org/AudiobookFormat>
 pub trait FindAudiobookFormatIds {
 	type IdType;
+	/// <https://schema.org/AudiobookFormat>
 	fn find_audiobook_format_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

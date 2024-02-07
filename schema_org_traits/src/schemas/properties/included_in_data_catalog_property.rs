@@ -2,6 +2,7 @@
 pub trait GetIncludedInDataCatalogProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/includedInDataCatalog>
 	fn get_included_in_data_catalog_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

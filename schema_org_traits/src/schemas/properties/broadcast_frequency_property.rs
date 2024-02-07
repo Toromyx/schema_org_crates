@@ -2,6 +2,7 @@
 pub trait GetBroadcastFrequencyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/broadcastFrequency>
 	fn get_broadcast_frequency_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

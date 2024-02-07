@@ -2,6 +2,7 @@
 pub trait GetDistinguishingSignProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/distinguishingSign>
 	fn get_distinguishing_sign_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetPatternProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/pattern>
 	fn get_pattern_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

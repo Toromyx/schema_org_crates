@@ -1,6 +1,7 @@
 /// <https://schema.org/LinkRole>
 pub trait FindLinkRoleIds {
 	type IdType;
+	/// <https://schema.org/LinkRole>
 	fn find_link_role_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

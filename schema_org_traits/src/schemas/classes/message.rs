@@ -1,6 +1,7 @@
 /// <https://schema.org/Message>
 pub trait FindMessageIds {
 	type IdType;
+	/// <https://schema.org/Message>
 	fn find_message_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetWorkPresentedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/workPresented>
 	fn get_work_presented_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

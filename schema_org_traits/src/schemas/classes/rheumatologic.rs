@@ -1,6 +1,7 @@
 /// <https://schema.org/Rheumatologic>
 pub trait FindRheumatologicIds {
 	type IdType;
+	/// <https://schema.org/Rheumatologic>
 	fn find_rheumatologic_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

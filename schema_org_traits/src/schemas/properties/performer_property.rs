@@ -2,6 +2,7 @@
 pub trait GetPerformerProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/performer>
 	fn get_performer_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/Certification>
 pub trait FindCertificationIds {
 	type IdType;
+	/// <https://schema.org/Certification>
 	fn find_certification_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

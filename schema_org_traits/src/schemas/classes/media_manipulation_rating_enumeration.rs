@@ -1,6 +1,7 @@
 /// <https://schema.org/MediaManipulationRatingEnumeration>
 pub trait FindMediaManipulationRatingEnumerationIds {
 	type IdType;
+	/// <https://schema.org/MediaManipulationRatingEnumeration>
 	fn find_media_manipulation_rating_enumeration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetCvdNumC19HospPatsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/cvdNumC19HospPats>
 	fn get_cvd_num_c_19_hosp_pats_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

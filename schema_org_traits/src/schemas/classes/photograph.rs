@@ -1,6 +1,7 @@
 /// <https://schema.org/Photograph>
 pub trait FindPhotographIds {
 	type IdType;
+	/// <https://schema.org/Photograph>
 	fn find_photograph_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

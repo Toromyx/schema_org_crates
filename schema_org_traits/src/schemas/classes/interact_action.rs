@@ -1,6 +1,7 @@
 /// <https://schema.org/InteractAction>
 pub trait FindInteractActionIds {
 	type IdType;
+	/// <https://schema.org/InteractAction>
 	fn find_interact_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetNegativeNotesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/negativeNotes>
 	fn get_negative_notes_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

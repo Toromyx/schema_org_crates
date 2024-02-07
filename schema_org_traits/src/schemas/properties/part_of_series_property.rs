@@ -2,6 +2,7 @@
 pub trait GetPartOfSeriesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/partOfSeries>
 	fn get_part_of_series_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

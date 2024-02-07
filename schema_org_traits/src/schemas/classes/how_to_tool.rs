@@ -1,6 +1,7 @@
 /// <https://schema.org/HowToTool>
 pub trait FindHowToToolIds {
 	type IdType;
+	/// <https://schema.org/HowToTool>
 	fn find_how_to_tool_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

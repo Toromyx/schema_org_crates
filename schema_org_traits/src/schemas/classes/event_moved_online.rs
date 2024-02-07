@@ -1,6 +1,7 @@
 /// <https://schema.org/EventMovedOnline>
 pub trait FindEventMovedOnlineIds {
 	type IdType;
+	/// <https://schema.org/EventMovedOnline>
 	fn find_event_moved_online_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetCargoVolumeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/cargoVolume>
 	fn get_cargo_volume_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

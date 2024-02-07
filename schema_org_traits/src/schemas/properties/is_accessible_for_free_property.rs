@@ -2,6 +2,7 @@
 pub trait GetIsAccessibleForFreeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isAccessibleForFree>
 	fn get_is_accessible_for_free_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

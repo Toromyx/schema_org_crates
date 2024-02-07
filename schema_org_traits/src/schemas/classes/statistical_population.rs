@@ -1,6 +1,7 @@
 /// <https://schema.org/StatisticalPopulation>
 pub trait FindStatisticalPopulationIds {
 	type IdType;
+	/// <https://schema.org/StatisticalPopulation>
 	fn find_statistical_population_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/ReducedRelevanceForChildrenConsideration>
 pub trait FindReducedRelevanceForChildrenConsiderationIds {
 	type IdType;
+	/// <https://schema.org/ReducedRelevanceForChildrenConsideration>
 	fn find_reduced_relevance_for_children_consideration_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

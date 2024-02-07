@@ -2,6 +2,7 @@
 pub trait GetNonEqualProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/nonEqual>
 	fn get_non_equal_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

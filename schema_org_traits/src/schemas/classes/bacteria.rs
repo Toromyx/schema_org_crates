@@ -1,6 +1,7 @@
 /// <https://schema.org/Bacteria>
 pub trait FindBacteriaIds {
 	type IdType;
+	/// <https://schema.org/Bacteria>
 	fn find_bacteria_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetLoanRepaymentFormProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/loanRepaymentForm>
 	fn get_loan_repayment_form_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetPredecessorOfProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/predecessorOf>
 	fn get_predecessor_of_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

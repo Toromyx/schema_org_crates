@@ -1,6 +1,7 @@
 /// <https://schema.org/DefinedRegion>
 pub trait FindDefinedRegionIds {
 	type IdType;
+	/// <https://schema.org/DefinedRegion>
 	fn find_defined_region_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

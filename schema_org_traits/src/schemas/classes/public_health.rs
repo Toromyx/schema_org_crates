@@ -1,6 +1,7 @@
 /// <https://schema.org/PublicHealth>
 pub trait FindPublicHealthIds {
 	type IdType;
+	/// <https://schema.org/PublicHealth>
 	fn find_public_health_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

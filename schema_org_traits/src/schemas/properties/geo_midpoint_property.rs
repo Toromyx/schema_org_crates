@@ -2,6 +2,7 @@
 pub trait GetGeoMidpointProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/geoMidpoint>
 	fn get_geo_midpoint_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

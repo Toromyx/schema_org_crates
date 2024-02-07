@@ -1,6 +1,7 @@
 /// <https://schema.org/MedicineSystem>
 pub trait FindMedicineSystemIds {
 	type IdType;
+	/// <https://schema.org/MedicineSystem>
 	fn find_medicine_system_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

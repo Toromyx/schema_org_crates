@@ -2,6 +2,7 @@
 pub trait GetReviewCountProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/reviewCount>
 	fn get_review_count_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

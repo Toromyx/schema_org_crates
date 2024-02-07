@@ -2,6 +2,7 @@
 pub trait GetSubTripProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/subTrip>
 	fn get_sub_trip_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

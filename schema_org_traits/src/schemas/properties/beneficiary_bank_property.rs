@@ -2,6 +2,7 @@
 pub trait GetBeneficiaryBankProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/beneficiaryBank>
 	fn get_beneficiary_bank_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

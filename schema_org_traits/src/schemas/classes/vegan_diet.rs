@@ -1,6 +1,7 @@
 /// <https://schema.org/VeganDiet>
 pub trait FindVeganDietIds {
 	type IdType;
+	/// <https://schema.org/VeganDiet>
 	fn find_vegan_diet_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

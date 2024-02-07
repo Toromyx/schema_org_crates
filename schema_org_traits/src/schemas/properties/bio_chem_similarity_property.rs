@@ -2,6 +2,7 @@
 pub trait GetBioChemSimilarityProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/bioChemSimilarity>
 	fn get_bio_chem_similarity_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

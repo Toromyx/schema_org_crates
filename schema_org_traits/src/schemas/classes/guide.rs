@@ -1,6 +1,7 @@
 /// <https://schema.org/Guide>
 pub trait FindGuideIds {
 	type IdType;
+	/// <https://schema.org/Guide>
 	fn find_guide_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

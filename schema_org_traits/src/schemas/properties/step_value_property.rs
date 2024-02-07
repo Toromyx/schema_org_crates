@@ -2,6 +2,7 @@
 pub trait GetStepValueProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/stepValue>
 	fn get_step_value_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

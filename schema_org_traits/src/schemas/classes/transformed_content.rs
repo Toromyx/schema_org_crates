@@ -1,6 +1,7 @@
 /// <https://schema.org/TransformedContent>
 pub trait FindTransformedContentIds {
 	type IdType;
+	/// <https://schema.org/TransformedContent>
 	fn find_transformed_content_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

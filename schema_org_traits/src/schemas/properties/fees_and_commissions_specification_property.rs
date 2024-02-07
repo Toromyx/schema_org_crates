@@ -2,6 +2,7 @@
 pub trait GetFeesAndCommissionsSpecificationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/feesAndCommissionsSpecification>
 	fn get_fees_and_commissions_specification_property(
 		&self,
 		id: &Self::IdType,

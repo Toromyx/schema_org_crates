@@ -1,6 +1,7 @@
 /// <https://schema.org/Answer>
 pub trait FindAnswerIds {
 	type IdType;
+	/// <https://schema.org/Answer>
 	fn find_answer_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

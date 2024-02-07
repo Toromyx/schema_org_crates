@@ -2,6 +2,7 @@
 pub trait GetBitrateProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/bitrate>
 	fn get_bitrate_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

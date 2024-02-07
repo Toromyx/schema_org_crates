@@ -2,6 +2,7 @@
 pub trait GetDirectorProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/director>
 	fn get_director_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

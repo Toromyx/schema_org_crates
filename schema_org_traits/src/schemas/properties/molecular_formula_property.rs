@@ -2,6 +2,7 @@
 pub trait GetMolecularFormulaProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/molecularFormula>
 	fn get_molecular_formula_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetPaginationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/pagination>
 	fn get_pagination_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

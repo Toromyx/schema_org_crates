@@ -1,6 +1,7 @@
 /// <https://schema.org/WorkersUnion>
 pub trait FindWorkersUnionIds {
 	type IdType;
+	/// <https://schema.org/WorkersUnion>
 	fn find_workers_union_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

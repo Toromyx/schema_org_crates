@@ -2,6 +2,7 @@
 pub trait GetAcceptsReservationsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/acceptsReservations>
 	fn get_accepts_reservations_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/PathologyTest>
 pub trait FindPathologyTestIds {
 	type IdType;
+	/// <https://schema.org/PathologyTest>
 	fn find_pathology_test_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

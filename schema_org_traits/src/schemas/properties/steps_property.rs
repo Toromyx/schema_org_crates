@@ -3,6 +3,7 @@
 pub trait GetStepsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/steps>
 	#[deprecated = "This schema is superseded by <https://schema.org/step>."]
 	fn get_steps_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

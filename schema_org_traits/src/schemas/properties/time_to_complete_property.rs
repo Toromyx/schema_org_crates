@@ -2,6 +2,7 @@
 pub trait GetTimeToCompleteProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/timeToComplete>
 	fn get_time_to_complete_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

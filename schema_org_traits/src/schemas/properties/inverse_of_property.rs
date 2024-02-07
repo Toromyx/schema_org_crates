@@ -2,6 +2,7 @@
 pub trait GetInverseOfProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/inverseOf>
 	fn get_inverse_of_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

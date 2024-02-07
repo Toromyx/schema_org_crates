@@ -2,6 +2,7 @@
 pub trait GetEarlyPrepaymentPenaltyProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/earlyPrepaymentPenalty>
 	fn get_early_prepayment_penalty_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

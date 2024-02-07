@@ -2,6 +2,7 @@
 pub trait GetNumberOfAxlesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/numberOfAxles>
 	fn get_number_of_axles_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

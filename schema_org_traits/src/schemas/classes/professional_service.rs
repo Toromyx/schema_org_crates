@@ -1,6 +1,7 @@
 /// <https://schema.org/ProfessionalService>
 pub trait FindProfessionalServiceIds {
 	type IdType;
+	/// <https://schema.org/ProfessionalService>
 	fn find_professional_service_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

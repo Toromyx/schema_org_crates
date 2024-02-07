@@ -1,6 +1,7 @@
 /// <https://schema.org/HealthCare>
 pub trait FindHealthCareIds {
 	type IdType;
+	/// <https://schema.org/HealthCare>
 	fn find_health_care_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

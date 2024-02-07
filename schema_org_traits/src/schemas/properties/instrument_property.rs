@@ -2,6 +2,7 @@
 pub trait GetInstrumentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/instrument>
 	fn get_instrument_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

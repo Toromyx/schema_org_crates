@@ -2,6 +2,7 @@
 pub trait GetDifferentialDiagnosisProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/differentialDiagnosis>
 	fn get_differential_diagnosis_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

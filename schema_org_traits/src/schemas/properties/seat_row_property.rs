@@ -2,6 +2,7 @@
 pub trait GetSeatRowProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/seatRow>
 	fn get_seat_row_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

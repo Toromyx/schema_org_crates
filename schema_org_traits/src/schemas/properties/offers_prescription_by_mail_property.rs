@@ -2,6 +2,7 @@
 pub trait GetOffersPrescriptionByMailProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/offersPrescriptionByMail>
 	fn get_offers_prescription_by_mail_property(
 		&self,
 		id: &Self::IdType,

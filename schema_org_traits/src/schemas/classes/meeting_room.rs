@@ -1,6 +1,7 @@
 /// <https://schema.org/MeetingRoom>
 pub trait FindMeetingRoomIds {
 	type IdType;
+	/// <https://schema.org/MeetingRoom>
 	fn find_meeting_room_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

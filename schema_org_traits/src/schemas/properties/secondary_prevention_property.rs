@@ -2,6 +2,7 @@
 pub trait GetSecondaryPreventionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/secondaryPrevention>
 	fn get_secondary_prevention_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

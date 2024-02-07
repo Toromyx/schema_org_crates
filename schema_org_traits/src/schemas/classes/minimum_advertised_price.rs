@@ -1,6 +1,7 @@
 /// <https://schema.org/MinimumAdvertisedPrice>
 pub trait FindMinimumAdvertisedPriceIds {
 	type IdType;
+	/// <https://schema.org/MinimumAdvertisedPrice>
 	fn find_minimum_advertised_price_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

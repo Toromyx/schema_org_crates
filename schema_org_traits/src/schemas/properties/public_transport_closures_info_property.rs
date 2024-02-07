@@ -2,6 +2,7 @@
 pub trait GetPublicTransportClosuresInfoProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/publicTransportClosuresInfo>
 	fn get_public_transport_closures_info_property(
 		&self,
 		id: &Self::IdType,

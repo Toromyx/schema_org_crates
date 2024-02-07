@@ -1,6 +1,7 @@
 /// <https://schema.org/MedicalGuidelineContraindication>
 pub trait FindMedicalGuidelineContraindicationIds {
 	type IdType;
+	/// <https://schema.org/MedicalGuidelineContraindication>
 	fn find_medical_guideline_contraindication_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/GovernmentOffice>
 pub trait FindGovernmentOfficeIds {
 	type IdType;
+	/// <https://schema.org/GovernmentOffice>
 	fn find_government_office_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

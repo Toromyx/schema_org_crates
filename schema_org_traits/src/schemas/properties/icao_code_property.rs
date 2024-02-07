@@ -2,6 +2,7 @@
 pub trait GetIcaoCodeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/icaoCode>
 	fn get_icao_code_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

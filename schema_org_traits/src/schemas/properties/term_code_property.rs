@@ -2,6 +2,7 @@
 pub trait GetTermCodeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/termCode>
 	fn get_term_code_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

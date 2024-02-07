@@ -2,6 +2,7 @@
 pub trait GetServerStatusProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/serverStatus>
 	fn get_server_status_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

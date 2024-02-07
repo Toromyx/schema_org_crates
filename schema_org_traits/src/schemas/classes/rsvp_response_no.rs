@@ -1,6 +1,7 @@
 /// <https://schema.org/RsvpResponseNo>
 pub trait FindRsvpResponseNoIds {
 	type IdType;
+	/// <https://schema.org/RsvpResponseNo>
 	fn find_rsvp_response_no_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetFundedItemProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/fundedItem>
 	fn get_funded_item_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

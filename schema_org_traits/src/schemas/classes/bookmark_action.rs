@@ -1,6 +1,7 @@
 /// <https://schema.org/BookmarkAction>
 pub trait FindBookmarkActionIds {
 	type IdType;
+	/// <https://schema.org/BookmarkAction>
 	fn find_bookmark_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

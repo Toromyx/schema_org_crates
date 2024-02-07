@@ -2,6 +2,7 @@
 pub trait GetKnownVehicleDamagesProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/knownVehicleDamages>
 	fn get_known_vehicle_damages_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

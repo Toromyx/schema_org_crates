@@ -1,6 +1,7 @@
 /// <https://schema.org/RefurbishedCondition>
 pub trait FindRefurbishedConditionIds {
 	type IdType;
+	/// <https://schema.org/RefurbishedCondition>
 	fn find_refurbished_condition_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/DecontextualizedContent>
 pub trait FindDecontextualizedContentIds {
 	type IdType;
+	/// <https://schema.org/DecontextualizedContent>
 	fn find_decontextualized_content_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

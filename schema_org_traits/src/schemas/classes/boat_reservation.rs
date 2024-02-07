@@ -1,6 +1,7 @@
 /// <https://schema.org/BoatReservation>
 pub trait FindBoatReservationIds {
 	type IdType;
+	/// <https://schema.org/BoatReservation>
 	fn find_boat_reservation_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

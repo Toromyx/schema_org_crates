@@ -2,6 +2,7 @@
 pub trait GetIsPlanForApartmentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/isPlanForApartment>
 	fn get_is_plan_for_apartment_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/BefriendAction>
 pub trait FindBefriendActionIds {
 	type IdType;
+	/// <https://schema.org/BefriendAction>
 	fn find_befriend_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetTissueSampleProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/tissueSample>
 	fn get_tissue_sample_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

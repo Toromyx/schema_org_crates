@@ -1,6 +1,7 @@
 /// <https://schema.org/LowSaltDiet>
 pub trait FindLowSaltDietIds {
 	type IdType;
+	/// <https://schema.org/LowSaltDiet>
 	fn find_low_salt_diet_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

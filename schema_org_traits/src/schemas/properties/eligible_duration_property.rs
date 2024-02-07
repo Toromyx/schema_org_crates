@@ -2,6 +2,7 @@
 pub trait GetEligibleDurationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/eligibleDuration>
 	fn get_eligible_duration_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetExpectedArrivalUntilProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/expectedArrivalUntil>
 	fn get_expected_arrival_until_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

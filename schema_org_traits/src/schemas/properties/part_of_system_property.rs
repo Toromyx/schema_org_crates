@@ -2,6 +2,7 @@
 pub trait GetPartOfSystemProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/partOfSystem>
 	fn get_part_of_system_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

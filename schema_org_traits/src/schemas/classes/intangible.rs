@@ -1,6 +1,7 @@
 /// <https://schema.org/Intangible>
 pub trait FindIntangibleIds {
 	type IdType;
+	/// <https://schema.org/Intangible>
 	fn find_intangible_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

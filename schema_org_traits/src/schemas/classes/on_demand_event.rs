@@ -1,6 +1,7 @@
 /// <https://schema.org/OnDemandEvent>
 pub trait FindOnDemandEventIds {
 	type IdType;
+	/// <https://schema.org/OnDemandEvent>
 	fn find_on_demand_event_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/CityHall>
 pub trait FindCityHallIds {
 	type IdType;
+	/// <https://schema.org/CityHall>
 	fn find_city_hall_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

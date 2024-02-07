@@ -1,6 +1,7 @@
 /// <https://schema.org/ResultsNotAvailable>
 pub trait FindResultsNotAvailableIds {
 	type IdType;
+	/// <https://schema.org/ResultsNotAvailable>
 	fn find_results_not_available_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -3,6 +3,7 @@
 pub trait GetReviewsProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/reviews>
 	#[deprecated = "This schema is superseded by <https://schema.org/review>."]
 	fn get_reviews_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

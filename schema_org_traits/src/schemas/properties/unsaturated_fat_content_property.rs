@@ -2,6 +2,7 @@
 pub trait GetUnsaturatedFatContentProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/unsaturatedFatContent>
 	fn get_unsaturated_fat_content_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -1,6 +1,7 @@
 /// <https://schema.org/CompilationAlbum>
 pub trait FindCompilationAlbumIds {
 	type IdType;
+	/// <https://schema.org/CompilationAlbum>
 	fn find_compilation_album_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

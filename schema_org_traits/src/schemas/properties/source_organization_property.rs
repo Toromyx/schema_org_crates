@@ -2,6 +2,7 @@
 pub trait GetSourceOrganizationProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/sourceOrganization>
 	fn get_source_organization_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

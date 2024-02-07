@@ -1,6 +1,7 @@
 /// <https://schema.org/HowToStep>
 pub trait FindHowToStepIds {
 	type IdType;
+	/// <https://schema.org/HowToStep>
 	fn find_how_to_step_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

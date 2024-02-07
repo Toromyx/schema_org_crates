@@ -1,6 +1,7 @@
 /// <https://schema.org/KosherDiet>
 pub trait FindKosherDietIds {
 	type IdType;
+	/// <https://schema.org/KosherDiet>
 	fn find_kosher_diet_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

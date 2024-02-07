@@ -1,6 +1,7 @@
 /// <https://schema.org/Optometric>
 pub trait FindOptometricIds {
 	type IdType;
+	/// <https://schema.org/Optometric>
 	fn find_optometric_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

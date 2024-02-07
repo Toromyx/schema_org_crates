@@ -1,6 +1,7 @@
 /// <https://schema.org/Grant>
 pub trait FindGrantIds {
 	type IdType;
+	/// <https://schema.org/Grant>
 	fn find_grant_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

@@ -2,6 +2,7 @@
 pub trait GetRegionDrainedProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/regionDrained>
 	fn get_region_drained_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

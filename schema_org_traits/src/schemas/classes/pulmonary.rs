@@ -1,6 +1,7 @@
 /// <https://schema.org/Pulmonary>
 pub trait FindPulmonaryIds {
 	type IdType;
+	/// <https://schema.org/Pulmonary>
 	fn find_pulmonary_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

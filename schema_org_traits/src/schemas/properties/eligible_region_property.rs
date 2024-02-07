@@ -2,6 +2,7 @@
 pub trait GetEligibleRegionProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/eligibleRegion>
 	fn get_eligible_region_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

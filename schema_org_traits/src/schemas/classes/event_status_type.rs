@@ -1,6 +1,7 @@
 /// <https://schema.org/EventStatusType>
 pub trait FindEventStatusTypeIds {
 	type IdType;
+	/// <https://schema.org/EventStatusType>
 	fn find_event_status_type_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

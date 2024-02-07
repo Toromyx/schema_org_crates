@@ -3,6 +3,7 @@
 pub trait GetSampleTypeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/sampleType>
 	#[deprecated = "This schema is superseded by <https://schema.org/codeSampleType>."]
 	fn get_sample_type_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }

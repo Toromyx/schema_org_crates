@@ -1,6 +1,7 @@
 /// <https://schema.org/MonetaryAmountDistribution>
 pub trait FindMonetaryAmountDistributionIds {
 	type IdType;
+	/// <https://schema.org/MonetaryAmountDistribution>
 	fn find_monetary_amount_distribution_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

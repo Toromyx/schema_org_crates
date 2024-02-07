@@ -2,6 +2,7 @@
 pub trait GetIataCodeProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/iataCode>
 	fn get_iata_code_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

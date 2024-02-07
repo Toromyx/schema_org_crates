@@ -1,6 +1,7 @@
 /// <https://schema.org/CompositeWithTrainedAlgorithmicMediaDigitalSource>
 pub trait FindCompositeWithTrainedAlgorithmicMediaDigitalSourceIds {
 	type IdType;
+	/// <https://schema.org/CompositeWithTrainedAlgorithmicMediaDigitalSource>
 	fn find_composite_with_trained_algorithmic_media_digital_source_ids(
 		&self,
 	) -> Vec<&Self::IdType>;

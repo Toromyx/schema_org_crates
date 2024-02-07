@@ -1,6 +1,7 @@
 /// <https://schema.org/Mass>
 pub trait FindMassIds {
 	type IdType;
+	/// <https://schema.org/Mass>
 	fn find_mass_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

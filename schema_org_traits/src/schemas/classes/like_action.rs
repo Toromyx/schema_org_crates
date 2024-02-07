@@ -1,6 +1,7 @@
 /// <https://schema.org/LikeAction>
 pub trait FindLikeActionIds {
 	type IdType;
+	/// <https://schema.org/LikeAction>
 	fn find_like_action_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

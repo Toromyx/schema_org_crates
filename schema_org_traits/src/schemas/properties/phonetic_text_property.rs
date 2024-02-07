@@ -2,6 +2,7 @@
 pub trait GetPhoneticTextProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/phoneticText>
 	fn get_phonetic_text_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

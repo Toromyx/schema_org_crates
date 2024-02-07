@@ -1,6 +1,7 @@
 /// <https://schema.org/Neuro>
 pub trait FindNeuroIds {
 	type IdType;
+	/// <https://schema.org/Neuro>
 	fn find_neuro_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

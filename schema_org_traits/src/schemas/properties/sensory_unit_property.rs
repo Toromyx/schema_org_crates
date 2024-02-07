@@ -2,6 +2,7 @@
 pub trait GetSensoryUnitProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/sensoryUnit>
 	fn get_sensory_unit_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

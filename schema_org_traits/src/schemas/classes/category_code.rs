@@ -1,6 +1,7 @@
 /// <https://schema.org/CategoryCode>
 pub trait FindCategoryCodeIds {
 	type IdType;
+	/// <https://schema.org/CategoryCode>
 	fn find_category_code_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

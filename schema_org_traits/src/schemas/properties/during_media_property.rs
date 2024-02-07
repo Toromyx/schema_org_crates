@@ -2,6 +2,7 @@
 pub trait GetDuringMediaProperty {
 	type IdType;
 	type PropertyType;
+	/// <https://schema.org/duringMedia>
 	fn get_during_media_property(&self, id: &Self::IdType) -> Vec<&Self::PropertyType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

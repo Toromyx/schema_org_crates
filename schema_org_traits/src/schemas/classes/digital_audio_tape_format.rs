@@ -1,6 +1,7 @@
 /// <https://schema.org/DigitalAudioTapeFormat>
 pub trait FindDigitalAudioTapeFormatIds {
 	type IdType;
+	/// <https://schema.org/DigitalAudioTapeFormat>
 	fn find_digital_audio_tape_format_ids(&self) -> Vec<&Self::IdType>;
 }
 #[cfg(any(feature = "json-ld_0_15", doc))]

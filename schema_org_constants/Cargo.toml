@@ -11,3 +11,7 @@ repository = "https://github.com/Toromyx/schema_org_crates"
 features = [
     "doc",
 ]
+
+[features]
+default = []
+doc = []

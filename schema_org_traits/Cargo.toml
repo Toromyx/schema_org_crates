@@ -1,7 +1,7 @@
 [package]
 name = "schema_org_traits"
 description = "Schema.org schemas as Rust traits"
-version = "0.0.2"
+version = "0.0.3"
 edition = "2021"
 license = "MIT"
 repository = "https://github.com/Toromyx/schema_org_crates"
@@ -24,7 +24,7 @@ optional = true
 
 [dependencies.schema_org_constants]
 path = "../schema_org_constants"
-version = "^0.0.2"
+version = "^0.0.3"
 optional = true
 
 [dependencies.rdf-types_0_15]

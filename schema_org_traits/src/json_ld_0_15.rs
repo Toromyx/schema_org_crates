@@ -85,7 +85,8 @@ impl JsonLdStore {
 		let Some(object_indices) = self.by_object.get(schema_iri) else {
 			return vec![];
 		};
-		let indices: HashSet<_> = predicate_indices.intersection(object_indices).collect();
+		let mut indices: Vec<_> = predicate_indices.intersection(object_indices).collect();
+		indices.sort();
 		indices
 			.into_iter()
 			.filter_map(|index| self.quads.get(*index))
@@ -100,7 +101,8 @@ impl JsonLdStore {
 		let Some(predicate_indices) = self.by_predicate.get(property_iri) else {
 			return vec![];
 		};
-		let indices: HashSet<_> = subject_indices.intersection(predicate_indices).collect();
+		let mut indices: Vec<_> = subject_indices.intersection(predicate_indices).collect();
+		indices.sort();
 		indices
 			.into_iter()
 			.filter_map(|index| self.quads.get(*index))
@@ -125,16 +127,21 @@ mod tests {
 		GetRecipeIngredientProperty, GetRecipeInstructionsProperty,
 	};
 
-	#[tokio::test]
-	async fn test_json_ld_recipe_schema_graph() {
-		let schema_graph_text = include_str!("json_ld/tests/recipe_schema_graph.json");
+	static SCHEMA_GRAPH_TEXT: &str = include_str!("json_ld/tests/recipe_schema_graph.json");
+
+	async fn get_schema_graph_json_ld_store() -> JsonLdStore {
 		let input = RemoteDocument::new(
 			None,
 			Some("application/ld+json".parse().unwrap()),
-			Value::parse_str(schema_graph_text, |_| ()).unwrap(),
+			Value::parse_str(SCHEMA_GRAPH_TEXT, |_| ()).unwrap(),
 		);
 		let mut loader = ReqwestLoader::new_with_metadata_map(|_, _, _| ());
-		let json_ld_store = JsonLdStore::new(input, &mut loader, None).await;
+		JsonLdStore::new(input, &mut loader, None).await
+	}
+
+	#[tokio::test]
+	async fn test_json_ld_recipe_schema_graph() {
+		let json_ld_store = get_schema_graph_json_ld_store().await;
 		let recipe_ids = json_ld_store.find_recipe_ids();
 		let recipe_id = *recipe_ids.first().unwrap();
 		assert_eq!(recipe_id.as_str(), "https://example.test/recipe/#recipe");
@@ -160,5 +167,29 @@ mod tests {
 			(*calories.first().unwrap()).as_literal().unwrap().as_str(),
 			"420 kcal"
 		);
+	}
+
+	#[tokio::test]
+	async fn test_order_preservation() {
+		let json_ld_store = get_schema_graph_json_ld_store().await;
+		let recipe_id = *json_ld_store.find_recipe_ids().first().unwrap();
+		let recipe_ingredients = json_ld_store.get_recipe_ingredient_property(recipe_id);
+		assert_eq!(
+			recipe_ingredients
+				.iter()
+				.map(|object| object.as_literal().unwrap().as_str())
+				.collect::<Vec<_>>(),
+			vec![
+				"ingredient 1",
+				"ingredient 2",
+				"ingredient 3",
+				"ingredient 4",
+				"ingredient 5",
+				"ingredient 6",
+				"ingredient 7",
+				"ingredient 8",
+				"ingredient 9",
+			],
+		)
 	}
 }

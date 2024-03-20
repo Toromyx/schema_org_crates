@@ -22,7 +22,7 @@ optional = true
 
 [dependencies.schema_org_constants]
 path = "../schema_org_constants"
-version = "^0.0.3"
+version = "^0.0.4"
 optional = true
 
 [dependencies.rdf-types_0_15]

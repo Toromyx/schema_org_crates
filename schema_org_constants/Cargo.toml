@@ -8,10 +8,7 @@ repository = "https://github.com/Toromyx/schema_org_crates"
 
 # https://docs.rs/about/metadata
 [package.metadata.docs.rs]
-features = [
-    "doc",
-]
+all-features = true
 
 [features]
 default = []
-doc = []

@@ -8,9 +8,7 @@ repository = "https://github.com/Toromyx/schema_org_crates"
 
 # https://docs.rs/about/metadata
 [package.metadata.docs.rs]
-features = [
-    "doc",
-]
+all-features = true
 
 [dependencies.iref_2]
 package = "iref"
@@ -51,7 +49,6 @@ json-ld_0_15 = [
     "dep:rdf-types_0_15",
     "dep:iref_2",
 ]
-doc = []
 test = [
     "json-ld",
     "json-ld_0_15/reqwest",

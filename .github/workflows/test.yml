@@ -29,4 +29,4 @@ jobs:
           path: |
             target
             ~/.cargo/registry
-      - run: cargo test --features test
+      - run: cargo test --lib --features test

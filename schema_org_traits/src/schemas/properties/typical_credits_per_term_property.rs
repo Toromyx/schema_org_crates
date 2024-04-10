@@ -29,3 +29,27 @@ mod json_ld_0_15 {
 		}
 	}
 }
+#[cfg(any(feature = "json-ld_0_16", doc))]
+mod json_ld_0_16 {
+	use schema_org_constants::SchemaOrgNamespace;
+	impl crate::GetTypicalCreditsPerTermProperty for crate::json_ld_0_16::JsonLdStore {
+		type IdType = json_ld_0_16::ValidId;
+		type PropertyType = rdf_types_0_22::Object;
+		fn get_typical_credits_per_term_property(
+			&self,
+			id: &Self::IdType,
+		) -> Vec<&Self::PropertyType> {
+			self.get_property(
+				id,
+				match self.namespace() {
+					SchemaOrgNamespace::Http => {
+						schema_org_constants::TYPICAL_CREDITS_PER_TERM_PROPERTY_IRI_HTTP
+					}
+					SchemaOrgNamespace::Https => {
+						schema_org_constants::TYPICAL_CREDITS_PER_TERM_PROPERTY_IRI_HTTPS
+					}
+				},
+			)
+		}
+	}
+}

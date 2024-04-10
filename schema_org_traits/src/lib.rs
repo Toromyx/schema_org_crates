@@ -3,5 +3,8 @@
 
 #[cfg(any(feature = "json-ld_0_15", doc))]
 pub mod json_ld_0_15;
+#[cfg(any(feature = "json-ld_0_16", doc))]
+pub mod json_ld_0_16;
 mod schemas;
+
 pub use self::schemas::*;
